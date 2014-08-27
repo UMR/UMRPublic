@@ -1,0 +1,788 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E384E39E-E0BD-432B-B812-C0282B186DC8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UMRPublic</RootNamespace>
+    <AssemblyName>UMRPublic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.7.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.20\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.0.3.12153\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.0.3.12153\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.0\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="AboutUs1.aspx" />
+    <Content Include="applied_theory.aspx" />
+    <Content Include="ceo.aspx" />
+    <Content Include="ceo1.aspx" />
+    <Content Include="cfo.aspx" />
+    <Content Include="Client1.aspx" />
+    <Content Include="cmo.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Disclosure  Medical Records Systems 1993.JPG" />
+    <Content Include="history.aspx" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bot-bg.gif" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\c-sep-bg.gif" />
+    <Content Include="Images\cn-bg.gif" />
+    <Content Include="Images\Copy of cn-bg.gif" />
+    <Content Include="Images\Copy of logo.jpg" />
+    <Content Include="Images\hbg.gif" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\logo.GIF" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\logo_1.gif" />
+    <Content Include="Images\m-bottom.gif" />
+    <Content Include="Images\m-bul.gif" />
+    <Content Include="Images\m-sep.gif" />
+    <Content Include="Images\m-sep0.gif" />
+    <Content Include="Images\m.jpg" />
+    <Content Include="Images\m1.jpg" />
+    <Content Include="Images\mbg.jpg" />
+    <Content Include="Images\newlogo.jpg" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Images\p1.jpg" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\steven.bmp" />
+    <Content Include="Images\UMR.jpg" />
+    <Content Include="Images\umrBanner.jpg" />
+    <Content Include="Images\Untitled-1.jpg" />
+    <Content Include="Images\w17.gif" />
+    <Content Include="index.html" />
+    <Content Include="Job - Copy.aspx" />
+    <Content Include="Job.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="Longitudinal Medical Records Service Mark 1993.JPG" />
+    <Content Include="overview.aspx" />
+    <Content Include="PDFS\about.pdf" />
+    <Content Include="PDFS\CEO.pdf" />
+    <Content Include="PDFS\Mission.pdf.pdf" />
+    <Content Include="PDFS\RezaRaquib.pdf" />
+    <Content Include="Accountable Care Organization Solution.docx" />
+    <Content Include="ASTM_Standard_F_1625-95.pdf" />
+    <Content Include="BusinessDevelopment.doc" />
+    <Content Include="Doctor_Alert Network.pdf" />
+    <Content Include="donald.pdf" />
+    <Content Include="Health_Care Bridge.pdf" />
+    <Content Include="Ingenix.doc" />
+    <Content Include="International Patent Application 2010.pdf" />
+    <Content Include="Nurse%27s View Point.pdf" />
+    <Content Include="OVERVIEW.DOC" />
+    <Content Include="Peter Gordon Old.pdf" />
+    <Content Include="Reza Raquib.pdf" />
+    <Content Include="Sani-Teri Trademark Application.pdf" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="WebForm3.aspx" />
+    <Content Include="Peter Gordon.pdf" />
+    <Content Include="Frank J. Maddalena.pdf" />
+    <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Products.aspx" />
+    <Content Include="References.aspx" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Slides\UMR Presentation.htm" />
+    <Content Include="Slides\UMR Presentation2.htm" />
+    <Content Include="Slides\UMR Presentation2_files\buttons.gif" />
+    <Content Include="Slides\UMR Presentation2_files\filelist.xml" />
+    <Content Include="Slides\UMR Presentation2_files\frame.htm" />
+    <Content Include="Slides\UMR Presentation2_files\fullscreen.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master01.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master02.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master113.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master113.xml" />
+    <Content Include="Slides\UMR Presentation2_files\master113_background.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master113_image004.jpg" />
+    <Content Include="Slides\UMR Presentation2_files\master113_image005.png" />
+    <Content Include="Slides\UMR Presentation2_files\master113_image006.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master113_image007.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master113_image008.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master113_stylesheet.css" />
+    <Content Include="Slides\UMR Presentation2_files\master114.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master114.xml" />
+    <Content Include="Slides\UMR Presentation2_files\master114_stylesheet.css" />
+    <Content Include="Slides\UMR Presentation2_files\master115.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master115.xml" />
+    <Content Include="Slides\UMR Presentation2_files\master115_stylesheet.css" />
+    <Content Include="Slides\UMR Presentation2_files\master87.htm" />
+    <Content Include="Slides\UMR Presentation2_files\master87.xml" />
+    <Content Include="Slides\UMR Presentation2_files\master87_background.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master87_image001.jpg" />
+    <Content Include="Slides\UMR Presentation2_files\master87_image002.png" />
+    <Content Include="Slides\UMR Presentation2_files\master87_image003.png" />
+    <Content Include="Slides\UMR Presentation2_files\master87_image011.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master87_image012.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master87_image013.gif" />
+    <Content Include="Slides\UMR Presentation2_files\master87_stylesheet.css" />
+    <Content Include="Slides\UMR Presentation2_files\notes_flag.gif" />
+    <Content Include="Slides\UMR Presentation2_files\outline.htm" />
+    <Content Include="Slides\UMR Presentation2_files\pres.xml" />
+    <Content Include="Slides\UMR Presentation2_files\script.js" />
+    <Content Include="Slides\UMR Presentation2_files\slide0001.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0001_image009.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0001_image010.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0002.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0008.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0008_image020.jpg" />
+    <Content Include="Slides\UMR Presentation2_files\slide0008_image021.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0009.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image026.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image027.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image028.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image029.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image030.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image031.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image032.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image033.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image034.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image035.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0016_image036.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image037.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image038.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image039.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image040.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image041.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image042.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image043.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image044.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image045.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image046.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image047.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image048.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0027_image049.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028.xml" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image050.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image051.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image052.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image053.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image054.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image055.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image056.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image057.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image058.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0028_image059.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0043.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0043_image024.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0043_image025.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0045.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0045_image014.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0045_image015.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0046.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0046_image016.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0046_image017.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0048.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0049.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0050.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0051.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0052.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0053.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0057.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0058.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0059.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0059_image018.jpg" />
+    <Content Include="Slides\UMR Presentation2_files\slide0059_image019.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0061.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0061_image022.png" />
+    <Content Include="Slides\UMR Presentation2_files\slide0061_image023.gif" />
+    <Content Include="Slides\UMR Presentation2_files\slide0062.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0063.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0065.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0069.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0070.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0071.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0072.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0073.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0074.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0075.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0076.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0077.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0080.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0081.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0082.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0083.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0084.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0085.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0086.htm" />
+    <Content Include="Slides\UMR Presentation2_files\slide0087.htm" />
+    <Content Include="Slides\UMR Presentation2_files\sound001.wav" />
+    <Content Include="Slides\UMR Presentation_files\buttons.gif" />
+    <Content Include="Slides\UMR Presentation_files\error.htm" />
+    <Content Include="Slides\UMR Presentation_files\filelist.xml" />
+    <Content Include="Slides\UMR Presentation_files\frame.htm" />
+    <Content Include="Slides\UMR Presentation_files\fullscreen.htm" />
+    <Content Include="Slides\UMR Presentation_files\master02.htm" />
+    <Content Include="Slides\UMR Presentation_files\master03.htm" />
+    <Content Include="Slides\UMR Presentation_files\master03.xml" />
+    <Content Include="Slides\UMR Presentation_files\master03_image001.png" />
+    <Content Include="Slides\UMR Presentation_files\master03_image003.gif" />
+    <Content Include="Slides\UMR Presentation_files\master03_stylesheet.css" />
+    <Content Include="Slides\UMR Presentation_files\master04.htm" />
+    <Content Include="Slides\UMR Presentation_files\master04.xml" />
+    <Content Include="Slides\UMR Presentation_files\master04_image002.png" />
+    <Content Include="Slides\UMR Presentation_files\master04_image004.gif" />
+    <Content Include="Slides\UMR Presentation_files\outline.htm" />
+    <Content Include="Slides\UMR Presentation_files\pres.xml" />
+    <Content Include="Slides\UMR Presentation_files\script.js" />
+    <Content Include="Slides\UMR Presentation_files\slide0001.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0002.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0003.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0004.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0005.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0007.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0008.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0010.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0011.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0013.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0014.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0015.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0015_image006.gif" />
+    <Content Include="Slides\UMR Presentation_files\slide0016.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0016_image008.gif" />
+    <Content Include="Slides\UMR Presentation_files\slide0016_image010.gif" />
+    <Content Include="Slides\UMR Presentation_files\slide0017.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0017_image007.png" />
+    <Content Include="Slides\UMR Presentation_files\slide0017_image008.jpg" />
+    <Content Include="Slides\UMR Presentation_files\slide0018.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0019.htm" />
+    <Content Include="Slides\UMR Presentation_files\slide0020.htm" />
+    <Content Include="Slides\UMR Presentation_files\sound004.wav" />
+    <Content Include="Slides\UMR Presentation_files\sound005.wav" />
+    <Content Include="Slides\UMR Presentation_files\sound006.wav" />
+    <Content Include="Slides\UMR Presentation_files\sound011.wav" />
+    <Content Include="Slides\UMR Presentation_files\sound013.wav" />
+    <Content Include="Slides\UMR Presentation_files\sound014.wav" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\buttons.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\filelist.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\frame.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\fullscreen.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master01.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master15.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master15.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master15_image001.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master15_image008.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master15_image009.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master15_stylesheet.css" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master207.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master207.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master207_image002.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master207_image004.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master207_image005.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master207_stylesheet.css" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master208.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master208.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master208_image003.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master208_stylesheet.css" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master209.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master209.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master209_stylesheet.css" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master210.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master210.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\master210_stylesheet.css" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\outline.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\pres.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\script.js" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0001.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0001_image006.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0001_image007.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image010.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image011.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image012.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image013.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image014.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image015.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image016.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image017.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image018.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image019.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image020.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image021.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image022.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image023.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image024.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image025.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image026.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image027.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image028.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image029.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image030.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image031.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image032.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image033.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image034.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image035.jpg" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image036.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0006_image037.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0027.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0028.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0033.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0034.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0034_image065.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0034_image066.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0035.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0035_image067.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0035_image068.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0035_image069.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0036.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0036_image070.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0036_image071.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038.xml" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image038.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image039.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image040.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image041.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image042.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image043.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image044.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image045.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image046.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image047.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image048.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image049.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image050.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image051.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image052.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image053.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image054.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image055.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image056.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image057.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image058.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image059.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image060.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image061.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image062.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image063.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0038_image064.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0039.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0040.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0041.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0041_image072.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0041_image073.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0042.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0042_image074.png" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0042_image075.gif" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0043.htm" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0044.htm" />
+    <Content Include="Web.config" />
+    <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\preview.wmf" />
+    <Content Include="Slides\UMR Presentation2_files\editdata.mso" />
+    <Content Include="Slides\UMR Presentation2_files\preview.wmf" />
+    <Content Include="Slides\UMR Presentation_files\font.eot" />
+    <Content Include="Slides\UMR Presentation_files\font001.eot" />
+    <Content Include="Slides\UMR Presentation_files\oledata.mso" />
+    <Content Include="Slides\UMR Presentation_files\preview.wmf" />
+    <Content Include="Slides\UMR Presentation_files\slide0015_image005.emz" />
+    <Content Include="Slides\UMR Presentation_files\slide0015_image005.wmz" />
+    <Content Include="Slides\UMR Presentation_files\slide0016_image007.wmz" />
+    <Content Include="Slides\UMR Presentation_files\slide0016_image009.wmz" />
+    <Content Include="sheenacv.doc" />
+    <Content Include="Social Worker%27s View Point.pdf" />
+    <Content Include="U.S Patent Application 2009.pdf" />
+    <Content Include="UMR Presentation 2013 - 1.ppt" />
+    <Content Include="UMR_Wellness Tracking_System.pdf" />
+    <Content Include="Universal Medical Records - White Paper 09-18-2013.docx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AboutUs1.aspx.cs">
+      <DependentUpon>AboutUs1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AboutUs1.aspx.designer.cs">
+      <DependentUpon>AboutUs1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="applied_theory.aspx.cs">
+      <DependentUpon>applied_theory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="applied_theory.aspx.designer.cs">
+      <DependentUpon>applied_theory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="ceo.aspx.cs">
+      <DependentUpon>ceo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ceo.aspx.designer.cs">
+      <DependentUpon>ceo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ceo1.aspx.cs">
+      <DependentUpon>ceo1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ceo1.aspx.designer.cs">
+      <DependentUpon>ceo1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cfo.aspx.cs">
+      <DependentUpon>cfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cfo.aspx.designer.cs">
+      <DependentUpon>cfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Client1.aspx.cs">
+      <DependentUpon>Client1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client1.aspx.designer.cs">
+      <DependentUpon>Client1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cmo.aspx.cs">
+      <DependentUpon>cmo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cmo.aspx.designer.cs">
+      <DependentUpon>cmo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="history.aspx.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="history.aspx.designer.cs">
+      <DependentUpon>history.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Job - Copy.aspx.cs">
+      <DependentUpon>Job - Copy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Job - Copy.aspx.designer.cs">
+      <DependentUpon>Job - Copy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Job.aspx.cs">
+      <DependentUpon>Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Job.aspx.designer.cs">
+      <DependentUpon>Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="overview.aspx.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="overview.aspx.designer.cs">
+      <DependentUpon>overview.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="References.aspx.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="References.aspx.designer.cs">
+      <DependentUpon>References.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm3.aspx.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm3.aspx.designer.cs">
+      <DependentUpon>WebForm3.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Slides\UMR Presentation_files\_derived\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6556</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4338/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

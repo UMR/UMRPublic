@@ -1,0 +1,1393 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=PowerPoint.Slide>
+<meta name=Generator content="Microsoft PowerPoint 12">
+<link id=Main-File rel=Main-File href="../UMR%20Presentation2.htm">
+<link rel=Preview href=preview.wmf>
+<meta name=Robots content=NoIndex>
+<script src=script.js></script><script><!--
+if( !(IsWin("PPTOtl")||IsWin("PPTNav")||IsWin("PPTOtlNav")) )
+{
+	obj = GetObj("Main-File")
+	parent.location.href=obj.href
+}
+var gOtlHiliteClr="#ffffff",gOtlNormalClr="#000000",gOtlActiveClr="#ffff00",gSelected="",gTxtState=false,gChildEntryTable=new Array()
+function Load()
+{
+	if( IsWin("PPTOtl" ) ){ LoadOtl(); parent.gOtlLoaded=true; return }
+	if( g_supportsPPTHTML ) {
+		if( IsWin("PPTNav" ) ){ LoadNav("NavObj",UpdNav); parent.gNavLoaded=true; return }
+		if( IsWin("PPTOtlNav" ) ){ LoadNav("OtlNavObj",UpdOtlNav); parent.gOtlNavLoaded=true; return }
+	}
+}
+function Upd(){ if( IsWin("PPTNav") ) LoadNav("NavObj",UpdNav) }
+function LoadNav( oId,UpdFunc )
+{
+	document.ondragstart=CancelDrag
+	document.onselectstart=CancelDrag
+	document.body.style.margin=2
+	UpdFunc()
+	obj=document.all.item(oId)
+	obj.style.display="block"
+	obj.style.visibility="visible"
+	document.bgColor="threedface"
+	if( parent.frames["PPTNts"] )
+		notesBtn.style.display = ""
+	if( parent.gHasNarration )
+		nb_voiceBorder.style.display = ""
+}
+function LoadOtl()
+{
+	var otl=GetObj("OtlObj")
+	otl.style.display="block"
+	otl.style.visibility="visible"
+	if( gOtlActiveClr == "" ) gOtlActiveClr=document.linkColor
+	if( gOtlHiliteClr == "" ) gOtlHiliteClr=document.fgColor
+	if( gOtlNormalClr == "" )
+		gOtlNormalClr=document.bgColor
+	else
+		document.bgColor=gOtlNormalClr
+	InitArray()
+	if( ObjExists( parent.gCurSld ) ) {
+		ChangeState( parent.gCurSld,gOtlNormalClr,gOtlHiliteClr )
+		gSelected=parent.gCurSld
+	}
+	else gSelected = -1
+	UpdOtl()
+}
+function UpdOtl(){ UpdIdx(parent.gCurSld) }
+function UpdIdx( idx )
+{
+	if( gSelected != idx ) {
+		if( gSelected > 0 )
+			ChangeState( gSelected,gOtlHiliteClr,gOtlNormalClr )
+		if( ObjExists( idx ) ) {
+			gSelected = idx
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+		}
+		else gSelected = -1
+	}
+	if( gTxtState != parent.gOtlTxtExp ) {
+		state = "block"
+		if( !parent.gOtlTxtExp )
+			state="none"
+		for(ii=0; ii<gChildEntryTable.length; ii++) {
+			obj=gChildEntryTable[ii];
+			if( obj.id == null ) continue;
+			if( obj.id.indexOf("PPTC") >= 0 )
+				obj.style.display=state;
+		}
+		gTxtState=parent.gOtlTxtExp
+		if( ObjExists( gSelected ) )
+			ChangeState( gSelected,gOtlNormalClr,gOtlHiliteClr )
+	}
+}
+function InitArray()
+{
+	count=0
+	var list=GetTags(document,"DIV");
+	for(ii=0; ii<list.length; ii++) {
+		obj=list.item(ii)
+		if( obj.id == null ) continue
+		if( obj.id.indexOf("PPTC") >= 0 )
+			gChildEntryTable[count++]=obj
+	}
+}
+function ChangeState( idx,fgColor,bgColor )
+{
+	obj=GetObj("PPTL"+idx)
+	obj.style.color=fgColor
+	obj=GetObj("PPTP"+idx)
+	obj.style.backgroundColor=bgColor
+}
+function ChgClr( o,clr ){ if( o.id != "PPTL"+gSelected ) o.style.color=clr }
+function Over( src ){ ChgClr(GetLink(src),gOtlActiveClr) }
+function Out( src ){ ChgClr(GetLink(src),gOtlHiliteClr) }
+function Follow(src){ window.location.href = GetLink(src).href; }
+function ObjExists( ii ) { obj=GetObj("PPTP"+ii ); return( obj ) }
+function GoToSld( href ){ UpdIdx(parent.GetSldNum(href)); parent.GoToSld( href ) }
+function CancelDrag(){ window.event.cancelBubble=true;window.event.returnValue=false}
+function GetLink(src)
+{
+   if(src.tagName=="A") return src
+   else return GetTags(src,"A").item(0)
+}
+function UpdNav()
+{
+	txt = "<center>";
+	if( parent.GetHrefObj( parent.gCurSld ).mOrigVis == 1 )
+		txt += "Slide " + parent.GetCurSldNum() + " of " + parent.GetNumSlds()
+	else
+		txt += "Hidden Slide"
+	txt += "</center>";
+	nav_text.innerHTML = txt;
+	if( !parent.HasPrevSld() )
+		gBtnArr["nb_prev"].Enabled(0)
+	else
+		gBtnArr["nb_prev"].Enabled(1)
+	if( !parent.HasNextSld() )
+		gBtnArr["nb_next"].Enabled(0)
+	else
+		gBtnArr["nb_next"].Enabled(1)
+	gBtnArr["nb_nts"].Enabled(1)
+	gBtnArr["nb_ntsBorder"].SetFlag( parent.gHasNts )
+	gBtnArr["nb_sldshw"].Enabled(1)
+	gBtnArr["nb_voice"].Enabled(1)
+}
+function ExecBtn()
+{
+	if (event.keyCode == 13)
+	{
+		BtnOnDown();
+		BtnOnUp();
+	}
+}
+function UpdOtlNav()
+{
+	gBtnArr["nb_otl"].SetEnabled();
+	if( parent.gOtlOpen )
+		gBtnArr["nb_otlTxt"].Enabled( true );
+	else
+		document.all.item("nb_otlTxtBorder").style.visibility = "hidden";
+}
+
+//--></script>
+<style>
+<!--.PTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;
+	padding-left:2px;
+	font-weight:bold;}
+.CTxt
+	{position:relative;
+	width:100%;
+	margin-top:5px;}
+a
+	{color:white;
+	text-decoration:none;}
+ul
+	{color:white;
+	margin-bottom:0px;
+	margin-left:20px;}
+.sldNum
+	{margin-top:5px;
+	color:white;}
+.button
+	{position:absolute;
+	width:32px;
+	height:20px;
+	border-style:solid;
+	border-width:1px;
+	border-color:threedface;}
+-->
+</style>
+</head>
+
+<body onload="Load()" style='margin:2px'>
+
+<div id=NavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="ExecBtn()" style='display:none;visibility:hidden'>
+<table id="notesBtn" style='display:none;position:relative;width:55px' align=left cellpadding=0
+ cellspacing=0>
+ <td nowrap>
+ <div id="nb_ntsElem" title="Show/Hide
+Notes" align=center style='position:relative;margin-left:5px;margin-right:5px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt; cursor:default'>
+ <img src="notes_flag.gif" id="nb_nts" style='display:none'> &nbsp;Notes</div>
+ <div id="nb_ntsBorder" title ="Show/Hide
+Notes" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=1 style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+
+ </div>
+ </td>
+</table>
+
+
+<table style='position:relative;width:70px' align=right cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_sldshwText" title="Full Screen Slide Show" align=center style='position:relative;margin-left:20px;padding:3px;
+ font-family:Arial;color:buttontext;font-size:9pt;cursor:default'>Slide
+Show</div>
+ <div id="nb_sldshwBorder" title="Full Screen Slide Show" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=5 style='position:absolute;top:0%;left:0%;width:100%;height:20px'>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_sldshw" style='position:relative;left:-254px'></div>
+ </div>
+ </td>
+ <td>
+ <div id="nb_voiceBorder" style='display:none;position:absolute;top:0;left:-40px;
+ width:20px;height:20px' onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=4 class=button>
+ <div style='position:absolute;clip:rect(0px, 18px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_voice" title="Pause/Play Narration" style='position:
+ relative;left:-290px'></div>
+ </div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td nowrap>
+ <div id="nb_prevBorder" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=2 class=button style='left:-30px'>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_prev" title="Previous Slide" style='position:relative;
+ left:0px'></div>
+ </div>
+ <span id="nav_text" style='position:relative;top:3px;width:100px;font-family:
+ Arial;color:buttontext;font-size:9pt'></span>
+ <div id="nb_nextBorder" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=3 class=button>
+ <div style='position:absolute;clip:rect(0px, 30px, 18px, 0px)'><img
+ src="buttons.gif" id="nb_next" title="Next Slide" style='position:relative;
+ left:-90px'></div>
+ </div>
+ </td>
+</table>
+</div>
+
+<div id=OtlNavObj onload="Load()" onmouseover="BtnOnOver()"
+onmousedown="BtnOnDown()" onmouseout="BtnOnOut()" onmouseup="BtnOnUp()"
+onkeypress="ExecBtn()" style='display:none;visibility:hidden'>
+
+<table style='position:relative;width:70px' align=left cellpadding=0 cellspacing=0>
+ <td nowrap><div title="Show/Hide
+Outline" id="nb_otl" onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=11
+ style='position:absolute;top:0%;left:0%;width:100%;height:100%;cursor:default'>
+ <div id="nb_otlElem" align=center style='position:relative;padding:3px;font-family:Arial;
+ color:buttontext;font-size:9pt'>Outline</div></div>
+ </td>
+</table>
+
+<table style='position:relative' align=center cellpadding=0 cellspacing=0>
+ <td>
+ <div style='position:absolute;left:-18px;width:24px;height:20px;border-style:
+ solid;border-width:1px;border-color:threedface' onfocus="BtnOnOver()" onblur="BtnOnOut()" TABINDEX=12 id="nb_otlTxtBorder">
+ <div style='position:absolute;clip:rect(0px, 22px, 18px, 0px)'><img
+ src=buttons.gif id="nb_otlTxt" title="Expand/Collapse Outline"
+ style='position:relative;left:-157px'></div>
+ </div>
+ </td>
+</table>
+
+</div>
+
+<div id=OtlObj style='display:none;visibility:hidden;'>
+
+
+<table width="100%" style='font-family:Arial;font-size:9pt'>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>1</font></div>
+  </td>
+  <td width="100%">
+  <div id=PPTP1 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0001.htm');" id=PPTL1>&quot;Steven C&quot;</a></font></div>
+  <div id=PPTC1 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <br>
+   <li>Steven C. Cohn, M.D.</li>
+   <li>									Chairman of the Board</li>
+   <li>						President</li>
+   <br>
+   <br>
+   <li>Wayne O Wells, M.D.</li>
+   <li>Medical Director</li>
+   <br>
+   <br>
+   <li>Reza Bin Raquib</li>
+   <li>V.P. Information Systems</li>
+   <br>
+   <br>
+   <br>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>2</font></div>
+  </td>
+  <td>
+  <div id=PPTP2 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0002.htm');" id=PPTL2>Outline</a></font></div>
+  <div id=PPTC2 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Why Electronic Medical Records (EMR)?</li>
+   <li>Public Opinion</li>
+   <li>Universal Medical Records ?</li>
+   <li>Past, Present and Future</li>
+   <li>Today’s Current Medical Records Systems</li>
+   <li>UMR Electronic Medical Record Solutions</li>
+   <li>Medical Data Flow</li>
+   <li>Patient Records – Benefits</li>
+   <li>Patient Records – Features</li>
+   <li>Software Architecture</li>
+   <li>Design Based on Publicly Vetted Standards</li>
+   <li>Technology</li>
+   <li>UMR ASP Services</li>
+   <li>ASP – Technology</li>
+   <li>Privacy and Security</li>
+   <li>Solutions – Data Security</li>
+   <li>Conclusions : Helping Health Care Catch Up</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>3</font></div>
+  </td>
+  <td>
+  <div id=PPTP3 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0009.htm');" id=PPTL3>Why Electronic Medical
+  Records (EMRs)</a></font></div>
+  <div id=PPTC3 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Time spent filing and pulling patient charts, searching for charts</li>
+   <li>Time re-creating records if destroyed by natural disaster or accident</li>
+   <li>Staff time saved on finding and locating charts</li>
+   <li>Enhanced communication increases office efficiency</li>
+   <li>More patient encounters</li>
+   <li>Improved coding</li>
+   <li>Cost of supplies to maintain charts</li>
+   <li>Cost of facility space for records (can better use of space be made?)</li>
+   <li>Storage and Backup Cost</li>
+   <li>Transcription services cost</li>
+   <li>Better Security/Privacy Maintainable</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>4</font></div>
+  </td>
+  <td>
+  <div id=PPTP4 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0074.htm');" id=PPTL4>Why Electronic Medical
+  Records (EMRs)</a></font></div>
+  <div id=PPTC4 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Electronic record<span style='mso-spacerun:yes'>  </span>enable
+       healthcare provider to:</li>
+   <ul>
+    <li>integrates episodes of care</li>
+    <li>quickly obtain information on members of a family</li>
+    <li>integrate information about the community to allow a community-oriented
+        approach</li>
+    <li>gather data for practice-based research</li>
+    <li>integrate transparently with evidence-based, continuously updated,
+        decision support systems</li>
+   </ul>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>5</font></div>
+  </td>
+  <td>
+  <div id=PPTP5 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0058.htm');" id=PPTL5>Public Opinion</a></font></div>
+  <div id=PPTC5 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>In 2006 Lake Research Partners (LRP) and American Viewpoint conducted a
+       survey among 1,003 Americans nationwide</li>
+   <br>
+   <br>
+   <ul>
+    <li>(65%) is interested in accessing their own personal health information
+        electronically.</li>
+    <li>9 in 10 Americans (88%) say online records would be important in
+        reducing the number of unnecessary or repeated tests and procedures
+        they undergo.</li>
+    <br>
+    <br>
+   </ul>
+   <li>Americans believe they could gain more control over their health care by
+       using electronic personal health records. For example, ninety percent
+       say it would be personally important to track their symptoms or changes
+       in health care online</li>
+   <br>
+   <br>
+   <ul>
+    <br>
+   </ul>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>6</font></div>
+  </td>
+  <td>
+  <div id=PPTP6 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0048.htm');" id=PPTL6>Universal Medical
+  Records (UMR)</a></font></div>
+  <div id=PPTC6 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Universal Medical Records (UMR) is a secure, independent software
+       solution for capturing medical information and delivering it to
+       healthcare providers and their patients.</li>
+   <li>The UMR information network - actually, a network of networks - will
+       provide a universally accessible data capture and authentication system
+       for all patients and consumers, regardless of where they get their
+       medical care, who pays for it, where they work, or where they live over
+       the lifetime of the patient.</li>
+   <li>UMR EMR is an innovative electronic medical records system designed to
+       help physician practices improve quality of care, reduce risk, cut
+       costs, and increase revenues. Appropriate for any sized medical
+       practice—from a small, solo practice to a large, multi-provider/multi-location
+       group—this feature-rich system allows you to create and maintain
+       complete medical records faster and more efficiently than ever before.</li>
+   <br>
+   <br>
+   <li>UMR is the health care industry's equivalent of a highly specialized,
+       hyper-secure Internet. UMR is the end-result of several years of
+       research and development work with one common, overarching goal: to
+       jumpstart computerized data integration for the U.S. health care system.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>7</font></div>
+  </td>
+  <td>
+  <div id=PPTP7 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0057.htm');" id=PPTL7>Past, Present and Future</a></font></div>
+  <div id=PPTC7 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Past</li>
+   <ul>
+    <li>Paper System- Advantages and Disadvantages</li>
+   </ul>
+   <li>Present</li>
+   <ul>
+    <li>Combination of both Paper and Electronic system-radiology, accounts,
+        clinical laboratory</li>
+   </ul>
+   <li>Future</li>
+   <ul>
+    <li>Electronic Medical Records, Smart Cards</li>
+    <li>Promises and Pitfalls</li>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>8</font></div>
+  </td>
+  <td>
+  <div id=PPTP8 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0045.htm');" id=PPTL8>Today’s Current Medical
+  Records Systems</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>9</font></div>
+  </td>
+  <td>
+  <div id=PPTP9 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0046.htm');" id=PPTL9>UMR Electronic Medical
+  Records Solutions</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>10</font></div>
+  </td>
+  <td>
+  <div id=PPTP10 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0059.htm');" id=PPTL10>Medical Data Flow</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>11</font></div>
+  </td>
+  <td>
+  <div id=PPTP11 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0075.htm');" id=PPTL11>Patient Records --
+  Benefits</a></font></div>
+  <div id=PPTC11 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <br>
+   <li>Immediate access to patient records</li>
+   <li>Clinical decision support tools at the point of care</li>
+   <li>Complete flexibility and customization to support diverse practices and
+       workflows</li>
+   <li>Integration with all major information systems</li>
+   <li>Designed by clinicians for clinicians</li>
+   <li>Scalability</li>
+   <li>Familiar, problem-oriented format with a one-screen summary and detailed
+       patient information available with a single click</li>
+   <li>Information accessible by the whole care team instantly, while
+       maintaining security and HIPAA compliance</li>
+   <li>Lab results, transcriptions, radiology images and more automatically
+       imported and attached to the patient record</li>
+   <li>Comprehensive medical record – securely accessible when you need it,
+       where you need it, helping to reduce or eliminate costs associated with
+       transcription or chart pulls while correctly coding for the care you
+       provide</li>
+   <li>Highly customizable, with substantial ability to integrate with other
+       systems, either custom or off-the-shelf, using HL7 standards</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>12</font></div>
+  </td>
+  <td>
+  <div id=PPTP12 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0077.htm');" id=PPTL12>Patient Records --
+  Benefits</a></font></div>
+  <div id=PPTC12 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Designed to serve as the foundation of your practice’s transition to
+       comprehensive electronic medical records.</li>
+   <li>This permits practices of any size to take a modular approach to the
+       implementation of clinical information technology and realize the
+       benefits previously available only to the largest providers.</li>
+   <li>Knowledge Base Model (KBM) – offers your practice templates (e.g., vital
+       signs, HPI, PFSH, surgical history) customized for numerous medical
+       specialties</li>
+   <li>Specificity Coding – optimizes third-party payments by indicating
+       appropriate code levels [specifity coding] based on documentation</li>
+   <li>Medications Module – unique cumulative medication list which generates
+       prescriptions via computer and checks new prescriptions preventing
+       drug-drug, drug-allergy, drug-disease and drug-laboratory value harmful
+       interactions</li>
+   <li>Diagnosis Database (ICD-9) – features pre-loaded diagnosis codes</li>
+   <li>Procedure Database (CPT-4) – includes medical procedure codes</li>
+   <li>HCPCS Database</li>
+   <li>MDS Database</li>
+   <li>Manual Lab Order Entry and Results Reporting – allows for the creation
+       of manual lab orders and manual entry of lab results in patient charts</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>13</font></div>
+  </td>
+  <td>
+  <div id=PPTP13 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0081.htm');" id=PPTL13>Patient Records --
+  Features</a></font></div>
+  <div id=PPTC13 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Complete Electronic Medical Records system (EMR)</li>
+   <ul>
+    <li>Open multiple charts at the same time</li>
+    <li>User-definable chart summary field</li>
+    <li>MPI capabilities</li>
+   </ul>
+   <li>Progress Note Functionality</li>
+   <ul>
+    <li>Documentation by: free text, pre-defined, or user defined clinical
+        templates</li>
+    <li>Automatic updates on different sections of chart</li>
+    <li>Review allows providers to review unsigned notes, incoming lab data,
+        reports, and letters</li>
+    <li>Clinical templates include E&amp;M codes and AHCPR guidelines</li>
+    <li>Electronic signature documents author of progress note</li>
+   </ul>
+   <li>Prescription Writer</li>
+   <li>Prescription templates provide dose and alternatives for the prescribed
+       medication</li>
+   <li>Drug interaction and automatic allergy/intolerance checking 3 medication
+       lists: Current, Ineffective, Historical</li>
+   <li>Formulary checking</li>
+   <li>E-mail and/or Fax prescriptions from Patient Records directly to the
+       pharmacy</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>14</font></div>
+  </td>
+  <td>
+  <div id=PPTP14 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0082.htm');" id=PPTL14>Patient Records --
+  Features</a></font></div>
+  <div id=PPTC14 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Health Maintenance</li>
+   <ul>
+    <li>Achieves timely healthcare maintenance and captures overdue reminders</li>
+    <li>Vital Signs data capture</li>
+   </ul>
+   <li>Laboratory Data</li>
+   <ul>
+    <li>Lab data can be imported from outside or in-house lab using industry
+        standard formats (ASTM1238, HL7)</li>
+    <li>Abnormal data flag</li>
+   </ul>
+   <li>Messaging</li>
+   <ul>
+    <li>Intra-office messaging</li>
+    <li>Chart info can be e-mailed to consulting physicians</li>
+   </ul>
+   <li>Reporting</li>
+   <ul>
+    <li>Missing progress notes</li>
+    <li>Unsigned progress notes</li>
+    <li>Unsaved progress notes</li>
+    <li>Print chart summary</li>
+    <li>Print complete patient chart</li>
+    <li>Print note by: provider and date all notes</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>15</font></div>
+  </td>
+  <td>
+  <div id=PPTP15 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0076.htm');" id=PPTL15>Software Architecture</a></font></div>
+  <div id=PPTC15 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Either in a small practice or a large multi-specialty practice UMR will
+       scale to meet your needs. UMR uses today's software technologies from Microsoft
+       and Oracle to develop a system that can run within your practice or your
+       hosted data center. Access your charts from VPN connections, internet or
+       a disconnected off-line mode.</li>
+   <br>
+   <br>
+   <li>Affiliate Link makes your organization an attractive choice for
+       referring physicians by giving them secure, Web-based access to
+       information about the care you provide their patients. Sharing patient
+       information with authorized providers helps them follow the progress of
+       care for patients they refer to your organization and improves their
+       ability to coordinate ongoing care, resulting in better overall care
+       delivery.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>16</font></div>
+  </td>
+  <td>
+  <div id=PPTP16 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0087.htm');" id=PPTL16>Software Architecture</a></font></div>
+  <div id=PPTC16 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>UMR Interoperability Platform</li>
+   <ul>
+    <li>HIPAA-compliant security solution provides authentication,
+        authorization, access and auditing for all clinical data</li>
+    <li>Patient-centric longitudinal data repository (EHR) that stores data
+        from inpatient and ambulatory, and other stakeholders systems.</li>
+    <li>Codification libraries to normalized data from all source systems</li>
+    <li>Workflow engine that provides intelligent alerting and message routing
+        based on specific data content</li>
+    <li>Standards Based System support for existing and newly emerging open
+        standards and a nonproprietary implementation approach</li>
+    <li>Single-sign on capabilities for secure direct access to clinical
+        applications.</li>
+    <br>
+    <br>
+   </ul>
+   <li>ASP Solutions</li>
+   <ul>
+    <li>Speed to market, Low cost of ownership</li>
+    <li>Ability to add solutions and connection points as needed</li>
+    <li>High adoption rate</li>
+    <br>
+    <br>
+   </ul>
+   <li>Service Delivery Process and Planning</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>17</font></div>
+  </td>
+  <td>
+  <div id=PPTP17 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0049.htm');" id=PPTL17>Design Based on
+  Publicly Vetted Standards</a></font></div>
+  <div id=PPTC17 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>UMR is build in accordance with the principles of what is known as the
+       Connecting for Health Common Framework,<span style='mso-spacerun:yes'> 
+       </span>http://www.connectingforhealth.org/commonframework/</li>
+   <li>A set of design principles and policy standards established by a
+       collaboration of all stakeholders in the industry - including consumer
+       advocacy organizations, physician groups, insurers, technologists, and
+       privacy watchdogs</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>18</font></div>
+  </td>
+  <td>
+  <div id=PPTP18 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0083.htm');" id=PPTL18>Technology</a></font></div>
+  <div id=PPTC18 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>The system architecture of your electronic medical record and practice
+       management software is crucial in defining its long-term capabilities.
+       UMR offers a highly flexible system design, making it both suitable and
+       affordable for small and large practices.</li>
+   <li>Scalable Design</li>
+   <ul>
+    <li>All of the UMR systems allow clinics to start small and grow as their
+        needs change - without having to change systems. UMR’s scalable design,
+        built on key industry-standard, nonproprietary technologies that are
+        crucial for long-term success, supports both the single-doctor clinic
+        and the large multi-clinic enterprises.</li>
+   </ul>
+   <li>Network Compatibility</li>
+   <ul>
+    <li>UMR applications run across Ethernet networks, supporting either
+        Microsoft Windows NT/2000/2003 or Novell NetWare network operating
+        systems utilizing TCP/IP or IPX protocols.</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>19</font></div>
+  </td>
+  <td>
+  <div id=PPTP19 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0084.htm');" id=PPTL19>Technology</a></font></div>
+  <div id=PPTC19 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Choice of Database</li>
+   <ul>
+    <li>Oracle, MS SQL or other SQL databases.<span style='mso-spacerun:yes'> 
+        </span>UMR supports both centralized and decentralized deployment
+        models. Practices that use a single database server operate in a
+        centralized environment. Patients stored in a single database can be
+        accessed from single or multiple locations. Charts can be
+        electronically secured by practice, offering greater security for
+        multi-clinic installations.</li>
+   </ul>
+   <li>Interface Engine</li>
+   <ul>
+    <li>Connections to external information is an important part of any medical
+        record. Patient Records recognizes the importance of interconnectivity
+        and offers a wide variety of electronic data interchange import/export
+        features. Patient Records features both batch and real-time interfaces
+        to laboratories, master patient indexes, electronic claims
+        clearinghouses and payers, and other practice management systems. UMR
+        supports HL7, ASTM, and other EDI standards. These interfaces allow the
+        transfer of data into and out of UMR enterprise.</li>
+   </ul>
+   <li>Client-Server</li>
+   <ul>
+    <li>Supports a broad spectrum of client-server architecture. On the client
+        side, UMR<span style='mso-spacerun:yes'>  </span>supports Windows
+        95/98, Windows NT/2000, or Windows XP. Server operating systems
+        supported include Novell NetWare, Windows 2000/2003.</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>20</font></div>
+  </td>
+  <td>
+  <div id=PPTP20 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0085.htm');" id=PPTL20>Technology --
+  Connectivity</a></font></div>
+  <div id=PPTC20 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Application Service Provider (ASP)</li>
+   <ul>
+    <li>In addition to being offered as a client/server application, UMR can
+        also be implemented as an ASP (Application Service Provider)
+        application. This configuration brings UMR Enterprise into a practice
+        via an Internet VPN (Virtual Private Network), eliminating the need to
+        implement or maintain application and database servers.</li>
+    <li>The applications can be accessed at any workstation that has Internet
+        access and the VPN client installed. Both encryption (triple DES) and
+        secure authentication (SecurID) are part of the ASP offering.</li>
+   </ul>
+   <li>Connection with your own in-house systems</li>
+   <ul>
+    <li>UMR can be fully integrated with your in-house clinical infomation
+        management system, Laboratory, or other ancillary clinical data sources.
+        The system is smart enough to flag abnormal results and update all the
+        appropriate health maintenance items.</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>21</font></div>
+  </td>
+  <td>
+  <div id=PPTP21 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0086.htm');" id=PPTL21>Technology --
+  Connectivity</a></font></div>
+  <div id=PPTC21 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Integrated healthcare delivery networks and clinical data repositories</li>
+   <ul>
+    <li>As healthcare systems pursue the goal of integrated patient information
+        from all points of clinical contact, UMR provides a natural link tying
+        together the network and interfacing to clinical data repositories.</li>
+   </ul>
+   <li>The networked practice</li>
+   <ul>
+    <li>Standardization using across geographically separated practices
+        establishes a foundation for linking physicians and patients to a
+        common chart.</li>
+   </ul>
+   <li>Scanning and faxing</li>
+   <ul>
+    <li>Because most outside information comes in the form of paper, UMR allows
+        for easy insertion of scanned materials. Additionally, UMR can also be
+        used in conjunction with a fax server, allowing prescriptions or other
+        materials to be faxed straight from the UMR applications.</li>
+   </ul>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>22</font></div>
+  </td>
+  <td>
+  <div id=PPTP22 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0008.htm');" id=PPTL22>Technology --
+  Connectivity</a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>23</font></div>
+  </td>
+  <td>
+  <div id=PPTP23 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0050.htm');" id=PPTL23><span
+  style='mso-spacerun:yes'> </span><br>
+    UMR ASP Services</a></font></div>
+  <div id=PPTC23 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>ASP brings the entire UMR product line right into your office via a
+       secure Internet connection.</li>
+   <li>An ASP (Application Service Provider) is simply another way of accessing
+       and utilizing applications. Instead of installing the software on a
+       dedicated server at the physician's office, the UMR applications are
+       remotely installed and managed at our central data center. You can
+       utilize all of the functionality of UMR without requiring a large
+       initial investment or a complex computer network. Armed with this
+       simplicity, UMR ASP provides a convenient, cost-effective way to bring
+       the power of all applications solution into your office. <br>
+              <br>
+              .</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>24</font></div>
+  </td>
+  <td>
+  <div id=PPTP24 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0080.htm');" id=PPTL24><span
+  style='mso-spacerun:yes'> </span><br>
+    ASP -- Technology</a></font></div>
+  <div id=PPTC24 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <br>
+   <li>Broadband Internet Connection:</li>
+   <ul>
+    <li>To access UMR ASP from the medical office, users need to have a
+        broadband internet connection. We highly recommend a dedicated,
+        always-on Internet connection such as a fractional or full T1. A
+        broadband connection such as DSL (Digital Subscriber Line) or cable may
+        also be an option.</li>
+   </ul>
+   <li>Data security</li>
+   <ul>
+    <li>Virtual Private Network (VPN) architecture, data communication travels
+        through a secured pathway from and to each site. The VPN connections
+        are encrypted using triple DES encryption and authenticated using RSA's
+        SecurID protocols, with firewalls at both ends of the connection.</li>
+   </ul>
+   <li>Data Encryption:</li>
+   <ul>
+    <li>We employ triple DES encryption to protect privacy while information is
+        in transit across the Internet.</li>
+   </ul>
+   <li>RSA SecurID:</li>
+   <ul>
+    <li>UMR ASP employs the latest SecurID authentication technology that sets
+        up a barrier that is much stronger than a conventional password system.
+        It combines something a users knows (a five digit PIN) with an unique
+        six digit code that changes every 60 seconds and is specific to the
+        user and the time. Each user is given a key-chain like device that
+        generates the new codes continuously for three years. Only when these
+        two authentication factors are validated is access granted.</li>
+   </ul>
+   <li>Firewall Technology:</li>
+   <ul>
+    <li>The firewall protects your data at both ends of the link. At the ASP
+        end, it authenticates all users and prevents intrusions. At the VPN
+        client end, it protects your individual workstation.</li>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>25</font></div>
+  </td>
+  <td>
+  <div id=PPTP25 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0051.htm');" id=PPTL25>Privacy and Security</a></font></div>
+  <div id=PPTC25 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Those on UMR 's technical staff who are developing authentication
+       subsystems come not from health care, but from the banking industry, and
+       bring with them not just best practices, but a culture of zero tolerance
+       for security breaches.</li>
+   <li>Because UMR will be connected to data networks that exist today behind
+       the curtain of the health care system - and because of the sophisticated
+       and rigorous security and patient record location intelligence included
+       in the Common Framework design - the user of a personal health
+       information product will be able to quickly access his or her
+       information. The information that will pass through the UMR network into
+       the patient's control will be completely de-identified, assuring privacy
+       in the extremely unlikely event that it is not the patient's actual
+       medical data. Furthermore, in keeping with the principles of the Common
+       Framework - and as a final way of ensuring data integrity - the user
+       will have the ability to review that data and choose to include or
+       exclude it from their record.</li>
+   <li>Despite all our efforts to build the broadest possible network, a
+       tremendous amount of our medical information will remain on paper for
+       years to come. As a result, UMR will also allow patients and consumers
+       to capture and store scanned images of any documents they feel are
+       important and may one day want to share with their caregivers.</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>26</font></div>
+  </td>
+  <td>
+  <div id=PPTP26 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0063.htm');" id=PPTL26>Solutions – Data
+  Security</a></font></div>
+  <div id=PPTC26 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Technical Security Measures</li>
+   <ul>
+    <li>Audit trails</li>
+    <li>Authorization – user, role and context based</li>
+    <li>Encryptions E.g. public key systems, secure sockets</li>
+    <li>Unique identifiers</li>
+    <li>Firewalls and network service management</li>
+    <li>Integrity management E.g. cryptographic checksums</li>
+    <li>Digital signatures</li>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>27</font></div>
+  </td>
+  <td>
+  <div id=PPTP27 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0061.htm');" id=PPTL27>DATA SECURITY</a></font></div>
+  <div id=PPTC27 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Data Collection</li>
+   <li>Data Storage</li>
+   <li>Internal Use of Data</li>
+   <li>Data disclosure to third parties</li>
+   <li>Data Access by Subject</li>
+   <li>Data Record Transfer</li>
+   <li>Data Record Destruction</li>
+   <br>
+   <br>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>28</font></div>
+  </td>
+  <td>
+  <div id=PPTP28 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0062.htm');" id=PPTL28>DATA SECURITY</a></font></div>
+  <div id=PPTC28 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Administrative Security Measures</li>
+   <ul>
+    <li>Background checks</li>
+    <li>Authentication E.g. Passwords, tokens</li>
+    <li>Training</li>
+    <li>Backup and Disaster recovery</li>
+    <li>Security Policies</li>
+    <li>Accountability–sanctions, zero tolerance policy</li>
+    <br>
+    <br>
+   </ul>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>29</font></div>
+  </td>
+  <td>
+  <div id=PPTP29 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0065.htm');" id=PPTL29>Conclusions : Helping
+  Health Care Catch Up</a></font></div>
+  <div id=PPTC29 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Medical data is one of the most important assets</li>
+   <li>The protection of privacy is urgent</li>
+   <li>Threats to privacy issues</li>
+   <li>Non-technical Solutions</li>
+   <li>Technical Solutions</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>30</font></div>
+  </td>
+  <td>
+  <div id=PPTP30 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0052.htm');" id=PPTL30>Conclusions : Helping
+  Health Care Catch Up</a></font></div>
+  <div id=PPTC30 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>We believe that these and many other elements of a personal health
+       information infrastructure are decades overdue. Health care is the most
+       information-intensive and information-sensitive activity in our world,
+       and yet it remains the most woefully under-computerized. The mission of UMR
+       is to help fix this problem by placing patients and consumers at the
+       center of the long overdue computerization of our health care system.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>31</font></div>
+  </td>
+  <td>
+  <div id=PPTP31 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0053.htm');" id=PPTL31>Conclusions : Helping
+  Health Care Catch Up</a></font></div>
+  <div id=PPTC31 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>UMR’s organizational structure can be easily used to facilitate the
+       adoption and growth of emerging interoperative technologies. The
+       development of regional health information organizations (RHIOs), often
+       referred to as the building blocks of an interoperative electronic
+       network, is essential to the vision of the Office of the National
+       Coordinator for Health Information Technology’s (ONCHIT).</li>
+   <li>That vision articulates the extraordinary changes necessary to transform
+       our current system into an interconnected healthcare community.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>32</font></div>
+  </td>
+  <td>
+  <div id=PPTP32 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0043.htm');" id=PPTL32><span
+  style='mso-spacerun:yes'> </span></a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>33</font></div>
+  </td>
+  <td>
+  <div id=PPTP33 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0016.htm');" id=PPTL33><span
+  style='mso-spacerun:yes'> </span></a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>34</font></div>
+  </td>
+  <td>
+  <div id=PPTP34 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0027.htm');" id=PPTL34><span
+  style='mso-spacerun:yes'> </span></a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>35</font></div>
+  </td>
+  <td>
+  <div id=PPTP35 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0028.htm');" id=PPTL35><span
+  style='mso-spacerun:yes'> </span></a></font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>36</font></div>
+  </td>
+  <td>
+  <div id=PPTP36 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0069.htm');" id=PPTL36>Quality Improvements</a></font></div>
+  <div id=PPTC36 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Prompts doctors and nurses whenever health maintenance services are past
+       due.</li>
+   <br>
+   <br>
+   <li>Prompts doctors and nurses to perform chronic disease management
+       services and identifies when parameters are not met.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>37</font></div>
+  </td>
+  <td>
+  <div id=PPTP37 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0070.htm');" id=PPTL37>Quality Improvements</a></font></div>
+  <div id=PPTC37 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Performing drug interaction and allergy checking before prescribing a
+       medication.</li>
+   <br>
+   <br>
+   <li>Prints prescriptions to eliminate errors due to handwriting.</li>
+   <br>
+   <br>
+   <li>Keeps problem and medication lists 100% accurate to reduce mistakes due
+       to oversight of important information.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>38</font></div>
+  </td>
+  <td>
+  <div id=PPTP38 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0071.htm');" id=PPTL38>Quality Improvements</a></font></div>
+  <div id=PPTC38 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Laboratory results flow automatically to letters that are sent to
+       patients.</li>
+   <br>
+   <br>
+   <li>Makes information available outside of the office when on the phone with
+       the patient or when patients are seen in other facilities.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>39</font></div>
+  </td>
+  <td>
+  <div id=PPTP39 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0072.htm');" id=PPTL39>Other Benefits</a></font></div>
+  <div id=PPTC39 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <br>
+   <li>The Electronic Medical Record is the basic tool for global,
+       comprehensive, outcomes based, management of patient care.</li>
+   <br>
+   <br>
+   <li>You can efficiently monitor and manage the care of all patients and also
+       focus on specific disease processes.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+ <tr onmouseover="Over(this)" onmouseout="Out(this)" onclick="Follow(this)"
+  style='cursor:hand'>
+  <td align=right valign=top>
+  <div class=sldNum><font size=2>40</font></div>
+  </td>
+  <td>
+  <div id=PPTP40 class=PTxt><font size=2><a
+  href="javascript:GoToSld('slide0073.htm');" id=PPTL40>Other Benefits</a></font></div>
+  <div id=PPTC40 class=CTxt style='display:none'><font size=2>
+  <ul>
+   <li>Excellent care only of patients that make and keep regular appointments
+       and ignoring the rest will no longer be acceptable.</li>
+   <li>The EMR allows for comprehensive care in that the system can incorporate
+       complicated pathways, incorporating branching logic.</li>
+  </ul>
+  </font></div>
+  </td>
+ </tr>
+</table>
+
+
+
+</div>
+
+<div style='display:none'><a href=master87.htm></a><a href=master87.xml></a><a
+href=preview.wmf></a><a href="master87_image001.jpg"></a><a
+href="master87_image002.png"></a><a href="master87_image003.png"></a><a
+href=master113.htm></a><a href=master113.xml></a><a
+href="master113_image004.jpg"></a><a href="master113_image005.png"></a><a
+href=master114.htm></a><a href=master114.xml></a><a href=master115.htm></a><a
+href=master115.xml></a><a href=master02.htm></a><a href=pres.xml></a><a
+href=editdata.mso></a><a href=sound001.wav></a><a href=slide0001.htm></a><a
+href="master113_background.gif"></a><a href="master113_image006.gif"></a><a
+href="master113_image007.gif"></a><a href="master113_image008.gif"></a><a
+href="slide0001_image009.png"></a><a href="slide0001_image010.gif"></a><a
+href=slide0002.htm></a><a href="master87_background.gif"></a><a
+href="master87_image011.gif"></a><a href="master87_image012.gif"></a><a
+href="master87_image013.gif"></a><a href=slide0009.htm></a><a
+href=slide0074.htm></a><a href=slide0058.htm></a><a href=slide0048.htm></a><a
+href=slide0057.htm></a><a href=slide0045.htm></a><a
+href="slide0045_image014.png"></a><a href="slide0045_image015.gif"></a><a
+href=slide0046.htm></a><a href="slide0046_image016.png"></a><a
+href="slide0046_image017.gif"></a><a href=slide0059.htm></a><a
+href="slide0059_image018.jpg"></a><a href="slide0059_image019.gif"></a><a
+href=slide0075.htm></a><a href=slide0077.htm></a><a href=slide0081.htm></a><a
+href=slide0082.htm></a><a href=slide0076.htm></a><a href=slide0087.htm></a><a
+href=slide0049.htm></a><a href=slide0083.htm></a><a href=slide0084.htm></a><a
+href=slide0085.htm></a><a href=slide0086.htm></a><a href=slide0008.htm></a><a
+href="slide0008_image020.jpg"></a><a href="slide0008_image021.gif"></a><a
+href=slide0050.htm></a><a href=slide0080.htm></a><a href=slide0051.htm></a><a
+href=slide0063.htm></a><a href=slide0061.htm></a><a
+href="slide0061_image022.png"></a><a href="slide0061_image023.gif"></a><a
+href=slide0062.htm></a><a href=slide0065.htm></a><a href=slide0052.htm></a><a
+href=slide0053.htm></a><a href=slide0043.htm></a><a
+href="slide0043_image024.png"></a><a href="slide0043_image025.gif"></a><a
+href=slide0016.htm></a><a href="slide0016_image026.gif"></a><a
+href="slide0016_image027.gif"></a><a href="slide0016_image028.gif"></a><a
+href="slide0016_image029.png"></a><a href="slide0016_image030.gif"></a><a
+href="slide0016_image031.gif"></a><a href="slide0016_image032.gif"></a><a
+href="slide0016_image033.gif"></a><a href="slide0016_image034.gif"></a><a
+href="slide0016_image035.gif"></a><a href="slide0016_image036.gif"></a><a
+href=slide0027.htm></a><a href="slide0027_image037.gif"></a><a
+href="slide0027_image038.gif"></a><a href="slide0027_image039.gif"></a><a
+href="slide0027_image040.png"></a><a href="slide0027_image041.gif"></a><a
+href="slide0027_image042.png"></a><a href="slide0027_image043.gif"></a><a
+href="slide0027_image044.png"></a><a href="slide0027_image045.gif"></a><a
+href="slide0027_image046.gif"></a><a href="slide0027_image047.png"></a><a
+href="slide0027_image048.gif"></a><a href="slide0027_image049.gif"></a><a
+href=slide0028.htm></a><a href=slide0028.xml></a><a
+href="slide0028_image050.gif"></a><a href="slide0028_image051.gif"></a><a
+href="slide0028_image052.gif"></a><a href="slide0028_image053.gif"></a><a
+href="slide0028_image054.gif"></a><a href="slide0028_image055.gif"></a><a
+href="slide0028_image056.gif"></a><a href="slide0028_image057.gif"></a><a
+href="slide0028_image058.gif"></a><a href="slide0028_image059.gif"></a><a
+href=slide0069.htm></a><a href=slide0070.htm></a><a href=slide0071.htm></a><a
+href=slide0072.htm></a><a href=slide0073.htm></a><a href=master01.htm></a><a
+href="master87_stylesheet.css"></a><a href="master113_stylesheet.css"></a><a
+href="master114_stylesheet.css"></a><a href="master115_stylesheet.css"></a><a
+href=script.js></a><a href="../UMR%20Presentation2.htm"></a><a
+href=fullscreen.htm></a><a href="notes_flag.gif"></a><a href=buttons.gif></a><a
+href=frame.htm></a><a href=outline.htm></a></div>
+
+</body>
+
+</html>
