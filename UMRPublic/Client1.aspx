@@ -238,6 +238,11 @@
                                             <%--<span class="style2">Sign in to UMR Portals</span><br />--%>
                                             <fieldset style="border: 1px solid #000000">
                                                 <legend class="style2">Sign In</legend>
+                                                <asp:HyperLink ID="HyperLinkAzure" runat="server" NavigateUrl="http://umrportals.azurewebsites.net/LogIn.aspx"
+                                                    Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial"> Portal (Azure)</asp:HyperLink>
+                                                <br />
+                                                <br />
+                                                
                                                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://universalmedicalrecord.com/UMRPortals/LogIn.aspx"
                                                     Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals </asp:HyperLink>
                                                 <br />
