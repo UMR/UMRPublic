@@ -246,6 +246,7 @@
     <Content Include="Peter Gordon Old.pdf" />
     <Content Include="Reza Raquib.pdf" />
     <Content Include="Sani-Teri Trademark Application.pdf" />
+    <Content Include="Scripts\copyright.js" />
     <Content Include="WebForm2.aspx" />
     <Content Include="WebForm3.aspx" />
     <Content Include="Peter Gordon.pdf" />

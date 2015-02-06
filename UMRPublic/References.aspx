@@ -9,6 +9,8 @@
     <meta name="description" content="UMR Holdings International Corp"/>
     <meta name="keywords" content="jewelry, watches"/>
     <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/copyright.js" type="text/javascript"></script>
     <style type="text/css">
         .style1
         {
@@ -159,7 +161,7 @@
             <a href="Job.aspx">Job Openings</a>  | <a href="References.aspx">References</a>  |  <a href="#">.....</a></td>
       </tr>
       <tr>
-        <td class="bottom_addr">© 2011-2014 UMR Holdings International Corp. All Rights Reserved<br>&nbsp;</td>
+        <td class="copyrightTd bottom_addr"></td>
       </tr>
     </table></td>
   </tr>

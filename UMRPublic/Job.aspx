@@ -8,7 +8,9 @@
     <title>UMR Holdings International Corp</title>
     <meta name="description" content="UMR Holdings International Corp" />
     <meta name="keywords" content="jewelry, watches" />
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/copyright.js" type="text/javascript"></script>
     <style type="text/css">
         .style1
         {
@@ -18,14 +20,12 @@
             color: #48555a;
             font-family: "Rod Transparent";
         }
-
         #page
         {
             margin-left: auto;
             margin-right: auto;
             width: 800px;
         }
-
         .style2
         {
             text-indent: -.25in;
@@ -37,7 +37,6 @@
             margin-top: 0in;
             margin-bottom: .0001pt;
         }
-
         .style3
         {
             text-indent: -.25in;
@@ -50,8 +49,6 @@
             margin-bottom: 10.0pt;
         }
     </style>
-
-
 </head>
 
 <body>
@@ -82,7 +79,7 @@
                                             <div id="slogan">
                                                 A leader in Healthcare Information Technology
                                             </div>
-                                            <img src="images/p1.jpg" alt="" width="666" height="196"></td>
+                                            <img src="images/p1.jpg" alt="" width="666" height="196" /></td>
                                         <td class="hbg">&nbsp;</td>
                                     </tr>
                                 </table>
@@ -101,56 +98,56 @@
                                                                 style="height: 250px">
                                                                 <tr>
                                                                     <td>
-                                                                        <img src="images/spacer.gif" alt="" width="1" height="14"></td>
+                                                                        <img src="images/spacer.gif" alt="" width="1" height="14"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="Default.aspx">Home</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
-                                                                        <img src="images/m-sep0.gif" width="188" height="1"></td>
+                                                                        <img src="images/m-sep0.gif" width="188" height="1"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="AboutUs1.aspx">About Us</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
-                                                                        <img src="images/m-sep.gif" width="188" height="1"></td>
+                                                                        <img src="images/m-sep.gif" width="188" height="1"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="Products.aspx">Products and Services</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
-                                                                        <img src="images/m-sep.gif" width="188" height="1"></td>
+                                                                        <img src="images/m-sep.gif" width="188" height="1"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="Client1.aspx">Client Access</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
-                                                                        <img src="images/m-sep.gif" width="188" height="1"></td>
+                                                                        <img src="images/m-sep.gif" width="188" height="1"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="Contact.aspx">Contact Us</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
-                                                                        <img src="images/m-sep.gif" width="188" height="1"></td>
+                                                                        <img src="images/m-sep.gif" width="188" height="1"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="Job.aspx">Job Openings</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
-                                                                        <img src="images/m-sep.gif" width="188" height="1"></td>
+                                                                        <img src="images/m-sep.gif" width="188" height="1"/></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="References.aspx">References</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
-                                                                        <img src="images/spacer.gif" alt="" width="1" height="12"></td>
+                                                                        <img src="images/spacer.gif" alt="" width="1" height="12"/></td>
                                                                 </tr>
                                                             </table>
                                                         </td>
@@ -389,8 +386,7 @@
             <a href="Job.aspx">Job Openings</a>  | <a href="References.aspx">References</a>  |  <a href="#">.....</a></td>
                                     </tr>
                                     <tr>
-                                        <td class="bottom_addr">© 2011-2014 UMR Holdings International Corp. All Rights Reserved<br>
-                                            &nbsp;</td>
+                                        <td class="copyrightTd bottom_addr"></td>
                                     </tr>
                                 </table>
                             </td>

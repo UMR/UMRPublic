@@ -8,7 +8,9 @@
     <title>UMR Holdings International Corp</title>
     <meta name="description" content="UMR Holdings International Corp" />
     <meta name="keywords" content="jewelry, watches" />
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/copyright.js" type="text/javascript"></script>
     <style type="text/css">
         .style1
         {
@@ -184,7 +186,7 @@
                                                                                     <span class="initialstyle"><span style="font-family: Helv;">Copyright&nbsp;<span
                                                                                         class="Apple-style-span"
                                                                                         style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium;"><span
-                                                                                            style="font-family: Symbol;">ã</span></span>&nbsp;1996-2014 
+                                                                                            style="font-family: Symbol;">ã</span></span>&nbsp;1996-<span class="copyrightSpan"></span>
                                                                                                 Universal Medical Records&nbsp;&nbsp;All 
                                                                                                 rights reserved.&nbsp;&nbsp;Patents 
                                                                                                 Pending.&nbsp;&nbsp;Printed in the 
@@ -293,8 +295,7 @@
                                             <a href="Job.aspx">Job Openings</a>  | <a href="References.aspx">References</a>  |  <a href="#">.....</a></td>
                                     </tr>
                                     <tr>
-                                        <td class="bottom_addr">© 2011-2014 UMR Holdings International Corp. All Rights Reserved<br>
-                                            &nbsp;</td>
+                                        <td class="copyrightTd bottom_addr"></td>
                                     </tr>
                                 </table>
                             </td>
