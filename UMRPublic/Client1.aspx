@@ -254,7 +254,7 @@
                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>TM</sup></asp:HyperLink>
                                                     <br />
                                                     <br />
-                                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals/LogIn.aspx"
+                                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals/LogIn.aspx" target="_top"
                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals<sup>(Beta)</sup></asp:HyperLink>
                                                     <br />
                                                     <br />
