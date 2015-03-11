@@ -189,6 +189,53 @@
                                                                             <p class="MsoNormal"><o:p>&nbsp;</o:p></p>
 
                                                                             <p class="MsoNormal"><u>Immediately Available Job Position</u>:</p>
+                                                                            <div class="WordSection1">
+
+<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
+text-align:justify;mso-pagination:widow-orphan;mso-layout-grid-align:auto;
+text-autospace:ideograph-numeric ideograph-other"><b><span style="font-size:
+10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
+color:black;letter-spacing:-.15pt">Research Microbiologist Laboratory Technologist,
+<span class="SpellE">Cortlandt</span> Manor, NY</span></b><strong><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"> <span style="mso-spacerun:yes">&nbsp;</span></span></strong><span style="font-size:10.0pt;
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-bidi-font-weight:bold">Handle
+mammalian cell lines used for HIV-1 envelope protein expression; use and
+maintain Surface Plasmon Resonance SPR; seed, propagate and maintain mammalian
+tissue culture cells; transfer them to express HIV-1 envelop glycoproteins;
+check protein expression by Dot-Blot analysis; purify protein by affinity and
+size exclusion chromatography; characterize and quantify purified protein
+fractions; run BN-PAGE electrophoresis and BCA method; reveal the binding and
+kinetic profile of monoclonal antibodies;</span><span style="font-size:10.0pt;
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#000033"> </span><span style="font-size:
+10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-bidi-font-weight:bold">analyze
+data by using BIA evaluation;</span><span style="font-size:10.0pt;font-family:
+&quot;Arial&quot;,&quot;sans-serif&quot;;color:#000033"> </span><span style="font-size:10.0pt;
+font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-bidi-font-weight:bold">do
+molecular cloning; supervise junior technologists/students.<strong><span style="mso-ansi-font-size:10.0pt;mso-bidi-font-size:10.0pt"> </span></strong><strong><span style="mso-ansi-font-size:10.0pt;mso-bidi-font-size:10.0pt;font-weight:normal;
+mso-bidi-font-weight:bold">Master</span></strong></span><span style="font-size:
+10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">’s in Biochemistry <span style="letter-spacing:-.15pt">or related field + 6 mos. <span class="SpellE">exp</span>
+in job offered.</span><span style="color:#222222"> </span><span style="color:black;mso-bidi-font-weight:bold"><o:p></o:p></span></span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-weight:bold">Experience in seeding, propagating and conducting
+experiments in mammalian cell lines.<span style="mso-spacerun:yes">&nbsp;
+</span>Perform transfection of plasmid DNA and expression of HIV-1 envelope
+proteins in cell lines. Analyze and purify expressed proteins by using standard
+biochemical and molecular biology techniques (PAGE/ BN-PAGE, Dot-Blot/ Western
+blotting, protein quantitation, affinity chromatography). Hands on experience
+with SEC purification to characterize the protein fractions. Experienced in
+cloning, in-vitro mutagenesis and sequencing. Be able to independently carry
+out experiments on Surface Plasmon Resonance (SPR) and execute the results.
+Analyze the interaction between small drug molecules (including antibodies)
+with HIV envelope proteins. Perform the kinetic modeling on SPR generated data
+by using BIA evaluation. Supervise junior technologists/students<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
+mso-bidi-font-weight:bold">Email resume to scohnmd@universalmedicalrecord.com</span><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+                                                                            <hr />
 
                                                                             <p class="MsoNormal">Marketing Director</p>
 
