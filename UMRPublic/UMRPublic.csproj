@@ -42,12 +42,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -74,9 +81,6 @@
     </Reference>
     <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
       <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
@@ -121,6 +125,10 @@
     <Content Include="About.aspx" />
     <Content Include="AboutUs1.aspx" />
     <Content Include="applied_theory.aspx" />
+    <Content Include="App_Data\UMRJobs.mdf" />
+    <Content Include="App_Data\UMRJobs_log.ldf">
+      <DependentUpon>UMRJobs.mdf</DependentUpon>
+    </Content>
     <Content Include="ceo.aspx" />
     <Content Include="ceo1.aspx" />
     <Content Include="cfo.aspx" />
@@ -251,6 +259,24 @@
     <Content Include="WebForm3.aspx" />
     <Content Include="Peter Gordon.pdf" />
     <Content Include="Frank J. Maddalena.pdf" />
+    <Content Include="packages.config" />
+    <EntityDeploy Include="EntityFramework\UMRJobsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>UMRJobsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="EntityFramework\UMRJobsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UMRJobsModel.edmx</DependentUpon>
+      <LastGenOutput>UMRJobsModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EntityFramework\UMRJobsModel.edmx.diagram">
+      <DependentUpon>UMRJobsModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="EntityFramework\UMRJobsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UMRJobsModel.edmx</DependentUpon>
+      <LastGenOutput>UMRJobsModel.cs</LastGenOutput>
+    </Content>
     <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Products.aspx" />
@@ -664,6 +690,30 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EntityFramework\JobContent.cs">
+      <DependentUpon>UMRJobsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\UMRJobsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UMRJobsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\UMRJobsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UMRJobsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\UMRJobsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UMRJobsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\UserCredential.cs">
+      <DependentUpon>UMRJobsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EntityFramework\UserJob.cs">
+      <DependentUpon>UMRJobsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -740,8 +790,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Slides\UMR Presentation_files\_derived\" />
+    <Folder Include="video\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -753,6 +803,9 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

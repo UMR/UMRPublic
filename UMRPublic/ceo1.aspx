@@ -1,41 +1,43 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ceo1.aspx.cs" Inherits="UMRPublic.ceo1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ceo.aspx.cs" Inherits="UMRPublic.ceo" %>
 
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-    <title>UMR Holdings International Corp</title>
-    <meta name="description" content="UMR Holdings International Corp" />
-    <meta name="keywords" content="jewelry, watches" />
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <style type="text/css">
-        .style1
-        {
-            font-size: 18px;
-            font-weight: normal;
-            text-transform: uppercase;
-            color: #48555a;
-            font-family: "Rod Transparent";
-        }
-
-        #page
-        {
-            margin-left: auto;
-            margin-right: auto;
-            width: 800px;
-        }
-
-        .style2
-        {
-            text-align: center;
-        }
-    </style>
+<title>UMR Holdings International Corp</title>
+<meta name="description" content="UMR Holdings International Corp"/>
+<meta name="keywords" content="jewelry, watches"/>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            .style1
+            {
+                font-size: 18px;
+                font-weight: normal;
+                text-transform: uppercase;
+                color: #48555a;
+                font-family: "Rod Transparent";
+            }
+            #page {
+  margin-left:auto;
+  margin-right:auto;
+  width:800px;
+}
+            .style2
+            {
+                text-align: center;
+            }
+            </style>
+        
+        
 </head>
+
 <body>
+
+<div id="page">
     <form id="form1" runat="server">
-        <div id="page">
-            <table border="0" cellpadding="0" cellspacing="0" width="50%" height="100%" 
+    
+    <table border="0" cellpadding="0" cellspacing="0" width="50%" height="100%" 
         align="center">
   <tr>
 <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0">
@@ -74,7 +76,7 @@
         <td><img src="images/spacer.gif" alt="" width="1" height="14"></td>
       </tr>
       <tr>
-        <td class="menu"><a href="Default.aspx">Home</a></td>
+        <td class="menu"><a href="index.aspx">Home</a></td>
       </tr>
       <tr>
         <td height="1"><img src="images/m-sep0.gif" width="188" height="1"></td>
@@ -447,7 +449,8 @@ Society of Testing and Materials - January 1990<o:p>
 </table>
 </tr>
 </table>
-        </div>
+
     </form>
+</div>
 </body>
 </html>

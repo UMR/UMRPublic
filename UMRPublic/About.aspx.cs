@@ -11,14 +11,13 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.Net;
-
 namespace UMRPublic
 {
     public partial class About : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string path = @"Medical\PDFS\about.pdf";
+            string path = @"UMRPublic\PDFS\about.pdf";
             WebClient client = new WebClient();
             Byte[] buffer = client.DownloadData(path);
 
@@ -28,12 +27,11 @@ namespace UMRPublic
                 Response.AddHeader("content-length", buffer.Length.ToString());
                 Response.BinaryWrite(buffer);
             }
-            else
-            {
-                // if file does not exist
-                Response.Write("This file does not exist.");
+                else
+                {
+                    // if file does not exist
+                    Response.Write("This file does not exist.");
+                }
             }
         }
-
     }
-}

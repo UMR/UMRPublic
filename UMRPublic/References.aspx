@@ -8,9 +8,9 @@
     <title>UMR Holdings International Corp</title>
     <meta name="description" content="UMR Holdings International Corp"/>
     <meta name="keywords" content="jewelry, watches"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/copyright.js" type="text/javascript"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css"/>
     <style type="text/css">
         .style1
         {
@@ -74,7 +74,7 @@
                 <td><img src="images/spacer.gif" alt="" width="1" height="14"></td>
               </tr>
               <tr>
-                <td class="menu"><a href="Default.aspx">Home</a></td>
+                <td class="menu"><a href="index.aspx">Home</a></td>
               </tr>
               <tr>
                 <td height="1"><img src="images/m-sep0.gif" width="188" height="1"></td>

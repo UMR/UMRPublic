@@ -72,7 +72,7 @@
         <td><img src="images/spacer.gif" alt="" width="1" height="14"></td>
       </tr>
       <tr>
-        <td class="menu"><a href="Default.aspx">Home</a></td>
+        <td class="menu"><a href="index.aspx">Home</a></td>
       </tr>
       <tr>
         <td height="1"><img src="images/m-sep0.gif" width="188" height="1"></td>
@@ -152,10 +152,10 @@
 <TD width="50%"><A href="applied_theory.aspx">Applied Theory</A> </TD>
 <TD width="50%"></TD></TR>
 <TR>
-<TD width="50%"><A href="Longitudinal Medical Records Service Mark 1993.JPG">Longitudinal Medical Records Service Mark 1993</A> </TD>
+<TD width="50%"><A href="Longitudinal Medical Records Service Mark 1993.JPG">Longitudinal UMRPublic Records Service Mark 1993</A> </TD>
 <TD width="50%"></TD></TR>
 <TR>
-<TD width="50%"><A href="Disclosure  Medical Records Systems 1993.JPG">U.S. Disclosure Medical Records Systems 1993</A> </TD>
+<TD width="50%"><A href="Disclosure  Medical Records Systems 1993.JPG">U.S. Disclosure UMRPublic Records Systems 1993</A> </TD>
 <TD width="50%"></TD></TR>
 <TR>
 <TD width="50%"><A href="U.S Patent Application 2009.pdf">U.S Patent Application 2009</A> </TD>

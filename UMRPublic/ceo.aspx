@@ -76,7 +76,7 @@
         <td><img src="images/spacer.gif" alt="" width="1" height="14"></td>
       </tr>
       <tr>
-        <td class="menu"><a href="Default.aspx">Home</a></td>
+        <td class="menu"><a href="index.aspx">Home</a></td>
       </tr>
       <tr>
         <td height="1"><img src="images/m-sep0.gif" width="188" height="1"></td>
@@ -213,7 +213,7 @@ mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Tim
 mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;" class="InitialStyle">
 <font size="2" face="Arial">May of 1984, Dr. Cohn received his M.D. from S.U.N.Y. Downstate Medical Center in Brooklyn,
  New York. During Dr. Cohn's fourth year at medical school, he elected to do research in the field of Glaucoma,
- at Mount Sinai Medical Center with Steven Podos, M.D. - Chairman and Professor of Ophthalmology at Mount Sinai Medical Center.
+ at Mount Sinai Medical Center with Steven Podos, M.D. - Chairman and Professor of Ophthalmology at Mount Sinai UMRPublic Center.
  This research involved inducing glaucoma in cyanolmologus monkeys 
 and studying the retinal blood flow alterations utilizing fluorescein angiography.  <o:p>
 </o:p>

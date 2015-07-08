@@ -7,9 +7,9 @@
     <title>UMR Holdings International Corp</title>
     <meta name="description" content="UMR Holdings International Corp" />
     <meta name="keywords" content="jewelry, watches" />
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+	    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/copyright.js" type="text/javascript"></script>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <style type="text/css">
         .style1
         {
@@ -79,7 +79,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <td class="menu">
-                                                                    <a href="Default.aspx">Home</a>
+                                                                    <a href="index.aspx">Home</a>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -260,8 +260,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td class="copyrightTd bottom_addr">
-                                    </td>
+                                     <td class="copyrightTd bottom_addr"></td>
                                 </tr>
                             </table>
                         </td>

@@ -72,7 +72,7 @@
         <td><img src="images/spacer.gif" alt="" width="1" height="14"></td>
       </tr>
       <tr>
-        <td class="menu"><a href="Default.aspx">Home</a></td>
+        <td class="menu"><a href="index.aspx">Home</a></td>
       </tr>
       <tr>
         <td height="1"><img src="images/m-sep0.gif" width="188" height="1"></td>
