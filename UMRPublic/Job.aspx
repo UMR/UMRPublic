@@ -10,23 +10,23 @@
 <meta name="keywords" content="jewelry, watches"/>
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/copyright.js" type="text/javascript"></script>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css"/>
         <style type="text/css">
-            .style1
-            {
+            .style1 {
                 font-size: 18px;
                 font-weight: normal;
                 text-transform: uppercase;
                 color: #48555a;
                 font-family: "Rod Transparent";
             }
+
             #page {
-  margin-left:auto;
-  margin-right:auto;
-  width:800px;
-}
-            .style2
-            {
+                margin-left: auto;
+                margin-right: auto;
+                width: 800px;
+            }
+
+            .style2 {
                 text-indent: -.25in;
                 line-height: 115%;
                 font-size: 11.0pt;
@@ -36,8 +36,8 @@
                 margin-top: 0in;
                 margin-bottom: .0001pt;
             }
-            .style3
-            {
+
+            .style3 {
                 text-indent: -.25in;
                 line-height: 115%;
                 font-size: 11.0pt;
@@ -147,252 +147,26 @@
         </div>
         &nbsp;&nbsp;&nbsp;
                             </td>
-        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td><h1>Job Openings</h1>
-      <p>&nbsp;</p></td>
-          </tr>
-          <tr>
-            <td class="c-sep-bg"><img src="images/w17.gif" alt="" width="17" height="1"></td>
-          </tr>
-          <tr>
-            <td class="body_txt">
-		<p>
-			<span class="Apple-style-span"
-				style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium;">
-				<table border="0" cellpadding="0" cellspacing="0" style="font-size: small"
-					width="100%">
-					<tr>
-						<td valign="top">
-							<div class="WordSection1">
+          
+        <td valign="top" style="margin:5px">
+            <h1><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Login.aspx">Add Job Openings</asp:HyperLink></h1>
 
-							<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-
-							<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-
-							<p class="MsoNormal"><u>Immediately Available Job Position</u>:</p>
-                            <div class="WordSection1">
-							<p class="MsoNormal" style="mso-margin-top-alt:auto;mso-margin-bottom-alt:auto;
-							text-align:justify;mso-pagination:widow-orphan;mso-layout-grid-align:auto;
-							text-autospace:ideograph-numeric ideograph-other"><b><span style="font-size:
-							10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;mso-fareast-font-family:&quot;Times New Roman&quot;;
-							color:black;letter-spacing:-.15pt">Research Microbiologist Laboratory Technologist,
-							<span class="SpellE">Cortlandt</span> Manor, NY</span></b><strong><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black"> <span style="mso-spacerun:yes">&nbsp;</span></span></strong><span style="font-size:10.0pt;
-							font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-bidi-font-weight:bold">Handle
-							mammalian cell lines used for HIV-1 envelope protein expression; use and
-							maintain Surface Plasmon Resonance SPR; seed, propagate and maintain mammalian
-							tissue culture cells; transfer them to express HIV-1 envelop glycoproteins;
-							check protein expression by Dot-Blot analysis; purify protein by affinity and
-							size exclusion chromatography; characterize and quantify purified protein
-							fractions; run BN-PAGE electrophoresis and BCA method; reveal the binding and
-							kinetic profile of monoclonal antibodies;</span><span style="font-size:10.0pt;
-							font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:#000033"> </span><span style="font-size:
-							10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-bidi-font-weight:bold">analyze
-							data by using BIA evaluation;</span><span style="font-size:10.0pt;font-family:
-							&quot;Arial&quot;,&quot;sans-serif&quot;;color:#000033"> </span><span style="font-size:10.0pt;
-							font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;color:black;mso-bidi-font-weight:bold">do
-							molecular cloning; supervise junior technologists/students.<strong><span style="mso-ansi-font-size:10.0pt;mso-bidi-font-size:10.0pt"> </span></strong><strong><span style="mso-ansi-font-size:10.0pt;mso-bidi-font-size:10.0pt;font-weight:normal;
-							mso-bidi-font-weight:bold">Master</span></strong></span><span style="font-size:
-							10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;">'s in Biochemistry <span style="letter-spacing:-.15pt">or related field + 6 mos. <span class="SpellE">exp</span>
-							in job offered.</span><span style="color:#222222"> </span><span style="color:black;mso-bidi-font-weight:bold"><o:p></o:p></span></span></p>
-
-							<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
-							mso-bidi-font-weight:bold">Experience in seeding, propagating and conducting
-							experiments in mammalian cell lines.<span style="mso-spacerun:yes">&nbsp;
-							</span>Perform transfection of plasmid DNA and expression of HIV-1 envelope
-							proteins in cell lines. Analyze and purify expressed proteins by using standard
-							biochemical and molecular biology techniques (PAGE/ BN-PAGE, Dot-Blot/ Western
-							blotting, protein quantitation, affinity chromatography). Hands on experience
-							with SEC purification to characterize the protein fractions. Experienced in
-							cloning, in-vitro mutagenesis and sequencing. Be able to independently carry
-							out experiments on Surface Plasmon Resonance (SPR) and execute the results.
-							Analyze the interaction between small drug molecules (including antibodies)
-							with HIV envelope proteins. Perform the kinetic modeling on SPR generated data
-							by using BIA evaluation. Supervise junior technologists/students<o:p></o:p></span></p>
-
-							<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;;
-							mso-bidi-font-weight:bold">Email resume to scohnmd@universalmedicalrecord.com</span><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p></o:p></span></p>
-
-							<p class="MsoNormal"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,&quot;sans-serif&quot;"><o:p>&nbsp;</o:p></span></p>
-
-							</div>
-                            <hr />
-
-							<p class="MsoNormal">Marketing Director</p>
-
-							<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-
-							<p class="MsoNormal"><u>Job Duties</u>:</p>
-
-							<p class="MsoNormal"><span style='mso-bidi-font-family:"Times New Roman"'>Direct
-							and develop unique business propositions and business partnerships to increase
-							company's network. Manage, coordinate and execute all marketing strategies and
-							implement tactical plans that meet and exceed company expectations. Conduct and
-							analyze market research to determine competitiveness.<b style='mso-bidi-font-weight:
-							normal'> </b>Conduct staff meetings to provide management and staff information
-							concerning business strategies and company services. Present marketing reports
-							to fellow management and directors.<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
-
-							<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-
-							<p class="MsoNormal"><u>Minimum Requirements</u>:</p>
-
-							<p class="MsoNormal" style='mso-hyphenate:none;mso-layout-grid-align:none;
-							text-autospace:none'><span style='mso-bidi-font-family:"Times New Roman"'>Master's
-							Degree in Marketing or any related field; or Bachelors Degree in Marketing or
-							any related field plus 5 years of related experience; Foreign degree and/or
-							work experience is acceptable.<b><o:p></o:p></b></span></p>
-
-							<p class="MsoNormal" style='mso-hyphenate:none;mso-layout-grid-align:none;
-							text-autospace:none'><b><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></b></p>
-
-							<p class="MsoNormal"><u>Days/Hours</u>:</p>
-
-							<p class="MsoNormal">Full-time; M-F; 40 hours per week</p>
-
-							<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
-
-							<p class="MsoNormal"><u>Employer Contact Information and Job Location:<o:p></o:p></u></p>
-
-							<p class="MsoNormal">Universal Medical Records</p>
-
-							<p class="MsoNormal">22 The Cross Road</p>
-
-							<p class="MsoNormal">Cortlandt Manor, New York 10567</p>
-
-							<p class="MsoNormal">Tel No.: 914-737-7499</p>
-
-							<p class="MsoNormal"><span style='mso-bidi-font-family:"Times New Roman"'><o:p>&nbsp;</o:p></span></p>
-
-							</div>
-
-						</td>
-					</tr>
-				</table>
-			</span>
-			<hr/>
-			<span class="Apple-style-span" 
-                    style="border-collapse: separate; color: rgb(0, 0, 0); font-family: 'Times New Roman'; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px; font-size: medium; ">
-                <table border="0" cellpadding="0" cellspacing="0" style="font-size: small" 
-                    width="100%">
-                    <tr>
-                        <td valign="top">
-                            <p class="MsoNormal">
-                                Health Services Manager, Cortland Manor, NY 
-                            </p>
-                            <p class="MsoNormal">
-                                Responsibilities:</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Manage healthcare facility</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Oversee business operations</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Improve efficiency and quality in delivering healthcare services</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Maintain abreast of new healthcare laws and regulations</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Create work schedules</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Maintain and organize records of the facility’s services</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Manage communications with members of medical staff and department heads</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Direct, supervise, evaluate work activities of medical, nursing and other personnel</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Review and analyze facility activities and data to aid planning and risk management</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Plan, implement and administer healthcare programs and services</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Review and approve budgets</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Control billing and collection</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Direct personnel administration and training</p>
-                            <p class="style2" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Develop and maintain computerized record management system</p>
-								
-							 <p class="style3" style="mso-list: l0 level1 lfo1">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Direct personnel activities</p>
-                            <p class="MsoNormal">
-                                <span style="mso-spacerun:yes">&nbsp; </span>
-                            </p>
-                            <p class="MsoNormal">
-                                Requirements</p>
-                            <p class="style2" style="mso-list: l1 level1 lfo2">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>Masters in Public Health or related field</p>
-                            <p class="style3" style="mso-list: l1 level1 lfo2">
-                                <![if !supportLists]>
-                                <span style="font-family:Symbol;mso-fareast-font-family:Symbol;mso-bidi-font-family:
-Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </span></span></span><![endif]>3 months experience in job related field<br 
-                                    style="mso-special-character:line-break" />
-                                <![if !supportLineBreakNewLine]>
-                                <br style="mso-special-character:line-break" />
-                                <![endif]>
-                            </p>
-                            <p class="MsoNormal">
-                                <b style="mso-bidi-font-weight:normal">E-mail resumes to -
-                                <span style="mso-spacerun:yes">&nbsp;</span><a 
-                                    href="mailto:info@universalmedicalrecord.com">info@universalmedicalrecord.com</a><o:p></o:p></b></p>
-                            <p class="MsoNormal">
-                                <b style="mso-bidi-font-weight:normal"><o:p>&nbsp;</o:p></b></p>
-                            <p style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; ">
-                                &nbsp;</p>
-                        </td>
-                    </tr>
-                </table>
-                </span></p>
-                                    </td>
-          </tr>
-        </table></td>
+            <h1>Job Openings</h1>           
+           
+               
+            <asp:ListView ID="lstJobs" runat="server" OnLoad="lstJobs_Load">
+                <EmptyDataTemplate>
+                    <hr />
+                    <label style="text-align:center; vertical-align:central; margin:10px ">No Jobs Available Now</label>
+                </EmptyDataTemplate>
+                <ItemTemplate>
+                    <hr />
+                    <div style="margin:10px" >
+                        <%# Eval("JobDescription") %>
+                    </div>                   
+                </ItemTemplate>
+            </asp:ListView>
+        </td>
       </tr>
     </table></td>
   </tr>

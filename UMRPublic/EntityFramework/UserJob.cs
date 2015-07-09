@@ -17,6 +17,7 @@ namespace UMRPublic.EntityFramework
         public int UserJobId { get; set; }
         public int UserCredentialId { get; set; }
         public int JobContenId { get; set; }
+        public bool IsActive { get; set; }
     
         public virtual JobContent JobContent { get; set; }
         public virtual UserCredential UserCredential { get; set; }

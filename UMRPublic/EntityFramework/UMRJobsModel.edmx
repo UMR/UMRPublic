@@ -39,6 +39,7 @@
           <Property Name="UserJobId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserCredentialId" Type="int" Nullable="false" />
           <Property Name="JobContenId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
         </EntityType>
         <Association Name="FK_UserJobs_JobContents_JobContenId">
           <End Role="JobContents" Type="Self.JobContents" Multiplicity="1" />
@@ -107,7 +108,7 @@
           </Key>
           <Property Name="UserCredentialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserPassword" Type="String" Nullable="false" />
+          <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="UserJobs" Relationship="UMRJobsModel.FK_UserJobs_UserCredentials_UserCredentialId" FromRole="UserCredential" ToRole="UserJob" />
         </EntityType>
         <EntityContainer Name="UMRJobsEntities" annotation:LazyLoadingEnabled="true">
@@ -132,6 +133,7 @@
           <Property Name="JobContenId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="JobContent" Relationship="UMRJobsModel.FK_UserJobs_JobContents_JobContenId" FromRole="UserJob" ToRole="JobContent" />
           <NavigationProperty Name="UserCredential" Relationship="UMRJobsModel.FK_UserJobs_UserCredentials_UserCredentialId" FromRole="UserJob" ToRole="UserCredential" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
         </EntityType>
         <Association Name="FK_UserJobs_JobContents_JobContenId">
           <End Type="UMRJobsModel.JobContent" Role="JobContent" Multiplicity="1" />
@@ -195,6 +197,7 @@
           <EntitySetMapping Name="UserJobs">
             <EntityTypeMapping TypeName="UMRJobsModel.UserJob">
               <MappingFragment StoreEntitySet="UserJobs">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="JobContenId" ColumnName="JobContenId" />
                 <ScalarProperty Name="UserCredentialId" ColumnName="UserCredentialId" />
                 <ScalarProperty Name="UserJobId" ColumnName="UserJobId" />
