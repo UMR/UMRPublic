@@ -30,6 +30,7 @@ namespace UMRPublic
             if (verify.Count() > 0)
             {
                 Session.Add("JobLogin", verify.Select(a => a.UserName).SingleOrDefault());
+                Session.Add("LoggedInUserId", verify.Select(a => a.UserCredentialId).SingleOrDefault());
                 Response.Redirect("~/AdminPanel/AdminPanelDefault.aspx", false);
             }
             else

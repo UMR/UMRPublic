@@ -16,12 +16,37 @@ namespace UMRPublic.AdminPanel
             {
                 Response.Redirect("~/Job.aspx", false);
             }
-            addJobLabel.Text = "Job Posting On : <span style='color:darkcyan'>" + DateTime.Now.Date.ToString("MM-dd-yyyy") + "</span>";
+            addJobLabel.Text = "Job Post On : <span style='color:darkcyan'>" + DateTime.Now + "</span>";
         }
         protected void addRadButton_Click(object sender, EventArgs e)
         {
-             UMRJobsEntities JobsEntities = new UMRJobsEntities();
-             JobContent jobContent = new JobContent();
+            if (!string.IsNullOrEmpty(addJobRadEditor.Content))
+            {
+                JobContent jobContent = new JobContent();
+
+                jobContent.JobTitle = addJobLabel.Text;
+                jobContent.JobDescription = addJobRadEditor.Content;
+
+                using (UMRJobsEntities JobsEntities = new UMRJobsEntities())
+                {
+                    JobsEntities.JobContents.Add(jobContent);
+                    JobsEntities.SaveChanges();
+
+                    UserJob userJob = new UserJob();
+                    userJob.UserCredentialId = int.Parse(Session["LoggedInUserId"].ToString());
+                    userJob.JobContenId = jobContent.JobContentId;
+                    userJob.IsActive = true;
+                    JobsEntities.UserJobs.Add(userJob);
+                    JobsEntities.SaveChanges();
+                    addJobRadEditor.Content = string.Empty;
+                    Response.Write("<script>alert('A New Job Successfully Posted.');</script>");
+                }
+
+            }
+            else
+            {
+                Response.Write("<script>alert('Job Content is Empty. Please Input Some Text.');</script>");
+            }
         }
     }
 }

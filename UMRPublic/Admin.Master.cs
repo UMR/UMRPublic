@@ -26,6 +26,7 @@ namespace UMRPublic
         protected void logoutButton_Click(object sender, EventArgs e)
         {
             Session.Remove("JobLogin");
+            Session.Remove("LoggedInUserId");
             Response.Redirect("~/Job.aspx", false);
         }
     }
