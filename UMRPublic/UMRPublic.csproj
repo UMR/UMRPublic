@@ -322,6 +322,8 @@
     </Content>
     <Content Include="Admin.Master" />
     <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
+    <None Include="Properties\PublishProfiles\UMRPublic - Azure Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\UMRPublic - FTP.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Products.aspx" />
     <Content Include="References.aspx" />
@@ -705,12 +707,21 @@
     <Compile Include="AdminPanel\ChangePassword.aspx.designer.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AdminPanel\JobsList_Delete.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\JobsList_Edit.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="AdminPanel\JobsList.aspx.cs">
       <DependentUpon>JobsList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminPanel\JobsList.aspx.designer.cs">
       <DependentUpon>JobsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\JobsList_Insert.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="applied_theory.aspx.cs">
       <DependentUpon>applied_theory.aspx</DependentUpon>

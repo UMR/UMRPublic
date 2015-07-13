@@ -9,6 +9,13 @@ namespace UMRPublic
 {
     public partial class Admin : System.Web.UI.MasterPage
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            if (Session["JobLogin"] == null)
+            {
+                Response.Redirect("~/Job.aspx", false);
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

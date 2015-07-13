@@ -12,11 +12,11 @@ namespace UMRPublic
 {
     public partial class Login : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Init(object sender, EventArgs e)
         {
             if (Session["JobLogin"] != null)
             {
-                Response.Redirect("~/AdminPanel/AdminPanelDefault.aspx", false);
+                Response.Redirect("~/AdminPanel/JobsList.aspx", false);
             }
         }              
         protected void LogInButton_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace UMRPublic
             {
                 Session.Add("JobLogin", verify.Select(a => a.UserName).SingleOrDefault());
                 Session.Add("LoggedInUserId", verify.Select(a => a.UserCredentialId).SingleOrDefault());
-                Response.Redirect("~/AdminPanel/AdminPanelDefault.aspx", false);
+                Response.Redirect("~/AdminPanel/JobsList.aspx", false);
             }
             else
             {

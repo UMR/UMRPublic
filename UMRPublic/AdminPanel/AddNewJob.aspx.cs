@@ -10,13 +10,19 @@ namespace UMRPublic.AdminPanel
 {
     public partial class AddNewJob : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Init(object sender, EventArgs e)
         {
             if (Session["JobLogin"] == null)
             {
                 Response.Redirect("~/Job.aspx", false);
             }
-            addJobLabel.Text = "Job Post On : <span style='color:darkcyan'>" + DateTime.Now + "</span>";
+        }
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["JobLogin"] != null)
+            {
+                addJobLabel.Text = "Job Post On : <span style='color:darkcyan'>" + DateTime.Now + "</span>";
+            }
         }
         protected void addRadButton_Click(object sender, EventArgs e)
         {

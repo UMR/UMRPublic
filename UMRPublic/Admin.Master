@@ -24,12 +24,12 @@
             </div>
             <div id="rightContentHolder">
                 <div id="homeImage">
-                    <a href="/AdminPanel/AdminPanelDefault.aspx">
+                    <a href="/AdminPanel/AdminPanelDefault.aspx" title="Home">
                         <img width="40px" height="35px" src="/AdminPanel/images/home.png" alt="Home" />
                     </a>
                 </div>
                 <div id="LogOut" class="LogOut">
-                    <asp:LinkButton runat="server" id="logoutButton" onclick="logoutButton_Click">
+                    <asp:LinkButton runat="server" id="logoutButton" onclick="logoutButton_Click" ToolTip="Log Out">
                         <img width="40px" height="35px" src="/AdminPanel/images/LogoutIcon.png" alt="Log Out" />
                     </asp:LinkButton>
                 </div>
