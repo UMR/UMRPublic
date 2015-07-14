@@ -33,7 +33,7 @@ namespace UMRPublic.AdminPanel
                     {
                         JobsEntities.Entry(jobContent).State = EntityState.Modified;
                         JobsEntities.SaveChanges();
-                        Response.Write("<script>alert('A New Job Successfully Posted.');</script>");
+                        Response.Write("<script>alert('Change Saved Successfully.');</script>");
                     }
                 }
                 else
