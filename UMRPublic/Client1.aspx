@@ -75,12 +75,11 @@
     <title>UMR Holdings International Corp</title>
     <meta name="description" content="UMR Holdings International Corp" />
     <meta name="keywords" content="jewelry, watches" />
-	<script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/copyright.js" type="text/javascript"></script>
     <link href="css/style.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
-        .style1
-        {
+        .style1 {
             font-size: 18px;
             font-weight: normal;
             text-transform: uppercase;
@@ -88,28 +87,25 @@
             font-family: "Rod Transparent";
         }
 
-        #page
-        {
+        #page {
             margin-left: auto;
             margin-right: auto;
             width: 800px;
         }
 
-        .style2
-        {
+        .style2 {
             font-size: small;
             font-weight: bold;
         }
 
-        .style3
-        {
+        .style3 {
             font-size: small;
         }
     </style>
 </head>
 <body>
-    <div id="page">
-        <form id="form1" runat="server">
+    <form id="form1" runat="server">
+                <div id="page">
             <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" align="center">
                 <tr>
                     <td>
@@ -246,15 +242,15 @@
                                                     <br />
                                                     <br />
 
-                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://universalmedicalrecord.com/UMRPortals/LogIn.aspx"
+                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://portals.universalmedicalrecord.com"
                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals </asp:HyperLink>
                                                     <br />
                                                     <br />
-                                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://universalmedicalrecord.com/Medcodepedia/Login.aspx"
+                                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://medcodes.universalmedicalrecord.com"
                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>TM</sup></asp:HyperLink>
                                                     <br />
                                                     <br />
-                                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals/LogIn.aspx" target="_top"
+                                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals/LogIn.aspx" Target="_top"
                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals<sup>(Beta)</sup></asp:HyperLink>
                                                     <br />
                                                     <br />
@@ -476,7 +472,7 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                             <td class="copyrightTd bottom_addr"></td>
+                                            <td class="copyrightTd bottom_addr"></td>
                                         </tr>
                                     </table>
                                 </td>
@@ -485,7 +481,8 @@
                     </td>
                 </tr>
             </table>
-        </form>
-    </div>
+        </div>
+    </form>
+
 </body>
 </html>
