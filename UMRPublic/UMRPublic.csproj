@@ -165,13 +165,6 @@
     <Content Include="AdminPanel\images\LogoutIcon.png" />
     <Content Include="AdminPanel\JobsList.aspx" />
     <Content Include="applied_theory.aspx" />
-    <EmbeddedResource Include="App_Data\UMRJobs.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <Content Include="App_Data\UMRJobs_log.ldf">
-      <DependentUpon>UMRJobs.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="ceo.aspx" />
     <Content Include="ceo1.aspx" />
     <Content Include="cfo.aspx" />
@@ -880,6 +873,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="Slides\UMR Presentation_files\_derived\" />
     <Folder Include="video\" />
   </ItemGroup>
@@ -923,7 +917,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -105,7 +105,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-                <div id="page">
+        <div id="page">
             <table border="0" cellpadding="0" cellspacing="0" width="100%" height="100%" align="center">
                 <tr>
                     <td>
@@ -235,7 +235,7 @@
                                                     </table>
                                                 </div>
                                                 <%--<span class="style2">Sign in to UMR Portals</span><br />--%>
-                                                <fieldset style="border: 1px solid #000000">
+                                                <%--<fieldset style="border: 1px solid #000000">
                                                     <legend class="style2">Sign In</legend>
                                                     <asp:HyperLink ID="HyperLinkAzure" runat="server" NavigateUrl="http://umrportals.azurewebsites.net/LogIn.aspx"
                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial"> Portal (Azure)</asp:HyperLink>
@@ -293,7 +293,7 @@
                                                 </table>
                                                 <br />
                                                 <br />
-                                                <br />
+                                                <br />--%>
                                                 <%--<br />
                                                 <div style="width:60px;margin:5px auto 0px auto;" >
                                                     <asp:Button ID="Button2" runat="server" Text="Sign In" Font-Bold="True" PostBackUrl="http://universalmedicalrecord.com/UMRPortals/LogIn.aspx"
@@ -303,154 +303,194 @@
                                             <td valign="top">
                                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                     <tr>
+                                                        <td style="background-color: #F3F8FE;">
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                <tr>
+                                                                    <td>
+                                                                        <h1>SIGN IN</h1>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="c-sep-bg">
+                                                                        <img src="images/w17.gif" alt="" width="17" height="1" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="body_txt">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://portals.universalmedicalrecord.com"
+                                                                                        Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals </asp:HyperLink>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://medcodes.universalmedicalrecord.com"
+                                                                                        Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>TM</sup></asp:HyperLink>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
                                                         <td>
-                                                            <h1>SIGN UP!</h1>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="c-sep-bg">
-                                                            <img src="images/w17.gif" alt="" width="17" height="1" />
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="body_txt">
-                                                            <table>
+                                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
                                                                     <td>
+                                                                        <h1>SIGN UP!</h1>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="c-sep-bg">
+                                                                        <img src="images/w17.gif" alt="" width="17" height="1" />
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="body_txt">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td>
 
-                                                                        <asp:Label ID="Label1" runat="server" Text="Email Address"></asp:Label>
-                                                                    </td>
-                                                                    <td>
+                                                                                    <asp:Label ID="Label1" runat="server" Text="Email Address"></asp:Label>
+                                                                                </td>
+                                                                                <td>
 
-                                                                        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
+                                                                                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
 
-                                                                        <asp:Label ID="Label2" runat="server" Text="Verify Email Address"></asp:Label>
-                                                                    </td>
-                                                                    <td>
+                                                                                    <asp:Label ID="Label2" runat="server" Text="Verify Email Address"></asp:Label>
+                                                                                </td>
+                                                                                <td>
 
-                                                                        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
+                                                                                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
 
-                                                                        <asp:Label ID="Label3" runat="server" Text="First Name"></asp:Label>
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td>
+                                                                                    <asp:Label ID="Label3" runat="server" Text="First Name"></asp:Label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td>
 
-                                                                        <asp:Label ID="Label4" runat="server" Text="Last Name"></asp:Label>
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Position
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Company Name
-                                                                    </td>
-                                                                    <td>
+                                                                                    <asp:Label ID="Label4" runat="server" Text="Last Name"></asp:Label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Position
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Company Name
+                                                                                </td>
+                                                                                <td>
 
-                                                                        <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Company Address
-                                                                    </td>
-                                                                    <td>
+                                                                                    <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Company Address
+                                                                                </td>
+                                                                                <td>
 
-                                                                        <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Business Phone
+                                                                                    <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Business Phone
 
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Mobile #
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Fax#
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>City/Town
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>State
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>Zip Code
-                                                                    </td>
-                                                                    <td>
-                                                                        <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td></td>
-                                                                    <td>
-                                                                        <asp:Button ID="Button3" runat="server" Text="Submit" Font-Bold="True" OnClick="Button1_Click" />
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td colspan="4">
-                                                                        <asp:Label ID="Label7" runat="server"></asp:Label>
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Mobile #
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Fax#
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox10" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>City/Town
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox11" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>State
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox12" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>Zip Code
+                                                                                </td>
+                                                                                <td>
+                                                                                    <asp:TextBox ID="TextBox13" runat="server"></asp:TextBox>
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td></td>
+                                                                                <td>
+                                                                                    <asp:Button ID="Button3" runat="server" Text="Submit" Font-Bold="True" OnClick="Button1_Click" />
+                                                                                </td>
+                                                                                <td></td>
+                                                                                <td></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td colspan="4">
+                                                                                    <asp:Label ID="Label7" runat="server"></asp:Label>
 
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
                                                                     </td>
                                                                 </tr>
                                                             </table>
