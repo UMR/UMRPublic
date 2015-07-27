@@ -9,55 +9,55 @@
     
     protected void Button1_Click(object sender, EventArgs e)
     {
-        string str1 = TextBox1.Text;
-        string str2 = TextBox2.Text;
-        string str3 = TextBox3.Text;
-        string str4 = TextBox4.Text;
-        string str5 = TextBox5.Text;
-        string str6 = TextBox6.Text;
-        string str7 = TextBox7.Text;
-        string str8 = TextBox8.Text;
-        string str9 = TextBox9.Text;
-        string str10 = TextBox10.Text;
-        string str11 = TextBox11.Text;
-        string str12 = TextBox12.Text;
-        string str13 = TextBox13.Text;
+        //string str1 = TextBox1.Text;
+        //string str2 = TextBox2.Text;
+        //string str3 = TextBox3.Text;
+        //string str4 = TextBox4.Text;
+        //string str5 = TextBox5.Text;
+        //string str6 = TextBox6.Text;
+        //string str7 = TextBox7.Text;
+        //string str8 = TextBox8.Text;
+        //string str9 = TextBox9.Text;
+        //string str10 = TextBox10.Text;
+        //string str11 = TextBox11.Text;
+        //string str12 = TextBox12.Text;
+        //string str13 = TextBox13.Text;
 
 
         try
         {
-            string strSQL1 = "select Max(client_id) from tbl_Client";
+            //string strSQL1 = "select Max(client_id) from tbl_Client";
 
-            string sqlCon1 = (string)ConfigurationManager.AppSettings["data_conn"];
-            SqlConnection sqlConnection1 = new SqlConnection(sqlCon1);
-            sqlConnection1.Open();
-            SqlCommand sqlCom1 = new SqlCommand(strSQL1, sqlConnection1);
+            //string sqlCon1 = (string)ConfigurationManager.AppSettings["data_conn"];
+            //SqlConnection sqlConnection1 = new SqlConnection(sqlCon1);
+            //sqlConnection1.Open();
+            //SqlCommand sqlCom1 = new SqlCommand(strSQL1, sqlConnection1);
 
-            SqlDataReader dtr1 = sqlCom1.ExecuteReader();
-            int temp = 0;
-            if (dtr1.Read() == true)
-            {
-                temp = Convert.ToInt32(dtr1.GetValue(0));
+            //SqlDataReader dtr1 = sqlCom1.ExecuteReader();
+            //int temp = 0;
+            //if (dtr1.Read() == true)
+            //{
+            //    temp = Convert.ToInt32(dtr1.GetValue(0));
 
-            }
-            dtr1.Close();
-            sqlConnection1.Close();
-            temp = temp + 1;
-            //.................
-            string strcon = (string)ConfigurationManager.AppSettings["data_conn"];
-            string qry = "INSERT INTO tbl_Client values ('" + temp + "','" + str1 + "','" + str3 + "','" + str4 + "','" + str5 + "','" + str6 + "','" + str7 + "','" + str8 + "','" + str9 + "','" + str10 + "','" + str11 + "','" + str12 + "','" + str13 + "')";
+            //}
+            //dtr1.Close();
+            //sqlConnection1.Close();
+            //temp = temp + 1;
+            ////.................
+            //string strcon = (string)ConfigurationManager.AppSettings["data_conn"];
+            //string qry = "INSERT INTO tbl_Client values ('" + temp + "','" + str1 + "','" + str3 + "','" + str4 + "','" + str5 + "','" + str6 + "','" + str7 + "','" + str8 + "','" + str9 + "','" + str10 + "','" + str11 + "','" + str12 + "','" + str13 + "')";
 
-            SqlConnection con = new SqlConnection(strcon);
+            //SqlConnection con = new SqlConnection(strcon);
 
-            SqlCommand com = new SqlCommand(qry, con);
-
-
-            con.Open();
-            com.ExecuteNonQuery();
+            //SqlCommand com = new SqlCommand(qry, con);
 
 
-            con.Close();
-            this.TextBox1.Text = "";
+            //con.Open();
+            //com.ExecuteNonQuery();
+
+
+            //con.Close();
+            //this.TextBox1.Text = "";
 
 
             Label7.Text = "Signing up is completed successfully";
@@ -306,12 +306,12 @@
                                                         <td style="background-color: #F3F8FE;">
                                                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                 <tr>
-                                                                    <td>
+                                                                    <td colspan="2">
                                                                         <h1>SIGN IN</h1>
                                                                     </td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="c-sep-bg">
+                                                                    <td class="c-sep-bg" colspan="2">
                                                                         <img src="images/w17.gif" alt="" width="17" height="1" />
                                                                     </td>
                                                                 </tr>
@@ -328,6 +328,22 @@
                                                                                 <td>
                                                                                     <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://medcodes.universalmedicalrecord.com"
                                                                                         Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>TM</sup></asp:HyperLink>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                    <td class="body_txt">
+                                                                        <table>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://testportals.universalmedicalrecord.com/" Target="_top"
+                                                                                        Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals<sup>(Beta)</sup></asp:HyperLink>
+                                                                                </td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://testmedcodes.universalmedicalrecord.com/"
+                                                                                        Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>(Beta)TM</sup></asp:HyperLink>
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
