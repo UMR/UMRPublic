@@ -316,9 +316,11 @@
     </Content>
     <Content Include="Admin.Master" />
     <Content Include="PDFS\Stakeholders Evaluation.pdf" />
+    <None Include="Properties\PublishProfiles\Azure Production.pubxml" />
     <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
-    <None Include="Properties\PublishProfiles\UMRPublic - Azure Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\UMRPublic - FTP %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\UMRPublic - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\UMRPublic - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Products.aspx" />
     <Content Include="References.aspx" />
@@ -920,7 +922,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
