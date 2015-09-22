@@ -7,30 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UMRPublic
-{
-
-    public partial class Client1 : System.Web.UI.Page
-    {
-
-        /// <summary>
-        /// Head1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
-
-        /// <summary>
-        /// form1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
+namespace UMRPublic {    
+    
+    public partial class Client1 {
+        
         /// <summary>
         /// HyperLink1 control.
         /// </summary>
@@ -39,7 +19,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
-
+        
         /// <summary>
         /// HyperLink2 control.
         /// </summary>
@@ -48,7 +28,25 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
-
+        
+        /// <summary>
+        /// HyperLink3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        
+        /// <summary>
+        /// HyperLink4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink4;
+        
         /// <summary>
         /// Label1 control.
         /// </summary>
@@ -57,7 +55,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-
+        
         /// <summary>
         /// TextBox1 control.
         /// </summary>
@@ -66,7 +64,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
+        
         /// <summary>
         /// Label2 control.
         /// </summary>
@@ -75,7 +73,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
         /// <summary>
         /// TextBox2 control.
         /// </summary>
@@ -84,7 +82,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox2;
-
+        
         /// <summary>
         /// Label3 control.
         /// </summary>
@@ -93,7 +91,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-
+        
         /// <summary>
         /// TextBox3 control.
         /// </summary>
@@ -102,7 +100,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
-
+        
         /// <summary>
         /// Label4 control.
         /// </summary>
@@ -111,7 +109,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-
+        
         /// <summary>
         /// TextBox4 control.
         /// </summary>
@@ -120,7 +118,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox4;
-
+        
         /// <summary>
         /// TextBox5 control.
         /// </summary>
@@ -129,7 +127,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox5;
-
+        
         /// <summary>
         /// TextBox6 control.
         /// </summary>
@@ -138,7 +136,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox6;
-
+        
         /// <summary>
         /// TextBox7 control.
         /// </summary>
@@ -147,7 +145,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox7;
-
+        
         /// <summary>
         /// TextBox8 control.
         /// </summary>
@@ -156,7 +154,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox8;
-
+        
         /// <summary>
         /// TextBox9 control.
         /// </summary>
@@ -165,7 +163,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox9;
-
+        
         /// <summary>
         /// TextBox10 control.
         /// </summary>
@@ -174,7 +172,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox10;
-
+        
         /// <summary>
         /// TextBox11 control.
         /// </summary>
@@ -183,7 +181,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox11;
-
+        
         /// <summary>
         /// TextBox12 control.
         /// </summary>
@@ -192,7 +190,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox12;
-
+        
         /// <summary>
         /// TextBox13 control.
         /// </summary>
@@ -201,7 +199,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBox13;
-
+        
         /// <summary>
         /// Button3 control.
         /// </summary>
@@ -210,7 +208,7 @@ namespace UMRPublic
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button3;
-
+        
         /// <summary>
         /// Label7 control.
         /// </summary>
@@ -220,5 +218,4 @@ namespace UMRPublic
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label7;
     }
-
 }
