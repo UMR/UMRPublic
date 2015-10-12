@@ -22,13 +22,13 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://portals.universalmedicalrecord.com"
+                                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://universalmedicalrecord.com/UMRPortals"
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals </asp:HyperLink>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://medcodes.universalmedicalrecord.com"
+                                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://universalmedicalrecord.com/Medcodepedia"
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>TM</sup></asp:HyperLink>
                                     </td>
                                 </tr>
@@ -38,13 +38,13 @@
                             <table>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://testportals.universalmedicalrecord.com/" Target="_top"
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals" Target="_top"
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals<sup>(Beta)</sup></asp:HyperLink>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://testmedcodes.universalmedicalrecord.com/"
+                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://umrtest.com/Medcodepedia"
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>(Beta)TM</sup></asp:HyperLink>
                                     </td>
                                 </tr>
