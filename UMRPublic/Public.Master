@@ -125,6 +125,13 @@
                                                                         <img src="images/m-sep.gif" width="188" height="1" /></td>
                                                                 </tr>
                                                                 <tr>
+                                                                    <td class="menu"><a href="https://jobboard.tempworks.com/UniversalMedicalRecords/">Job Search</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                        <img src="images/m-sep.gif" width="188" height="1" /></td>
+                                                                </tr>
+                                                                <tr>
                                                                     <td class="menu"><a href="References.aspx">References</a></td>
                                                                 </tr>
                                                                 <tr>
@@ -160,7 +167,8 @@
                                             <a href="Products.aspx">Products and Services</a>  |  
                                             <a href="Client1.aspx">Client Access</a>  | 
                                             <a href="Contact.aspx">Contact Us</a>   |  
-                                            <a href="Job.aspx">Job Openings</a>  | 
+                                            <a href="Job.aspx">Job Openings</a>  |   
+                                            <a href="https://jobboard.tempworks.com/UniversalMedicalRecords/">Job Search</a>  | 
                                             <a href="References.aspx">References</a>
                                         </td>
                                     </tr>
