@@ -99,12 +99,19 @@
                                                                 <tr>
                                                                     <td class="menu"><a href="Client1.aspx">Client Access</a></td>
                                                                 </tr>
-                                                                <tr>
+                                                                <%--<tr>
                                                                     <td height="1">
                                                                         <img src="images/m-sep.gif" width="188" height="1" /></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="https://webcenter.tempworks.com/TwSelect/UniversalMedicalRecords/Account/LogIn?ReturnUrl=%2FTwSelect%2FUniversalMedicalRecords%2FHome%2FIndex">Employee Access</a></td>
+                                                                </tr>--%>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                        <img src="images/m-sep.gif" width="188" height="1" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="menu"><a href="https://UMR.aviontego.com/portals/main.aspx?App=3&CompanyId=UMR">Employee Portal</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
@@ -120,19 +127,40 @@
                                                                 <tr>
                                                                     <td class="menu"><a href="Job.aspx">Job Openings</a></td>
                                                                 </tr>
-                                                                <tr>
+                                                                <%--<tr>
                                                                     <td height="1">
                                                                         <img src="images/m-sep.gif" width="188" height="1" /></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td class="menu"><a href="https://jobboard.tempworks.com/UniversalMedicalRecords/">Job Search</a></td>
+                                                                </tr>--%>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                        <img src="images/m-sep.gif" width="188" height="1" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="menu"><a href="https://UMR.aviontego.com/portals/main.aspx?App=2&CompanyId=UMR">Job Board</a></td>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
                                                                         <img src="images/m-sep.gif" width="188" height="1" /></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="menu"><a href="References.aspx">References</a></td>
+                                                                    <td class="menu"><a href="https://UMR.aviontego.com/portals/main.aspx?App=1&CompanyId=UMR">Applicant Portal</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                        <img src="images/m-sep.gif" width="188" height="1" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td class="menu"><a href="https://UMR.aviontego.com/portals/main.aspx?App=3&CompanyId=UMR">Customer Portal</a></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td height="1">
+                                                                        <img src="images/m-sep.gif" width="188" height="1" /></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <%--<td class="menu"><a href="References.aspx">References</a></td>--%>
                                                                 </tr>
                                                                 <tr>
                                                                     <td>
@@ -166,11 +194,14 @@
                                             <a href="AboutUs1.aspx">About Us</a>  |  
                                             <a href="Products.aspx">Products and Services</a>  |  
                                             <a href="Client1.aspx">Client Access</a>  | 
-                                            <a href="https://webcenter.tempworks.com/TwSelect/UniversalMedicalRecords/Account/LogIn?ReturnUrl=%2FTwSelect%2FUniversalMedicalRecords%2FHome%2FIndex">Employee Access</a>  | 
+                                            <%--<a href="https://webcenter.tempworks.com/TwSelect/UniversalMedicalRecords/Account/LogIn?ReturnUrl=%2FTwSelect%2FUniversalMedicalRecords%2FHome%2FIndex">Employee Access</a>  | --%>
+                                            <a href="https://UMR.aviontego.com/portals/main.aspx?App=3&CompanyId=UMR">Employee Portal</a>  |
                                             <a href="Contact.aspx">Contact Us</a>   |  
                                             <a href="Job.aspx">Job Openings</a>  |   
-                                            <a href="https://jobboard.tempworks.com/UniversalMedicalRecords/">Job Search</a>  | 
-                                            <a href="References.aspx">References</a>
+                                            <a href="https://UMR.aviontego.com/portals/main.aspx?App=2&CompanyId=UMR">Job Board</a>  | 
+                                            <%--<a href="References.aspx">References</a>--%>  
+                                            <a href="https://UMR.aviontego.com/portals/main.aspx?App=1&CompanyId=UMR">Applicant Portal</a>  |   
+                                            <a href="https://UMR.aviontego.com/portals/main.aspx?App=3&CompanyId=UMR">Customer Portal</a> 
                                         </td>
                                     </tr>
                                     <tr>
