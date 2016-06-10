@@ -29,7 +29,7 @@
                                 <tr>
                                     <td>
                                         <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="http://universalmedicalrecord.com/Medcodepedia"
-                                            Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>TM</sup></asp:HyperLink>
+                                            Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">Medcodepedia<sup>TM</sup></asp:HyperLink>
                                     </td>
                                 </tr>
                             </table>
@@ -45,7 +45,7 @@
                                 <tr>
                                     <td>
                                         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://umrtest.com/Medcodepedia"
-                                            Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">UMR Medcodepedia<sup>(Beta)TM</sup></asp:HyperLink>
+                                            Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">Medcodepedia<sup>(Beta)TM</sup></asp:HyperLink>
                                     </td>
                                 </tr>
                             </table>
