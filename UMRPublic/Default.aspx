@@ -10,6 +10,11 @@
             </td>
         </tr>
         <tr>
+            <td>
+                <h1>Medicine Is Now A Science<sup>TM</sup></h1>
+            </td>
+        </tr>
+        <tr>
             <td class="c-sep-bg">
                 <img src="images/w17.gif" alt="" width="17" height="1"/></td>
         </tr>

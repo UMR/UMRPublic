@@ -17,7 +17,7 @@ namespace UMRPublic
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string path = @"UMRPublic\PDFS\about.pdf";
+            string path = @"Medical\PDFS\about.pdf";
             WebClient client = new WebClient();
             Byte[] buffer = client.DownloadData(path);
 

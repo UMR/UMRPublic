@@ -7,290 +7,400 @@
         .style2 {
             text-align: center;
         }
+        <!--
+         /* Font Definitions */
+         @font-face
+	        {font-family:Helv;
+	        panose-1:2 11 6 4 2 2 2 3 2 4;}
+        @font-face
+	        {font-family:"Cambria Math";
+	        panose-1:2 4 5 3 5 4 6 3 2 4;}
+         /* Style Definitions */
+         p.MsoNormal, li.MsoNormal, div.MsoNormal
+	        {margin:0in;
+	        margin-bottom:.0001pt;
+	        text-autospace:none;
+	        font-size:10.0pt;
+	        font-family:"Times New Roman",serif;}
+        p.DefaultText, li.DefaultText, div.DefaultText
+	        {mso-style-name:"Default Text";
+	        margin:0in;
+	        margin-bottom:.0001pt;
+	        text-autospace:none;
+	        font-size:12.0pt;
+	        font-family:"Times New Roman",serif;}
+        span.InitialStyle
+	        {mso-style-name:InitialStyle;
+	        font-family:"Courier New";}
+        .MsoPapDefault
+	        {margin-bottom:10.0pt;
+	        line-height:115%;}
+         /* Page Definitions */
+         @page WordSection1
+	        {size:8.5in 11.0in;
+	        margin:1.0in 1.0in 1.0in 1.0in;}
+        div.WordSection1
+	        {page:WordSection1;}
+        -->
     </style>
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td class="c-sep-bg"><img src="images/w17.gif" alt="" width="17" height="1"></td>
-          </tr>
-          <tr>
+        <tr>
+            <td class="c-sep-bg">
+                <img src="images/w17.gif" alt="" width="17" height="1"></td>
+        </tr>
+        <tr>
             <td class="body_txt">
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr>
-        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
-		
-		 <tr>
-            <td>&nbsp;&nbsp;&nbsp;
-            <img src="images/steven.bmp"  width="80" height="100"></td>
-          </tr>
-          <tr>
-            <td><h1>Chief Executive Officer</h1>
-                                        </td>
-          </tr>
-          <tr>
-            <td class="c-sep-bg"><img src="images/w17.gif" alt="" width="17" height="1"></td>
-          </tr>
-          <tr>
-            <td class="body_txt">
-               
-                                            
-<p class="style2" style="mso-pagination:widow-orphan"><b><font size="3" color="#C0C0C0"><span style="font-family: Helv">C
-U R R I C U L U M<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </span>V I T
-A E</span></font></b><span style="font-family: Helv"><b><font size="3" color="#C0C0C0">&nbsp;&nbsp;&nbsp;&nbsp;</font></b></span></p>
-<p class="style2" style="mso-pagination:widow-orphan"><b><font size="3" color="#C0C0C0">
-<span style="font-family: Helv" class="InitialStyle">OF</span></font></b><span style="font-family: Helv"><b><font size="3" color="#C0C0C0">&nbsp;&nbsp;&nbsp;&nbsp;</font></b></span>
-</p>
-                <p class="style2" style="mso-pagination:widow-orphan">
-                    <span style="font-family: Helv"><b><font size="3" color="#C0C0C0">S T E V E N<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>C H A R L E S<span style="mso-spacerun: yes">&nbsp;&nbsp;
-</span>C O H N,<span style="mso-spacerun: yes">&nbsp; </span>M.D.</font></b><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle">
-<font size="2"><font face="Arial"><span style="font-family: Helv"><b>D.O.B.<span style="mso-spacerun: yes">&nbsp;
-</span>7/29/58</b></span></font><span style="font-family:&quot;Arial&quot;"><o:p>
-</o:p>
-</span></font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">
-<font size="2" face="Arial">In May of 1980, Dr. Cohn graduated from S.U.N.Y. Albany Summa Cum Laude, with a B.A. in Psychology. Dr. Cohn was inducted 
-into Phi Beta Kappa and was elected President of Signum Laudis.
- During his senior year at S.U.N.Y.A., he did research into the following fields:<o:p>
-</o:p>
-</font></span><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman"><font size="1"><o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;" class="InitialStyle">
-<font size="2" face="Arial">FETAL
-ALCOHOL SYNDROME<o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle">
-<font size="2"><font face="Arial"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;">ORGANOMETALLIC
-COMPOUNDS</span></font><span style="font-family:
-&quot;Arial&quot;"><o:p>
-</o:p>
-</span></font></span><span style="font-family:&quot;Courier New&quot;" class="InitialStyle"><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;" class="InitialStyle">
-<font size="2" face="Arial">The Fetal Alcohol Syndrome research involved 
-administering pregnant rats increments of alcohol and determining 
-at what levels the offspring developed the "Fetal Alcohol Syndrome".<o:p>
-</o:p>
-</font><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;" class="InitialStyle">
-<font size="2" face="Arial">The Organometallic Compound research involved studying the proton structure of various compounds,
- altering their configuration and following these changes on the NMR.<o:p>
-</o:p>
-</font><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;" class="InitialStyle">
-<font size="2" face="Arial">May of 1984, Dr. Cohn received his M.D. from S.U.N.Y. Downstate Medical Center in Brooklyn,
- New York. During Dr. Cohn's fourth year at medical school, he elected to do research in the field of Glaucoma,
- at Mount Sinai Medical Center with Steven Podos, M.D. - Chairman and Professor of Ophthalmology at Mount Sinai UMRPublic Center.
- This research involved inducing glaucoma in cyanolmologus monkeys 
-and studying the retinal blood flow alterations utilizing fluorescein angiography.  <o:p>
-</o:p>
-</font><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family:&quot;Times New Roman&quot;;
-mso-hansi-font-family:&quot;Times New Roman&quot;;mso-bidi-font-family:&quot;Times New Roman&quot;" class="InitialStyle">
-<font size="2" face="Arial">The ensuing year Dr. Cohn become a Medical Malpractice Consultant.
- Dr. Cohn was hired by the law firm of Bower & Gardner, a Defensive Medical Malpractice Law Firm that specializes in hospital malpractice. 
- Dr. Cohn's job description was Physician Consultant which entailed overseeing the nurses and attorneys in their evaluations 
- and preparations of various malpractice cases.
-During this time Dr. Cohn began consulting for the following agencies.<o:p>
-</o:p>
-</font><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">Lipsig
-&amp; Sullivan - August 1985 to present - contact Ed Milstein (212) 732-9000<o:p>
-</o:p> (212) 732-9000 
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">Kaplan,
-Friedman &amp; Zand - August 1985 to present - contact Mitchell Gorkin (718)
-875-6066<o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">Schneider,
-Kleinick &amp; Weitz - August 1985 to January 1988 - contact Robert Jackson
-(212) 962-4760 <o:p>
-</o:p> (212) 962-4760 
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">Medical
-Liability Mutual - June 1986 to 1990
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">Deffina
-&amp; Blau - August 1985 - 1989<o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">Eisen
-&amp; Napoli - August 1985 to 1990<o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">Friedman
-&amp; Levy - August 1985 to January 1987<o:p>
-</o:p>
-</font></span></p>
+                    <tr>
+                        <td valign="top">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
-<p>
-    <span><b>Dr.Cohn is the Founder and President of the following companies</b></span>
-    <br />
-    
-    <span><b>Ceres Global Resources – Established‭
-    2012 – </b>Green Energy Distribution‭-‭Ownership 100%</span>
-    <br />
-    <span><b>UMR Holdings International‭ Corp - Established‭
-    2011 </b>Technology Holdings corporation for global business development - Ownership 100%</span>
-    <br />
-    <span><b>Universal Medical Records – Established‭
-    1992 </b>Research and Development Corporation, Medical Records Management, software and consulting company that pioneered 
-    the merging of Electronic Medical Records with Telecommunication protocols, IT and Healthcare staffing and ‭recruitment
-     -‭Ownership 100%</span>
-    <br />
-    <span><b>Telemetric Security Systems - Established‭
-    1989 - </b>Global and mobile medical and security systems,
-    Car Sitter‭™ – Ownership 100%</span>
-    <br />
-    <span><b>B.A.S.E.C.‭Industries - Established‭
-    1988 - </b>Bar coding Activating Safe Electronic Circuitry. Holds several patents and patents pending for 
-    electronic security/communication products and services.</span>
-</p>
-
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle">
-<font size="2" face="Arial"><span style="font-family: Helv"><b>Guest<span style="mso-spacerun: yes">&nbsp;
-</span>Speaker</b></span></font></span></p>
-<table border="1" cellspacing="0">
-  <tbody><tr>
-    <td><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-	<font size="2" face="Arial">Spring
-      1991</font></span></span></td>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">International
-      Mobile Communications Expo, Anaheim, CA</font></span></td>
-  </tr>
-  <tr>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Summer
-      1991</font></span></td>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Telocator
-      1991, Toronto, Canada</font></span></td>
-  </tr>
-  <tr>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Fall
-      1992 </font></span></td>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Washington,
-      D.C., American Public Health Association</font></span></td>
-  </tr>
-  <tr>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Spring
-      1993<span style="mso-tab-count:1">&nbsp; </span></font></span></td>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">San
-      Antonio, Texas, Ninth Annual Symposium on the Computerization of Medical
-      Records <span style="mso-tab-count:1">&nbsp; </span>and North American
-      Conference on Patient Cards</font></span></td>
-  </tr>
-  <tr>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Spring
-      1993</font></span></td>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Venice, Italy, Patient Care with Computers and Cards, 
-	Fifth Global Congress on Patient Cards and Computerization of Health Records</font></span></td>
-  </tr>
-  <tr>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">Spring
-      1997</font></span></td>
-    <td><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-	<font size="2" face="Arial">The National Managed Health Care Congress [NMHCC], 
-	Washington, D.C. Technology Alternatives for the Electronic Medical Record</font></span></td>
-  </tr>
-</tbody></table>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle">
-<font size="2"><font face="Arial"><span style="font-family: Helv"><b>National
-Television</b></span></font><span style="font-family:
-&quot;Arial&quot;"><o:p>
-</o:p>
-</span></font></span><span style="font-family:&quot;Courier New&quot;" class="InitialStyle"><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">Public Broadcasting Show - MotorWeek '91<o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">Channel America - April 1992<o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">WNFT, WTVX, WABN and New Orleans Teleport - May 1992<o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><font face="Arial"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2">News 12 - Cablevision - June thru September 1992 <o:p>
-</o:p>
-</font></span><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2">&nbsp;<o:p>
-</o:p>
-</font></span></span></font></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle">
-<font size="2"><font face="Arial"><span style="font-family: Helv"><b>National<span style="mso-spacerun: yes">&nbsp;
-</span>Radio</b></span></font><span style="font-family:&quot;Arial&quot;"><o:p>
-</o:p>
-</span></font></span><span style="font-family:&quot;Courier New&quot;" class="InitialStyle"><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">Southeast Agricultural Network - May 1992<o:p>
-</o:p>
-</font></span><span style="font-family: Helv"><font size="1"><o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle">
-<font size="2"><font face="Arial"><span style="font-family: Helv"><b>Organizations</b></span></font><span style="font-family:&quot;Arial&quot;"><o:p>
-</o:p>
-</span></font></span><span style="font-family:&quot;Courier New&quot;" class="InitialStyle"><font size="1"><o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span class="InitialStyle"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman">
-<font size="2" face="Arial">Eagle Scout - January 1993<o:p>
-</o:p>
-</font></span></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">American Medical Association 1984<o:p>
-</o:p>
-</font></span></p>
-<p class="DefaultText" style="mso-pagination:widow-orphan"><span style="mso-ascii-font-family: Times New Roman; mso-hansi-font-family: Times New Roman; mso-bidi-font-family: Times New Roman" class="InitialStyle">
-<font size="2" face="Arial">American Society of Testing and Materials - January 1990<o:p>
-</o:p>
-</font></span></p>
-&nbsp;<!--msnavigation-->&nbsp;</table>
-                                                    </td>
-      </tr>
-    </table>
+                                <tr>
+                                    <td>&nbsp;&nbsp;&nbsp;
+            <img src="images/steven.bmp" ></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h1>Chief Executive Officer</h1>
                                     </td>
-          </tr>
-        </table>
+                                </tr>
+                                <tr>
+                                    <td class="c-sep-bg">
+                                        <img src="images/w17.gif" alt="" width="17" height="1"></td>
+                                </tr>
+                                <tr>
+                                    <td class="body_txt">
+
+
+                                        <div class="WordSection1">
+
+                                            <p class="DefaultText" align="center" style='text-align: center'>
+                                                <span
+                                                    class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>C U R R I C U
+L U M    V I T A E</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-size: 14.0pt; font-family: "Helv",sans-serif'>&nbsp;</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText" align="center" style='text-align: center'>
+                                                <span
+                                                    class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>OF</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-size: 14.0pt; font-family: "Helv",sans-serif'>&nbsp;</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText" align="center" style='text-align: center'>
+                                                <span
+                                                    class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>S T E V E N  
+C H A R L E S   C O H N,  M.D.</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText" align="center" style='text-align: center'>
+                                                <span
+                                                    class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>D.O.B. 
+7/29/58</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Dr. Cohn is a prolific inventor,
+self-made, healthcare visionary and a true entrepreneur.</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>&nbsp;</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>In May of 1980, Dr. Cohn graduated from
+S.U.N.Y. Albany Summa Cum Laude, with a B.A. in Psychology.  Dr. Cohn was
+inducted into Phi Beta Kappa and was elected President of Signum Laudis. 
+During his senior year at S.U.N.Y.A., he did research into the following
+fields:</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>&nbsp;</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>FETAL ALCOHOL SYNDROME</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>ORGANOMETALLIC COMPOUNDS</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>The Fetal Alcohol Syndrome research
+involved administering pregnant rats increments of alcohol and determining at
+what levels the offspring developed the &quot;Fetal Alcohol Syndrome&quot;.</span></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle"><span style='font-family: "Times New Roman",serif'>&nbsp;</span></span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>The Organometallic Compound research
+involved studying the proton structure of various compounds, altering their
+configuration and following these changes on the NMR.</span></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle"><span style='font-family: "Times New Roman",serif'>&nbsp;</span></span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>May of 1984, Dr. Cohn received his M.D.
+from S.U.N.Y. Downstate Medical Center in Brooklyn, New York.  During Dr.
+Cohn's fourth year at medical school, he elected to do research in the field of
+Glaucoma, at Mount Sinai Medical Center with Steven Podos, M.D. - Chairman and
+Professor of Ophthalmology at Mount Sinai Medical Center.  This research
+involved inducing glaucoma in cyanolmologus monkeys and studying the retinal
+blood flow alterations utilizing fluorescein angiography. </span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>&nbsp;</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>The ensuing year Dr. Cohn become a Medical
+Malpractice Consultant.   Dr. Cohn was hired by the law firm of Bower &amp;
+Gardner, a Defensive Medical Malpractice Law Firm that specializes in hospital
+malpractice.  Dr. Cohn's job description was Physician Consultant which
+entailed overseeing the nurses and attorneys in their evaluations and
+preparations of various malpractice cases.  During this time Dr. Cohn began
+consulting </span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>for the following agencies.</span></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle"><span style='font-family: "Times New Roman",serif'>&nbsp;</span></span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Lipsig &amp; Sullivan - August 1985-1990</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Kaplan, Friedman &amp; Zand - August 1985-1990</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Schneider, Kleinick &amp; Weitz - August
+1985 to January 1988 </span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Medical Liability Mutual - June 1986 to 1990</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Deffina &amp; Blau - August 1985 - 1989</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Eisen &amp; Napoli - August 1985 to 1990</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Friedman &amp; Levy - August 1985 to
+January 1987</span></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle"><span style='font-family: "Times New Roman",serif'>&nbsp;</span></span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Dr. Cohn is the founder and president of
+UMR Holdings International, Universal Medical Records Information Network Corp,
+Universal Medical Records Ltd, American Healthcare Institute Medical Management
+System Inc. (AHIMMS), Sani-Teri® Inc., Telemetric Security Systems, B.A.S.E.C.
+Industries Ltd., and Comet Electronics Corp.  UMR provides Medical Records
+Management software that has pioneered the merging of the Electronic Medical
+Records with Telecommunications protocols.  The company also provides medical
+staffing throughout the tri-state area.   TSS has developed and presently holds
+several Patents Pending, Trademarks and Copyrights on medical/security systems
+that works via telecommunications.  B.A.S.E.C. holds several patents and
+patents pending for electronic security/communication products and services.
+Comet Electronics was a PC board assembly facility where various electronic
+products were manufactured and developed.</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>&nbsp;</span></span>
+                                            </p>
+
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>Guest
+Speaker</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <table class="MsoTableGrid" border="0" cellspacing="0" cellpadding="0"
+                                                style='border-collapse: collapse; border: none'>
+                                                <tr style='height: 8.6pt'>
+                                                    <td width="101" valign="top" style='width: 86.1pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.6pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Spring 1991</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="882" valign="top" style='width: 661.55pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.6pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>International Mobile Communications
+  Expo, Anaheim, CA</span></span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr style='height: 8.6pt'>
+                                                    <td width="101" valign="top" style='width: 76.1pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.6pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Summer 1991</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="882" valign="top" style='width: 661.55pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.6pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Telocator 1991, Toronto, Canada</span></span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr style='height: 8.6pt'>
+                                                    <td width="101" valign="top" style='width: 76.1pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.6pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Fall 1992</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="882" valign="top" style='width: 661.55pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.6pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Washington, D.C., American Public Health
+  Association</span></span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr style='height: 11.65pt'>
+                                                    <td width="101" valign="top" style='width: 76.1pt; padding: 0in 5.4pt 0in 5.4pt; height: 11.65pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Spring 1993</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="882" valign="top" style='width: 661.55pt; padding: 0in 5.4pt 0in 5.4pt; height: 11.65pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>San Antonio, Texas, Ninth Annual
+  Symposium on the Computerization of Medical Records and North American
+  Conference on Patient Cards</span></span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr style='height: 12.1pt'>
+                                                    <td width="101" valign="top" style='width: 76.1pt; padding: 0in 5.4pt 0in 5.4pt; height: 12.1pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Spring 1993</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="882" valign="top" style='width: 661.55pt; padding: 0in 5.4pt 0in 5.4pt; height: 12.1pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Venice, Italy, Patient Care with
+  Computers and Cards, Fifth Global Congress on Patient Cards and
+  Computerization of Health Records</span></span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                <tr style='height: 8.5pt'>
+                                                    <td width="101" valign="top" style='width: 76.1pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.5pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Spring 1997</span></span>
+                                                        </p>
+                                                    </td>
+                                                    <td width="882" valign="top" style='width: 661.55pt; padding: 0in 5.4pt 0in 5.4pt; height: 8.5pt'>
+                                                        <p class="DefaultText">
+                                                            <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>The National Managed Health Care
+  Congress [NMHCC], Washington, D.C. Technology Alternatives for the Electronics
+  Medical Record</span></span>
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <p class="DefaultText"><span class="InitialStyle"><span style='font-family: "Times New Roman",serif'>&nbsp;</span></span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>National
+Television</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Public Broadcasting Show - MotorWeek '91</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Channel America - April 1992</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>WNFT, WTVX, WABN and New Orleans Teleport
+- May 1992</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>News 12 - Cablevision - June thru
+September 1992</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>&nbsp;</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>National
+Radio</span></b></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Southeast Agricultural Network - May 1992</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 14.0pt; font-family: "Helv",sans-serif'>&nbsp;</span></span>
+                                            </p>
+
+                                            <p class="DefaultText"><span class="InitialStyle"><b><span style='font-family: "Helv",sans-serif'>Organizations</span></b></span></p>
+
+                                            <p class="DefaultText"><span class="InitialStyle">&nbsp;</span></p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>Eagle Scout - January 1993</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>American Medical Association 1984</span></span>
+                                            </p>
+
+                                            <p class="DefaultText">
+                                                <span class="InitialStyle"><span style='font-size: 10.0pt; font-family: "Times New Roman",serif'>American Society of Testing and Materials
+- January 1990<a name="QuickMark1"></a><a name="QuickMark"></a></span></span>
+                                            </p>
+
+                                        </div>
+                                        &nbsp;<!--msnavigation-->
+                                &nbsp;
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
 </asp:Content>
