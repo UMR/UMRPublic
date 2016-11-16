@@ -5,6 +5,12 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMRPublic", "UMRPublic\UMRPublic.csproj", "{E384E39E-E0BD-432B-B812-C0282B186DC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PublicTest", "PublicTest\PublicTest.csproj", "{58498A67-CE2A-4705-A0AE-36DC9328A72D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mock", "Mock\Mock.csproj", "{C6551F51-93C1-4B4B-997E-133388B02899}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMRPublicSPA", "UMRPublicSPA\UMRPublicSPA.csproj", "{FF215692-836A-43C2-998A-862D74C84478}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,17 +21,38 @@ Global
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58498A67-CE2A-4705-A0AE-36DC9328A72D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58498A67-CE2A-4705-A0AE-36DC9328A72D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58498A67-CE2A-4705-A0AE-36DC9328A72D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58498A67-CE2A-4705-A0AE-36DC9328A72D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://spike:8080/tfs/defaultcollection
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = UMRPublic\\UMRPublic.csproj
 		SccProjectName1 = UMRPublic
 		SccLocalPath1 = UMRPublic
+		SccProjectUniqueName2 = PublicTest\\PublicTest.csproj
+		SccProjectName2 = PublicTest
+		SccLocalPath2 = PublicTest
+		SccProjectUniqueName3 = Mock\\Mock.csproj
+		SccProjectName3 = Mock
+		SccLocalPath3 = Mock
+		SccProjectUniqueName4 = UMRPublicSPA\\UMRPublicSPA.csproj
+		SccProjectName4 = UMRPublicSPA
+		SccLocalPath4 = UMRPublicSPA
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,179 @@
+﻿
+<!--<div class="container-fluid">
+    <div class="row">
+        <div class="total-container">
+            <div class="col-md-2 sidebar">
+                <div class="sidebar-content">
+                    <div class="user-img">
+                        <a *ngIf="currentUserPhoto == ''" href="#" [routerLink]="['/']"><img src="app/main/img/user.png" alt="User Photo"></a>
+                        <img *ngIf="currentUserPhoto != ''" [src]="currentUserPhoto||''" alt="User Photo" style="width: 160px; height: 160px; border-radius: 100%; margin: 0; " />
+                    </div>
+                    <hr />
+                    <div class="sidevar-nav">
+                        <nav [hidden]="isLoading">
+                            <ul>
+                                <li><a href="#" [routerLink]="['/']" ><i class="fa fa-home"></i>  Home</a></li>
+                                <ul *ngFor="let menuItem of menu">
+                                    <li *ngIf="menuItem.label != 'Alert Network'" [routerLinkActive]="['isActive']">
+                                        <a href="#" [routerLink]="[menuItem.url]" >
+                                            <i [ngClass]="[menuItem.icon]"></i>  {{ menuItem.label}}
+                                        </a>
+                                    </li>
+                                    <li *ngIf="menuItem.label == 'Alert Network'" style="cursor:pointer; background-color:transparent;"  >
+                                        <a data-toggle="collapse" data-target="#subMenu" (click)="isCollapsedContent = !isCollapsedContent">
+                                            <i class="fa fa-bell"></i>    {{menuItem.label}} <i class="glyphicon" [ngClass]="{ 'glyphicon-triangle-bottom' : !isCollapsedContent, 'glyphicon-triangle-top' : isCollapsedContent }" aria-hidden="true"></i>
+                                        </a>
+                                        <ul *ngIf="menuItem.label == 'Alert Network'" id="subMenu" class="collapse">
+                                            <li *ngFor="let subMenuItem of subMenu" [routerLinkActive]="['isActive']">
+                                                <a href="#" [routerLink]="[subMenuItem.url]" >
+                                                    <i [ngClass]="[menuItem.icon]"></i>  {{ subMenuItem.label}}
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <li><a [routerLink]="['/login']"><i class="fa fa-power-off"></i>  Logout</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <header class="header">
+                    <div class="header-left">
+                        <p><span>Welcome,</span><span> <a [style.color]="'blue'" [routerLink]="['/']">{{userInformation.FIRST_NAME ? userInformation.FIRST_NAME : "" }} {{userInformation.LAST_NAME ? userInformation.LAST_NAME : ""}}{{userInformation.TITLE ? ", "+userInformation.TITLE : ""}}</a></span></p>
+                    </div>
+                    <div class="header-right">
+                        <nav>
+                            <ul [style.margin-top]="'-5px'"  [style.font-size]="'20px'">
+                                <li><i class="fa fa-bell"></i></li>
+                                <li><a [routerLink]="['/login']" (click)="logout()"><i class="fa fa-power-off"></i></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                <div id="bodyContent">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>-->
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img src="../../assets/images/urmtest-logo.png">
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                <ul class="nav navbar-nav navbar-right">
+
+                    <li class="hidden">
+                        <a></a>
+                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="products.html">Products & Services</a> </li>
+                    <li><a href="client-access.html">Client Access</a> </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portal <i class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Employee Portal</a></li>
+                            <li><a href="#">Applicant Portal</a></li>
+                            <li><a href="#">Customer Portal</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jobs <i class="fa fa-caret-down"></i> </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="job-open.html">Job Openings</a>
+                            </li>
+                            <li><a href="job-search.html">Job Board</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a> </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <section class="banner">
+        <div class="container">
+            <div class="row">
+
+                <img src="../../assets/images/banner.png" alt="" class="img-responsive">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="content">
+        <div class="container">
+            <div class="row">
+
+                <div class="home-content">
+                    <div class="col-md-7">
+
+                        <h3>WELCOME TO UMR HOLDINGS INTERNATIONAL CORP!</h3>
+
+                        <p>Medicine is the branch of health science and the sector of public life concerned with maintaining or restoring human health through the study, diagnosis, treatment and possible prevention of disease and injury. It is both an area of knowledge – a science of body systems, their diseases and treatment – and the applied practice of that knowledge.</p>
+
+                        <p>Western medical care is shared between medical professionals (physicians) and other professionals such as physician assistants, nurses and pharmacists, sometimes known as allied health professionals. Historically, only those with a medical doctorate have been considered to practice medicine. Clinicians (licensed professionals who deal with patients) can be physicians, nurses, therapists or others. The medical profession is the social and occupational structure of the group of people formally trained and authorized to apply medical knowledge. Many countries and legal jurisdictions have legal limitations on who may practice medicine.</p>
+
+                        <p>Medicine comprises various specialized sub-branches, such as cardiology, pulmonology, neurology, or other fields such as sports medicine, research or public health.</p>
+
+
+                    </div>
+                    <div class="col-md-5">
+                        <img src="../../assets/images/hcontent-img.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="subscribe">
+        <div class="container">
+            <div class="row sb">
+
+                <div class="subscription">
+                    <div class="col-md-7">
+                        <h3>Subscribe Our Newsletter to Get Notified</h3>
+                        <form action="">
+                            <div class="input-group sb-input-group">
+                                <input type="email" class="form-control sb-input" placeholder="Enter Your Email Address">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default btn-subscribe" type="button"> <i class="fa fa-send"></i> Subscribe</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </form>
+                    </div>
+                    <div class="col-md-5 text-right">
+                        <p>For Any Query Contact Us Today<p>
+                        <p><i class="fa fa-phone"></i> (914) 737-7499</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+

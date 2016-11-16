@@ -1,0 +1,44 @@
+﻿<div class="container">
+    <div class="row">
+        <form role="form" (ngSubmit)='onLogin()' #loginForm="ngForm">
+            <fieldset>
+                <legend class="col-sm-6 col-sm-offset-3">UMR Portal Login</legend>
+
+                <div class="form-group input-group col-sm-6 col-sm-offset-3">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                    <select class="form-control" id="institution"
+                            [(ngModel)]="institution"  name="institution"  required>
+                        <option *ngFor="let ins of institutions" [value]="ins.value">{{ins.name}}</option>
+                    </select>
+                </div>
+
+                <div class="form-group input-group col-sm-6 col-sm-offset-3">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="text" class="form-control" id="loginId" placeholder="Login ID"
+                           [(ngModel)]="loginId" name="loginId" #tempLoginId="ngModel" required autofocus>
+                </div>
+                <div [hidden]="tempLoginId.valid || tempLoginId.pristine" class="control-validation alert alert-danger col-sm-6 col-sm-offset-3">
+                    Name is required
+                </div>
+                <div class="form-group input-group col-sm-6 col-sm-offset-3">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" class="form-control" id="password" placeholder="Password"
+                           [(ngModel)]="password" name="password" #tempPassword="ngModel" required>
+                </div>
+                <div [hidden]="tempPassword.valid || tempPassword.pristine" class="control-validation alert alert-danger col-sm-6 col-sm-offset-3">Password is required</div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default col-xs-12 col-sm-6 col-sm-offset-3">Login</button>
+                </div>
+
+                <div class="form-group text-center col-sm-6 col-sm-offset-3">
+                    <a href="#">Provider Enrollment</a>&nbsp;|&nbsp;<a href="#">Patient Enrollment</a>
+                </div>
+                <div class="form-group text-center col-sm-6 col-sm-offset-3">
+                    <a href="#">Forgot your password?</a>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>

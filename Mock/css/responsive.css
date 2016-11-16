@@ -1,0 +1,68 @@
+/* lg */ 
+@media (min-width: 1200px) {
+	
+}
+
+/* md */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+
+}
+
+/* sm */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-default .navbar-nav>li>a {
+        font-size: 11px;
+        padding: 15px 10px;
+    }
+    .subscription .col-md-5 {
+        margin-top: 15px;
+        text-align: left;
+    }
+    .contact-form .col-md-4, .contact-form .col-md-12{
+        padding-left: 0px;
+        padding-bottom: 10px
+    }
+}
+
+/* xs */
+@media (max-width: 767px) {
+	
+    .subscription .col-md-5 {
+        margin-top: 15px;
+        text-align: left;
+    }
+    .contact-form .col-md-4, .contact-form .col-md-12{
+        padding-left: 0px;
+        padding-bottom: 10px
+    }
+
+}
+
+/* XS Portrait */
+@media (max-width: 479px) {
+
+    .subscription .col-md-5 {
+        margin-top: 15px;
+        text-align: left;
+    }
+    .contact-form .col-md-4, .contact-form .col-md-12{
+        padding-left: 0px;
+        padding-bottom: 10px
+    }
+
+}
+
+
+@media (max-width: 320px) {
+   
+   .subscription .col-md-5 {
+        margin-top: 15px;
+        text-align: left;
+    }
+    .contact-form .col-md-4, .contact-form .col-md-12{
+        padding-left: 0px;
+        padding-bottom: 10px
+    }
+
+}

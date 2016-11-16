@@ -1,0 +1,54 @@
+{
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "sourceMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": true,
+        "noImplicitAny": false,
+        "suppressImplicitAnyIndexErrors": true,
+        "noEmitHelpers": true,
+        "declaration": false,
+        "outDir": "output",
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+        "types": [
+            "core-js",
+            "node",
+            "jquery",
+            "fullcalendar"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "app/compiled",
+        "app/**/*.e2e.ts",
+        "app/**/*.spec.ts",
+        "app/*.e2e.ts",
+        "app/*.spec.ts",
+        "output",
+        "dist"
+    ],
+    "include": [
+        "app/app.module.ts",
+        "app/patient_records/patient-records.module.ts",
+        "app/alert_networks/create_soap_notes/create-soap-notes.module.ts",
+        "app/alert_networks/alert_management/alert-management.module.ts",
+        "app/demographics_editor/demographics-editor.module.ts",
+        "app/user_information/user-information.module.ts",
+        "app/user_settings/user-settings.module.ts",
+        "app/change_password/change-password.module.ts"
+    ],
+    "atom": {
+        "rewriteTsconfig": false
+    },
+    "angularCompilerOptions": {
+        "genDir": "app/compiled",
+        "skipMetadataEmit": true
+    }
+}
