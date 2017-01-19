@@ -1,4 +1,4 @@
-<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Public.Master" CodeBehind="Job.aspx.cs" Inherits="UMRPublic.Job" %>
+<%@ Page Language="C#" AutoEventWireup="True" MasterPageFile="~/Public.Master" CodeBehind="Job.aspx.cs" Inherits="UMRPublic.Job" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>

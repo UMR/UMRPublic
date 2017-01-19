@@ -1,0 +1,66 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" notessizex="4608" notessizey="6048"
+  gridspacingx="49152" gridspacingy="49152" subsetembed="1">
+  <p:master id="15" slidesn="0,0" type="main" href="master15.htm"
+   xmlhref="master15.xml" template="Aspect" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="207" slidesn="0,0" type="main" href="master207.htm"
+   xmlhref="master207.xml" template="1_Aspect" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="208" slidesn="0,0" type="main" href="master208.htm"
+   xmlhref="master208.xml" template="2_Aspect" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="209" slidesn="0,0" type="main" href="master209.htm"
+   xmlhref="master209.xml" template="3_Aspect" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="210" slidesn="0,0" type="main" href="master210.htm"
+   xmlhref="master210.xml" template="4_Aspect" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+   </p:schemes>
+  </p:master>
+  <p:master id="1" slidesn="1CB84E1,4702B960" type="notes" href="master01.htm"
+   layout="notes" slots="header,dateTime,slideImage,body,footer,slideNumber"/>
+  <p:slide id="1" slidesn="0,0" href="slide0001.htm" masterhref="master207.htm"/>
+  <p:slide id="27" slidesn="0,0" href="slide0027.htm"/>
+  <p:slide id="6" slidesn="0,0" href="slide0006.htm" xmlhref="slide0006.xml"/>
+  <p:slide id="28" slidesn="0,0" href="slide0028.htm"/>
+  <p:slide id="39" slidesn="1CB8542,545A9770" href="slide0039.htm"/>
+  <p:slide id="38" slidesn="1CB853F,B1FDB860" href="slide0038.htm"
+   xmlhref="slide0038.xml"/>
+  <p:slide id="34" slidesn="0,0" href="slide0034.htm"/>
+  <p:slide id="35" slidesn="0,0" href="slide0035.htm"/>
+  <p:slide id="36" slidesn="0,0" href="slide0036.htm"/>
+  <p:slide id="41" slidesn="1CB8548,8748B620" href="slide0041.htm"/>
+  <p:slide id="42" slidesn="1CB8548,8D747430" href="slide0042.htm"/>
+  <p:slide id="40" slidesn="1CB8542,8B4A28E0" href="slide0040.htm"/>
+  <p:slide id="33" slidesn="0,0" href="slide0033.htm"/>
+  <p:slide id="44" slidesn="1CB8549,56F9A820" href="slide0044.htm"/>
+  <p:slide id="43" slidesn="1CB8549,56F9A820" href="slide0043.htm"/>
+  <p:viewstate type="slideView" scale="90" restoredleft="230" restoredtop="946"
+   manualadjustleft="t" manualadjusttop="t" hideoutlineicons="t"/>
+  <p:slideshowsettings pencolor="rgb(255,0,0)"/>
+  <p:headersfooters formatid="0" nouserdate="t" nofooter="t" noheader="t"
+   nodate="t" todaydate="t"/>
+  <p:headersfooters notes="t" nouserdate="t" nofooter="t" noheader="t"
+   nodate="t" todaydate="t"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="22533"/>
+</xml>

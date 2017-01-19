@@ -1,4 +1,8 @@
-﻿import {Component} from '@angular/core';
+﻿
+import {Component} from '@angular/core';
+import {FooterComponent} from './common/components/footer/footer.component';
+import {HeaderComponent} from './common/components/header/header.component';
+import {SubscribeComponent} from './common/components/subscribe/subscribe.component';
 //import { ROUTER_DIRECTIVES }  from '@angular/router';
 
 // Statics
@@ -15,7 +19,10 @@ import 'rxjs/add/operator/map';
 @Component({
     selector: 'app',
     template: `
-              <router-outlet></router-outlet>   
+              <umr-public-header></umr-public-header>
+              <router-outlet></router-outlet> 
+              <umr-public-subscribe></umr-public-subscribe>
+              <umr-public-footer></umr-public-footer>  
               `
 })
 

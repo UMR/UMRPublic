@@ -1,7 +1,7 @@
-﻿import { platformBrowser } from '@angular/platform-browser';
-import { AppModuleNgFactory } from './compiled/app/app.module.ngfactory';
-import { enableProdMode } from '@angular/core';
+﻿//import { platformBrowser } from '@angular/platform-browser';
+//import { AppModuleNgFactory } from './compiled/app/app.module.ngfactory';
+//import { enableProdMode } from '@angular/core';
 
-enableProdMode();
+//enableProdMode();
 
-platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+//platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);

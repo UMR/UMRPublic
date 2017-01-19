@@ -211,7 +211,7 @@ h1, h2, h3, h4, h5, h6{
 
 
 /* Form Module */
-.form-module {
+.form-client {
   position: relative;
   background: #ffffff;
   max-width: 620px;
@@ -222,7 +222,7 @@ h1, h2, h3, h4, h5, h6{
   margin:0 auto;
   margin-top: 30px
 }
-.form-module .toggle {
+.form-client .toggle {
   cursor: pointer;
   position: absolute;
   top: -0;
@@ -236,7 +236,7 @@ h1, h2, h3, h4, h5, h6{
   line-height: 30px;
   text-align: center;
 }
-.form-module .toggle .tooltip {
+.form-client .toggle .tooltip {
   position: absolute;
   top: 5px;
   right: -65px;
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6{
   text-transform: uppercase;
   z-index: 100000 !important
 }
-.form-module .toggle .tooltip:before {
+.form-client .toggle .tooltip:before {
   content: '';
   position: absolute;
   top: 5px;
@@ -259,21 +259,21 @@ h1, h2, h3, h4, h5, h6{
   border-bottom: 5px solid transparent;
   border-right: 5px solid rgba(0, 0, 0, 0.6);
 }
-.form-module .form {
+.form-client .form {
   display: none;
   padding: 40px;
 }
-.form-module .form:nth-child(2) {
+.form-client .form:nth-child(2) {
   display: block;
 }
-.form-module h2 {
+.form-client h2 {
   margin: 0 0 20px;
   color: #434a54;
   font-size: 16px;
   font-weight: 400;
   line-height: 1;
 }
-.form-module input {
+.form-client input {
   outline: none;
   display: block;
   width: 100%;
@@ -284,11 +284,11 @@ h1, h2, h3, h4, h5, h6{
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.form-module input:focus {
+.form-client input:focus {
   border: 1px solid #33b5e5;
   color: #333333;
 }
-.form-module button {
+.form-client button {
   cursor: pointer;
   background: #33b5e5;
   width: 100%;
@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5, h6{
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
 }
-.form-module button:hover {
+.form-client button:hover {
   background: #178ab4;
 }
 

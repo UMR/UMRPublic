@@ -1,0 +1,87 @@
+<xml xmlns:v="urn:schemas-microsoft-com:vml"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:p="urn:schemas-microsoft-com:office:powerpoint"
+ xmlns:oa="urn:schemas-microsoft-com:office:activation">
+ <p:presentation sizeof="screen" gridspacingx="49152" gridspacingy="49152"
+  savewithfonts="t">
+  <p:master id="3" slidesn="0,0" type="main" href="master03.htm"
+   xmlhref="master03.xml" template="Citrus" layout="title_body"
+   slots="title,body,dateTime,footer,slideNumber">
+   <p:schemes>
+    <p:colorscheme
+     colors="#c6fe82,#fc6600,#000000,#ffffff,#00cc00,#ff822d,#ff63b1,#dddddd"/>
+    <p:colorscheme
+     colors="#ffffff,#000000,#777777,#000000,#00cc00,#ff822d,#ff63b1,#b2b2b2"/>
+    <p:colorscheme
+     colors="#ffffff,#000000,#4d4d4d,#000000,#c0c0c0,#808080,#4d4d4d,#eaeaea"/>
+    <p:colorscheme
+     colors="#ffffff,#000000,#777777,#000000,#72ce86,#f6b070,#eb9dc4,#b2b2b2"/>
+    <p:colorscheme
+     colors="#ffffff,#000000,#777777,#000000,#f58f91,#ce7162,#f6ca7c,#c0c0c0"/>
+    <p:colorscheme
+     colors="#ffffff,#000000,#777777,#000000,#fab774,#cbacd4,#c2eb77,#c0c0c0"/>
+    <p:colorscheme
+     colors="#ced5e8,#3b6147,#777777,#ffffff,#fea868,#9aa8d0,#9ce157,#969696"/>
+    <p:colorscheme
+     colors="#8798c7,#2c395e,#000000,#ffffff,#fee168,#bae482,#efad6b,#c0c0c0"/>
+   </p:schemes>
+  </p:master>
+  <p:master id="4" slidesn="0,0" type="title" href="master04.htm"
+   xmlhref="master04.xml" layout="title_subtitle"
+   slots="centerTitle,subTitle,dateTime,footer,slideNumber"/>
+  <p:master id="2" slidesn="1C5187C,900846C0" type="handout" href="master02.htm"
+   layout="handout" slots="header,dateTime,footer,slideNumber"/>
+  <p:slide id="1" slidesn="0,0" href="slide0001.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="18" slidesn="0,0" href="slide0018.htm"/>
+  <p:slide id="2" slidesn="0,0" href="slide0002.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="19" slidesn="0,0" href="slide0019.htm" masterhref="master04.htm"
+   layout="title_subtitle" slots="centerTitle,subTitle" collapseoutline="t"/>
+  <p:slide id="3" slidesn="0,0" href="slide0003.htm" masterhref="master04.htm"
+   layout="title_subtitle" slots="centerTitle,subTitle" collapseoutline="t"
+   overridemasteranimations="t"/>
+  <p:slide id="4" slidesn="0,0" href="slide0004.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="5" slidesn="0,0" href="slide0005.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="7" slidesn="0,0" href="slide0007.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="13" slidesn="0,0" href="slide0013.htm" layout="title_body"
+   slots="title,body" collapseoutline="t"/>
+  <p:slide id="8" slidesn="0,0" href="slide0008.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="10" slidesn="0,0" href="slide0010.htm" layout="2_columns"
+   slots="title,body,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="11" slidesn="0,0" href="slide0011.htm" layout="title_body"
+   slots="title,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="14" slidesn="0,0" href="slide0014.htm" layout="2_columns"
+   slots="title,body,body" collapseoutline="t" overridemasteranimations="t"/>
+  <p:slide id="15" slidesn="0,0" href="slide0015.htm" layout="2_columns"
+   slots="title,clipart,body"/>
+  <p:slide id="17" slidesn="0,0" href="slide0017.htm" layout="title_only"
+   slots="title"/>
+  <p:slide id="20" slidesn="0,0" href="slide0020.htm" layout="title_body"
+   slots="title,body" collapseoutline="t"/>
+  <p:slide id="16" slidesn="0,0" href="slide0016.htm" layout="2_columns"
+   slots="title,clipart,body"/>
+  <p:viewstate type="slideView" slidehref="slide0015.htm" restoredleft="219"
+   manualadjustleft="t"/>
+  <p:slideshowsettings pencolor="schemeText" loop="t"/>
+  <p:font name="Tahoma" charset="0" type="4" family="34"/>
+  <p:font name="Wingdings" charset="2" type="4" family="2"/>
+  <p:font name="Arial" charset="0" type="4" family="34"/>
+  <p:font name="Times New Roman" charset="0" type="4" family="18"/>
+  <p:font name="System"/>
+  <p:headersfooters formatid="0" noheader="t"/>
+  <p:headersfooters notes="t" slidenumber="t" formatid="0"/>
+  <p:pptdocumentsettings framecolors="WhiteTextOnBlack" hideslideanimation="t"
+   browsersupport="v4"/>
+ </p:presentation>
+ <o:shapedefaults v:ext="edit" spidmax="60422" style='mso-wrap-style:none'>
+  <v:stroke startarrowwidth="narrow" startarrowlength="short" endarrowwidth="narrow"
+   endarrowlength="short" color2="none [0]" weight="1pt" endcap="square"/>
+  <v:textbox style='mso-fit-shape-to-text:t'/>
+  <o:colormru v:ext="edit" colors="#ff822d,#0c0"/>
+  <o:colormenu v:ext="edit" strokecolor="none"/>
+ </o:shapedefaults></xml>

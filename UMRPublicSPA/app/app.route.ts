@@ -3,17 +3,24 @@ import {MainComponent} from './main/main.component';
 import {LoginComponent} from './login/login.component';
 import { AuthGuard } from './auth.guard';
 //import { MainResolver } from './main/main.resolver';
+import { ProductsServicesComponent } from './products-and-services/products-services.component';
+import { AboutComponent } from './about/about.component';
+import {ContactPortalComponent} from './contact-portal/contact-portal.component';
+import {ClientAccessComponent} from './client-access/client-access.component';
+import {CustomerPortalComponent} from './customer-portal/customer-portal.component';
+import {ApplicantPortalComponent} from './applicant-portal/applicant-portal.component';
+import {JobOpeningComponent} from './jobs-opening/jobs-opening.component';
 
 export const routes: Routes = [
     {
         path: '',
-        component: MainComponent,
+        component: MainComponent
         //canActivate: [AuthGuard],
         //resolve: { main: MainResolver },
-        children: [
-            {
-                path: ''
-            },
+        //children: [
+        //    {
+        //        path: ''
+        //    },
             //{ path: 'patient-records', loadChildren: './patient_records/patient-records.module#PatientRecordsModule' },
             //{ path: 'create-soap-note', loadChildren: './alert_networks/create_soap_notes/create-soap-notes.module#CreateSoapNotesModule' },
             //{ path: 'alert-management', loadChildren: './alert_networks/alert_management/alert-management.module#AlertManagementModule' },
@@ -39,16 +46,48 @@ export const routes: Routes = [
             //...userInformationRoutes,
             //...soapChronologyRoutes,
             //...userManagementRoutes
-        ]
+        //]
     },
     {
         path: 'login',
         component: LoginComponent
     },
     {
+        path: '404',
+        redirectTo: '/'
+    },
+    {
         path: '**',
-        redirectTo: "/"
-    }
+        redirectTo: "404"
+    },
+    {
+        path: 'products-services',
+        component: ProductsServicesComponent
+    },
+    {
+        path: 'about',
+        component: AboutComponent
+    },
+    {
+        path: 'contact-portal',
+        component: ContactPortalComponent
+    },
+    {
+        path: 'client-access',
+        component: ClientAccessComponent
+    },
+    {
+        path: 'applicant-portal',
+        component: ApplicantPortalComponent
+    },
+    {
+        path: 'customer-portal',
+        component: CustomerPortalComponent
+    },
+    {
+        path: 'jobs-opening',
+        component: JobOpeningComponent
+    }    
 ];
 
 export const routing = RouterModule.forRoot(routes , { preloadingStrategy: PreloadAllModules });

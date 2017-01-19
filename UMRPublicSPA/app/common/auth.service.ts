@@ -12,6 +12,8 @@ import {getToken, getTokenFromRefreshToken, revokeToken} from './helpers/http-cl
 import {authCookieKey, disableAuthorization, allPermissions} from './constants/auth-keys';
 
 
+
+
 @Injectable()
 export class AuthService {
     constructor(private http: Http, private umrCookieService: UmrCookieService, private router: Router) { }
@@ -49,11 +51,12 @@ export class AuthService {
     }
 
     login(userID: string, password: string, acr: string): Observable<any> {
-        return getToken(this.http, userID, password, acr)
-            .map<any>((value, index) => {
-                this.saveAuthInfo(value, true);
-            })
-            .catch<any>(this.handleError);
+        return Observable.create(()=> 0);
+        //return getToken(this.http, userID, password, acr)
+        //    .map<any>((value, index) => {
+        //        this.saveAuthInfo(value, true);
+        //    })
+        //    .catch<any>(this.handleError);
     }
 
     setUserSettings() {
@@ -69,12 +72,13 @@ export class AuthService {
         if (!refreshToken) {
             return Observable.throw('Cookie not found');
         }
-        return getTokenFromRefreshToken(this.http, refreshToken)
-            .map<any>((value, index) => {
-                this.saveAuthInfo(value);
-                activateAutoLogout(this.refreshTokenLifeTime, this.logout, this);
-            })
-            .catch<any>(this.handleError);
+        return Observable.create(() => 0);
+        //return getTokenFromRefreshToken(this.http, refreshToken)
+        //    .map<any>((value, index) => {
+        //        this.saveAuthInfo(value);
+        //        activateAutoLogout(this.refreshTokenLifeTime, this.logout, this);
+        //    })
+        //    .catch<any>(this.handleError);
     }
 
     /**

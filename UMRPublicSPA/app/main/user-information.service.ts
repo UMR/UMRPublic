@@ -17,17 +17,18 @@ export class UserInformationService {
         const headers = new Headers();
         const bearer = 'Bearer {0}'.replace('{0}', this._accessTokenService.accessToken);
         headers.append('Authorization', bearer);
-        return this._http.get(this._currentlyLoggedOnUserUrl, {
-            headers
-        })
-            .map((value, index) => {
-                return value;
-            })
-            .catch<any>((err, caught) => {
-                const errMsg = err.message || err.statusText || 'Server Error';
-                console.error(errMsg);
-                return Observable.throw(err);
-            });
+        return Observable.create(() => 0);
+        //return this._http.get(this._currentlyLoggedOnUserUrl, {
+        //    headers
+        //})
+        //    .map((value, index) => {
+        //        return value;
+        //    })
+        //    .catch<any>((err, caught) => {
+        //        const errMsg = err.message || err.statusText || 'Server Error';
+        //        console.error(errMsg);
+        //        return Observable.throw(err);
+        //    });
     }
 
     getCurrentUserMenu(): Observable<Observable<UserMenu[]>> {
@@ -38,15 +39,16 @@ export class UserInformationService {
             headers
         };
 
-        return this._http.get(this._currentlyLoggedOnUserUrl, options)
-            .map<Observable<UserMenu[]>>((response, index) => {
-                const userID: string = response.json().USER_ID;
-                const _userMenurUrl = `${resourceServerUrl}/get_user_menu/${userID}`;
-                return this._http.get(_userMenurUrl, options)
-                    .map<UserMenu[]>((response, index) => {
-                        return <UserMenu[]>response.json();
-                    });
-            });
+        return Observable.create(() => 0);
+        //return this._http.get(this._currentlyLoggedOnUserUrl, options)
+        //    .map<Observable<UserMenu[]>>((response, index) => {
+        //        const userID: string = response.json().USER_ID;
+        //        const _userMenurUrl = `${resourceServerUrl}/get_user_menu/${userID}`;
+        //        return this._http.get(_userMenurUrl, options)
+        //            .map<UserMenu[]>((response, index) => {
+        //                return <UserMenu[]>response.json();
+        //            });
+        //    });
     }
 
     getCurrentUserPhoto(): Observable<string> {
@@ -58,9 +60,10 @@ export class UserInformationService {
         };
 
         const _photoUrl = `${resourceServerUrl}/get_user_photo`;
-        return this._http.get(_photoUrl, options)
-                    .map<string>((response, index) => {                     
-                        return <string>response.json();
-                    });
+        return Observable.create(() => 0);
+        //return this._http.get(_photoUrl, options)
+        //            .map<string>((response, index) => {                     
+        //                return <string>response.json();
+        //            });
     }
 }
