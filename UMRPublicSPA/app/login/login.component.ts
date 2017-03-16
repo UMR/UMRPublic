@@ -11,13 +11,12 @@ class User {
 })
 export class LoginComponent {
     constructor(private _router: Router, private _loginService: LoginService) {
-        this.institution = this.institutions[0].value;
+        
     }
-
-    institution: string;
+    
     loginId: string;
     password: string;
-
+    institution: string;
     institutions = [
         {
             name: 'Universal Medical Records',
@@ -30,7 +29,7 @@ export class LoginComponent {
     ];
 
     onLogin() {
-        this._loginService.login(this.loginId, this.password, this.institution)
+        this._loginService.login(this.loginId, this.password)
             .subscribe(() => {
                 this._router.navigate(['/']);
             }, () => console.error('The Login ID or Password is incorrect.'));

@@ -1,7 +1,7 @@
 ﻿import { Routes, RouterModule, PreloadAllModules }  from '@angular/router';
 import {MainComponent} from './main/main.component';
 import {LoginComponent} from './login/login.component';
-import { AuthGuard } from './auth.guard';
+//import { AuthGuard } from './auth.guard';
 //import { MainResolver } from './main/main.resolver';
 import { ProductsServicesComponent } from './products-and-services/products-services.component';
 import { AboutComponent } from './about/about.component';
@@ -10,6 +10,7 @@ import {ClientAccessComponent} from './client-access/client-access.component';
 import {CustomerPortalComponent} from './customer-portal/customer-portal.component';
 import {ApplicantPortalComponent} from './applicant-portal/applicant-portal.component';
 import {JobOpeningComponent} from './jobs-opening/jobs-opening.component';
+import {JobDashboardComponent} from './jobs-opening/job-dashboard/job-dashboard.component';
 
 export const routes: Routes = [
     {
@@ -87,7 +88,11 @@ export const routes: Routes = [
     {
         path: 'jobs-opening',
         component: JobOpeningComponent
-    }    
+    },
+    {
+        path: 'job-dashboard',
+        component: JobDashboardComponent
+    }     
 ];
 
 export const routing = RouterModule.forRoot(routes , { preloadingStrategy: PreloadAllModules });

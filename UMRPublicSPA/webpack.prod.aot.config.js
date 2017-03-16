@@ -4,14 +4,15 @@ const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
 const UglifyJsPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+const ExtendedDefinePlugin = require('extended-define-webpack-plugin');
 
 module.exports = {
     entry: {
         'polyfills-vendor': [
             path.resolve(__dirname, 'node_modules/es6-shim/es6-shim.min.js'),
             path.resolve(__dirname, 'node_modules/reflect-metadata/Reflect.js'),
-            path.resolve(__dirname, 'node_modules/zone.js/dist/zone.min.js'),            
-            './app/vendor'
+            path.resolve(__dirname, 'node_modules/zone.js/dist/zone.min.js')            
+            //'./app/vendor'
         ],
         'app': './app/boot.aot'
     },
@@ -35,10 +36,10 @@ module.exports = {
             __dirname
         ),
        new CopyWebpackPlugin([
-            {
-                from: './assets/images',
-                to: 'assets/images'
-            },
+           {
+               from: './assets/images',
+               to: 'assets/images'
+           },
             {
                 from: './node_modules/bootstrap/dist',
                 to: 'assets/bootstrap'
@@ -48,16 +49,53 @@ module.exports = {
                 to: 'assets/font-awesome'
             },
             {
-                from: './node_modules/primeui',
-                to: 'assets/primeui'
-            },
-            {
                 from: './assets/css',
                 to: 'assets/css'
-            }, ,
+            },
+             {
+                 from: './assets/pdf',
+                 to: 'assets/pdf'
+             },
             {
                 from: './assets/js',
                 to: 'assets/js'
+            },
+
+            {
+                from: './assets/images/medicine.png',
+                to: 'assets/images/medicine.png'
+            },
+            {
+                from: './assets/images/dna.png',
+                to: 'assets/images/dna.png'
+            },
+            {
+                from: './assets/images/wheelchair.png',
+                to: 'assets/images/wheelchair.png'
+            },
+            {
+                from: './assets/images/medical-history.png',
+                to: 'assets/images/medical-history.png'
+            },
+            {
+                from: './assets/slides',
+                to: 'assets/slides'
+            },
+            {
+                from: './assets/slides/UMRHealthcareRecordsIntegratedSolution_files',
+                to: 'assets/slides/UMRHealthcareRecordsIntegratedSolution_files'
+            },
+            {
+                from: './assets/slides/UMRPresentation_files',
+                to: 'assets/slides/UMRPresentation_files'
+            },
+            {
+                from: './assets/doc',
+                to: 'assets/doc'
+            },
+            {
+                from: './assets/ppt',
+                to: 'assets/ppt'
             }
        ]),
         new HtmlWebpack({
@@ -65,7 +103,7 @@ module.exports = {
             inject: 'body',
             template: './index.html'
         }),
-        new webpack.NoErrorsPlugin(),
+        new webpack.NoEmitOnErrorsPlugin(),
         new UglifyJsPlugin({
             beautify: false,
             minimize: true,
@@ -83,6 +121,11 @@ module.exports = {
             test: /\./,
             threshold: 0,
             minRatio: 0.8
+        }),
+        new ExtendedDefinePlugin({
+            APP_CONFIG: {
+                ENV: "production"
+            }
         })
     ],
     module: {
@@ -95,8 +138,16 @@ module.exports = {
                 ],
                 exclude: [/\.(spec|e2e|d)\.ts$/]
             },
-            { loader: 'raw', test: /\.(css|html)$/, exclude: ['./index.html'] },
-            { test: /\.json$/, loader: 'json-loader' }
+            { loader: 'raw-loader', test: /\.(css|html)$/, exclude: ['./index.html'] },
+            { test: /\.json$/, loader: 'json-loader' },
+            {
+                enforce: 'pre',
+                test: /\.(ico|png|jpg|jpeg|otf|eot|svg|ttf|woff2)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: { limit: 10000 }
+                }]
+            }
         ]
     },
     resolve: {

@@ -3,8 +3,6 @@
   <Import Project="..\packages\Microsoft.Net.Compilers.2.0.0-rc2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.0.0-rc2\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
-  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -30,7 +28,7 @@
     <SccProvider>SAK</SccProvider>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>2.1</TypeScriptToolsVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -84,6 +82,7 @@
     <Content Include="app\contact-portal\location\location.component.html" />
     <Content Include="app\customer-portal\customer-portal.component.html" />
     <Content Include="app\job-board\job-board.component.html" />
+    <Content Include="app\jobs-opening\job-dashboard\job-dashboard.component.html" />
     <Content Include="app\jobs-opening\jobs-opening.component.html" />
     <Content Include="app\portal\portal.component.html" />
     <Content Include="app\products-and-services\products-services.component.html" />
@@ -109,6 +108,7 @@
     <Content Include="assets\images\member-4.jpg" />
     <Content Include="assets\images\urmtest-logo.png" />
     <Content Include="assets\images\wheelchair.png" />
+    <Content Include="assets\js\app.min.js" />
     <Content Include="assets\js\bootstrap.js" />
     <Content Include="assets\js\bootstrap.min.js" />
     <Content Include="assets\js\custom.js" />
@@ -422,7 +422,6 @@
     <Content Include="assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="assets\fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="packages.config" />
     <Content Include="assets\pdf\about.pdf" />
     <Content Include="assets\slides\UMRPresentation2_files\editdata.mso" />
     <Content Include="assets\slides\UMRPresentation_files\font.eot" />
@@ -457,7 +456,6 @@
     <Content Include="app\main\main.component.style.css" />
     <Content Include="assets\images\favicon.ico" />
     <Content Include="index.html" />
-    <Content Include="unit-tests.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -481,13 +479,10 @@
     <TypeScriptCompile Include="app\common\components\subscribe\subscribe.component.ts" />
     <TypeScriptCompile Include="app\common\constants\auth-keys.ts" />
     <TypeScriptCompile Include="app\common\directives\loading-image.component.ts" />
-    <TypeScriptCompile Include="app\common\directives\trimmed-input.directive.ts" />
     <TypeScriptCompile Include="app\common\helpers\auto-logout.helper.ts" />
     <TypeScriptCompile Include="app\common\helpers\http-client.helper.ts" />
     <TypeScriptCompile Include="app\common\helpers\route-config.helper.ts" />
     <TypeScriptCompile Include="app\common\loading-image.module.ts" />
-    <TypeScriptCompile Include="app\common\pipes\my-uppercase.pipe.spec.ts" />
-    <TypeScriptCompile Include="app\common\pipes\my-uppercase.pipe.ts" />
     <TypeScriptCompile Include="app\common\services\access-token.service.spec.ts" />
     <TypeScriptCompile Include="app\common\services\access-token.service.ts" />
     <TypeScriptCompile Include="app\common\services\dialog.service.spec.ts" />
@@ -499,6 +494,7 @@
     <TypeScriptCompile Include="app\contact-portal\location\location.component.ts" />
     <TypeScriptCompile Include="app\customer-portal\customer-portal.component.ts" />
     <TypeScriptCompile Include="app\job-board\job-board.component.ts" />
+    <TypeScriptCompile Include="app\jobs-opening\job-dashboard\job-dashboard.component.ts" />
     <TypeScriptCompile Include="app\jobs-opening\jobs-opening.component.ts" />
     <TypeScriptCompile Include="app\login\login.component.spec.ts" />
     <TypeScriptCompile Include="app\login\login.component.ts" />
@@ -518,6 +514,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="app\common\pipes\" />
     <Folder Include="assets\slides\UMRPresentation_files\_derived\" />
   </ItemGroup>
   <PropertyGroup>

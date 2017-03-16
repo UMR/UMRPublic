@@ -758,6 +758,10 @@ footer{
     font-size: 14px
 }
 
+.modal-backdrop.in {
+    opacity: 0;
+}
+
 
 
 @media(min-width:767px) {

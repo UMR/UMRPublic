@@ -17,6 +17,7 @@
     },
     "exclude": [
         "node_modules",
+        "app/boot.aot.ts",
         "app/**/*.e2e.ts",
         "app/**/*.spec.ts",
         "app/*.e2e.ts",

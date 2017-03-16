@@ -2,7 +2,7 @@
 import {CookieService, CookieOptions, CookieOptionsArgs, BaseCookieOptions, ANGULAR2_COOKIE_PROVIDERS} from 'angular2-cookie/core';
 
 @Injectable()
-export class UmrCookieService {
+export class UmrPublicCookieService {
     constructor(private _cookieService: CookieService) { }
 
     getAllCookies() {

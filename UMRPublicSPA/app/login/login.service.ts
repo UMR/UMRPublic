@@ -1,5 +1,4 @@
 ﻿import {Injectable} from '@angular/core';
-//import {AccessTokenService} from '../common/services/access-token.service';
 import {AuthService} from '../common/auth.service';
 
 
@@ -11,8 +10,8 @@ export class LoginService {
         return !!this._accessTokenService.accessToken;
     }
 
-    login(userID: string, password: string, institution) {
-        return this._accessTokenService.login(userID, password, institution);
+    login(userID: string, password: string) {
+        return this._accessTokenService.login(userID, password);
     }
 
     logout() {

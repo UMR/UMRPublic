@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const ExtendedDefinePlugin = require('extended-define-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -12,9 +13,9 @@ module.exports = {
             path.resolve(__dirname, 'node_modules/zone.js/dist/zone.min.js'),
             path.resolve(__dirname, 'node_modules/zone.js/dist/long-stack-trace-zone.min.js')
         ],
-        //'vendor': [
-        //    './app/vendor'
-        //],
+        'vendor': [
+            './app/vendor'
+        ],
         'app': './app/boot'
     },
     output: {
@@ -26,7 +27,7 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.SourceMapDevToolPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
-            name: ['app', /*'vendor',*/ 'polyfills']
+            name: ['app', 'vendor','polyfills']
         }),
         new webpack.ContextReplacementPlugin(
             /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
@@ -100,7 +101,12 @@ module.exports = {
             inject: 'body',
             template: './index.html'
         }),
-        new OpenBrowserPlugin({ url: 'http://localhost:14248/', browser: 'chrome' })
+        new OpenBrowserPlugin({ url: 'http://localhost:14248/', browser: 'chrome' }),
+        new ExtendedDefinePlugin({
+            APP_CONFIG: {
+                ENV: "development"
+            }
+        })
     ],
     module: {
         loaders: [
@@ -114,7 +120,7 @@ module.exports = {
                 ],
                 exclude: [/\.(spec|e2e|d)\.ts$/]
             },
-            { loader: 'raw', test: /\.(css|html)$/, exclude: ['./index.html'] },
+            { loader: 'raw-loader', test: /\.(css|html)$/, exclude: ['./index.html'] },
             { test: /\.json$/, loader: 'json-loader' }
         ]
     },

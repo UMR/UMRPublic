@@ -6,7 +6,7 @@ import { routing }        from './app.route';
 import { HttpModule  } from '@angular/http';
 import {CookieService, CookieOptions} from 'angular2-cookie/core';
 import {LoginService} from './login/login.service';
-import {UmrCookieService} from './common/services/umr-cookie.service';
+import {UmrPublicCookieService} from './common/services/umr-cookie.service';
 import {AuthService} from './common/auth.service';
 import { AuthGuard } from './auth.guard';
 //import { MainResolver } from './main/main.resolver';
@@ -24,7 +24,11 @@ import {ClientAccessComponent} from './client-access/client-access.component';
 import {SubscribeComponent} from './common/components/subscribe/subscribe.component';
 import {ProductsServicesComponent} from './products-and-services/products-services.component';
 import {JobOpeningComponent} from './jobs-opening/jobs-opening.component';
-import {LocationComponent } from './contact-portal/location/location.component'
+import {LocationComponent } from './contact-portal/location/location.component';
+import {JobBoardComponent} from './job-board/job-board.component';
+import {PortalComponent} from './portal/portal.component';
+import {JobDashboardComponent} from './jobs-opening/job-dashboard/job-dashboard.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -46,11 +50,14 @@ import {LocationComponent } from './contact-portal/location/location.component'
         SubscribeComponent,
         ProductsServicesComponent,
         JobOpeningComponent,
-        LocationComponent
+        LocationComponent,
+        JobBoardComponent,
+        PortalComponent,
+        JobDashboardComponent
     ],
     providers: [CookieService,
         LoginService,
-        UmrCookieService,
+        UmrPublicCookieService,
         AuthService,
         AuthGuard,
         UserInformationService

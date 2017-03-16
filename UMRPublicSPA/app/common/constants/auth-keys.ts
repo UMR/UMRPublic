@@ -1,5 +1,5 @@
 ﻿export const authCookieKey = 'tokenKey';
-import {Headers} from '@angular/http';
+//import {Headers} from '@angular/http';
 
 
 //export const disableAuthorization: boolean = false;
@@ -16,28 +16,28 @@ import {Headers} from '@angular/http';
 //////////////////////////172.16.1.11//////////////////////////
 
 //export const disableAuthorization: boolean = true;
-//export const authorizationServerUrl = 'http://www.umrtest.com/UMRPortalsAPIAuthorizationServer';
-//export const pathMatch = '/UMRPortals';
-//export const scopes = ['UMRPortals', 'offline_access', 'openid & acr_values=UMHLD'];
-//export const resourceServerUrl = 'http://www.umrtest.com/UMRPortalsAPIResourceServer';
+//export const authorizationServerUrl = 'http://www.umrtest.com/UMRPublicAPIAuthorizationServer';
+//export const pathMatch = '/UMRPublic';
+//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+//export const resourceServerUrl = 'http://www.umrtest.com/UMRPublicAPIResourceServer';
 
 
 ////////////////////////////// Localhost///////////////////////////
 
 export const disableAuthorization: boolean = true;
 export const authorizationServerUrl = 'http://localhost:35427';
-export const pathMatch = '/UMRPortals';
-export const scopes = ['UMRPortals', 'offline_access', 'openid & acr_values=UMHLD'];
-export const resourceServerUrl = 'http://localhost:14241';
+export const pathMatch = '/UMRPublic';
+export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+export const resourceServerUrl = 'http://localhost:2696';
 
 
 ////////////////    SPIKE /////////////////////
 
 //export const disableAuthorization: boolean = true;
-//export const authorizationServerUrl = 'http://172.16.205.67:1111';
-//export const pathMatch = '/UMRPortals';
-//export const scopes = ['UMRPortals', 'offline_access', 'openid & acr_values=UMHLD'];
-//export const resourceServerUrl = 'http://172.16.205.67:2222';
+//export const authorizationServerUrl = 'http://172.16.205.67:1515';
+//export const pathMatch = '/UMRPublic';
+//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+//export const resourceServerUrl = 'http://172.16.205.67:1516';
 
 
 export const allPermissions = ['Add New Applicant', 'Allowed IP', 'Applicant Degree', 'Applicant Ownership', 'Applicant Skill', 'Applicant Transfer', 'Applicants', 'Assign Recruiter Role', 'Calendar', 'Cold Tracking', 'Configure Field Access Permission', 'Contact', 'Email', 'Follow-up', 'General Population', 'Hot Tracking', 'Information', 'Institution Information', 'Institution Type Information', 'Interview', 'Job Attributes', 'Job Skills', 'Manage Profile', 'Manage Recruiter', 'Manage Role', 'Others', 'Pending', 'Placement', 'Position Information', 'Profiles', 'Recruiter', 'Send Out', 'Settings', 'User Mail', 'User Mail Configuration', 'User Mail Template', 'User Settings', 'View By Applicant', 'View by Institution', 'Logout'];

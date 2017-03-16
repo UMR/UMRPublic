@@ -2,7 +2,7 @@
 import {Router, Routes} from '@angular/router';
 import {Http, Headers, Response, RequestOptionsArgs} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
-import {UmrCookieService} from '../common/services/umr-cookie.service';
+import {UmrPublicCookieService} from '../common/services/umr-cookie.service';
 import {CookieOptionsArgs} from 'angular2-cookie/core';
 import {cloneRoutes, removeUnauthorizeRoutes} from './helpers/route-config.helper';
 
@@ -16,7 +16,7 @@ import {authCookieKey, disableAuthorization, allPermissions} from './constants/a
 
 @Injectable()
 export class AuthService {
-    constructor(private http: Http, private umrCookieService: UmrCookieService, private router: Router) { }
+    constructor(private http: Http, private umrCookieService: UmrPublicCookieService, private router: Router) { }
 
     get isLoggedIn(): boolean {
         return !!this.accessToken;
@@ -50,13 +50,11 @@ export class AuthService {
         return accessTokenInfo && accessTokenInfo.permissions;
     }
 
-    login(userID: string, password: string, acr: string): Observable<any> {
-        return Observable.create(()=> 0);
-        //return getToken(this.http, userID, password, acr)
-        //    .map<any>((value, index) => {
-        //        this.saveAuthInfo(value, true);
-        //    })
-        //    .catch<any>(this.handleError);
+    login(userID: string, password: string): Observable<any> {
+        return getToken(this.http, userID, password)
+            .map((value, index) => {
+                this.saveAuthInfo(value, true);
+            }).catch(err => Observable.throw(err));
     }
 
     setUserSettings() {
@@ -72,13 +70,12 @@ export class AuthService {
         if (!refreshToken) {
             return Observable.throw('Cookie not found');
         }
-        return Observable.create(() => 0);
-        //return getTokenFromRefreshToken(this.http, refreshToken)
-        //    .map<any>((value, index) => {
-        //        this.saveAuthInfo(value);
-        //        activateAutoLogout(this.refreshTokenLifeTime, this.logout, this);
-        //    })
-        //    .catch<any>(this.handleError);
+        return getTokenFromRefreshToken(this.http, refreshToken)
+            .map((value, index) => {
+                this.saveAuthInfo(value);
+                activateAutoLogout(this.refreshTokenLifeTime, this.logout, this);
+            })
+            .catch(err => Observable.throw(err));
     }
 
     /**

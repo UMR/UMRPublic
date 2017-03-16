@@ -13,12 +13,12 @@ const accessTokenFromRefreshTokenBody = 'grant_type=refresh_token&refresh_token=
 function getheaders(): Headers {
     const headers = new Headers();
     headers.append('Content-Type', 'application/x-www-form-urlencoded');
-    headers.append('Authorization', 'Basic V2ViVU1SUmVjcnVpdG1lbnRDbGllbnQ6OGJyTU5McWxidmRPOFhma2tBcU1oL2Vza3JwQmpMSm5VWTNIS0Flb2U2MD0=');
+    headers.append('Authorization', 'Basic V2ViVU1SUHVibGljQ2xpZW50Ojhick1OTHFsYnZkTzhYZmtrQXFNaC9lc2tycEJqTEpuVVkzSEtBZW9lNjA9');
     return headers;
 }
 
-export function getToken(http: Http, userID: string, password: string, institution: string): Observable<Response> {
-    const body = accessTokenBody.replace('{0}', userID).replace('{1}', password).replace('{2}', institution);
+export function getToken(http: Http, userID: string, password: string): Observable<Response> {
+    const body = accessTokenBody.replace('{0}', userID).replace('{1}', password);
     return http.post(accessTokenUrl, body, { headers: getheaders() });
 }
 

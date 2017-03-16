@@ -17,15 +17,14 @@
         ]
     },
     "exclude": [
-        "node_modules",
-        "app/**/*.e2e.ts",
-        "app/**/*.spec.ts",
-        "app/*.e2e.ts",
-        "app/*.spec.ts"
+      "node_modules",
+      "app/boot.aot.ts",
+      "app/**/*.e2e.ts",
+      "app/**/*.spec.ts",
+      "app/*.e2e.ts",
+      "app/*.spec.ts"
     ],
     "awesomeTypescriptLoaderOptions": {
-        "useWebpackText": true,
-        "forkChecker": true,
-        "useCache": true
+        "useWebpackText": true        
     }
 }
