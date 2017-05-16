@@ -1,5 +1,5 @@
 ﻿export const authCookieKey = 'tokenKey';
-//import {Headers} from '@angular/http';
+import {Headers} from '@angular/http';
 
 
 //export const disableAuthorization: boolean = false;

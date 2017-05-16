@@ -39,11 +39,24 @@ namespace UMRPublicBO.BO
             catch(Exception ex) {
                 throw ex;
             }
-            return null;
-            
         }
+        public static UserCredential GetUserByUserID(string userID)
+        {            
+            UMRJobs JobsEntities = new UMRJobs();            
+            try
+            {
 
-        private static bool UpdatePassword(int userCredentialId, string userName, string confirmPassword)
+                var user = (from userCred in JobsEntities.UserCredentials
+                           where userCred.UserCredentialId.ToString() == userID                           
+                           select userCred).FirstOrDefault();
+                return user;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public static bool UpdatePassword(int userCredentialId, string userName, string confirmPassword)
         {
             try
             {

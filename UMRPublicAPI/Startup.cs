@@ -19,9 +19,9 @@ namespace UMRPublicAPI
             app.UseIdentityServerBearerTokenAuthentication(new IdentityServerBearerTokenAuthenticationOptions
             {
                 Authority = UMRPublicAPI.AuthorizationServer.Constants.AuthorizationServerPath,
-                ClientId = UMRPublicAPI.AuthorizationServer.Constants.UMRPortalsScope,
-                ClientSecret = UMRPublicAPI.AuthorizationServer.Constants.UMRPortalsScopeSecret.Sha256(),
-                RequiredScopes = new[] { UMRPublicAPI.AuthorizationServer.Constants.UMRPortalsScope },
+                ClientId = UMRPublicAPI.AuthorizationServer.Constants.UMRPublicScope,
+                ClientSecret = UMRPublicAPI.AuthorizationServer.Constants.UMRPublicScopeSecret.Sha256(),
+                RequiredScopes = new[] { UMRPublicAPI.AuthorizationServer.Constants.UMRPublicScope },
                 SigningCertificate = LoadCertificate(),
                 EnableValidationResultCache = false
             });

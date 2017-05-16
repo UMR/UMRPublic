@@ -2,7 +2,7 @@
 import {Router} from '@angular/router';
 
 @Component({    
-    templateUrl: 'customer-portal.component.html'
+    templateUrl: './customer-portal.component.html'
 })
 
 export class CustomerPortalComponent {

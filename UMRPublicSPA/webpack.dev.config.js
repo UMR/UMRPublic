@@ -30,8 +30,8 @@ module.exports = {
             name: ['app', 'vendor','polyfills']
         }),
         new webpack.ContextReplacementPlugin(
-            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-            __dirname
+            /angular(\\|\/)core(\\|\/)@angular/,
+            path.resolve(__dirname, 'app')
         ),
         new CopyWebpackPlugin([
            {
@@ -50,10 +50,18 @@ module.exports = {
                 from: './assets/css',
                 to: 'assets/css'
             },
-             {
-                 from: './assets/pdf',
-                 to: 'assets/pdf'
-             },
+            {
+                from: './node_modules/primeui',
+                to: 'assets/primeui'
+            },
+            {
+                from: './node_modules/quill/dist',
+                to: 'assets/quill'
+            },            
+            {
+                from: './assets/pdf',
+                to: 'assets/pdf'
+            },
             {
                 from: './assets/js',
                 to: 'assets/js'

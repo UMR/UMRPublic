@@ -5,16 +5,18 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using UMRPublicBO.BO;
 using UMRPublicBO.DAL;
 
 namespace UMRPublicAPI.Controllers
 {
+    [EnableCors("*", "*", "GET,POST,PUT,DELETE")]
     [RoutePrefix("api/jobboards")]
-    public class JobBoardsController : ApiController
+    public class JobBoardsController : CurrentUserController
     {
-        [Route("get_all_jobs")]
+        [Route("getalljobs")]
         [HttpGet]
         [ResponseType(typeof(JobContent))]
         public IHttpActionResult GetAllJobs()
@@ -27,10 +29,14 @@ namespace UMRPublicAPI.Controllers
                     return NotFound();
                 }
 
-                return Ok(jobs);                
+                return Ok(jobs);
             }
             catch (Exception ex)
-            {   
+            {
+                if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                {
+                    return InternalServerError();
+                }
                 return InternalServerError(ex);
             }            
         }
@@ -38,11 +44,11 @@ namespace UMRPublicAPI.Controllers
         [Route("getalljobsbyuserid")]
         [HttpGet]
         [ResponseType(typeof(JobContent))]
-        public IHttpActionResult GetAllJobsByUserID(int userId)
+        public IHttpActionResult GetAllJobsByUserID()
         {
             try
             {
-                List<JobContent> jobs = JobManager.GetAllJobsByUserID(userId);
+                List<JobContent> jobs = JobManager.GetAllJobsByUserID(base.GetCurrentUser().UserCredentialId);
                 if (jobs.Count == 0)
                 {
                     return NotFound();
@@ -52,13 +58,17 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                {
+                    return InternalServerError();
+                }
                 return InternalServerError(ex);
             }
         }
 
         [Route("insertjob")]
         [HttpPost]
-        public HttpResponseMessage InsetJob([FromBody]JobContent jobContent, int userCredentialId)
+        public HttpResponseMessage InsetJob([FromBody]JobContent jobContent)
         {
             HttpResponseMessage responseMessage;
             try
@@ -69,11 +79,15 @@ namespace UMRPublicAPI.Controllers
                     return responseMessage;
                 }
 
-                JobManager.InsetJob(jobContent, userCredentialId);
+                JobManager.InsetJob(jobContent, base.GetCurrentUser().UserCredentialId);
                 return Request.CreateResponse(HttpStatusCode.Created);
             }
             catch (Exception ex)
             {
+                if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                {
+                    responseMessage = Request.CreateResponse(HttpStatusCode.ExpectationFailed);
+                }
                 responseMessage = Request.CreateResponse(HttpStatusCode.ExpectationFailed, ex.Message);
             }
             return responseMessage;
@@ -81,30 +95,42 @@ namespace UMRPublicAPI.Controllers
     
         [Route("updatejob")]
         [HttpPut]
-        public IHttpActionResult UpdateJob(int jobContentId, int userCredentialId, string description)
+        public IHttpActionResult UpdateJob([FromBody]JobContent jobContent)
         {
             try
             {
-                JobManager.UpdateJob(jobContentId, userCredentialId, description);
+                if (jobContent == null)
+                {
+                    return NotFound();
+                }
+                JobManager.UpdateJob(jobContent.JobContentId, base.GetCurrentUser().UserCredentialId, jobContent.JobDescription);
                 return Ok();
             }
             catch (Exception ex)
             {
+                if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                {
+                    return InternalServerError();
+                }
                 return InternalServerError(ex);
             }
         }
 
-        [Route("deletejob")]
-        [HttpPut]
-        public IHttpActionResult DeleteJob(int jobContentId, int userId)
+        [Route("deletejob/{jobContentId}")]
+        [HttpDelete]
+        public IHttpActionResult DeleteJob(int jobContentId)
         {
             try
             {
-                JobManager.DeleteJob(jobContentId, userId);
+                JobManager.DeleteJob(jobContentId, base.GetCurrentUser().UserCredentialId);
                 return Ok();
             }
             catch (Exception ex)
             {
+                if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                {
+                    return InternalServerError();
+                }
                 return InternalServerError(ex);
             }
         }

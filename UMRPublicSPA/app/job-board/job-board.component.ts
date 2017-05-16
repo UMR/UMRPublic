@@ -2,7 +2,7 @@
 import {Router} from '@angular/router';
 
 @Component({
-    templateUrl: 'job-board.component.html'
+    templateUrl: './job-board.component.html'
 })
 
 export class JobBoardComponent {

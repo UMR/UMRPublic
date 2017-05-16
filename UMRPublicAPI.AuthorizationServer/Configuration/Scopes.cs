@@ -11,12 +11,12 @@ namespace UMRPublicAPI.AuthorizationServer.Configuration
             {
                 new Scope
                 {
-                    Name = Constants.UMRPortalsScope,
+                    Name = Constants.UMRPublicScope,
                     Enabled = true,
                     Type = ScopeType.Resource,
                     ScopeSecrets = new List<Secret>
                     {
-                        new Secret(Constants.UMRPortalsScopeSecret.Sha256())
+                        new Secret(Constants.UMRPublicScopeSecret.Sha256())
                     },
                     IncludeAllClaimsForUser = true,
                     Emphasize = true

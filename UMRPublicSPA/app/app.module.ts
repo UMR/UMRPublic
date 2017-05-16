@@ -1,6 +1,10 @@
 ﻿import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditorModule, SharedModule, TooltipModule, DataTableModule, PaginatorModule, ButtonModule, ConfirmDialogModule, GrowlModule } from 'primeng/primeng';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//import { EditorModule } from 'primeng/components/editor/editor';
+//import { DataTableModule } from 'primeng/components/dataTable/dataTable';
 import { AppComponent }   from './app.component';
 import { routing }        from './app.route';
 import { HttpModule  } from '@angular/http';
@@ -9,13 +13,14 @@ import {LoginService} from './login/login.service';
 import {UmrPublicCookieService} from './common/services/umr-cookie.service';
 import {AuthService} from './common/auth.service';
 import { AuthGuard } from './auth.guard';
+import { UserInformationService } from './common/services/user-information.service';
 //import { MainResolver } from './main/main.resolver';
-import {UserInformationService} from './main/user-information.service';
-import {MainComponent} from './main/main.component';
-import {LoginComponent} from './login/login.component';
+import { MainComponent } from './main/main.component';
+import { LoginComponent } from './login/login.component';
 import { LoadingImageModule } from './common/loading-image.module';
 import {FooterComponent} from './common/components/footer/footer.component';
-import {HeaderComponent} from './common/components/header/header.component';
+import { HeaderComponent } from './common/components/header/header.component';
+import { HomeComponent } from './home/home.component';
 import {CustomerPortalComponent} from './customer-portal/customer-portal.component';
 import {ContactPortalComponent} from './contact-portal/contact-portal.component';
 import {ApplicantPortalComponent} from './applicant-portal/applicant-portal.component';
@@ -27,21 +32,36 @@ import {JobOpeningComponent} from './jobs-opening/jobs-opening.component';
 import {LocationComponent } from './contact-portal/location/location.component';
 import {JobBoardComponent} from './job-board/job-board.component';
 import {PortalComponent} from './portal/portal.component';
-import {JobDashboardComponent} from './jobs-opening/job-dashboard/job-dashboard.component';
+import { JobDashboardComponent } from './jobs-opening/job-dashboard/job-dashboard.component';
+import { AdminFooterComponent } from './common/components/admin-footer/admin-footer.component';
+import { AdminHeaderComponent } from './common/components/admin-header/admin-header.component';
+import { AdminHomeComponent } from './jobs-opening/admin-home/admin-home.component';
+import { ChangePasswordComponent } from './jobs-opening/change-password/change-password.component';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         routing,
-        LoadingImageModule
+        LoadingImageModule,
+        SharedModule,
+        EditorModule,
+        TooltipModule,
+        DataTableModule,
+        PaginatorModule,
+        ButtonModule,
+        ConfirmDialogModule,
+        BrowserAnimationsModule,
+        GrowlModule
     ],
     declarations: [AppComponent,
         MainComponent,
         LoginComponent,
         FooterComponent,
         HeaderComponent,
+        HomeComponent,
         CustomerPortalComponent,
         ContactPortalComponent,
         ApplicantPortalComponent,
@@ -53,15 +73,24 @@ import {JobDashboardComponent} from './jobs-opening/job-dashboard/job-dashboard.
         LocationComponent,
         JobBoardComponent,
         PortalComponent,
-        JobDashboardComponent
+        AdminFooterComponent,
+        JobDashboardComponent,
+        AdminHeaderComponent,
+        AdminFooterComponent,
+        AdminHomeComponent,
+        ChangePasswordComponent
     ],
-    providers: [CookieService,
-        LoginService,
+    providers: [{ provide: CookieService, useFactory: cookieServiceFactory },
         UmrPublicCookieService,
+        LoginService,        
         AuthService,
         AuthGuard,
-        UserInformationService
+        UserInformationService        
     ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function cookieServiceFactory() { return new CookieService(); }
+//{ provide: UmrPublicCookieService, useFactory: cookieServiceFactory }

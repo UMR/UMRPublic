@@ -56,9 +56,13 @@ namespace UMRPortalsAPI.AuthorizationServer
         public override Task GetProfileDataAsync(ProfileDataRequestContext context)
         {
             var identity = new ClaimsIdentity();
+            UserCredential currentUser = UserManager.GetUserByUserID(context.Subject.GetSubjectId());
             dynamic currentUserDynamic = new ExpandoObject();
-            currentUserDynamic.UserCredentialId = context.Subject.GetSubjectId();
-            currentUserDynamic.UserName = context.Subject.GetName();
+            if (currentUser != null)
+            {
+                currentUserDynamic.UserCredentialId = currentUser.UserCredentialId;
+                currentUserDynamic.UserName = currentUser.UserName;                
+            }
             if (currentUserDynamic != null)
             {
                 var currentUserJson = Newtonsoft.Json.JsonConvert.SerializeObject(currentUserDynamic);
@@ -69,6 +73,19 @@ namespace UMRPortalsAPI.AuthorizationServer
             }
             context.IssuedClaims = identity.Claims;
             return Task.FromResult(0);
+            //dynamic currentUserDynamic = new ExpandoObject();
+            //currentUserDynamic.UserCredentialId = context.Subject.GetSubjectId();
+            //currentUserDynamic.UserName = context.Subject.GetName();
+            //if (currentUserDynamic != null)
+            //{
+            //    var currentUserJson = Newtonsoft.Json.JsonConvert.SerializeObject(currentUserDynamic);
+            //    identity.AddClaims(new[]
+            //    {
+            //        new Claim("currentUser", currentUserJson)
+            //    });
+            //}
+            //context.IssuedClaims = identity.Claims;
+            //return Task.FromResult(0);
         }
         //public override Task SignOutAsync(SignOutContext context)
         //{

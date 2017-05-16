@@ -11,8 +11,11 @@ module.exports = {
         'polyfills-vendor': [
             path.resolve(__dirname, 'node_modules/es6-shim/es6-shim.min.js'),
             path.resolve(__dirname, 'node_modules/reflect-metadata/Reflect.js'),
-            path.resolve(__dirname, 'node_modules/zone.js/dist/zone.min.js')
-            //'./app/vendor'
+            path.resolve(__dirname, 'node_modules/zone.js/dist/zone.min.js'),
+            path.resolve(__dirname, 'node_modules/zone.js/dist/long-stack-trace-zone.min.js')       
+        ],
+        'vendor': [
+            './app/vendor'
         ],
         'app': './app/boot'
     },
@@ -32,8 +35,8 @@ module.exports = {
         }),
         new webpack.optimize.AggressiveMergingPlugin(),
         new webpack.ContextReplacementPlugin(
-            /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-            __dirname
+            /angular(\\|\/)core(\\|\/)@angular/,
+            path.resolve(__dirname, 'app')
         ),
         new CopyWebpackPlugin([
             {
@@ -52,10 +55,18 @@ module.exports = {
                 from: './assets/css',
                 to: 'assets/css'
             },
-                {
-                    from: './assets/pdf',
-                    to: 'assets/pdf'
-                },
+            {
+                from: './node_modules/primeui',
+                to: 'assets/primeui'
+            },
+            {
+                from: './node_modules/quill/dist',
+                to: 'assets/quill'
+            },    
+            {
+                from: './assets/pdf',
+                to: 'assets/pdf'
+            },
             {
                 from: './assets/js',
                 to: 'assets/js'

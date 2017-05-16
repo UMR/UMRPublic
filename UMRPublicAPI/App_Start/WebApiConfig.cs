@@ -25,6 +25,7 @@ namespace UMRPublicAPI
             config.Formatters.JsonFormatter
             .SerializerSettings
             .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            config.EnableCors();
         }
     }
 }

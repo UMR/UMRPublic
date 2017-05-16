@@ -2,7 +2,7 @@
 declare var google: any;
 @Component({
     selector: 'location',
-    templateUrl: 'location.component.html'
+    templateUrl: './location.component.html'
 })
 
 export class LocationComponent implements OnInit {

@@ -1,112 +1,48 @@
-﻿
-<section class="home-content content job-list-content">
+﻿<section class="home-content content job-list-content">
     <div class="container">
-        <div class="row">
+        <div class="row">            
             <div class="col-sm-6 col-md-6">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3>JOB LIST</h3>
                     </div>
-                    <div class="panel-body table-responsive">
-                        <table class="table table-condensed table-striped tbl">
-                            <thead class="bg-info">
-                                <tr>
-                                    <th>Job Title</th>
-                                    <th class="text-center">No. of Vacancies</th>
-                                    <th>Published</th>
-                                    <th>Deadline</th>
-                                    <th class="text-center">Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><b class="text-info">Health Service Manager</b></td>
-                                    <td class="text-center">01</td>
-                                    <td>June 20, 2016</td>
-                                    <td>June 30, 2016</td>
-                                    <td class="text-center">
-                                        <ul class="list-inline edit-delete">
-                                            <li><a href=""><i class="glyphicon glyphicon-edit text-info"></i></a></li>
-                                            <li><a href=""><i class="glyphicon glyphicon-trash text-danger"></i></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b class="text-info">Health Service Manager</b></td>
-                                    <td class="text-center">01</td>
-                                    <td>June 20, 2016</td>
-                                    <td>June 30, 2016</td>
-                                    <td class="text-center">
-                                        <ul class="list-inline edit-delete">
-                                            <li><a href=""><i class="glyphicon glyphicon-edit text-info"></i></a></li>
-                                            <li><a href=""><i class="glyphicon glyphicon-trash text-danger"></i></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><b class="text-info">Health Service Manager</b></td>
-                                    <td class="text-center">01</td>
-                                    <td>June 20, 2016</td>
-                                    <td>June 30, 2016</td>
-                                    <td class="text-center">
-                                        <ul class="list-inline edit-delete">
-                                            <li><a href=""><i class="glyphicon glyphicon-edit text-info"></i></a></li>
-                                            <li><a href=""><i class="glyphicon glyphicon-trash text-danger"></i></a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="row">
-                            <div class="col-sm-9 col-md-9 col-lg-9">
-                                <nav aria-label="Page navigation">
-                                    <ul class="pagination pagination-sm">
-                                        <li class="disabled">
-                                            <a href="#" aria-label="Previous">
-                                                <span aria-hidden="true">&laquo;</span>
-                                            </a>
-                                        </li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li class="disabled"><a href="#">. . . . .</a></li>
-                                        <li><a href="#">10</a></li>
-                                        <li><a href="#">11</a></li>
-                                        <li>
-                                            <a href="#" aria-label="Next">
-                                                <span aria-hidden="true">&raquo;</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <div class="col-sm-3 col-md-3 col-lg-3 text-right">
-                                <form action="" method="post" class="form-inline">
-                                    <div class="form-group">
-                                        <span for="show"><small>Show</small></span>
-                                        <select name="show" class="form-control input-sm fm-input">
-                                            <option value="">05</option>
-                                            <option value="">10</option>
-                                            <option value="">20</option>
-                                            <option value="">50</option>
-                                            <option value="">100</option>
-                                        </select>
+                    <div class="panel-body panel-body-padding">  
+                        <p-dataTable [value]="jobContents" [responsive]="true" [loading]="loading" [rows]="rows" [paginator]="true" 
+                                     [totalRecords]="totalRecords" [rowsPerPageOptions]="rowsPerPageOptions" [pageLinks]="pageLinkSize" 
+                                     selectionMode="single" [(selection)]="selectedJobContent" dataKey="JobContentId">
+                            <p-column field="JobContentId" header="Job Published" [hidden]="true"></p-column>
+                            <p-column field="JobTitle" header="Job Published" [sortable]="true"></p-column>                            
+                            <p-column header="Action">
+                                <ng-template let-data="rowData" pTemplate>
+                                    <div class="text-center">                                        
+                                        <a (click)="editButtonClick(data)"><i class="fa fa-edit"></i></a>
+                                        <a (click)="deleteButtonClick(data)"><i class="fa fa-trash"></i></a>
                                     </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                                </ng-template>
+                            </p-column>                            
+                        </p-dataTable>
+                    </div>                    
                 </div>
             </div>
             <div class="col-sm-6 col-md-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3>ADD JOB</h3>
-                    </div>
-                    <div></div>
-                </div>
-            </div>
+                <form [formGroup]="jobContentFormGroup" (ngSubmit)="onSubmit()" novalidate>
+                    <div class="panel panel-default">
+                        <div class="panel-heading clearfix">
+                            <h3 class="pull-left">ADD JOB</h3>
+                            <p class="pull-right">{{jobContent.JobTitle}}</p>
+                        </div>
+                        <div *ngIf="formErrors.description" class="alert alert-danger">
+                            {{ formErrors.description }}
+                        </div>
+                        <p-editor [style]="{'height':'320px'}" pTooltip="Last Name" tooltipPosition="top" tooltipEvent="focus" formControlName="description" required></p-editor>                        
+                    </div>                    
+                    <button type="submit" *ngIf="!isUpdated" [disabled]="jobContentFormGroup.invalid" class="btn btn-default btn-job">Submit</button>
+                    <button type="submit" *ngIf="isUpdated" [disabled]="jobContentFormGroup.invalid" class="btn btn-default btn-job">Update</button>
+                    <button type="button" *ngIf="isUpdated" class="btn btn-default btn-job" (click)="resetForm($event)">Cancel</button>
+                </form>
+            </div>            
         </div>
     </div>
 </section>
+<p-growl [value]="jobGrowlMessage"></p-growl>
+<p-confirmDialog width="425"></p-confirmDialog>

@@ -4,6 +4,7 @@
     refresh_token: string,
     token_type: string,
     permissions: string[],
-    refresh_expires: number
-    created: number
+    refresh_expires: number,
+    created: number,
+    userCredentialId: number
 }

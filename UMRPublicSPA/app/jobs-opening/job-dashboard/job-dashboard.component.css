@@ -1,0 +1,13 @@
+﻿.panel-body-padding {
+    padding:0;
+}
+
+.alert {
+    padding: 8px;
+    margin: 0px;
+    border: 1px solid transparent;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}

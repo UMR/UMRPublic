@@ -3,7 +3,8 @@ import {Router} from '@angular/router';
 import {LoginService } from '../login/login.service';
 
 @Component({
-    templateUrl: 'jobs-opening.component.html'
+    templateUrl: 'jobs-opening.component.html',
+    providers: [LoginService]
 })
 
 export class JobOpeningComponent {
@@ -20,8 +21,7 @@ export class JobOpeningComponent {
             return false;
         }
         this.loginService.login(this.loginId, this.password)
-            .subscribe(() => {
-            
+            .subscribe(() => {            
             this.router.navigate([`/job-dashboard`]); 
         }, () => console.error('The Login ID or Password is incorrect.'));             
                

@@ -3,17 +3,18 @@ import {CookieService, CookieOptions, CookieOptionsArgs, BaseCookieOptions, ANGU
 
 @Injectable()
 export class UmrPublicCookieService {
+
     constructor(private _cookieService: CookieService) { }
 
-    getAllCookies() {
+    getAllCookies(): Object {
         return this._cookieService.getAll();
     }
 
-    getCookie(key: string) {
+    getCookie(key: string): string {
         return this._cookieService.get(key);
     }
 
-    setCookie(key: string, value: string, options?: CookieOptionsArgs) {
+    setCookie(key: string, value: string, options?: CookieOptionsArgs):void {
         if (options) {
             this._cookieService.put(key, value, options);
         } else {
@@ -25,7 +26,7 @@ export class UmrPublicCookieService {
         return this._cookieService.getObject(key);
     }
 
-    setSerializedObject(key: string, value: Object, options?: CookieOptionsArgs) {
+    setSerializedObject(key: string, value: Object, options?: CookieOptionsArgs): void {
         if (options) {
             this._cookieService.putObject(key, value, options);
         } else {
@@ -33,7 +34,7 @@ export class UmrPublicCookieService {
         }
     }
 
-    removeCookie(key: string, options?: CookieOptionsArgs) {
+    removeCookie(key: string, options?: CookieOptionsArgs): void {
         if (options) {
             this._cookieService.remove(key, options);
         } else {

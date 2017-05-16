@@ -1,7 +1,4 @@
-﻿
-import {Router, Routes, Route} from '@angular/router';
-
-
+﻿import {Router, Routes, Route} from '@angular/router';
 
 export function cloneRoutes(routes: Routes) {
     const routesClone: Routes = [];

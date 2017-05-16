@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="BO\JobManager.cs" />
     <Compile Include="BO\UserManager.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="DAL\JobContent.cs">
       <DependentUpon>UMRJobsModel.tt</DependentUpon>
     </Compile>

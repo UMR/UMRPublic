@@ -2,6 +2,8 @@
 import {Router, Routes} from '@angular/router';
 import {Http, Headers, Response, RequestOptionsArgs} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
 import {UmrPublicCookieService} from '../common/services/umr-cookie.service';
 import {CookieOptionsArgs} from 'angular2-cookie/core';
 import {cloneRoutes, removeUnauthorizeRoutes} from './helpers/route-config.helper';
@@ -9,15 +11,14 @@ import {cloneRoutes, removeUnauthorizeRoutes} from './helpers/route-config.helpe
 import {AuthInfo} from './authInfo';
 import {activateAutoLogout, deActivateAutoLogout} from './helpers/auto-logout.helper';
 import {getToken, getTokenFromRefreshToken, revokeToken} from './helpers/http-client.helper';
-import {authCookieKey, disableAuthorization, allPermissions} from './constants/auth-keys';
-
-
-
+import { authCookieKey, disableAuthorization, allPermissions } from './constants/auth-keys';
 
 @Injectable()
 export class AuthService {
-    constructor(private http: Http, private umrCookieService: UmrPublicCookieService, private router: Router) { }
-
+    constructor(private http: Http, private umrCookieService: UmrPublicCookieService, private router: Router) {
+        console.log(this.umrCookieService);
+    }
+    
     get isLoggedIn(): boolean {
         return !!this.accessToken;
     }
@@ -97,13 +98,12 @@ export class AuthService {
             }
         });
     }
-
     private saveAuthInfo(value, isAccessToken: boolean = false) {
-        try {
-            const info = <AuthInfo>value.json();
+        try {            
+            const info = <AuthInfo>value.json();            
             info.permissions = info.permissions || [];
             info.permissions = this.getPermissions(info, isAccessToken);
-            info.created = (new Date()).valueOf();
+            info.created = (new Date()).valueOf();            
             this.umrCookieService.setSerializedObject(authCookieKey, info);
         } catch (e) {
             console.error(e);
