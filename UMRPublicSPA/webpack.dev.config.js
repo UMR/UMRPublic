@@ -142,5 +142,6 @@ module.exports = {
         hot: true,
         inline: true,
         host: "localhost"
-    }
+    },
+    watch: true
 };

@@ -2,7 +2,8 @@
 
 @Component({
     selector: 'umr-public-admin-footer',
-    templateUrl: './admin-footer.component.html'
+    templateUrl: './admin-footer.component.html',
+    styleUrls: ['./admin-footer.component.css']
 })
 
 export class AdminFooterComponent {

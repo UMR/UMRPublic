@@ -86,7 +86,7 @@ export class AuthService {
      */
     logout() {
         deActivateAutoLogout();
-        this.router.navigate(['/login']).then(isNavigated => {
+        this.router.navigate(['/jobs-opening']).then(isNavigated => {
             const accessTokenInfo = this._getAccessTokenInfo();
             if (accessTokenInfo && accessTokenInfo.refresh_token) {
                 const refreshToken = accessTokenInfo.refresh_token;

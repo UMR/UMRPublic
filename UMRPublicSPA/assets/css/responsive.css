@@ -13,7 +13,7 @@
 @media (min-width: 768px) and (max-width: 991px) {
     .navbar-default .navbar-nav>li>a {
         font-size: 11px;
-        padding: 15px 10px;
+        padding: 15px 8px;
     }
     .subscription .col-md-5 {
         margin-top: 15px;
@@ -36,6 +36,18 @@
         padding-left: 0px;
         padding-bottom: 10px
     }
+    .contact-form .col-md-4:first-child, .contact-form .col-md-12 {
+       padding-left: 0px;
+    }
+    .form-client .form {
+        padding: 15px;
+    }
+    .job-open .col-md-2 {
+        float:left !important;
+    }
+    .btn-job {
+        margin-top: 15px;
+    }
 
 }
 
@@ -49,6 +61,18 @@
     .contact-form .col-md-4, .contact-form .col-md-12{
         padding-left: 0px;
         padding-bottom: 10px
+    }
+    .contact-form .col-md-4:first-child, .contact-form .col-md-12 {
+       padding-left: 0px;
+    }
+    .form-client .form {
+        padding: 15px;
+    }
+    .job-open .col-md-2 {
+        float:left !important;
+    }
+    .btn-job {
+        margin-top: 15px;
     }
 
 }
@@ -64,5 +88,16 @@
         padding-left: 0px;
         padding-bottom: 10px
     }
-
+    .contact-form .col-md-4:first-child, .contact-form .col-md-12 {
+       padding-left: 0;
+    }
+    .form-client .form {
+        padding: 15px;
+    }
+    .job-open .col-md-2 {
+        float:left !important;
+    }
+    .btn-job {
+        margin-top: 15px;
+    }
 }

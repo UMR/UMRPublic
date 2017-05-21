@@ -75,6 +75,7 @@
     <Content Include="app\about\owl.carousel.css" />
     <Content Include="app\applicant-portal\applicant-portal.component.html" />
     <Content Include="app\client-access\client-access.component.html" />
+    <Content Include="app\common\components\admin-footer\admin-footer.component.css" />
     <Content Include="app\common\components\admin-footer\admin-footer.component.html" />
     <Content Include="app\common\components\admin-header\admin-header.component.html" />
     <Content Include="app\common\components\footer\footer.component.html" />

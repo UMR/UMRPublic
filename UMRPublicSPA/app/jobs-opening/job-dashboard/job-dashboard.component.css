@@ -11,3 +11,112 @@
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
+
+.panel {
+  border-color: #E6E9ED;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0; }
+.panel-title > a:hover, 
+.panel-title > a:active, 
+.panel-title > a:focus  {
+    text-decoration:none;
+}
+
+.panel-default > .panel-heading{
+    background: transparent;
+}
+
+.panel-group .panel{
+    border-radius: 0;
+}
+
+.panel-title>.small, .panel-title>.small>a, .panel-title>a, .panel-title>small, .panel-title>small>a{
+    display: block;
+}
+
+.panel-default .panel-heading, .panel-default .panel-footer {
+    color: #434A54;
+    background-color: #F5F7FA;
+    border-color: #E6E9ED;
+}
+.panel-heading h3 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #434A54 }
+
+.panel-footer {
+  padding: 10px 15px 5px; }
+
+p {
+    margin: 0;
+}
+
+:host >>> .ui-state-default, 
+:host >>> .ui-widget-content .ui-state-default, 
+:host >>> .ui-widget-header .ui-state-default {
+    border: none;
+}
+
+:host >>> .ui-datatable thead th, 
+:host >>> .ui-datatable tbody td, 
+:host >>> .ui-datatable tfoot td, 
+:host >>> .ui-datatable tfoot th {
+   border: none; 
+}
+
+:host >>> .ui-datatable th.ui-state-default {
+    background: #d9edf7;
+    color: #434A54;
+}
+
+:host >>> .ui-datatable tbody td:nth-child(2n+1) {
+  text-align:center;
+}
+
+:host >>> .ui-datatable .ui-paginator {
+    padding: 3px 2px;
+}
+
+:host >>> .ui-paginator-bottom {
+    background: #fff;
+}
+
+:host >>> .ui-paginator .ui-paginator-page.ui-state-active {
+    background: #4FC1E9;
+    color: #ffffff;
+    border: 1px solid #3BAFDA;
+}
+
+:host >>> .ui-paginator .ui-paginator-page, 
+:host >>> .ui-paginator .ui-paginator-pages,
+:host >>> .ui-paginator .ui-paginator-next,
+:host >>> .ui-paginator .ui-paginator-last,
+:host >>> .ui-paginator .ui-paginator-first,
+:host >>> .ui-paginator .ui-paginator-prev,
+:host >>> .ui-paginator .ui-paginator-current {
+    padding: 2px 10px;
+    border-radius: 0;
+}
+
+:host >>> .ui-paginator-rpp-options {
+    float: right;
+    margin: 2px 15px;
+    padding: 3px;
+    border: 1px solid #E6E9ED !important;
+}
+:host >>> .ui-paginator-rpp-options:focus {
+    outline: 0;
+}
+
+
+@media (max-width: 767px) {
+    :host >>> .ui-datatable tbody td:nth-child(2n+1) {
+      text-align:left;
+    }
+}
+

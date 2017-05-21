@@ -1,7 +1,7 @@
 ﻿import { Routes, RouterModule, PreloadAllModules }  from '@angular/router';
 import {MainComponent} from './main/main.component';
 import {LoginComponent} from './login/login.component';
-//import { AuthGuard } from './auth.guard';
+import { AuthGuard } from './auth.guard';
 //import { MainResolver } from './main/main.resolver';
 import { HomeComponent } from './home/home.component';
 import { ProductsServicesComponent } from './products-and-services/products-services.component';
@@ -34,12 +34,14 @@ export const routes: Routes = [
     },
     {
         path: 'job-dashboard',
+        canActivate: [AuthGuard],
         component: AdminHomeComponent,
         children:
         [
             {
                 path: '',
-                component: JobDashboardComponent
+                component: JobDashboardComponent,
+                canActivateChild: [AuthGuard]
             },
             {
                 path: 'change-password',

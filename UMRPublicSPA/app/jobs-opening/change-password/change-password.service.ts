@@ -24,14 +24,8 @@ export class ChangePasswordService {
         let options = new RequestOptions({ headers: headers });
 
         return this.http.put(changePasswordURL, bodyString, options)
-            .map((res: Response) => {
-                if (res.status == 200) {
-                    return res.status;
-                }
-                else
-                {
-                    return res.status;
-                }
+            .map((res: Response) => {                
+                return res;                
             })
             .catch(err => Observable.throw(err));
     }

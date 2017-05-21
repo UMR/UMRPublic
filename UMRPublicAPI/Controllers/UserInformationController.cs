@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using UMRPublicAPI.Models;
+using UMRPublicBO;
 using UMRPublicBO.BO;
 using UMRPublicBO.DAL;
 
@@ -15,16 +16,26 @@ namespace UMRPublicAPI.Controllers
     {
         [Route("updatepassword")]
         [HttpPut]
-        public IHttpActionResult UpdatePassword([FromBody] string confirmPassword)
+        public IHttpActionResult UpdatePassword([FromBody] UserInformation userInformation)
         {
             try
             {
-                if (confirmPassword == null)
+                if (userInformation == null)
                 {
                     return NotFound();
                 }
-                UserManager.UpdatePassword(base.GetCurrentUser().UserCredentialId, base.GetCurrentUser().UserName.Trim(), confirmPassword.Trim());
-                return Ok();
+                string oldPassword = UserManager.GetUserByUserID(base.GetCurrentUser().UserCredentialId.ToString()).UserPassword.Trim();
+                string password = Utility.GenerateMD5(userInformation.OldPassword.Trim());
+                if (oldPassword == password)
+                {
+                    UserManager.UpdatePassword(base.GetCurrentUser().UserCredentialId, base.GetCurrentUser().UserName.Trim(), userInformation.NewPassword.Trim());
+                    return Ok();
+                }
+                else if (oldPassword != password)
+                {
+                    return Ok<string>("Password is incorrect");
+                }
+                return BadRequest();
             }
             catch (Exception ex)
             {

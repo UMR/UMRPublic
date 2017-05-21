@@ -59,7 +59,7 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
         setTimeout(() => {
             this.getAllJobsByUserId();
             this.loading = false;
-        }, 1000);
+        }, 500);
         //this.jobContent = new JobContent();        
         this.createForm();
         this.jobContent.JobDescription = '';
@@ -151,7 +151,7 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
                     .subscribe(res => {
                         console.log(res);
                         if ((res as any) == "200") {                            
-                            this.jobGrowlMessage.push({ severity: 'info', summary: 'Confirmed', detail: 'Job has been deleted successfully' });
+                            this.jobGrowlMessage.push({ severity: 'success', summary: 'Confirmed', detail: 'Job has been deleted successfully' });
                             this.getAllJobsByUserId();
                             this.jobContentFormGroup.reset();
                             this.jobContent = new JobContent();
@@ -159,12 +159,12 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
                             this.isUpdated = false;
                         }
                         else {
-                            this.jobGrowlMessage.push({ severity: 'error', summary: 'Job delete failed', detail: '' });
+                            this.jobGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Job delete failed' });
                         }
                     },
                     error => {
                         console.log(error);
-                        this.jobGrowlMessage.push({ severity: 'error', summary: 'Job delete failed', detail: '' });
+                        this.jobGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Job delete failed' });
                     });
             },
             reject: () => {
@@ -178,7 +178,7 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
             .subscribe(res => {
                 console.log(res);
                 if ((res as any) == "201") {
-                    this.jobGrowlMessage.push({ severity: 'success', summary: 'Job has been posted successfully', detail: 'Job has been posted successfully' });
+                    this.jobGrowlMessage.push({ severity: 'success', summary: 'Confirmed', detail: 'Job has been posted successfully' });
                     this.getAllJobsByUserId();
                     this.jobContentFormGroup.reset();
                     this.jobContent = new JobContent();
@@ -187,12 +187,12 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
                     //alert('Job has been posted successfully');
                 }
                 else {
-                    this.jobGrowlMessage.push({ severity: 'error', summary: 'Job post failed', detail: '' });
+                    this.jobGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Job post failed' });
                 }
             },
             error => {
                 console.log(error);
-                this.jobGrowlMessage.push({ severity: 'error', summary: 'Job delete failed', detail: '' });
+                this.jobGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Job post failed' });
             });
     }
 
@@ -201,7 +201,7 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
             .subscribe(res => {
                 console.log(res);
                 if ((res as any) == "200") {
-                    this.jobGrowlMessage.push({ severity: 'success', summary: 'Job has been updated successfully', detail: 'Job has been updated successfully' });
+                    this.jobGrowlMessage.push({ severity: 'success', summary: 'Confirmed', detail: 'Job has been updated successfully' });
                     this.getAllJobsByUserId();
                     this.jobContentFormGroup.reset();
                     this.jobContent = new JobContent();
@@ -210,28 +210,15 @@ export class JobDashboardComponent implements AfterViewInit, OnInit {
                     //alert('Job has been updated successfully');
                 }
                 else {
-                    this.jobGrowlMessage.push({ severity: 'error', summary: 'Job update failed', detail: '' });
+                    this.jobGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Job update failed' });
                 }
             },
             error => {
                 console.log(error);
-                this.jobGrowlMessage.push({ severity: 'error', summary: 'Job update failed', detail: '' });
+                this.jobGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Job update failed' });
             });
     }
-
-    deleteJob(jobContentId: number) {
-        this.jobContentService.deleteJobContent(jobContentId)
-            .subscribe(res => {
-                console.log(res);
-                if ((res as any) == "200") {
-                    //alert('Job has been deleted successfully');
-                }
-            },
-            error => {
-                console.log(error);
-            });
-    }
-
+    
     getAllJobsByUserId() {
         this.jobContentService.getAllJobsByUserId()
             .subscribe(

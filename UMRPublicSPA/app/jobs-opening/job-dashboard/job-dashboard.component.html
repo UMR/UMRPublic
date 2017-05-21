@@ -14,10 +14,10 @@
                             <p-column field="JobTitle" header="Job Published" [sortable]="true"></p-column>                            
                             <p-column header="Action">
                                 <ng-template let-data="rowData" pTemplate>
-                                    <div class="text-center">                                        
+                                    <span>                                        
                                         <a (click)="editButtonClick(data)"><i class="fa fa-edit"></i></a>
                                         <a (click)="deleteButtonClick(data)"><i class="fa fa-trash"></i></a>
-                                    </div>
+                                    </span>
                                 </ng-template>
                             </p-column>                            
                         </p-dataTable>

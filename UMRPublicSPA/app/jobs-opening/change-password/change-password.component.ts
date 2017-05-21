@@ -6,22 +6,25 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { SharedModule, TooltipModule, ButtonModule, ConfirmDialogModule, ConfirmationService, Message } from 'primeng/primeng';
 import { ChangePasswordService } from './change-password.service';
+//import { EqualValidator } from '../../common/directives/equal-validator.directive';
 declare var $: any;
 
 @Component({
     templateUrl: './change-password.component.html',
-    styleUrls: ['./change-password.component.css'],
-    providers: [ChangePasswordService, ConfirmationService]
+    styleUrls: ['./change-password.component.css'],    
+    providers: [ChangePasswordService, ConfirmationService]    
 })
 
 export class ChangePasswordComponent implements OnInit {
 
     confirmPassword: string;
+    oldPassword: string;
+    userInformation: UserInformation;
     changePasswordFormGroup: FormGroup;
     changePasswordGrowlMessage: Message[] = [];
 
     constructor(private changePasswordService: ChangePasswordService, private fb: FormBuilder, private confirmationService: ConfirmationService) {
-
+        this.userInformation = new UserInformation();
     }
 
     ngOnInit(): void {
@@ -30,7 +33,7 @@ export class ChangePasswordComponent implements OnInit {
 
     createForm(): void {
         this.changePasswordFormGroup = this.fb.group({
-            'oldPassword': ['', [Validators.required]],
+            'oldPassword': ['', Validators.compose([Validators.required])],
             'newPassword': ['', [Validators.required]],
             'confirmPassword': ['', [Validators.required]]
         });
@@ -67,7 +70,7 @@ export class ChangePasswordComponent implements OnInit {
 
     validationMessages = {
         'oldPassword': {
-            'required': 'Old password is required'
+            'required': 'Old password is required'            
         },
         'newPassword': {
             'required': 'New password is required'
@@ -79,29 +82,40 @@ export class ChangePasswordComponent implements OnInit {
 
     onSubmit() {
         if (this.changePasswordFormGroup.status === "VALID") {
-            this.confirmPassword = this.changePasswordFormGroup.get('confirmPassword').value;
-            console.log(this.confirmPassword);
+            this.userInformation.oldPassword = this.changePasswordFormGroup.get('oldPassword').value.trim();
+            this.userInformation.newPassword = this.changePasswordFormGroup.get('newPassword').value.trim();
+            console.log(this.userInformation.newPassword);
             this.updatePassword();
         }
     }
 
     updatePassword() {
-        this.changePasswordService.updatePassword(this.confirmPassword)
+        this.changePasswordService.updatePassword(this.userInformation)
             .subscribe(res => {
                 console.log(res);
-                if ((res as any) == "200") {
-                    this.changePasswordGrowlMessage.push({ severity: 'success', summary: 'Password has been updated successfully', detail: 'Password has been updated successfully' });
+                if ((res as any).status == "200" && (res as any)._body == "") {
+                    this.changePasswordGrowlMessage.push({ severity: 'success', summary: 'Confirmed', detail: 'Password has been updated successfully' });
                     this.changePasswordFormGroup.reset();
-                    this.confirmPassword = null;
+                    this.userInformation = null;
                     this.createForm();
                 }
+                else if ((res as any)._body != '') {
+                    console.log((res as any)._body);
+                    this.changePasswordGrowlMessage.push({ severity: 'info', summary:'Information' , detail: (res as any)._body.replace(/^"(.*)"$/, '$1') });
+                }
                 else {
-                    this.changePasswordGrowlMessage.push({ severity: 'error', summary: 'Password update failed', detail: '' });
+                    this.changePasswordGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: (res as any)._body });
                 }
             },
             error => {
                 console.log(error);
-                this.changePasswordGrowlMessage.push({ severity: 'error', summary: 'Password update failed', detail: '' });
+                this.changePasswordGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Password update failed' });
             });
     }
 }
+
+export class UserInformation {
+    oldPassword: string;
+    newPassword: string;
+}
+
