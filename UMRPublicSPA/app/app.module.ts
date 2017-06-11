@@ -37,6 +37,9 @@ import { AdminFooterComponent } from './common/components/admin-footer/admin-foo
 import { AdminHeaderComponent } from './common/components/admin-header/admin-header.component';
 import { AdminHomeComponent } from './jobs-opening/admin-home/admin-home.component';
 import { ChangePasswordComponent } from './jobs-opening/change-password/change-password.component';
+import { EqualValidator } from './common/directives/equal-validator.directive';
+import { ForbiddenValidatorDirective } from './common/directives/single-equal-validator';
+import { AsyncPasswordValidator } from './common/directives/password.async.validator';
 
 @NgModule({
     imports: [
@@ -78,7 +81,10 @@ import { ChangePasswordComponent } from './jobs-opening/change-password/change-p
         AdminHeaderComponent,
         AdminFooterComponent,
         AdminHomeComponent,
-        ChangePasswordComponent
+        ChangePasswordComponent,
+        EqualValidator,
+        ForbiddenValidatorDirective,
+        AsyncPasswordValidator
     ],
     providers: [{ provide: CookieService, useFactory: cookieServiceFactory },
         UmrPublicCookieService,
@@ -86,6 +92,11 @@ import { ChangePasswordComponent } from './jobs-opening/change-password/change-p
         AuthService,
         AuthGuard,
         UserInformationService        
+    ],
+    exports: [
+        EqualValidator,
+        ForbiddenValidatorDirective,
+        AsyncPasswordValidator
     ],
     bootstrap: [AppComponent]
 })

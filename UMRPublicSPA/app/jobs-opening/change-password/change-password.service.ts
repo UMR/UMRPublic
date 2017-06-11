@@ -29,4 +29,20 @@ export class ChangePasswordService {
             })
             .catch(err => Observable.throw(err));
     }
+
+    isMatchPassword(password: string): Observable<Response> {
+
+        const isMatchPasswordURL = `${resourceServerUrl}/api/userinformation/ismatchpassword/${password}`;
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let bearer = 'Bearer {0}'.replace('{0}', this.accessTokenService.accessToken);
+        headers.append('Authorization', bearer);
+        let options = new RequestOptions({ headers: headers });
+
+        return this.http.get(encodeURI(isMatchPasswordURL), options)
+            .map((res: Response) => {                                              
+                return res;
+            })
+            .catch(err => Observable.throw(err));
+    }
 }

@@ -1,12 +1,13 @@
-﻿import { Component, OnInit } from '@angular/core';
+﻿import { Component, OnInit} from '@angular/core';
 import { Response } from '@angular/http';
-import { ReactiveFormsModule, FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { ReactiveFormsModule, FormGroup, FormBuilder, ValidatorFn, Validators, FormControl, AbstractControl } from '@angular/forms';
 import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
-import { SharedModule, TooltipModule, ButtonModule, ConfirmDialogModule, ConfirmationService, Message } from 'primeng/primeng';
+import { SharedModule, TooltipModule, ButtonModule, ConfirmDialogModule, ConfirmationService, Message, Tooltip } from 'primeng/primeng';
 import { ChangePasswordService } from './change-password.service';
-//import { EqualValidator } from '../../common/directives/equal-validator.directive';
+import { forbiddenNameValidator } from '../../common/directives/single-equal-validator';
+import { AsyncPasswordValidator } from '../../common/directives/password.async.validator';
 declare var $: any;
 
 @Component({
@@ -21,16 +22,17 @@ export class ChangePasswordComponent implements OnInit {
     oldPassword: string;
     userInformation: UserInformation;
     changePasswordFormGroup: FormGroup;
-    changePasswordGrowlMessage: Message[] = [];
+    changePasswordGrowlMessage: Message[] = [];    
 
     constructor(private changePasswordService: ChangePasswordService, private fb: FormBuilder, private confirmationService: ConfirmationService) {
         this.userInformation = new UserInformation();
     }
 
     ngOnInit(): void {
-        this.createForm();
+        this.createForm();        
+        //'oldPassword': ['', Validators.compose([Validators.required, this.isMatchPasswordAsyn.bind(this)])],
     }
-
+    
     createForm(): void {
         this.changePasswordFormGroup = this.fb.group({
             'oldPassword': ['', Validators.compose([Validators.required])],
@@ -41,7 +43,7 @@ export class ChangePasswordComponent implements OnInit {
         this.changePasswordFormGroup.valueChanges
             .subscribe(data => this.onValueChanged(data));
 
-        this.onValueChanged(); // set validation messages now
+        this.onValueChanged(); // set validation messages now        
     }
 
     onValueChanged(data?: any): void {
@@ -70,13 +72,16 @@ export class ChangePasswordComponent implements OnInit {
 
     validationMessages = {
         'oldPassword': {
-            'required': 'Old password is required'            
+            'required': 'Old password is requred',
+            'asyncInvalid': 'Password is not correct'
         },
         'newPassword': {
-            'required': 'New password is required'
+            'required': 'New password is required',
+            'validateEqual': 'Confirm password does not match'
         },
         'confirmPassword': {
-            'required': 'Confirm password is required'            
+            'required': 'Confirm password is required',
+            'validateEqual': 'New password does not match'
         }
     };
 
@@ -111,7 +116,29 @@ export class ChangePasswordComponent implements OnInit {
                 console.log(error);
                 this.changePasswordGrowlMessage.push({ severity: 'error', summary: 'Failed', detail: 'Password update failed' });
             });
-    }
+    }    
+
+    isMatchPasswordAsyn(control: AbstractControl): Promise<{ [key: string]: any }> {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                this.changePasswordService.isMatchPassword(control.value.trim())
+                    .subscribe(res => {
+                        if (control.value.trim() != '') {
+                            console.log(control.value.trim());
+                            console.log(res);
+                            if ((res as any).status == "200" && (res as any)._body== "") {
+                                resolve({ taken: true });                                
+                                console.log('Taken: ' + res);                                
+                            }
+                            else if ((res as any).status == "200" && (res as any)._body != "" && (res as any)._body.replace(/^"(.*)"$/, '$1') == "No") {                                
+                                resolve(null);  
+                                console.log('Null: ' + res);
+                            }
+                        }
+                    });
+            }, 3000);
+        });
+    }    
 }
 
 export class UserInformation {

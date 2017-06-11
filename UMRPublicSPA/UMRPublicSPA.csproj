@@ -488,7 +488,10 @@
     <TypeScriptCompile Include="app\common\components\header\header.component.ts" />
     <TypeScriptCompile Include="app\common\components\subscribe\subscribe.component.ts" />
     <TypeScriptCompile Include="app\common\constants\auth-keys.ts" />
+    <TypeScriptCompile Include="app\common\directives\equal-validator.directive.ts" />
     <TypeScriptCompile Include="app\common\directives\loading-image.component.ts" />
+    <TypeScriptCompile Include="app\common\directives\password.async.validator.ts" />
+    <TypeScriptCompile Include="app\common\directives\single-equal-validator.ts" />
     <TypeScriptCompile Include="app\common\helpers\auto-logout.helper.ts" />
     <TypeScriptCompile Include="app\common\helpers\http-client.helper.ts" />
     <TypeScriptCompile Include="app\common\helpers\route-config.helper.ts" />

@@ -19,7 +19,7 @@
 
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingOne">
+                    <!--<div class="panel-heading" role="tab" id="headingOne">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                                 <div class="row">
@@ -44,11 +44,17 @@
                                 </div>
                             </a>
                         </h4>
-                    </div>
+                    </div>-->
 
                     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body">
-                            <div class="col-md-6 job-body">
+                        <div class="panel-body" *ngFor="let jobContent of jobContents; let i = index">   
+                            <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
+                                                           
+                            </div>
+                            <!--<div class="col-md-6 job-body" [innerHTML]="jobContent.SecondHalf">
+
+                            </div>-->
+                            <!--<div class="col-md-6 job-body" >                                
                                 <h4>Responsibilities:</h4>
                                 <ul>
                                     <li><i class="fa fa-angle-double-right"></i> Manage healthcare facility</li>
@@ -68,8 +74,8 @@
                                     <li><i class="fa fa-angle-double-right"></i> Direct personnel activities</li>
                                 </ul>
                                 <p>Send your CV to <a href="">info@universalmedicalrecord.com</a> </p>
-                            </div>
-                            <div class="col-md-6 job-body">
+                            </div>-->
+                            <!--<div class="col-md-6 job-body">
                                 <h4>Requirements:</h4>
                                 <ul>
                                     <li><i class="fa fa-angle-double-right"></i> Masters in Public Health or related field</li>
@@ -90,12 +96,12 @@
                                     <li><i class="fa fa-angle-double-right"></i> Opportunity to learn and contribute in different product areas</li>
                                 </ul>
                                 <a href="" class="btn btn-default btn-job"> Apply Now</a>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
 
-                <div class="panel panel-default">
+                <!--<div class="panel panel-default">
                     <div class="panel-heading" role="tab" id="headingThree">
                         <h4 class="panel-title">
                             <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -126,7 +132,7 @@
                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
                         <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. </div>
                     </div>
-                </div>
+                </div>-->
 
             </div>
 

@@ -1,19 +1,22 @@
-﻿import {Component} from '@angular/core';
+﻿import { Component, AfterViewInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {LoginService } from '../login/login.service';
+import { JobContentService } from './services/job-content.service';
+import { JobContent } from './model/job-content';
 
 @Component({
     templateUrl: 'jobs-opening.component.html',
-    providers: [LoginService]
+    providers: [LoginService, JobContentService]
 })
 
-export class JobOpeningComponent {
+export class JobOpeningComponent implements AfterViewInit {
 
-    constructor(private router: Router, private loginService: LoginService) { }
+    constructor(private router: Router, private loginService: LoginService,private jobContentService: JobContentService) { }
 
     loginId: string;
     password: string;
-
+    jobContents = [];    
+    filterJobContents = [];
     goToJobBoard() {
         if (this.loginId == "" || this.password == "")
         {
@@ -23,7 +26,39 @@ export class JobOpeningComponent {
         this.loginService.login(this.loginId, this.password)
             .subscribe(() => {            
             this.router.navigate([`/job-dashboard`]); 
-        }, () => console.error('The Login ID or Password is incorrect.'));             
-               
+        }, () => console.error('The Login ID or Password is incorrect.'));  
+    }
+
+    getAllJobs() {
+        this.jobContentService.getAllJobs()
+            .subscribe(
+            jobcontents => this.jobContents = jobcontents,
+            error => {
+                console.log(error);
+            });
+    }    
+
+    ngAfterViewInit() {
+        
+        this.getAllJobs();   
+        setTimeout(() => {
+            let jobContents = this.jobContents; 
+            for (let content of jobContents) {
+                let len = content.JobDescription.length;                
+                let halfContent = content.JobDescription.substring(0, len / 2);
+                let secondHalf = content.JobDescription.substring(len - len / 2, len);
+                let jobContent = new JobContent();
+                jobContent.HalfContent = halfContent;
+                jobContent.SecondHalf = secondHalf;
+                console.log(content.JobDescription);
+                this.filterJobContents.push(jobContent);
+            }
+            
+        }, 1000);
+        //let jobs = this.jobContents;
+        //for (var item of jobs) {
+        //    console.log(item.JobDescription);
+        //}
+        //console.log(this.jobContents.length);
     }
 }

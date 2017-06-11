@@ -116,4 +116,27 @@ export class JobContentService {
             })
             .catch(err => Observable.throw(err));
     }
+
+    getAllJobs(): Observable<JobContent[]> {
+
+        let jobContentGetURL = `${resourceServerUrl}` + "/api/jobboards/getalljobs";
+
+        let headers = new Headers();
+        headers.append('Content-Type', 'application/json');
+        let bearer = 'Bearer {0}'.replace('{0}', this.accessTokenService.accessToken);
+        headers.append('Authorization', bearer);
+        let options = new RequestOptions({ headers: headers });
+
+        return this.http.get(jobContentGetURL, options)
+            .map((res: Response) => {
+                console.log('GetAllJobs: ' + res.json());
+                if (res.status == 200) {
+                    return res.json();
+                }
+                else {
+                    return null;
+                }
+            })
+            .catch(err => Observable.throw(err));
+    }
 }
