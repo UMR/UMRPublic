@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMRPublic", "UMRPublic\UMRPublic.csproj", "{E384E39E-E0BD-432B-B812-C0282B186DC8}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMRPublicBO", "UMRPublicBO\UMRPublicBO.csproj", "{6EB8EEA8-427D-49C4-B078-6DA6C5020720}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMRPublicAPI", "UMRPublicAPI\UMRPublicAPI.csproj", "{226AF594-1722-49FF-AE3B-87C984F0AFC9}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UMRJobsDB", "UMRJobsDB\UMRJobsDB.sqlproj", "{625ED69D-EBCF-4C5C-B122-91563D3898F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,12 +49,16 @@ Global
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 8
+		SccNumberOfProjects = 9
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://spike:8080/tfs/defaultcollection
 		SccLocalPath0 = .
@@ -77,5 +83,8 @@ Global
 		SccProjectUniqueName7 = UMRPublicAPI\\UMRPublicAPI.csproj
 		SccProjectName7 = UMRPublicAPI
 		SccLocalPath7 = UMRPublicAPI
+		SccProjectUniqueName8 = UMRJobsDB\\UMRJobsDB.sqlproj
+		SccProjectName8 = UMRJobsDB
+		SccLocalPath8 = UMRJobsDB
 	EndGlobalSection
 EndGlobal
