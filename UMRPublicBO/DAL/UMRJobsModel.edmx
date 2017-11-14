@@ -4,7 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UMRJobsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="UMRJobsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ExternalJob">
+          <Key>
+            <PropertyRef Name="ExternalJobID" />
+          </Key>
+          <Property Name="ExternalJobID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="State" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="County" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="ReqJobOpeningId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="JobContents">
           <Key>
             <PropertyRef Name="JobContentId" />
@@ -66,6 +75,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="UMRJobsModelStoreContainer">
+          <EntitySet Name="ExternalJob" EntityType="Self.ExternalJob" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="JobContents" EntityType="Self.JobContents" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserCredentials" EntityType="Self.UserCredentials" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserJobs" EntityType="Self.UserJobs" Schema="dbo" store:Type="Tables" />
@@ -78,11 +88,33 @@
             <End Role="UserJobs" EntitySet="UserJobs" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UMRJobsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="UMRJobs" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ExternalJobs" EntityType="UMRJobsModel.ExternalJob" />
+          <EntitySet Name="JobContents" EntityType="UMRJobsModel.JobContent" />
+          <EntitySet Name="UserCredentials" EntityType="UMRJobsModel.UserCredential" />
+          <EntitySet Name="UserJobs" EntityType="UMRJobsModel.UserJob" />
+          <AssociationSet Name="FK_UserJobs_JobContents_JobContenId" Association="UMRJobsModel.FK_UserJobs_JobContents_JobContenId">
+            <End Role="JobContent" EntitySet="JobContents" />
+            <End Role="UserJob" EntitySet="UserJobs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserJobs_UserCredentials_UserCredentialId" Association="UMRJobsModel.FK_UserJobs_UserCredentials_UserCredentialId">
+            <End Role="UserCredential" EntitySet="UserCredentials" />
+            <End Role="UserJob" EntitySet="UserJobs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ExternalJob">
+          <Key>
+            <PropertyRef Name="ExternalJobID" />
+          </Key>
+          <Property Name="ExternalJobID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="State" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="County" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ReqJobOpeningId" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="JobContent">
           <Key>
             <PropertyRef Name="JobContentId" />
@@ -101,16 +133,16 @@
           <Property Name="EmailCV" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="SpecialInstruction" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="ApplicationDeadline" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="UserJobs" Relationship="Self.FK_UserJobs_JobContents_JobContenId" FromRole="JobContents" ToRole="UserJobs" />
+          <NavigationProperty Name="UserJobs" Relationship="UMRJobsModel.FK_UserJobs_JobContents_JobContenId" FromRole="JobContent" ToRole="UserJob" />
         </EntityType>
         <EntityType Name="UserCredential">
           <Key>
             <PropertyRef Name="UserCredentialId" />
           </Key>
           <Property Name="UserCredentialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="UserPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="UserJobs" Relationship="Self.FK_UserJobs_UserCredentials_UserCredentialId" FromRole="UserCredentials" ToRole="UserJobs" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="UserPassword" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UserJobs" Relationship="UMRJobsModel.FK_UserJobs_UserCredentials_UserCredentialId" FromRole="UserCredential" ToRole="UserJob" />
         </EntityType>
         <EntityType Name="UserJob">
           <Key>
@@ -120,88 +152,85 @@
           <Property Name="UserCredentialId" Type="Int32" Nullable="false" />
           <Property Name="JobContenId" Type="Int32" Nullable="false" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <NavigationProperty Name="JobContent" Relationship="Self.FK_UserJobs_JobContents_JobContenId" FromRole="UserJobs" ToRole="JobContents" />
-          <NavigationProperty Name="UserCredential" Relationship="Self.FK_UserJobs_UserCredentials_UserCredentialId" FromRole="UserJobs" ToRole="UserCredentials" />
+          <NavigationProperty Name="JobContent" Relationship="UMRJobsModel.FK_UserJobs_JobContents_JobContenId" FromRole="UserJob" ToRole="JobContent" />
+          <NavigationProperty Name="UserCredential" Relationship="UMRJobsModel.FK_UserJobs_UserCredentials_UserCredentialId" FromRole="UserJob" ToRole="UserCredential" />
         </EntityType>
         <Association Name="FK_UserJobs_JobContents_JobContenId">
-          <End Role="JobContents" Type="Self.JobContent" Multiplicity="1" />
-          <End Role="UserJobs" Type="Self.UserJob" Multiplicity="*" />
+          <End Type="UMRJobsModel.JobContent" Role="JobContent" Multiplicity="1" />
+          <End Type="UMRJobsModel.UserJob" Role="UserJob" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="JobContents">
+            <Principal Role="JobContent">
               <PropertyRef Name="JobContentId" />
             </Principal>
-            <Dependent Role="UserJobs">
+            <Dependent Role="UserJob">
               <PropertyRef Name="JobContenId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserJobs_UserCredentials_UserCredentialId">
-          <End Role="UserCredentials" Type="Self.UserCredential" Multiplicity="1" />
-          <End Role="UserJobs" Type="Self.UserJob" Multiplicity="*" />
+          <End Type="UMRJobsModel.UserCredential" Role="UserCredential" Multiplicity="1" />
+          <End Type="UMRJobsModel.UserJob" Role="UserJob" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="UserCredentials">
+            <Principal Role="UserCredential">
               <PropertyRef Name="UserCredentialId" />
             </Principal>
-            <Dependent Role="UserJobs">
+            <Dependent Role="UserJob">
               <PropertyRef Name="UserCredentialId" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="UMRJobs" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="JobContents" EntityType="Self.JobContent" />
-          <EntitySet Name="UserCredentials" EntityType="Self.UserCredential" />
-          <EntitySet Name="UserJobs" EntityType="Self.UserJob" />
-          <AssociationSet Name="FK_UserJobs_JobContents_JobContenId" Association="Self.FK_UserJobs_JobContents_JobContenId">
-            <End Role="JobContents" EntitySet="JobContents" />
-            <End Role="UserJobs" EntitySet="UserJobs" />
-          </AssociationSet>
-          <AssociationSet Name="FK_UserJobs_UserCredentials_UserCredentialId" Association="Self.FK_UserJobs_UserCredentials_UserCredentialId">
-            <End Role="UserCredentials" EntitySet="UserCredentials" />
-            <End Role="UserJobs" EntitySet="UserJobs" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="UMRJobsModelStoreContainer" CdmEntityContainer="UMRJobs">
+          <EntitySetMapping Name="ExternalJobs">
+            <EntityTypeMapping TypeName="UMRJobsModel.ExternalJob">
+              <MappingFragment StoreEntitySet="ExternalJob">
+                <ScalarProperty Name="ReqJobOpeningId" ColumnName="ReqJobOpeningId" />
+                <ScalarProperty Name="County" ColumnName="County" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="ExternalJobID" ColumnName="ExternalJobID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="JobContents">
             <EntityTypeMapping TypeName="UMRJobsModel.JobContent">
               <MappingFragment StoreEntitySet="JobContents">
-                <ScalarProperty Name="JobContentId" ColumnName="JobContentId" />
-                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
-                <ScalarProperty Name="NoOfVacancies" ColumnName="NoOfVacancies" />
-                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
-                <ScalarProperty Name="JobNature" ColumnName="JobNature" />
-                <ScalarProperty Name="EducationalRequirements" ColumnName="EducationalRequirements" />
-                <ScalarProperty Name="ExperienceRequirements" ColumnName="ExperienceRequirements" />
-                <ScalarProperty Name="AdditionalJobRequirements" ColumnName="AdditionalJobRequirements" />
-                <ScalarProperty Name="JobLocation" ColumnName="JobLocation" />
-                <ScalarProperty Name="SalaryRange" ColumnName="SalaryRange" />
-                <ScalarProperty Name="OtherBenefits" ColumnName="OtherBenefits" />
-                <ScalarProperty Name="EmailCV" ColumnName="EmailCV" />
-                <ScalarProperty Name="SpecialInstruction" ColumnName="SpecialInstruction" />
                 <ScalarProperty Name="ApplicationDeadline" ColumnName="ApplicationDeadline" />
+                <ScalarProperty Name="SpecialInstruction" ColumnName="SpecialInstruction" />
+                <ScalarProperty Name="EmailCV" ColumnName="EmailCV" />
+                <ScalarProperty Name="OtherBenefits" ColumnName="OtherBenefits" />
+                <ScalarProperty Name="SalaryRange" ColumnName="SalaryRange" />
+                <ScalarProperty Name="JobLocation" ColumnName="JobLocation" />
+                <ScalarProperty Name="AdditionalJobRequirements" ColumnName="AdditionalJobRequirements" />
+                <ScalarProperty Name="ExperienceRequirements" ColumnName="ExperienceRequirements" />
+                <ScalarProperty Name="EducationalRequirements" ColumnName="EducationalRequirements" />
+                <ScalarProperty Name="JobNature" ColumnName="JobNature" />
+                <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+                <ScalarProperty Name="NoOfVacancies" ColumnName="NoOfVacancies" />
+                <ScalarProperty Name="JobTitle" ColumnName="JobTitle" />
+                <ScalarProperty Name="JobContentId" ColumnName="JobContentId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserCredentials">
             <EntityTypeMapping TypeName="UMRJobsModel.UserCredential">
               <MappingFragment StoreEntitySet="UserCredentials">
-                <ScalarProperty Name="UserCredentialId" ColumnName="UserCredentialId" />
-                <ScalarProperty Name="UserName" ColumnName="UserName" />
                 <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="UserCredentialId" ColumnName="UserCredentialId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="UserJobs">
             <EntityTypeMapping TypeName="UMRJobsModel.UserJob">
               <MappingFragment StoreEntitySet="UserJobs">
-                <ScalarProperty Name="UserJobId" ColumnName="UserJobId" />
-                <ScalarProperty Name="UserCredentialId" ColumnName="UserCredentialId" />
-                <ScalarProperty Name="JobContenId" ColumnName="JobContenId" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="JobContenId" ColumnName="JobContenId" />
+                <ScalarProperty Name="UserCredentialId" ColumnName="UserCredentialId" />
+                <ScalarProperty Name="UserJobId" ColumnName="UserJobId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

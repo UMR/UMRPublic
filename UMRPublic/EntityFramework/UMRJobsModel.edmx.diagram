@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="UMRJobsModel.UserJob" Width="2.25" PointX="5.375" PointY="1.25" />
         <AssociationConnector Association="UMRJobsModel.FK_UserJobs_JobContents_JobContenId" />
         <AssociationConnector Association="UMRJobsModel.FK_UserJobs_UserCredentials_UserCredentialId" />
+        <EntityTypeShape EntityType="UMRJobsModel.ExternalJob" Width="1.5" PointX="0.75" PointY="4.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

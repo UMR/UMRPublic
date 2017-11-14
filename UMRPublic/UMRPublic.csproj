@@ -241,6 +241,7 @@
     <Content Include="index.html" />
     <Content Include="Job - Copy.aspx" />
     <Content Include="Job.aspx" />
+    <Content Include="JobBoard.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Longitudinal Medical Records Service Mark 1993.JPG" />
     <Content Include="overview.aspx" />
@@ -763,6 +764,9 @@
     <Compile Include="EmployeeAccess.aspx.designer.cs">
       <DependentUpon>EmployeeAccess.aspx</DependentUpon>
     </Compile>
+    <Compile Include="EntityFramework\ExternalJob.cs">
+      <DependentUpon>UMRJobsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="EntityFramework\JobContent.cs">
       <DependentUpon>UMRJobsModel.tt</DependentUpon>
     </Compile>
@@ -810,6 +814,13 @@
     </Compile>
     <Compile Include="Job.aspx.designer.cs">
       <DependentUpon>Job.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JobBoard.aspx.cs">
+      <DependentUpon>JobBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JobBoard.aspx.designer.cs">
+      <DependentUpon>JobBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -912,7 +923,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

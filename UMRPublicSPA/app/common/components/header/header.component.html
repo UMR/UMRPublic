@@ -12,15 +12,15 @@
             </a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse navbar-ex1-collapse"  >
             <ul class="nav navbar-nav navbar-right">
                 <li class="hidden">
                     <a></a>
                 </li>
-                <li><a routerLink="/">Home</a></li>
-                <li><a routerLink="/about">About</a></li>
-                <li><a routerLink="/products-services">Products & Services</a> </li>
-                <li><a routerLink="/client-access">Client Access</a> </li>
+                <li><a routerLink="/" (click)="onMenuClick()">Home</a></li>
+                <li><a routerLink="/about" (click)="onMenuClick()">About</a></li>
+                <li><a routerLink="/products-services" (click)="onMenuClick()">Products & Services</a> </li>
+                <li><a routerLink="/client-access" (click)="onMenuClick()">Client Access</a> </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portal <i class="fa fa-caret-down"></i> </a>
                     <ul class="dropdown-menu">
@@ -38,7 +38,7 @@
                         <li><a href="https://UMR.aviontego.com/portals/main.aspx?App=2&CompanyId=UMR">Job Board</a></li>
                     </ul>
                 </li>
-                <li><a routerLink="/contact-portal">Contact</a> </li>
+                <li><a routerLink="/contact-portal" (click)="onMenuClick()">Contact</a> </li>
             </ul>
         </div>
     </div>

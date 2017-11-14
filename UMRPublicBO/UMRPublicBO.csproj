@@ -59,6 +59,9 @@
     <Compile Include="BO\JobManager.cs" />
     <Compile Include="BO\UserManager.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="DAL\ExternalJob.cs">
+      <DependentUpon>UMRJobsModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="DAL\JobContent.cs">
       <DependentUpon>UMRJobsModel.tt</DependentUpon>
     </Compile>

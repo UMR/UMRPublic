@@ -28,5 +28,6 @@ namespace UMRPublic.EntityFramework
         public DbSet<JobContent> JobContents { get; set; }
         public DbSet<UserCredential> UserCredentials { get; set; }
         public DbSet<UserJob> UserJobs { get; set; }
+        public DbSet<ExternalJob> ExternalJobs { get; set; }
     }
 }

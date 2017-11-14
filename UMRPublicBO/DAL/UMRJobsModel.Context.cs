@@ -25,6 +25,7 @@ namespace UMRPublicBO.DAL
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<ExternalJob> ExternalJobs { get; set; }
         public virtual DbSet<JobContent> JobContents { get; set; }
         public virtual DbSet<UserCredential> UserCredentials { get; set; }
         public virtual DbSet<UserJob> UserJobs { get; set; }

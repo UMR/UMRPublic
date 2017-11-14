@@ -139,7 +139,8 @@
                                                                         <img src="images/m-sep.gif" width="188" height="1" /></td>
                                                                 </tr>
                                                                 <tr>
-                                                                    <td class="menu"><a href="https://UMR.aviontego.com/portals/main.aspx?App=2&CompanyId=UMR">Job Board</a></td>
+                                                                    <td class="menu"><a href="JobBoard.aspx">Job Board</a></td>
+                                                                    <%--<td class="menu"><a href="https://UMR.aviontego.com/portals/main.aspx?App=2&CompanyId=UMR">Job Board</a></td>--%>
                                                                 </tr>
                                                                 <tr>
                                                                     <td height="1">
