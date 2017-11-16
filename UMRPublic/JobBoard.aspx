@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Job Board</h1>
     <hr />
-    <asp:DataList ID="lstJobsBoard" runat="server" OnLoad="lstJobs_Load" RepeatColumns="3" RepeatDirection="Horizontal" RepeatLayout="Flow" >
+    <asp:DataList ID="lstJobsBoard" runat="server" OnLoad="lstJobs_Load" RepeatColumns="3" RepeatDirection="Horizontal" RepeatLayout="Table" >
         <ItemTemplate>
             <asp:Panel ID="Panel1" runat="server" GroupingText="Job Opening" Width="200px">
                 <table style="font-size: 12px;">
