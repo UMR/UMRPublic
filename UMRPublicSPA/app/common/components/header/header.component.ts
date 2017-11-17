@@ -11,7 +11,6 @@ export class HeaderComponent {
     }
     onMenuClick() {
         try {
-            console.log("QS: ", this.el.nativeElement.querySelector('.navbar-ex1-collapse'));
             this.renderer.setElementClass(this.el.nativeElement.querySelector('.navbar-ex1-collapse'), 'in', false);
         } catch (e) {
             alert(e);
