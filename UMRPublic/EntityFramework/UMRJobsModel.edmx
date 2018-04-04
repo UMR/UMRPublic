@@ -13,6 +13,7 @@
           <Property Name="State" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="County" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="ReqJobOpeningId" Type="int" Nullable="false" />
+          <Property Name="JobRequirement" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="JobContents">
           <Key>
@@ -178,6 +179,7 @@
           <Property Name="State" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="County" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
           <Property Name="ReqJobOpeningId" Type="Int32" Nullable="false" />
+          <Property Name="JobRequirement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -227,6 +229,7 @@
           <EntitySetMapping Name="ExternalJobs">
             <EntityTypeMapping TypeName="UMRJobsModel.ExternalJob">
               <MappingFragment StoreEntitySet="ExternalJob">
+                <ScalarProperty Name="JobRequirement" ColumnName="JobRequirement" />
                 <ScalarProperty Name="ReqJobOpeningId" ColumnName="ReqJobOpeningId" />
                 <ScalarProperty Name="County" ColumnName="County" />
                 <ScalarProperty Name="State" ColumnName="State" />

@@ -63,9 +63,12 @@
     <Folder Include="Properties" />
     <Folder Include="Predeployment" />
     <Folder Include="Predeployment\2017-11-13" />
+    <Folder Include="Predeployment\2018-04-02" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Predeployment\2017-11-13\01_TR_01_CREATE_TABLE_ExternalJob.sql" />
     <None Include="Predeployment\2017-11-13\00_Status.txt" />
+    <None Include="Predeployment\2018-04-02\00_status.txt" />
+    <None Include="Predeployment\2018-04-02\01_Tow_01_Alter ExternalJob.sql" />
   </ItemGroup>
 </Project>

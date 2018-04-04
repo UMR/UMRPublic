@@ -5,29 +5,22 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Job Board</h1>
     <hr />
-    <asp:DataList ID="lstJobsBoard" runat="server" OnLoad="lstJobs_Load" RepeatColumns="3" RepeatDirection="Horizontal" RepeatLayout="Table" >
+    <asp:DataList ID="lstJobsBoard" runat="server" OnLoad="lstJobs_Load" RepeatColumns="1" RepeatDirection="Horizontal" RepeatLayout="Table" >
         <ItemTemplate>
-            <asp:Panel ID="Panel1" runat="server" GroupingText="Job Opening" Width="200px">
+            <asp:Panel ID="Panel1" runat="server" GroupingText="Job Opening" Width="700px">
                 <table style="font-size: 12px;">
                     <tr>
-                        <td style="width: 50px;">State:</td>
-                        <td>
-                            <div style="font-size: 12px;">
-                                <%# Eval("State") %>
-                            </div>
-                        </td>
+                        <td>State:  <%# Eval("State") %></td>
+                        <td>County: <%# Eval("County") %></td>
                     </tr>
                     <tr>
-                        <td>County:</td>
-                        <td>
-                            <div style="font-size: 12px;">
-                                <%# Eval("County") %>
-                            </div>
+                        <td colspan="2">
+                            <%# Eval("JobRequirement") %>
                         </td>
                     </tr>
                 </table>
             </asp:Panel>
-
+            <br style="padding-bottom: 5px;" />
         </ItemTemplate>
     </asp:DataList>
 </asp:Content>

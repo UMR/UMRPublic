@@ -25,6 +25,7 @@
     <SccProvider>SAK</SccProvider>
     <TargetFrameworkProfile />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -622,7 +623,7 @@
     <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0042_image075.gif" />
     <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0043.htm" />
     <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\slide0044.htm" />
-    <Content Include="Web.config" />
+    <None Include="Web.config" />
     <Content Include="Slides\UMRHealthcareRecordsIntegratedSolution_files\preview.wmf" />
     <Content Include="Slides\UMR Presentation2_files\editdata.mso" />
     <Content Include="Slides\UMR Presentation2_files\preview.wmf" />
@@ -923,7 +924,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

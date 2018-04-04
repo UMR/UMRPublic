@@ -12,16 +12,11 @@ namespace UMRPublic
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
         protected void lstJobs_Load(object sender, EventArgs e)
         {
             UMRJobsEntities JobsEntities = new UMRJobsEntities();
-
             var jobsData = JobsEntities.ExternalJobs.ToList();
-
-
-
             lstJobsBoard.DataSource = jobsData;
             lstJobsBoard.DataBind();
         }
