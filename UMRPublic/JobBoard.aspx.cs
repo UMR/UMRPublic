@@ -16,7 +16,9 @@ namespace UMRPublic
         protected void lstJobs_Load(object sender, EventArgs e)
         {
             UMRJobsEntities JobsEntities = new UMRJobsEntities();
-            var jobsData = JobsEntities.ExternalJobs.ToList();
+            var jobsData = JobsEntities.ExternalJobs
+                .OrderByDescending(jobs => jobs.ExternalJobID)
+                .ToList();
             lstJobsBoard.DataSource = jobsData;
             lstJobsBoard.DataBind();
         }
