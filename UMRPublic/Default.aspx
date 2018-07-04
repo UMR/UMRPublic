@@ -6,7 +6,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
             <td>
-                <h1>Welcome to UMR Holdings International Corp!</h1>
+                <h1>Welcome to Universal Medical Record<sup>(TM)</sup></h1>
             </td>
         </tr>
         <tr>

@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>UMR Holdings International Corp</title>
-<meta name="description" content="UMR Holdings International Corp"/>
+<title>Universal Medical Record</title>
+<meta name="description" content="Universal Medical Record"/>
 <meta name="keywords" content="jewelry, watches"/>
 <link href="css/style.css" rel="stylesheet" type="text/css">
         <style type="text/css">
@@ -293,7 +293,7 @@ Symbol"><span style="mso-list:Ignore">·<span style="font:7.0pt &quot;Times New R
             <a href="Job.aspx">Job Openings</a>  | <a href="References.aspx">References</a>  |  <a href="#">.....</a></td>
       </tr>
       <tr>
-        <td class="bottom_addr">© 2011-2013 UMR Holdings International Corp. All Rights Reserved<br>&nbsp;</td>
+        <td class="bottom_addr">© 2011-2013 Universal Medical Record<sup>(TM)</sup>. All Rights Reserved<br>&nbsp;</td>
       </tr>
     </table></td>
   </tr>

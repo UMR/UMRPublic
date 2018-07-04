@@ -39,7 +39,7 @@
                                 <span style="font-family: Symbol;">ã</span>
                             </span>
                             &nbsp;1996-<span class="copyrightSpan"></span>
-                            Universal Medical Records&nbsp;All rights reserved.&nbsp;&nbsp;Patents Pending.&nbsp;&nbsp;Printed in the United States of America.&nbsp;&nbsp;No part of this publication may be reproduced in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the company.<br />
+                            Universal Medical Records<sup>(TM)</sup>&nbsp;All rights reserved.&nbsp;&nbsp;Patents Pending.&nbsp;&nbsp;Printed in the United States of America.&nbsp;&nbsp;No part of this publication may be reproduced in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the company.<br />
                             <br />
                             Ver 121009
                         </span>

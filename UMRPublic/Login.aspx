@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>UMR Holdings International Corp</title>
-<meta name="description" content="UMR Holdings International Corp"/>
+<title>Universal Medical Record</title>
+<meta name="description" content="Universal Medical Record"/>
 <meta name="keywords" content="jewelry, watches"/>
     <script src="Scripts/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="Scripts/copyright.js" type="text/javascript"></script>
