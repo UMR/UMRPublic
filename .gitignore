@@ -177,3 +177,4 @@ FakesAssemblies/
 *.ide-shm
 *.ide-wal
 *.jfm
+*.config
