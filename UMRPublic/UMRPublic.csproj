@@ -290,6 +290,7 @@
     <Content Include="Admin.Master" />
     <Content Include="PDFS\Stakeholders Evaluation.pdf" />
     <Content Include="packages.config" />
+    <Content Include="PDFS\Trademark Registration.pdf" />
     <None Include="Properties\PublishProfiles\Azure.pubxml" />
     <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
     <None Include="Properties\PublishProfiles\UMRPortalsMain - FTP.pubxml" />
@@ -924,7 +925,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
+      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

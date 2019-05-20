@@ -74,6 +74,11 @@
                             <a href="slides/UMR%20Presentation.htm">Slide Presentation 2003</a>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <a href="PDFS/Trademark Registration.pdf">Trademark Registration</a>
+                        </td>
+                    </tr>
 
                     <tr>
                         <td>&nbsp;
