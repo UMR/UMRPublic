@@ -108,7 +108,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <a href="OVERVI~3.DOC">Mission Statement</a>
+                                            <a href="PDFS/Overview.pdf">Mission Statement</a>
                                         </td>
                                     </tr>
                                     <tr>

@@ -291,6 +291,8 @@
     <Content Include="PDFS\Stakeholders Evaluation.pdf" />
     <Content Include="packages.config" />
     <Content Include="PDFS\Trademark Registration.pdf" />
+    <Content Include="PDFS\Overview.pdf" />
+    <Content Include="PDFS\Sani-Teri Trademark.pdf" />
     <None Include="Properties\PublishProfiles\Azure.pubxml" />
     <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
     <None Include="Properties\PublishProfiles\UMRPortalsMain - FTP.pubxml" />
@@ -925,7 +927,7 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties UseAjaxifiedTemplates="True" UseJQuerySupport="True" />
+      <UserProperties UseJQuerySupport="True" UseAjaxifiedTemplates="True" />
     </VisualStudio>
   </ProjectExtensions>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

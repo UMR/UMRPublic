@@ -75,12 +75,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>
-                            <a href="PDFS/Trademark Registration.pdf">Trademark Registration</a>
-                        </td>
-                    </tr>
-
-                    <tr>
                         <td>&nbsp;
                                                                     
                         </td>

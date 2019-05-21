@@ -66,7 +66,15 @@
                                                     <td width="50%"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td width="50%"><a href="Sani-Teri Trademark Application.pdf">Sani-Teri Trademark Application</a> </td>
+                                                    <td width="50%"><a href="Sani-Teri Trademark Application.pdf">Sani-Teri<sup>&reg</sup> Trademark Application</a> </td>
+                                                    <td width="50%"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="50%"><a href="PDFS/Sani-Teri Trademark.pdf">Sani-Teri<sup>&reg</sup> Trademark</a> </td>
+                                                    <td width="50%"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="50%"><a href="PDFS/Trademark Registration.pdf">Universal Medical Record<sup>&reg</sup> Trademark</a> </td>
                                                     <td width="50%"></td>
                                                 </tr>
                                                 <tr>
