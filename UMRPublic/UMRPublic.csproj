@@ -290,6 +290,9 @@
     <Content Include="Admin.Master" />
     <Content Include="PDFS\Stakeholders Evaluation.pdf" />
     <Content Include="packages.config" />
+    <Content Include="PDFS\Trademark Registration.pdf" />
+    <Content Include="PDFS\Overview.pdf" />
+    <Content Include="PDFS\Sani-Teri Trademark.pdf" />
     <None Include="Properties\PublishProfiles\Azure.pubxml" />
     <None Include="Properties\PublishProfiles\FileSysDep.pubxml" />
     <None Include="Properties\PublishProfiles\UMRPortalsMain - FTP.pubxml" />

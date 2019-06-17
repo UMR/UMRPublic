@@ -35,7 +35,7 @@
                             </table>
                         </td>
                         <td class="body_txt">
-                            <table>
+                            <%--<table>
                                 <tr>
                                     <td>
                                         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals" Target="_top"
@@ -48,7 +48,7 @@
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">Medcodepedia<sup>(Beta)TM</sup></asp:HyperLink>
                                     </td>
                                 </tr>
-                            </table>
+                            </table>--%>
                         </td>
                     </tr>
                 </table>

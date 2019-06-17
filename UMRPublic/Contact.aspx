@@ -22,7 +22,7 @@
                             <tr>
                                 <td valign="top">
                                     <p style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
-                                        Universal Medical Records
+                                        Universal Medical Records<sup>&reg</sup>
                                     </p>
                                     <p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
                                         <span style="font-family: Helv;">22 THE CROSS ROAD</span>
