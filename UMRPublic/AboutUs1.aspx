@@ -21,7 +21,7 @@
                         <span style="font-family: Helv;">
                             <span class="Apple-style-span" style="text-align: center;">
                                 <span class="style6"
-                                    style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">UNIVERSAL MEDICAL RECORDS
+                                    style="border-collapse: separate; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: 2; text-align: -webkit-auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-border-horizontal-spacing: 0px; -webkit-border-vertical-spacing: 0px; -webkit-text-decorations-in-effect: none; -webkit-text-size-adjust: auto; -webkit-text-stroke-width: 0px;">UNIVERSAL MEDICAL RECORD<sup>(TM)</sup>
                                     <br />
                                     22 THE CROSS ROAD
                                     <br />
@@ -39,7 +39,7 @@
                                 <span style="font-family: Symbol;">ã</span>
                             </span>
                             &nbsp;1996-<span class="copyrightSpan"></span>
-                            Universal Medical Records<sup>(TM)</sup>&nbsp;All rights reserved.&nbsp;&nbsp;Patents Pending.&nbsp;&nbsp;Printed in the United States of America.&nbsp;&nbsp;No part of this publication may be reproduced in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the company.<br />
+                            Universal Medical Record<sup>(TM)</sup>&nbsp;All rights reserved.&nbsp;&nbsp;Patents Pending.&nbsp;&nbsp;Printed in the United States of America.&nbsp;&nbsp;No part of this publication may be reproduced in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the company.<br />
                             <br />
                             Ver 121009
                         </span>
