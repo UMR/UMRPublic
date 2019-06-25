@@ -24,13 +24,22 @@
                                     <p style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
                                         Universal Medical Records<sup>&reg</sup>
                                     </p>
-                                    <p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
+                                    <%--<p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
                                         <span style="font-family: Helv;">22 THE CROSS ROAD</span>
                                     </p>
                                     <p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
                                         <span style="font-family: Helv;">CORTLANDT MANOR, NEW YORK
                                             <span>&nbsp;<span class="Apple-converted-space">&nbsp;</span>
                                             </span>10567
+                                        </span>
+                                    </p>--%>
+                                    <p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
+                                        <span style="font-family: Helv;">2 John Walsh Blvd</span>
+                                    </p>
+                                    <p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
+                                        <span style="font-family: Helv;">Bldg 1 (Lindy Bldg) ste 204, Peekskill, NY 
+                                            <span>&nbsp;<span class="Apple-converted-space">&nbsp;</span>
+                                            </span>10566
                                         </span>
                                     </p>
                                     <p align="left" class="defaulttext" style="word-spacing: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px;">
