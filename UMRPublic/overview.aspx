@@ -41,14 +41,14 @@
                     <tr>
                         <td valign="top">
                             <div>
-                                <p style="text-align: center" class="defaulttext" align="center"><span class="initialstyle"><b><span style="font-family: Helv">UNIVERSAL MEDICAL RECORDS<span style="mso-spacerun: yes">&nbsp; </span></span></b></span></p>
+                                <p style="text-align: center" class="defaulttext" align="center"><span class="initialstyle"><b><span style="font-family: Helv">UNIVERSAL MEDICAL RECORDS&reg<span style="mso-spacerun: yes">&nbsp; </span></span></b></span></p>
                                 <p style="text-align: center" class="defaulttext" align="center"><span class="initialstyle"><b><span style="font-family: Helv">22 THE CROSS ROAD</span></b></span></p>
                                 <p style="text-align: center" class="defaulttext" align="center"><span class="initialstyle"><b><span style="font-family: Helv">CORTLANDT MANOR, NEW YORK<span style="mso-spacerun: yes">&nbsp; </span>10567</span></b></span></p>
                                 <p style="text-align: center" class="defaulttext" align="center"><span class="initialstyle"><b><span style="font-family: Helv">Tel: (914) 737-7499&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Fax: (212) 504-7956</span></b></span></p>
                                 <p class="defaulttext">
                                     <span class="initialstyle"><b><span style="font-family: Helv">Copyright </span></b></span><b><span style="font-family: Symbol">ã</span></b><span class="initialstyle"><b><span style="font-family: Helv"> 1996-
                                         <script language="JavaScript">document.write(this_year_string);</script>
-                                        Universal Medical Records<span style="mso-spacerun: yes">&nbsp; </span>All rights reserved.<span style="mso-spacerun: yes">&nbsp; </span>Patents Pending.<span style="mso-spacerun: yes">&nbsp; </span>Printed in the United States of America.<span style="mso-spacerun: yes">&nbsp; </span>No part of this publication may be reproduced in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the company.</span></b></span>
+                                        Universal Medical Records&reg<span style="mso-spacerun: yes">&nbsp; </span>All rights reserved.<span style="mso-spacerun: yes">&nbsp; </span>Patents Pending.<span style="mso-spacerun: yes">&nbsp; </span>Printed in the United States of America.<span style="mso-spacerun: yes">&nbsp; </span>No part of this publication may be reproduced in a retrieval system, or transmitted, in any form or by any means, electronic, mechanical, photocopying, recording, or otherwise, without the prior written permission of the company.</span></b></span>
                                 </p>
                                 <p class="defaulttext"><span class="initialstyle"><b><span style="font-family: 'Arial Narrow'; font-size: 10pt">Ver 121009</span></b></span></p>
                                 <h2><span style="font-family: Helv; font-weight: normal" class="initialstyle">TABLE OF CONTENT</span></h2>

@@ -11,11 +11,6 @@
         </tr>
         <tr>
             <td>
-                <h1>Welcome to Universal Medical Records<sup>(TM)</sup></h1>
-            </td>
-        </tr>
-        <tr>
-            <td>
                 <h1>Medicine Is Now A Science<sup>TM</sup></h1>
             </td>
         </tr>
