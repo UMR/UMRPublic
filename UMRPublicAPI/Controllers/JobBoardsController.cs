@@ -12,6 +12,7 @@ using UMRPublicBO.DAL;
 
 namespace UMRPublicAPI.Controllers
 {
+    [AllowAnonymous]
     [EnableCors("*", "*", "GET,POST,PUT,DELETE")]
     [RoutePrefix("api/jobboards")]
     public class JobBoardsController : CurrentUserController
@@ -60,7 +61,7 @@ namespace UMRPublicAPI.Controllers
             {
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
-                    return InternalServerError();
+                    return InternalServerError(ex);
                 }
                 return InternalServerError(ex);
             }

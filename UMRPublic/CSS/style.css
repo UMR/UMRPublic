@@ -15,7 +15,7 @@ h1 {font-size: 14px;font-weight: bold;color: #000000;margin: 0px;padding-left: 1
 .bottom_addr a {text-decoration: none;}
 .bottom_addr a:hover {text-decoration: underline;}
 .bottom_menu {color: #FFFFFF;text-align: center;padding-top: 10px;padding-bottom: 2px;font-size: 11px;}
-.bottom_menu a {color: #FFFFFF;text-decoration: underline;}
+.bottom_menu a {color: #FFFFFF;text-decoration: underline;font-size: 10px;}
 .bottom_menu a:hover {color: #6DD0F5;text-decoration: underline;}
 .menu {	color: #00648b;background-image: url(../images/m-bul.gif);background-repeat: no-repeat;font-weight: bold;padding-right: 30px;	padding-left: 10px;white-space: nowrap;font-family: Tahoma, Arial;font-size: 11px;text-align: right;padding-top: 3px;padding-bottom: 3px;background-position: 167px 7px;}
 .menu a{text-decoration: none;color: #00648b;}

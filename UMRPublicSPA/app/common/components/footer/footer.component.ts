@@ -7,4 +7,5 @@ import {Router} from '@angular/router';
 })
 
 export class FooterComponent {
+    toCopyright: number = new Date().getFullYear();
 }

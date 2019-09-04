@@ -24,13 +24,17 @@ namespace UMRPublicBO.BO
         public static List<JobContent> GetAllJobsByUserID(int userId)
         {
             UMRJobs JobsEntities = new UMRJobs();
-
+            List<JobContent> jobContents = new List<JobContent>();
             var jobsData = from jContent in JobsEntities.JobContents
                            join uJob in JobsEntities.UserJobs on jContent.JobContentId equals uJob.JobContenId
                            where uJob.UserCredentialId == userId && uJob.IsActive == true
                            orderby jContent.JobContentId descending
                            select jContent;
-            return jobsData.ToList();
+            if (jobsData.Any())
+            {
+                jobContents = jobsData.ToList();
+            }
+            return jobContents;
         }
 
         public static void InsetJob(JobContent jobContent, int userCredentialId)

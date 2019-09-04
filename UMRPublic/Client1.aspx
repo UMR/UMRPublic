@@ -35,20 +35,20 @@
                             </table>
                         </td>
                         <td class="body_txt">
-                            <%--<table>
+                            <table>
                                 <tr>
                                     <td>
-                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://umrtest.com/UMRPortals" Target="_top"
+                                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http://universalmedicalrecord.com/UMRPortalsSPA" Target="_top"
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma, Arial">UMR Portals<sup>(Beta)</sup></asp:HyperLink>
                                     </td>
                                 </tr>
-                                <tr>
+                                <!--<tr>
                                     <td>
                                         <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http://umrtest.com/Medcodepedia"
                                             Font-Size="Small" Font-Bold="False" Font-Names="Tahoma,Arial">Medcodepedia<sup>(Beta)TM</sup></asp:HyperLink>
                                     </td>
-                                </tr>
-                            </table>--%>
+                                </tr>-->
+                            </table>
                         </td>
                     </tr>
                 </table>

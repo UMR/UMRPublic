@@ -1,5 +1,4 @@
 ﻿export const authCookieKey = 'tokenKey';
-import {Headers} from '@angular/http';
 
 
 //export const disableAuthorization: boolean = false;
@@ -13,8 +12,7 @@ import {Headers} from '@angular/http';
 ////export const resourceServerUrl = 'http://172.16.205.67/UMRRecruitmentResourceServer';
 
 
-//////////////////////////172.16.1.11//////////////////////////
-
+//////////////////////////  172.16.1.11 Test  /////////////////////////////////
 //export const disableAuthorization: boolean = true;
 //export const authorizationServerUrl = 'http://www.umrtest.com/UMRPublicAPIAuthorizationServer';
 //export const pathMatch = '/UMRPublic';
@@ -22,8 +20,15 @@ import {Headers} from '@angular/http';
 //export const resourceServerUrl = 'http://www.umrtest.com/UMRPublicAPIResourceServer';
 
 
-////////////////////////////// Localhost///////////////////////////
+//////////////////////////  172.16.1.104 PRODUCTION  //////////////////////////
+//export const disableAuthorization: boolean = true;
+//export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
+//export const pathMatch = '/UMRPublic';
+//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+//export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
 
+
+////////////////////////// Localhost /////////////////////////////////////////
 export const disableAuthorization: boolean = true;
 export const authorizationServerUrl = 'http://localhost:35427';
 export const pathMatch = '/UMRPublic';
@@ -31,8 +36,7 @@ export const scopes = ['UMRPublic', 'offline_access', 'openid'];
 export const resourceServerUrl = 'http://localhost:2696';
 
 
-////////////////    SPIKE /////////////////////
-
+//////////////////////////  SPIKE  ////////////////////////////////////////////
 //export const disableAuthorization: boolean = true;
 //export const authorizationServerUrl = 'http://172.16.205.67:1515';
 //export const pathMatch = '/UMRPublic';

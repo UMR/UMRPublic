@@ -60,4 +60,34 @@ Global
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DF05E7F-B9E1-42CB-B2EA-9204208BA125}
 	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://spike:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = UMRPublic\\UMRPublic.csproj
+		SccProjectName1 = UMRPublic
+		SccLocalPath1 = UMRPublic
+		SccProjectUniqueName2 = Mock\\Mock.csproj
+		SccProjectName2 = Mock
+		SccLocalPath2 = Mock
+		SccProjectUniqueName3 = UMRPublicSPA\\UMRPublicSPA.csproj
+		SccProjectName3 = UMRPublicSPA
+		SccLocalPath3 = UMRPublicSPA
+		SccProjectUniqueName4 = UMRPublicAPI.AuthorizationServer\\UMRPublicAPI.AuthorizationServer.csproj
+		SccProjectName4 = UMRPublicAPI.AuthorizationServer
+		SccLocalPath4 = UMRPublicAPI.AuthorizationServer
+		SccProjectUniqueName5 = UMRPublicBO\\UMRPublicBO.csproj
+		SccProjectName5 = UMRPublicBO
+		SccLocalPath5 = UMRPublicBO
+		SccProjectUniqueName6 = DocumentationPJ\\DocumentationPJ.vbproj
+		SccProjectName6 = DocumentationPJ
+		SccLocalPath6 = DocumentationPJ
+		SccProjectUniqueName7 = UMRPublicAPI\\UMRPublicAPI.csproj
+		SccProjectName7 = UMRPublicAPI
+		SccLocalPath7 = UMRPublicAPI
+		SccProjectUniqueName8 = UMRJobsDB\\UMRJobsDB.sqlproj
+		SccProjectName8 = UMRJobsDB
+		SccLocalPath8 = UMRJobsDB
+	EndGlobalSection
 EndGlobal

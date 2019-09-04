@@ -115,6 +115,7 @@
     <Content Include="assets\images\member-2.jpg" />
     <Content Include="assets\images\member-3.jpg" />
     <Content Include="assets\images\member-4.jpg" />
+    <Content Include="assets\images\member.jpg" />
     <Content Include="assets\images\urmtest-logo.png" />
     <Content Include="assets\images\wheelchair.png" />
     <Content Include="assets\js\app.min.js" />
@@ -448,6 +449,12 @@
     <Content Include="assets\pdf\Stakeholders-Evaluation.pdf" />
     <Content Include="assets\ppt\UMR-Presentation-2013-1.ppt" />
     <Content Include="assets\ppt\SlidePresentation2015.ppt" />
+    <Content Include="assets\pdf\CHIEF-EXECUTIVE-OFFICER.pdf" />
+    <Content Include="assets\pdf\CHIEF-MEDICAL-OFFICER.pdf" />
+    <Content Include="assets\pdf\Reza-Raquib.pdf" />
+    <Content Include="assets\pdf\Peter-Gordon.pdf" />
+    <Content Include="assets\pdf\Frank-J.-Maddalena.pdf" />
+    <Content Include="assets\pdf\Sheena-H.-Sloan.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

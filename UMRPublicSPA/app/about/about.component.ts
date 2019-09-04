@@ -1,4 +1,4 @@
-﻿import {Component, AfterViewInit} from '@angular/core';
+﻿import {Component, AfterViewInit, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 declare var $: any;
 
@@ -6,7 +6,12 @@ declare var $: any;
     templateUrl: 'about.component.html'
 })
 
-export class AboutComponent implements AfterViewInit {
+export class AboutComponent implements OnInit, AfterViewInit {
+    toCopyright: number;
+    ngOnInit() {
+        this.toCopyright = new Date().getFullYear();
+    }
+    
     ngAfterViewInit() {
         $(document).ready(function () {
             $(".owl-carousel").owlCarousel({

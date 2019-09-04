@@ -106,7 +106,7 @@ export class JobContentService {
 
         return this.http.get(jobContentGetURL, options)
             .map((res: Response) => {
-                console.log(res.json());
+                console.log('getAllJobsByUserId: ', res.json());
                 if (res.status == 200) {
                     return res.json();
                 }
