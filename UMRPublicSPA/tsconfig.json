@@ -1,30 +1,20 @@
-﻿{
-    "compileOnSave": false,
-    "buildOnSave": false,
-    "compilerOptions": {
-        "target": "es5",
-        "module": "es2015",
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "removeComments": false,
-        "noImplicitAny": false,
-        "suppressImplicitAnyIndexErrors": true,
-        "pretty": true,
-        "typeRoots": [
-            "node_modules/@types"
-        ]
-    },
-    "exclude": [
-      "node_modules",
-      "app/boot.aot.ts",
-      "app/**/*.e2e.ts",
-      "app/**/*.spec.ts",
-      "app/*.e2e.ts",
-      "app/*.spec.ts"
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
     ],
-    "awesomeTypescriptLoaderOptions": {
-        "useWebpackText": true        
-    }
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  }
 }
