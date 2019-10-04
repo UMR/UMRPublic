@@ -86,6 +86,7 @@
     <Content Include="src\app\contact-portal\contact-portal.component.html" />
     <Content Include="src\app\contact-portal\location\location.component.html" />
     <Content Include="src\app\customer-portal\customer-portal.component.html" />
+    <Content Include="src\app\home\home.component.css" />
     <Content Include="src\app\home\home.component.html" />
     <Content Include="src\app\job-board\job-board.component.html" />
     <Content Include="src\app\jobs-opening\admin-home\admin-home.component.html" />

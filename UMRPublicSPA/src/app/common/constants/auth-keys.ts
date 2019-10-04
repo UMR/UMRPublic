@@ -1,4 +1,4 @@
-﻿export const authCookieKey = 'tokenKey';
+export const authCookieKey = 'tokenKey';
 
 
 //export const disableAuthorization: boolean = false;
