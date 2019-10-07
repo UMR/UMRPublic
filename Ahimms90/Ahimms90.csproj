@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>Ahimms90</RootNamespace>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectGuid>{8CAE6CFC-236A-4351-B798-2762168DF928}</ProjectGuid>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="hts-cache\doit.log" />
+    <None Include="hts-cache\new.zip" />
+    <None Include="hts-cache\winprofile.ini" />
+    <None Include="pdf\CHIEF EXECUTIVE OFFICER.pdf" />
+    <None Include="pdf\CHIEF MEDICAL OFFICER.pdf" />
+    <None Include="pdf\Reza Raquib.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="about-us.html" />
+    <Content Include="contact-us.html" />
+    <Content Include="hts-cache\new.lst" />
+    <Content Include="hts-cache\new.txt" />
+    <Content Include="hts-cache\readme.txt" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\2b6c5201d135c693\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\3299415044f5ba72\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\3abfb527df085204\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\3d5fdb68a5f95e09\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\42851ef4b108a4b0\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\4661bf1e56dc9b5f\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\6618a99ee3e96a08\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\807a2d5e4f308ef5\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\886acd4f82e663\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\96e3cb6a15d1916e\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\a1b90c0dba3e0131\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\a3dfb3560c687481\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\bc72a8ac791a9700\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\bce2aa3bc95ae8e6\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\c78dea403bd03bfb\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\e2724dbdf43d5d08\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\e930ced7a6f0330f\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\e9ce958ed0f8aaf6\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\edcac03d5a249e1e\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\5ce0d1a0-298f-429b-a71f-9008fcc70bea\gpub\f82c5dafdec6bd88\styles.css" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\195b4ab4dfdeca42\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\28183fd5dc83bd86\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\85366ec326c7965c\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\c6375348d85f73e5\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\d40440603775d41f\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\eba23cd11ac6e2d8\script.js" />
+    <Content Include="img1.wsimg.com\blobby\go\gpub\f955f3519bc607c\script.js" />
+    <Content Include="img1.wsimg.com\ceph-p3-01\website-builder-data-prod\static\widgets\UX.3.50.8.js" />
+    <Content Include="img1.wsimg.com\isteam\stock\5696\_\rs=h_500,cg_true,m.jpg" />
+    <Content Include="img1.wsimg.com\isteam\stock\7771\_\rs=w_1240,h_620,cg_true,m\cr=w_1240,h_620.jpg" />
+    <Content Include="img1.wsimg.com\isteam\stock\pmeQ9Ww\_\rs=w_600,h_300,cg_true,m\cr=w_600,h_300.jpg" />
+    <Content Include="img1.wsimg.com\poly\v2\polyfill.min075c.js" />
+    <Content Include="img1.wsimg.com\tcc\tcc_l.combined.1.0.6.min.js" />
+    <Content Include="index.html" />
+    <Content Include="services.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ahimms90.com\" />
+  </ItemGroup>
+</Project>

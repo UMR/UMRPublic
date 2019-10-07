@@ -19,40 +19,103 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMRPublicAPI", "UMRPublicAP
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "UMRJobsDB", "UMRJobsDB\UMRJobsDB.sqlproj", "{625ED69D-EBCF-4C5C-B122-91563D3898F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ahimms90", "Ahimms90\Ahimms90.csproj", "{8CAE6CFC-236A-4351-B798-2762168DF928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Universal Medical Informatics", "Universal Medical Informatics\Universal Medical Informatics.csproj", "{B9069872-0C80-48A5-95BA-675B5F355895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMR Recruitment Services", "UMR Recruitment Services\UMR Recruitment Services.csproj", "{D7DD968A-3B73-402F-AEE6-6177AE1BC690}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Debug|x86.Build.0 = Debug|Any CPU
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Release|x86.ActiveCfg = Release|Any CPU
+		{E384E39E-E0BD-432B-B812-C0282B186DC8}.Release|x86.Build.0 = Release|Any CPU
 		{C6551F51-93C1-4B4B-997E-133388B02899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Debug|x86.Build.0 = Debug|Any CPU
 		{C6551F51-93C1-4B4B-997E-133388B02899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Release|x86.ActiveCfg = Release|Any CPU
+		{C6551F51-93C1-4B4B-997E-133388B02899}.Release|x86.Build.0 = Release|Any CPU
 		{FF215692-836A-43C2-998A-862D74C84478}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Debug|x86.Build.0 = Debug|Any CPU
 		{FF215692-836A-43C2-998A-862D74C84478}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Release|x86.ActiveCfg = Release|Any CPU
+		{FF215692-836A-43C2-998A-862D74C84478}.Release|x86.Build.0 = Release|Any CPU
 		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Debug|x86.Build.0 = Debug|Any CPU
 		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Release|x86.ActiveCfg = Release|Any CPU
+		{ECAAB9A5-1F5B-484D-84F4-81C67CF31BF2}.Release|x86.Build.0 = Release|Any CPU
 		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Debug|x86.Build.0 = Debug|Any CPU
 		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Release|x86.ActiveCfg = Release|Any CPU
+		{D1E59F22-BB8E-400E-B1E3-B566BFE03422}.Release|x86.Build.0 = Release|Any CPU
 		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Debug|x86.Build.0 = Debug|Any CPU
 		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Release|x86.ActiveCfg = Release|Any CPU
+		{6EB8EEA8-427D-49C4-B078-6DA6C5020720}.Release|x86.Build.0 = Release|Any CPU
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Debug|x86.Build.0 = Debug|Any CPU
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Release|x86.ActiveCfg = Release|Any CPU
+		{226AF594-1722-49FF-AE3B-87C984F0AFC9}.Release|x86.Build.0 = Release|Any CPU
 		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Debug|x86.Build.0 = Debug|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Debug|x86.Deploy.0 = Debug|Any CPU
 		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|x86.ActiveCfg = Release|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|x86.Build.0 = Release|Any CPU
+		{625ED69D-EBCF-4C5C-B122-91563D3898F5}.Release|x86.Deploy.0 = Release|Any CPU
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Debug|x86.ActiveCfg = Debug|x86
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Debug|x86.Build.0 = Debug|x86
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Release|Any CPU.ActiveCfg = Debug|x86
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Release|Any CPU.Build.0 = Debug|x86
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Release|x86.ActiveCfg = Debug|x86
+		{8CAE6CFC-236A-4351-B798-2762168DF928}.Release|x86.Build.0 = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Debug|x86.ActiveCfg = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Debug|x86.Build.0 = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Release|Any CPU.ActiveCfg = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Release|Any CPU.Build.0 = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Release|x86.ActiveCfg = Debug|x86
+		{B9069872-0C80-48A5-95BA-675B5F355895}.Release|x86.Build.0 = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Debug|x86.ActiveCfg = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Debug|x86.Build.0 = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Release|Any CPU.ActiveCfg = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Release|Any CPU.Build.0 = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Release|x86.ActiveCfg = Debug|x86
+		{D7DD968A-3B73-402F-AEE6-6177AE1BC690}.Release|x86.Build.0 = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,7 +124,7 @@ Global
 		SolutionGuid = {2DF05E7F-B9E1-42CB-B2EA-9204208BA125}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 12
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://spike:8080/tfs/defaultcollection
 		SccLocalPath0 = .
@@ -89,5 +152,14 @@ Global
 		SccProjectUniqueName8 = UMRJobsDB\\UMRJobsDB.sqlproj
 		SccProjectName8 = UMRJobsDB
 		SccLocalPath8 = UMRJobsDB
+		SccProjectUniqueName9 = Ahimms90\\Ahimms90.csproj
+		SccProjectName9 = Ahimms90
+		SccLocalPath9 = Ahimms90
+		SccProjectUniqueName10 = Universal\u0020Medical\u0020Informatics\\Universal\u0020Medical\u0020Informatics.csproj
+		SccProjectName10 = Universal\u0020Medical\u0020Informatics
+		SccLocalPath10 = Universal\u0020Medical\u0020Informatics
+		SccProjectUniqueName11 = UMR\u0020Recruitment\u0020Services\\UMR\u0020Recruitment\u0020Services.csproj
+		SccProjectName11 = UMR\u0020Recruitment\u0020Services
+		SccLocalPath11 = UMR\u0020Recruitment\u0020Services
 	EndGlobalSection
 EndGlobal
