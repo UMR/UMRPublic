@@ -96,6 +96,7 @@
     <Content Include="src\app\jobs-opening\job-dashboard\job-dashboard.component.html" />
     <Content Include="src\app\jobs-opening\jobs-opening.component.html" />
     <Content Include="src\app\portal\portal.component.html" />
+    <Content Include="src\app\products-and-services\products-services.component.css" />
     <Content Include="src\app\products-and-services\products-services.component.html" />
     <Content Include="src\assets\css\bootstrap.css" />
     <Content Include="src\assets\css\bootstrap.min.css" />
@@ -107,6 +108,7 @@
     <Content Include="src\assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="src\assets\images\02.jpg" />
     <Content Include="src\assets\images\03.jpg" />
+    <Content Include="src\assets\images\ahimms90.png" />
     <Content Include="src\assets\images\banner.png" />
     <Content Include="src\assets\images\dna.png" />
     <Content Include="src\assets\images\favicon.png" />
@@ -118,6 +120,8 @@
     <Content Include="src\assets\images\member-3.jpg" />
     <Content Include="src\assets\images\member-4.jpg" />
     <Content Include="src\assets\images\member.jpg" />
+    <Content Include="src\assets\images\umr-recreuitment-services.png" />
+    <Content Include="src\assets\images\universal-medical-informatics.png" />
     <Content Include="src\assets\images\urmtest-logo.png" />
     <Content Include="src\assets\images\wheelchair.png" />
     <Content Include="src\assets\js\app.min.js" />

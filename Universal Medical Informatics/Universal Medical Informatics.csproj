@@ -15,6 +15,18 @@
     <None Include="pdf\CHIEF EXECUTIVE OFFICER.pdf" />
     <None Include="pdf\CHIEF MEDICAL OFFICER.pdf" />
     <None Include="pdf\Reza Raquib.pdf" />
+    <None Include="umi\fonts\webfonts\fa-brands-400.eot" />
+    <None Include="umi\fonts\webfonts\fa-brands-400.ttf" />
+    <None Include="umi\fonts\webfonts\fa-brands-400.woff" />
+    <None Include="umi\fonts\webfonts\fa-brands-400.woff2" />
+    <None Include="umi\fonts\webfonts\fa-regular-400.eot" />
+    <None Include="umi\fonts\webfonts\fa-regular-400.ttf" />
+    <None Include="umi\fonts\webfonts\fa-regular-400.woff" />
+    <None Include="umi\fonts\webfonts\fa-regular-400.woff2" />
+    <None Include="umi\fonts\webfonts\fa-solid-900.eot" />
+    <None Include="umi\fonts\webfonts\fa-solid-900.ttf" />
+    <None Include="umi\fonts\webfonts\fa-solid-900.woff" />
+    <None Include="umi\fonts\webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="about-us.html" />
@@ -58,6 +70,35 @@
     <Content Include="img1.wsimg.com\tcc\tcc_l.combined.1.0.6.min.js" />
     <Content Include="index.html" />
     <Content Include="services.html" />
+    <Content Include="umi\about.html" />
+    <Content Include="umi\contact.html" />
+    <Content Include="umi\css\bootstrap.css" />
+    <Content Include="umi\css\bootstrap.min.css" />
+    <Content Include="umi\css\responsive.css" />
+    <Content Include="umi\fonts\css\all.css" />
+    <Content Include="umi\fonts\css\all.min.css" />
+    <Content Include="umi\fonts\css\brands.css" />
+    <Content Include="umi\fonts\css\brands.min.css" />
+    <Content Include="umi\fonts\css\fontawesome.css" />
+    <Content Include="umi\fonts\css\fontawesome.min.css" />
+    <Content Include="umi\fonts\css\regular.css" />
+    <Content Include="umi\fonts\css\regular.min.css" />
+    <Content Include="umi\fonts\css\solid.css" />
+    <Content Include="umi\fonts\css\solid.min.css" />
+    <Content Include="umi\fonts\css\svg-with-js.css" />
+    <Content Include="umi\fonts\css\svg-with-js.min.css" />
+    <Content Include="umi\fonts\css\v4-shims.css" />
+    <Content Include="umi\fonts\css\v4-shims.min.css" />
+    <Content Include="umi\fonts\webfonts\fa-brands-400.svg" />
+    <Content Include="umi\fonts\webfonts\fa-regular-400.svg" />
+    <Content Include="umi\fonts\webfonts\fa-solid-900.svg" />
+    <Content Include="umi\images\banner.png" />
+    <Content Include="umi\index.html" />
+    <Content Include="umi\js\bootstrap.js" />
+    <Content Include="umi\js\bootstrap.min.js" />
+    <Content Include="umi\js\jquery-v3.4.1.js" />
+    <Content Include="umi\services.html" />
+    <Content Include="umi\style.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ahimms90.com\" />

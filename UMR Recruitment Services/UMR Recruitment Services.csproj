@@ -15,6 +15,18 @@
     <None Include="pdf\CHIEF EXECUTIVE OFFICER.pdf" />
     <None Include="pdf\CHIEF MEDICAL OFFICER.pdf" />
     <None Include="pdf\Reza Raquib.pdf" />
+    <None Include="umrrs\fonts\webfonts\fa-brands-400.eot" />
+    <None Include="umrrs\fonts\webfonts\fa-brands-400.ttf" />
+    <None Include="umrrs\fonts\webfonts\fa-brands-400.woff" />
+    <None Include="umrrs\fonts\webfonts\fa-brands-400.woff2" />
+    <None Include="umrrs\fonts\webfonts\fa-regular-400.eot" />
+    <None Include="umrrs\fonts\webfonts\fa-regular-400.ttf" />
+    <None Include="umrrs\fonts\webfonts\fa-regular-400.woff" />
+    <None Include="umrrs\fonts\webfonts\fa-regular-400.woff2" />
+    <None Include="umrrs\fonts\webfonts\fa-solid-900.eot" />
+    <None Include="umrrs\fonts\webfonts\fa-solid-900.ttf" />
+    <None Include="umrrs\fonts\webfonts\fa-solid-900.woff" />
+    <None Include="umrrs\fonts\webfonts\fa-solid-900.woff2" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="about-us.html" />
@@ -58,6 +70,35 @@
     <Content Include="img1.wsimg.com\tcc\tcc_l.combined.1.0.6.min.js" />
     <Content Include="index.html" />
     <Content Include="services.html" />
+    <Content Include="umrrs\about.html" />
+    <Content Include="umrrs\contact.html" />
+    <Content Include="umrrs\css\bootstrap.css" />
+    <Content Include="umrrs\css\bootstrap.min.css" />
+    <Content Include="umrrs\css\responsive.css" />
+    <Content Include="umrrs\fonts\css\all.css" />
+    <Content Include="umrrs\fonts\css\all.min.css" />
+    <Content Include="umrrs\fonts\css\brands.css" />
+    <Content Include="umrrs\fonts\css\brands.min.css" />
+    <Content Include="umrrs\fonts\css\fontawesome.css" />
+    <Content Include="umrrs\fonts\css\fontawesome.min.css" />
+    <Content Include="umrrs\fonts\css\regular.css" />
+    <Content Include="umrrs\fonts\css\regular.min.css" />
+    <Content Include="umrrs\fonts\css\solid.css" />
+    <Content Include="umrrs\fonts\css\solid.min.css" />
+    <Content Include="umrrs\fonts\css\svg-with-js.css" />
+    <Content Include="umrrs\fonts\css\svg-with-js.min.css" />
+    <Content Include="umrrs\fonts\css\v4-shims.css" />
+    <Content Include="umrrs\fonts\css\v4-shims.min.css" />
+    <Content Include="umrrs\fonts\webfonts\fa-brands-400.svg" />
+    <Content Include="umrrs\fonts\webfonts\fa-regular-400.svg" />
+    <Content Include="umrrs\fonts\webfonts\fa-solid-900.svg" />
+    <Content Include="umrrs\images\banner.png" />
+    <Content Include="umrrs\index.html" />
+    <Content Include="umrrs\js\bootstrap.js" />
+    <Content Include="umrrs\js\bootstrap.min.js" />
+    <Content Include="umrrs\js\jquery-v3.4.1.js" />
+    <Content Include="umrrs\services.html" />
+    <Content Include="umrrs\style.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ahimms90.com\" />

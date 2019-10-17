@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+
+body, html{
+    color: #5e5e5e;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    padding: 0;
+    margin: 0; 
+}
+h1,h2,h3,h4,h5,h6{
+    color:#232323;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+p{  
+    color: #5e5e5e;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin-bottom: 0;
+}
+a{
+    color: #ffffff;
+    text-decoration: none;
+}
+a:hover{
+    color: #39C6F4;
+    text-decoration: none;
+    transition: .5s;
+}
+
+
+
+/* Header Area Stylesheet */
+.navbar-brand{
+    font-size: 14px;
+    font-weight: 700;
+}
+.topbar-area{
+    background:#ffffff;
+    padding: 10px 0px;
+}
+.nav-link{
+    text-transform: uppercase;
+    padding: 20px !important;
+    transition: 1s all;
+}
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active {
+    color: #FC6E51;
+    font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
+    color: #FC6E51;
+    transition: 1s all;
+}
+.logo-area{
+    padding: 20px 0;
+    background: #ffffff;
+}
+
+
+
+
+/* Content Area Stylesheet */
+.content-area{
+    margin-top: 149px;
+}
+.btn-list{
+    padding: 20px 0 10px 0;
+}
+.btn-umr {
+    color: #ffffff;
+    background: #FC6E51;
+    font-weight: 700;
+    padding: 10px 20px;
+    transition: 1s all;
+}
+.btn-umr:hover {
+    color: #ffffff;
+    background: #E9573F;
+    transition: 1s all;
+}
+sup{
+    font-size: 9px;
+    font-weight: 400;
+}
+
+
+
+/* Footer Area Stylesheet */
+.footer-area{
+    padding: 10px 0;
+}

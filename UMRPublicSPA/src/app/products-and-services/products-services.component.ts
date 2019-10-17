@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+﻿import { Component } from '@angular/core';
 import { resourceServerUrl } from '../common/constants/auth-keys';
 @Component({
-    templateUrl: './products-services.component.html'
+    templateUrl: './products-services.component.html',
+    styleUrls: ['./products-services.component.css']
 })
 export class ProductsServicesComponent{
   umiDomain: string;
