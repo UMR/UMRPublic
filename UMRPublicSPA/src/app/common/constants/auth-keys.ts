@@ -1,15 +1,15 @@
 export const authCookieKey = 'tokenKey';
 
 
-export const disableAuthorization: boolean = false;
-export const authorizationServerUrl = 'http://localhost:35429';
-export const pathMatch = '/UMRRecruitment';
-//export const authorizationServerUrl = 'http://172.16.205.67/UMRRecruitmentAuthorizationServer';
-export const scopes = ['umr_recruitment_web_api', 'offline_access', 'openid'];
-export const devTimeLoginId: string = 'test';
-export const devTimePassword: string = 'test';
-export const resourceServerUrl = 'http://localhost:14243';
-//export const resourceServerUrl = 'http://172.16.205.67/UMRRecruitmentResourceServer';
+//export const disableAuthorization: boolean = false;
+//export const authorizationServerUrl = 'http://localhost:35429';
+//export const pathMatch = '/UMRRecruitment';
+////export const authorizationServerUrl = 'http://172.16.205.67/UMRRecruitmentAuthorizationServer';
+//export const scopes = ['umr_recruitment_web_api', 'offline_access', 'openid'];
+//export const devTimeLoginId: string = 'test';
+//export const devTimePassword: string = 'test';
+//export const resourceServerUrl = 'http://localhost:14243';
+////export const resourceServerUrl = 'http://172.16.205.67/UMRRecruitmentResourceServer';
 
 
 //////////////////////////  172.16.1.11 Test  /////////////////////////////////
@@ -21,11 +21,11 @@ export const resourceServerUrl = 'http://localhost:14243';
 
 
 //////////////////////////  172.16.1.104 PRODUCTION  //////////////////////////
-//export const disableAuthorization: boolean = true;
-//export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
-//export const pathMatch = '/UMRPublic';
-//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
-//export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
+export const disableAuthorization: boolean = true;
+export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
+export const pathMatch = '/UMRPublic';
+export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
 
 
 ////////////////////////// Localhost /////////////////////////////////////////

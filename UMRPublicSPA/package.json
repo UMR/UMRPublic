@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "ng build --baseHref=/UMRPublicSPA/ --prod && gzipper --exclude=html --verbose ./dist/UMRPublicSPA && start .\\dist\\UMRPublicSPA"
+    "build:spike": "ng build --baseHref=/UMRPublicSPA/ --prod && gzipper --exclude=html --verbose ./dist/UMRPublicSPA && start .\\dist\\UMRPublicSPA",
+    "build:prod": "ng build --baseHref=/ --prod && gzipper --exclude=html --verbose ./dist/UMRPublicSPA && start .\\dist\\UMRPublicSPA"
   },
   "private": true,
   "dependencies": {

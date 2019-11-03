@@ -12,6 +12,13 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var newUrl = 'http://' + document.location.hostname + '/UMRRecruitment/Login.aspx';
+            //console.log(newUrl);
+            document.getElementById("ancRecruit").href = newUrl;
+        });
+    </script>
 </head>
 <body>
 
@@ -23,7 +30,7 @@
                         <ul class="list-inline d-flex justify-content-center">
                             <li class="list-inline-item">UMR Recruitment Services</li>
                             <li class="list-inline-item"><i class="fas fa-map-marker-alt"></i> 2 John Walsh Boulevard, Suite 204, NY 10566 US</li>
-                            <li class="list-inline-item"><i class="fas fa-phone-alt"></i> (914) 788-8066</li>
+                            <li class="list-inline-item"><i class="fas fa-phone-alt"></i> (914) 737-7499</li>
                         </ul>
                     </div>
                 </div>
@@ -76,13 +83,13 @@
                     </figure>
                 </div>
                 <div class="col-12">
-                    <p class="text-center">Better knowledge for a higher quality of life!</p>
+                    <p class="text-center">A premier healthcare staffing solution</p>
                 </div>
                 <div class="col-12 text-center btn-list">
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a href="https://UMR.aviontego.com/portals/main.aspx?App=3&CompanyId=UMR" " class="btn btn-default btn-umr">VISIT EMPLOYEE PORTAL</a></li>
-                        <li class="list-inline-item"><a href="https://UMR.aviontego.com/portals/main.aspx?App=1&CompanyId=UMR" " " class="btn btn-default btn-umr">VISIT APPLICANT PORTAL</a></li>
-                        <li class="list-inline-item"><a href="http://universalmedicalrecord.com/UMRRecruitment/Login.aspx?ReturnUrl=%2fUMRRecruitment%2f" class="btn btn-default btn-umr">VISIT RECRUITMENT </a></li>
+                        <!--<li class="list-inline-item"><a href="https://UMR.aviontego.com/portals/main.aspx?App=3&CompanyId=UMR" " class="btn btn-default btn-umr">VISIT EMPLOYEE PORTAL</a></li>-->
+                        <li class="list-inline-item"><a href="https://UMR.aviontego.com/portals/main.aspx?App=1&CompanyId=UMR" id="ancApply" class="btn btn-default btn-umr">APPLY HERE</a></li>
+                        <li class="list-inline-item"><a href="#" id="ancRecruit" class="btn btn-default btn-umr">ACCESS RECRUITMENT</a></li>
                     </ul>
                 </div>
             </div>
@@ -112,6 +119,5 @@
     <!-- Jquery Plugins -->
     <script src="js/jquery-v3.4.1.js"></script>
     <script src="js/bootstrap.js"></script>
-    
 </body>
 </html>

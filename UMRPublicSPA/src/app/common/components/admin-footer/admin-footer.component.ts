@@ -1,4 +1,4 @@
-﻿import { Component } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'umr-public-admin-footer',
@@ -7,4 +7,5 @@
 })
 
 export class AdminFooterComponent {
+    toCopyright: number = new Date().getFullYear();
 }
