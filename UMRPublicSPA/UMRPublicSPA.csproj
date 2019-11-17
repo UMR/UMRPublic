@@ -109,6 +109,8 @@
     <Content Include="src\assets\images\02.jpg" />
     <Content Include="src\assets\images\03.jpg" />
     <Content Include="src\assets\images\ahimms90.png" />
+    <Content Include="src\assets\images\banner-bottom-text.png" />
+    <Content Include="src\assets\images\banner-top-text.png" />
     <Content Include="src\assets\images\banner.png" />
     <Content Include="src\assets\images\dna.png" />
     <Content Include="src\assets\images\favicon.png" />

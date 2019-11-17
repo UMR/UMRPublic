@@ -71,7 +71,7 @@
     <Content Include="index.html" />
     <Content Include="services.html" />
     <Content Include="umrrs\about.html" />
-    <Content Include="umrrs\contact.html" />
+    <Content Include="umrrs\contact.php" />
     <Content Include="umrrs\css\bootstrap.css" />
     <Content Include="umrrs\css\bootstrap.min.css" />
     <Content Include="umrrs\css\responsive.css" />
