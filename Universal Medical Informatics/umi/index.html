@@ -15,12 +15,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var medcodeURL = 'http://' + document.location.hostname + '/Medcodepedia/Login.aspx';
-            var oldPortalURL = 'http://' + document.location.hostname + '/UMRPortals/LogIn.aspx';
+            //var oldPortalURL = 'http://' + document.location.hostname + '/UMRPortals/LogIn.aspx';
             var newPortalURL = 'http://' + document.location.hostname + '/UMRPortalsSPA';
             //console.log(newUrl);
-            document.getElementById("ancOldPortal").href = oldPortalURL;
+            document.getElementById("ancOldPortal").href = newPortalURL;
             document.getElementById("ancMedcode").href = medcodeURL;
-            document.getElementById("ancNewPortal").href = newPortalURL;
+            //document.getElementById("ancNewPortal").href = newPortalURL;
         });
     </script>
 </head>
@@ -93,7 +93,7 @@
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="http://www.universalmedicalrecord.com/UMRPortals/LogIn.aspx?ReturnUrl=%2fUMRPortals" class="btn btn-default btn-umr" id="ancOldPortal">VISIT UMR PORTALS</a></li>
                         <li class="list-inline-item"><a href="http://universalmedicalrecord.com/Medcodepedia/Login.aspx?ReturnUrl=%2fMedcodepedia" class="btn btn-default btn-umr" id="ancMedcode">VISIT MEDCODEPEDIA <sup>TM</sup></a></li>
-                        <li class="list-inline-item"><a href="http://universalmedicalrecord.com/UMRPortalsSPA" class="btn btn-default btn-umr" id="ancNewPortal">VISIT UMR PORTALS <sup>BETA</sup></a></li>
+                        <!--<li class="list-inline-item"><a href="http://universalmedicalrecord.com/UMRPortalsSPA" class="btn btn-default btn-umr" id="ancNewPortal">VISIT UMR PORTALS <sup>BETA</sup></a></li>-->
                     </ul>
                 </div>
             </div>
