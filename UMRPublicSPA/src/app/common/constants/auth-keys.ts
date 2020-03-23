@@ -21,11 +21,11 @@ export const authCookieKey = 'tokenKey';
 
 
 //////////////////////////  172.16.1.104 PRODUCTION  //////////////////////////
-//export const disableAuthorization: boolean = true;
-//export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
-//export const pathMatch = '/UMRPublic';
-//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
-//export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
+export const disableAuthorization: boolean = true;
+export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
+export const pathMatch = '/UMRPublic';
+export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
 
 
 ////////////////////////// Localhost /////////////////////////////////////////
@@ -37,11 +37,11 @@ export const authCookieKey = 'tokenKey';
 
 
 //////////////////////////  SPIKE  ////////////////////////////////////////////
-export const disableAuthorization: boolean = true;
-export const authorizationServerUrl = 'http://172.16.205.67:1515';
-export const pathMatch = '/UMRPublic';
-export const scopes = ['UMRPublic', 'offline_access', 'openid'];
-export const resourceServerUrl = 'http://172.16.205.67:1516';
+//export const disableAuthorization: boolean = true;
+//export const authorizationServerUrl = 'http://172.16.205.67:1515';
+//export const pathMatch = '/UMRPublic';
+//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+//export const resourceServerUrl = 'http://172.16.205.67:1516';
 
 
 export const allPermissions = ['Add New Applicant', 'Allowed IP', 'Applicant Degree', 'Applicant Ownership', 'Applicant Skill', 'Applicant Transfer', 'Applicants', 'Assign Recruiter Role', 'Calendar', 'Cold Tracking', 'Configure Field Access Permission', 'Contact', 'Email', 'Follow-up', 'General Population', 'Hot Tracking', 'Information', 'Institution Information', 'Institution Type Information', 'Interview', 'Job Attributes', 'Job Skills', 'Manage Profile', 'Manage Recruiter', 'Manage Role', 'Others', 'Pending', 'Placement', 'Position Information', 'Profiles', 'Recruiter', 'Send Out', 'Settings', 'User Mail', 'User Mail Configuration', 'User Mail Template', 'User Settings', 'View By Applicant', 'View by Institution', 'Logout'];

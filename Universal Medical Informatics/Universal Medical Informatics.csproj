@@ -15,6 +15,17 @@
     <None Include="pdf\CHIEF EXECUTIVE OFFICER.pdf" />
     <None Include="pdf\CHIEF MEDICAL OFFICER.pdf" />
     <None Include="pdf\Reza Raquib.pdf" />
+    <Content Include="umi\assets\pdf\about.pdf" />
+    <Content Include="umi\assets\pdf\CHIEF-EXECUTIVE-OFFICER.pdf" />
+    <Content Include="umi\assets\pdf\CHIEF-MEDICAL-OFFICER.pdf" />
+    <Content Include="umi\assets\pdf\donald.pdf" />
+    <Content Include="umi\assets\pdf\Frank-J.-Maddalena.pdf" />
+    <Content Include="umi\assets\pdf\Nurses-View-Point.pdf" />
+    <Content Include="umi\assets\pdf\Peter-Gordon.pdf" />
+    <Content Include="umi\assets\pdf\Reza-Raquib.pdf" />
+    <Content Include="umi\assets\pdf\Sheena-H.-Sloan.pdf" />
+    <Content Include="umi\assets\pdf\Social-Workers-View-Point.pdf" />
+    <Content Include="umi\assets\pdf\Stakeholders-Evaluation.pdf" />
     <None Include="umi\fonts\webfonts\fa-brands-400.eot" />
     <None Include="umi\fonts\webfonts\fa-brands-400.ttf" />
     <None Include="umi\fonts\webfonts\fa-brands-400.woff" />
@@ -74,6 +85,7 @@
     <Content Include="umi\contact.html" />
     <Content Include="umi\css\bootstrap.css" />
     <Content Include="umi\css\bootstrap.min.css" />
+    <Content Include="umi\css\owl.carousel.css" />
     <Content Include="umi\css\responsive.css" />
     <Content Include="umi\fonts\css\all.css" />
     <Content Include="umi\fonts\css\all.min.css" />
@@ -93,10 +105,13 @@
     <Content Include="umi\fonts\webfonts\fa-regular-400.svg" />
     <Content Include="umi\fonts\webfonts\fa-solid-900.svg" />
     <Content Include="umi\images\banner.png" />
+    <Content Include="umi\images\member.jpg" />
     <Content Include="umi\index.html" />
     <Content Include="umi\js\bootstrap.js" />
     <Content Include="umi\js\bootstrap.min.js" />
+    <Content Include="umi\js\copyright.js" />
     <Content Include="umi\js\jquery-v3.4.1.js" />
+    <Content Include="umi\js\owl.carousel.min.js" />
     <Content Include="umi\services.html" />
     <Content Include="umi\style.css" />
   </ItemGroup>
