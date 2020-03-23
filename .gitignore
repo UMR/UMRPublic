@@ -178,3 +178,5 @@ FakesAssemblies/
 *.ide-wal
 *.jfm
 *.config
+*.sqlite
+*.json
