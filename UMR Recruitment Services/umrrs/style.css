@@ -108,3 +108,42 @@ sup{
 .footer-area{
     padding: 10px 0;
 }
+
+.home-content .col-md-7 h3, .home-content .col-md-8 h3, .team .col-md-12 h3, .service h3 {
+    margin-top: 0px;
+    margin-bottom: 38px;
+    font-size: 22px;
+    color: #434a54;
+    text-transform: uppercase
+}
+
+.home-content .col-md-7 p {
+    text-align: justify;
+    font-size: 14px;
+    line-height: 24px;
+    color: #656d78
+}
+
+.about-content, .contact-content {
+    margin-top: 40px
+}
+
+.address, .phone, .email {
+    margin-bottom: 20px
+}
+
+    .address h3, .phone h3, .email h3 {
+        font-size: 22px;
+        line-height: 24px;
+        color: #434a54;
+        font-weight: 300;
+        margin-bottom: 10px
+    }
+
+    .address p, .phone p, .email p {
+        font-size: 14px;
+        line-height: 18px;
+        color: #434a54;
+        font-weight: 300;
+        margin: 0px
+    }

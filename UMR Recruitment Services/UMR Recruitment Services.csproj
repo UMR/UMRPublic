@@ -97,6 +97,7 @@
     <Content Include="umrrs\index.html" />
     <Content Include="umrrs\js\bootstrap.js" />
     <Content Include="umrrs\js\bootstrap.min.js" />
+    <Content Include="umrrs\js\copyright.js" />
     <Content Include="umrrs\js\jquery-v3.4.1.js" />
     <Content Include="umrrs\services.html" />
     <Content Include="umrrs\style.css" />
