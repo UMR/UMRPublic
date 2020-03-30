@@ -109,6 +109,14 @@ sup{
     padding: 10px 0;
 }
 
+.fixed-bottom-custom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+}
+
 
 .home-content .col-md-7 h3, .home-content .col-md-8 h3, .team .col-md-12 h3, .service h3 {
     margin-top: 0px;
@@ -153,6 +161,10 @@ sup{
 .sb {
     background: #39c6f4;
     padding: 20px 0px
+}
+
+.subscription_right_text{
+    text-align:right;
 }
 
 .subscription h3 {

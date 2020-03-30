@@ -109,6 +109,7 @@
     <Content Include="umi\index.html" />
     <Content Include="umi\js\bootstrap.js" />
     <Content Include="umi\js\bootstrap.min.js" />
+    <Content Include="umi\js\carouselsetter.js" />
     <Content Include="umi\js\copyright.js" />
     <Content Include="umi\js\jquery-v3.4.1.js" />
     <Content Include="umi\js\owl.carousel.min.js" />
