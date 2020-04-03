@@ -15,6 +15,11 @@
     <None Include="pdf\CHIEF EXECUTIVE OFFICER.pdf" />
     <None Include="pdf\CHIEF MEDICAL OFFICER.pdf" />
     <None Include="pdf\Reza Raquib.pdf" />
+    <Content Include="umrrs\fonts\fontawesome-webfont.svg" />
+    <Content Include="umrrs\fonts\fontawesome-webfont.woff2" />
+    <Content Include="umrrs\fonts\fontawesome-webfont.eot" />
+    <Content Include="umrrs\fonts\fontawesome-webfont.ttf" />
+    <Content Include="umrrs\fonts\fontawesome-webfont.woff" />
     <None Include="umrrs\fonts\webfonts\fa-brands-400.eot" />
     <None Include="umrrs\fonts\webfonts\fa-brands-400.ttf" />
     <None Include="umrrs\fonts\webfonts\fa-brands-400.woff" />
@@ -75,6 +80,7 @@
     <Content Include="umrrs\contact.php" />
     <Content Include="umrrs\css\bootstrap.css" />
     <Content Include="umrrs\css\bootstrap.min.css" />
+    <Content Include="umrrs\css\font-awesome.min.css" />
     <Content Include="umrrs\css\responsive.css" />
     <Content Include="umrrs\fonts\css\all.css" />
     <Content Include="umrrs\fonts\css\all.min.css" />
