@@ -530,6 +530,7 @@
     <TypeScriptCompile Include="src\app\customer-portal\customer-portal.component.ts" />
     <TypeScriptCompile Include="src\app\home\home.component.ts" />
     <TypeScriptCompile Include="src\app\job-board\job-board.component.ts" />
+    <TypeScriptCompile Include="src\app\job-board\job-board.model.ts" />
     <TypeScriptCompile Include="src\app\job-board\job-board.service.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\admin-home\admin-home.component.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\change-password\change-password.component.ts" />

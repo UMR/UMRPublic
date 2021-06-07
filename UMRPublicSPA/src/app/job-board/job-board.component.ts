@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { JobContentService } from '../jobs-opening/services/job-content.service';
+import { JobBoard } from './job-board.model';
 import { JobBoardService } from './job-board.service';
 
 @Component({
@@ -7,20 +9,20 @@ import { JobBoardService } from './job-board.service';
   providers: [JobBoardService]
 })
 
-export class JobBoardComponent implements OnInit, AfterViewInit {
+export class JobBoardComponent implements OnInit {
 
-  jobBoardContents = [];
+  jobBoardContents = [];  
 
   constructor(private router: Router, private jobBoardService: JobBoardService) { }
 
   ngOnInit(): void {
-    //this.getAllJobBoards();
+    this.getAllJobBoards();
   }
 
   getAllJobBoards() {
     this.jobBoardService.getAllJobBoards()
       .subscribe(data => {
-        this.jobBoardContents = data;
+        this.jobBoardContents = data;        
         console.log(this.jobBoardContents);
       },
         error => {
@@ -28,21 +30,4 @@ export class JobBoardComponent implements OnInit, AfterViewInit {
         });
   }
 
-  ngAfterViewInit() {
-
-    this.getAllJobBoards();
-    //setTimeout(() => {
-    //  let jobContents = this.jobBoardcontents;
-    //  for (let content of jobContents) {
-    //    let len = content.JobDescription.length;
-    //    let halfContent = content.JobDescription.substring(0, len / 2);
-    //    let secondHalf = content.JobDescription.substring(len - len / 2, len);
-    //    let jobContent = new JobContent();
-    //    jobContent.HalfContent = halfContent;
-    //    jobContent.SecondHalf = secondHalf;
-    //    this.filterJobContents.push(jobContent);
-    //  }
-
-    //}, 1000);    
-  }
 }

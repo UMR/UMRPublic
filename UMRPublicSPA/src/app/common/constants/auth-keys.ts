@@ -21,19 +21,19 @@ export const authCookieKey = 'tokenKey';
 
 
 //////////////////////////  172.16.1.104 PRODUCTION  //////////////////////////
-export const disableAuthorization: boolean = true;
-export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
-export const pathMatch = '/UMRPublic';
-export const scopes = ['UMRPublic', 'offline_access', 'openid'];
-export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
+//export const disableAuthorization: boolean = true;
+//export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
+//export const pathMatch = '/UMRPublic';
+//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+//export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
 
 
 ////////////////////////// Localhost /////////////////////////////////////////
-//export const disableAuthorization: boolean = true;
-//export const authorizationServerUrl = 'http://localhost:35427';
-//export const pathMatch = '/UMRPublic';
-//export const scopes = ['UMRPublic', 'offline_access', 'openid'];
-//export const resourceServerUrl = 'http://localhost:2696';
+export const disableAuthorization: boolean = true;
+export const authorizationServerUrl = 'http://localhost:35427';
+export const pathMatch = '/UMRPublic';
+export const scopes = ['UMRPublic', 'offline_access', 'openid'];
+export const resourceServerUrl = 'http://localhost:2696';
 
 
 //////////////////////////  SPIKE  ////////////////////////////////////////////
