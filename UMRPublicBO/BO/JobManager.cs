@@ -10,6 +10,17 @@ namespace UMRPublicBO.BO
 {
     public class JobManager
     {
+
+        public static List<ExternalJob> GetAllJobBoards()
+        {
+            UMRJobs JobsEntities = new UMRJobs();
+            var jobsData = JobsEntities.ExternalJobs
+                .OrderByDescending(jobs => jobs.ExternalJobID)
+                .ToList();
+
+            return jobsData.ToList();
+        }
+
         public static List<JobContent> GetAllJobs()
         {
             UMRJobs JobsEntities = new UMRJobs();

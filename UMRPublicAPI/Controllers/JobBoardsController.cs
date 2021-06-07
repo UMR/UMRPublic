@@ -17,6 +17,36 @@ namespace UMRPublicAPI.Controllers
     [RoutePrefix("api/jobboards")]
     public class JobBoardsController : CurrentUserController
     {
+        #region
+
+        [Route("getalljobboards")]
+        [HttpGet]
+        [ResponseType(typeof(JobContent))]
+        public IHttpActionResult GetAllJobBoards()
+        {
+            try
+            {
+                List<ExternalJob> jobboards = JobManager.GetAllJobBoards();
+                if (jobboards.Count == 0)
+                {
+                    return NotFound();
+                }
+
+                return Ok(jobboards);
+            }
+            catch (Exception ex)
+            {
+                if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                {
+                    return InternalServerError();
+                }
+                return InternalServerError(ex);
+            }
+        }
+
+        #endregion
+
+        #region Job Opening
         [Route("getalljobs")]
         [HttpGet]
         [ResponseType(typeof(JobContent))]
@@ -135,5 +165,6 @@ namespace UMRPublicAPI.Controllers
                 return InternalServerError(ex);
             }
         }
+        #endregion
     }
 }
