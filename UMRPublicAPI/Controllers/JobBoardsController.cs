@@ -7,6 +7,7 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
+using UMRPublicAPI.Models;
 using UMRPublicBO.BO;
 using UMRPublicBO.DAL;
 
@@ -25,14 +26,40 @@ namespace UMRPublicAPI.Controllers
         public IHttpActionResult GetAllJobBoards()
         {
             try
-            {
-                List<ExternalJob> jobboards = JobManager.GetAllJobBoards();
-                if (jobboards.Count == 0)
+            {                
+                List<ExternalJob> jobboardsFromRepo = JobManager.GetAllJobBoards();
+                List<ExternalJobModel> jobboardModels = new List<ExternalJobModel>();
+
+                if (jobboardsFromRepo != null && jobboardsFromRepo.Count > 0) 
+                {
+                    foreach (var jobBoard in jobboardsFromRepo)
+                    {
+                        ExternalJobModel externalJobModel = new ExternalJobModel();
+
+                        externalJobModel.ExternalJobID = jobBoard.ExternalJobID;
+                        externalJobModel.State = jobBoard.State;
+                        externalJobModel.County = jobBoard.County;
+                        externalJobModel.ReqJobOpeningId = jobBoard.ReqJobOpeningId;
+                        if (jobBoard.JobRequirement.Contains("<style>"))
+                        {
+                            int first = jobBoard.JobRequirement.IndexOf("<style>") + "methods".Length;
+                            int last = jobBoard.JobRequirement.LastIndexOf("</style>");
+                            int remove = last - first;
+                            string jobRequirement = jobBoard.JobRequirement.Remove(first, remove);
+                            externalJobModel.JobRequirement = jobRequirement;
+                        }
+                        else { externalJobModel.JobRequirement = jobBoard.JobRequirement; }
+                            
+                        jobboardModels.Add(externalJobModel);
+                    }
+                }
+
+                if (jobboardModels.Count == 0)
                 {
                     return NotFound();
                 }
 
-                return Ok(jobboards);
+                return Ok(jobboardModels);
             }
             catch (Exception ex)
             {
