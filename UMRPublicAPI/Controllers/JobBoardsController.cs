@@ -42,7 +42,7 @@ namespace UMRPublicAPI.Controllers
                         externalJobModel.ReqJobOpeningId = jobBoard.ReqJobOpeningId;
                         if (!string.IsNullOrEmpty( jobBoard.JobRequirement) && jobBoard.JobRequirement.Contains("<style>"))
                         {
-                            int first = jobBoard.JobRequirement.IndexOf("<style>") + "methods".Length;
+                            int first = jobBoard.JobRequirement.IndexOf("<style>");
                             int last = jobBoard.JobRequirement.LastIndexOf("</style>");
                             int remove = last - first;
                             string jobRequirement = jobBoard.JobRequirement.Remove(first, remove);
