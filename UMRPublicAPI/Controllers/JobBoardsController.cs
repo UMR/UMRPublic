@@ -40,7 +40,7 @@ namespace UMRPublicAPI.Controllers
                         externalJobModel.State = jobBoard.State;
                         externalJobModel.County = jobBoard.County;
                         externalJobModel.ReqJobOpeningId = jobBoard.ReqJobOpeningId;
-                        if (jobBoard.JobRequirement.Contains("<style>"))
+                        if (!string.IsNullOrEmpty( jobBoard.JobRequirement) && jobBoard.JobRequirement.Contains("<style>"))
                         {
                             int first = jobBoard.JobRequirement.IndexOf("<style>") + "methods".Length;
                             int last = jobBoard.JobRequirement.LastIndexOf("</style>");
