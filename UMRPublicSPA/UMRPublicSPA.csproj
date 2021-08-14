@@ -112,7 +112,10 @@
     <Content Include="src\assets\images\banner-bottom-text.png" />
     <Content Include="src\assets\images\banner-top-text.png" />
     <Content Include="src\assets\images\banner.png" />
+    <Content Include="src\assets\images\CBO.jpg" />
     <Content Include="src\assets\images\CEO.jpg" />
+    <Content Include="src\assets\images\CMO.jpg" />
+    <Content Include="src\assets\images\CTO.jpg" />
     <Content Include="src\assets\images\dna.png" />
     <Content Include="src\assets\images\favicon.png" />
     <Content Include="src\assets\images\hcontent-img.png" />
