@@ -62,6 +62,10 @@ namespace UMRPublicAPI.AuthorizationServer
                 };
                 UMRPublic.UseIdentityServer(options);
             });
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Authorization Server has been started successfully");
+            });
         }
         X509Certificate2 LoadCertificate()
         {

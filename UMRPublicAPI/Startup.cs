@@ -28,6 +28,10 @@ namespace UMRPublicAPI
             var config = new HttpConfiguration();
             WebApiConfig.Register(config);
             app.UseWebApi(config);
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Resource Server has been started successfully");
+            });
         }
         X509Certificate2 LoadCertificate()
         {
