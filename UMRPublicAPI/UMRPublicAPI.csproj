@@ -54,6 +54,9 @@
     <Reference Include="IdentityServer3.AccessTokenValidation">
       <HintPath>..\lib\IdentityServer3\IdentityServer3.AccessTokenValidation.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.IdentityModel.Protocol.Extensions">
       <HintPath>..\lib\IdentityServer3\Microsoft.IdentityModel.Protocol.Extensions.dll</HintPath>
@@ -204,6 +207,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobBoardsController.cs" />
     <Compile Include="Controllers\UserInformationController.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Models\CurrentUserModel.cs" />
     <Compile Include="Models\CustomResponse.cs" />
     <Compile Include="Models\ExternalJobModel.cs" />
@@ -226,6 +230,7 @@
   <ItemGroup>
     <Content Include="idsrv3test.pfx" />
     <Content Include="packages.config" />
+    <Content Include="log4net.config" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\UMRPublicAPI.pubxml" />
   </ItemGroup>
