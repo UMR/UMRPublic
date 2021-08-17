@@ -26,6 +26,8 @@ namespace UMRPublicAPI
             .SerializerSettings
             .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
             config.EnableCors();
+
+            log4net.Config.XmlConfigurator.Configure();
         }
     }
 }

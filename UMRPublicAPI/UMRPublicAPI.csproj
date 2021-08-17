@@ -230,7 +230,6 @@
   <ItemGroup>
     <Content Include="idsrv3test.pfx" />
     <Content Include="packages.config" />
-    <Content Include="log4net.config" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\UMRPublicAPI.pubxml" />
   </ItemGroup>
