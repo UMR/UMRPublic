@@ -19,6 +19,8 @@ namespace UMRPublicAPI.AuthorizationServer
     {
         public void Configuration(IAppBuilder app)
         {
+            log4net.Config.XmlConfigurator.Configure();
+
             app.Map("/UMRPublic", UMRPublic =>
             {
                 var factory = new IdentityServerServiceFactory()
