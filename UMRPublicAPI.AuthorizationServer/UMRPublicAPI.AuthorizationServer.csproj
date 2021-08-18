@@ -200,7 +200,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Documentation.docx" />
-    <Content Include="log4net.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\UMR.PublicAuth.pubxml" />
     <None Include="Web.Debug.config">
