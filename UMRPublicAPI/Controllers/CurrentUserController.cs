@@ -35,6 +35,7 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
                     return InternalServerError();

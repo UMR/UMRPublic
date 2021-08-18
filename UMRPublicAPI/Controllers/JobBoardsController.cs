@@ -91,6 +91,7 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
                     return InternalServerError();
@@ -116,6 +117,7 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
                     return InternalServerError(ex);
@@ -142,6 +144,7 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
                     responseMessage = Request.CreateResponse(HttpStatusCode.ExpectationFailed);
@@ -166,6 +169,7 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
                     return InternalServerError();
@@ -185,6 +189,7 @@ namespace UMRPublicAPI.Controllers
             }
             catch (Exception ex)
             {
+                Log.Write(ex);
                 if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
                 {
                     return InternalServerError();
