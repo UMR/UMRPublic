@@ -1,4 +1,4 @@
-﻿import {Component, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 declare var google: any;
 @Component({
     selector: 'location',
@@ -18,7 +18,7 @@ export class LocationComponent implements OnInit {
         var markerOption = {
             position: googleMapPosition,
             map: map,
-            title: "Universal Medical Records Inc",
+            title: "Universal Medical Record",
             clickable: true
         };
         new google.maps.Marker(markerOption);
