@@ -22,10 +22,10 @@ export const authCookieKey = 'tokenKey';
 
 //////////////////////////  172.16.1.104 PRODUCTION  //////////////////////////
 //export const disableAuthorization: boolean = true;
-//export const authorizationServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
+//export const authorizationServerUrl = 'https://www.universalmedicalrecord.com/UMRPublicAPIAuthorizationServer';
 //export const pathMatch = '/UMRPublic';
 //export const scopes = ['UMRPublic', 'offline_access', 'openid'];
-//export const resourceServerUrl = 'http://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
+//export const resourceServerUrl = 'https://www.universalmedicalrecord.com/UMRPublicAPIResourceServer';
 
 
 ////////////////////////// Localhost /////////////////////////////////////////
