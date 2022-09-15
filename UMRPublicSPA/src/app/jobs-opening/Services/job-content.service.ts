@@ -117,7 +117,8 @@ export class JobContentService {
 
   getAllJobs(): Observable<any> {
 
-        let jobContentGetURL = `${resourceServerUrl}` + "/api/jobboards/getalljobs";
+    //let jobContentGetURL = `${resourceServerUrl}` + "/api/jobboards/getalljobs";
+    let jobContentGetURL = "http://localhost:3576/api/jobs";
 
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');

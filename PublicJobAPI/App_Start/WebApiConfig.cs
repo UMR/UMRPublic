@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PublicJobAPI.Utility;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -13,7 +14,7 @@ namespace PublicJobAPI
             // Web API configuration and services
 
             // Web API routes
-            var cors = new EnableCorsAttribute("http://localhost:14247", "*", "*");
+            var cors = new EnableCorsAttribute(String.Join(", ", Constants.WebClientServerPaths.ToArray()), "*", "*");
             config.EnableCors(cors);
             config.MapHttpAttributeRoutes();
 

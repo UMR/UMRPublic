@@ -19,7 +19,7 @@ namespace PublicJobAPI.Controllers
                 //var jobs = GetActiveJobs();
 
                 List<JobContent> jobContents = new List<JobContent>();
-                DataTable dataTable = JobPostManager.GetAllJob();
+                DataTable dataTable = JobPostManager.GetAllActiveJobs();
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {
                     foreach (DataRow row in dataTable.Rows)
@@ -52,7 +52,7 @@ namespace PublicJobAPI.Controllers
         public DataTable GetActiveJobs()
         {
             List<JobContent> jobs = new List<JobContent>();
-            DataTable dataTable = JobPostManager.GetAllJob();
+            DataTable dataTable = JobPostManager.GetAllJobs();
             //JobContent jobContent =new
 
             return dataTable;
