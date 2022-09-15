@@ -10,8 +10,10 @@ using UMRRecruitment.BLL;
 
 namespace PublicJobAPI.Controllers
 {
+    [RoutePrefix("api/jobs")]
     public class JobsController : ApiController
     {
+        [HttpGet]
         public IHttpActionResult GetAllJobs()
         {
             try
