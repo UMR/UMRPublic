@@ -1,176 +1,177 @@
 <section class="content">
-    <div class="container">
-        <div class="row">
+  <div class="container">
+    <div class="row">
 
-            <div class="home-content about-content job-open contact-content">
-                <div class="col-sm-10 col-md-10">
-                    <h3>JOB OPENINGS </h3>
-                </div>
-                <!--<div class="col-sm-2 col-md-2 text-right">
-                    <button type="button" class="btn btn-default btn-job" data-toggle="modal" data-target=".bs-example-modal-sm">
-                        <i class="fa fa-briefcase"></i> Add Jobs
-                    </button>
-                </div>-->
-            </div>
-
+      <div class="home-content about-content job-open contact-content">
+        <div class="col-sm-10 col-md-10">
+          <h3>JOB OPENINGS </h3>
         </div>
-
-        <div class="job">
-
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                    <!--<div class="panel-heading" role="tab" id="headingOne">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="col-md-3 job-head">
-                                            <h5>Health Service Manager</h5>
-                                            <p>Universal Medical Records</p>
-                                        </div>
-                                        <div class="col-md-3 job-head">
-                                            <p><b>Published:</b> Jun 20, 2016</p>
-                                            <p><b>Deadline:</b> Jun 30, 2016</p>
-                                        </div>
-                                        <div class="col-md-3 job-head">
-                                            <p><b>No. of Vacancies:</b> 01</p>
-                                            <p><b>Gender:</b> Male <span><b>Age:</b> 35 to 45 yr(s)</span> </p>
-                                        </div>
-                                        <div class="col-md-3 job-head">
-                                            <p><b>Experience:</b> 5 to 8 yr(s)</p>
-                                            <p><b>Job Location:</b> New York</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </h4>
-                    </div>-->
-
-                    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                        <div class="panel-body" *ngFor="let jobContent of jobContents; let i = index">   
-                            <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
-                                                           
-                            </div>
-                            <!--<div class="col-md-6 job-body" [innerHTML]="jobContent.SecondHalf">
-
-                            </div>-->
-                            <!--<div class="col-md-6 job-body" >                                
-                                <h4>Responsibilities:</h4>
-                                <ul>
-                                    <li><i class="fa fa-angle-double-right"></i> Manage healthcare facility</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Oversee business operations</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Improve efficiency and quality in delivering healthcare services</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Maintain abreast of new healthcare laws and regulations</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Create work schedules</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Maintain and organize records of the facility services</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Manage communications with members of medical staff and department heads</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Direct, supervise, evaluate work activities of medical, nursing and other personnel</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Review and analyze facility activities and data to aid planning and risk management</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Plan, implement and administer healthcare programs and services</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Review and approve budgets</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Control billing and collection</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Direct personnel administration and training</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Develop and maintain computerized record management system</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Direct personnel activities</li>
-                                </ul>
-                                <p>Send your CV to <a href="">info@universalmedicalrecord.com</a> </p>
-                            </div>-->
-                            <!--<div class="col-md-6 job-body">
-                                <h4>Requirements:</h4>
-                                <ul>
-                                    <li><i class="fa fa-angle-double-right"></i> Masters in Public Health or related field</li>
-                                    <li><i class="fa fa-angle-double-right"></i> 3 months experience in job related field</li>
-                                </ul>
-                                <h4>Days/Hours:</h4>
-                                <ul>
-                                    <li><i class="fa fa-angle-double-right"></i> Full-time: 40 hours per week</li>
-                                </ul>
-                                <h4>Salary Range: Negotiable</h4>
-                                <h4>Other Benefits</h4>
-                                <ul>
-                                    <li><i class="fa fa-angle-double-right"></i> Awesome culture - driven to execution</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Opportunity to work closely with US-based technology team</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Competitive salary</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Two annual festival bonuses</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Free lunch and snacks</li>
-                                    <li><i class="fa fa-angle-double-right"></i> Opportunity to learn and contribute in different product areas</li>
-                                </ul>
-                                <a href="" class="btn btn-default btn-job"> Apply Now</a>
-                            </div>-->
-                        </div>
-                    </div>
-                </div>
-
-                <!--<div class="panel panel-default">
-                    <div class="panel-heading" role="tab" id="headingThree">
-                        <h4 class="panel-title">
-                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="col-md-3 job-head">
-                                            <h5>Managing Director</h5>
-                                            <p>Universal Medical Records</p>
-                                        </div>
-                                        <div class="col-md-3 job-head">
-                                            <p><b>Published:</b> Jun 20, 2016</p>
-                                            <p><b>Deadline:</b> Jun 30, 2016</p>
-                                        </div>
-                                        <div class="col-md-3 job-head">
-                                            <p><b>No. of Vacancies:</b> 01</p>
-                                            <p><b>Gender:</b> Male <span><b>Age:</b> 35 to 45 yr(s)</span> </p>
-                                        </div>
-                                        <div class="col-md-3 job-head">
-                                            <p><b>Experience:</b> 5 to 8 yr(s)</p>
-                                            <p><b>Job Location:</b> New York</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </h4>
-                    </div>
-
-                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                        <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. </div>
-                    </div>
-                </div>-->
-
-            </div>
-
-        </div>
-
-        <section class="jobadd-form">
-            <div class="container">
-                <div class="row">
-                    <form action="job-list.html">
-
-                        <!-- Modal -->
-                        <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog modal-sm" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">UMR Job Admin Login</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control contact-input" name="login_id" [(ngModel)]="loginId" placeholder="Login ID">
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="password" class="form-control contact-input" name="passwrd" [(ngModel)]="password" placeholder="Password">
-                                        </div>
-                                        <div class="form-group text-right">
-                                            <button type="submit" class="btn btn-primary btn-job" (click)="goToJobBoard()">Log In</button>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </form>
-                </div>
-            </div>
-        </section>
+        <!--<div class="col-sm-2 col-md-2 text-right">
+            <button type="button" class="btn btn-default btn-job" data-toggle="modal" data-target=".bs-example-modal-sm">
+                <i class="fa fa-briefcase"></i> Add Jobs
+            </button>
+        </div>-->
+      </div>
 
     </div>
+
+    <div class="job">
+
+      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+          <!--<div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="col-md-3 job-head">
+                                  <h5>Health Service Manager</h5>
+                                  <p>Universal Medical Records</p>
+                              </div>
+                              <div class="col-md-3 job-head">
+                                  <p><b>Published:</b> Jun 20, 2016</p>
+                                  <p><b>Deadline:</b> Jun 30, 2016</p>
+                              </div>
+                              <div class="col-md-3 job-head">
+                                  <p><b>No. of Vacancies:</b> 01</p>
+                                  <p><b>Gender:</b> Male <span><b>Age:</b> 35 to 45 yr(s)</span> </p>
+                              </div>
+                              <div class="col-md-3 job-head">
+                                  <p><b>Experience:</b> 5 to 8 yr(s)</p>
+                                  <p><b>Job Location:</b> New York</p>
+                              </div>
+                          </div>
+                      </div>
+                  </a>
+              </h4>
+          </div>-->
+
+          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body" *ngFor="let jobContent of jobContents; let i = index">
+              <h2>{{jobContent.JobTitle}}</h2>
+              <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span>
+              <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
+              </div>
+              <!--<div class="col-md-6 job-body" [innerHTML]="jobContent.SecondHalf">
+
+              </div>-->
+              <!--<div class="col-md-6 job-body" >
+                  <h4>Responsibilities:</h4>
+                  <ul>
+                      <li><i class="fa fa-angle-double-right"></i> Manage healthcare facility</li>
+                      <li><i class="fa fa-angle-double-right"></i> Oversee business operations</li>
+                      <li><i class="fa fa-angle-double-right"></i> Improve efficiency and quality in delivering healthcare services</li>
+                      <li><i class="fa fa-angle-double-right"></i> Maintain abreast of new healthcare laws and regulations</li>
+                      <li><i class="fa fa-angle-double-right"></i> Create work schedules</li>
+                      <li><i class="fa fa-angle-double-right"></i> Maintain and organize records of the facility services</li>
+                      <li><i class="fa fa-angle-double-right"></i> Manage communications with members of medical staff and department heads</li>
+                      <li><i class="fa fa-angle-double-right"></i> Direct, supervise, evaluate work activities of medical, nursing and other personnel</li>
+                      <li><i class="fa fa-angle-double-right"></i> Review and analyze facility activities and data to aid planning and risk management</li>
+                      <li><i class="fa fa-angle-double-right"></i> Plan, implement and administer healthcare programs and services</li>
+                      <li><i class="fa fa-angle-double-right"></i> Review and approve budgets</li>
+                      <li><i class="fa fa-angle-double-right"></i> Control billing and collection</li>
+                      <li><i class="fa fa-angle-double-right"></i> Direct personnel administration and training</li>
+                      <li><i class="fa fa-angle-double-right"></i> Develop and maintain computerized record management system</li>
+                      <li><i class="fa fa-angle-double-right"></i> Direct personnel activities</li>
+                  </ul>
+                  <p>Send your CV to <a href="">info@universalmedicalrecord.com</a> </p>
+              </div>-->
+              <!--<div class="col-md-6 job-body">
+                  <h4>Requirements:</h4>
+                  <ul>
+                      <li><i class="fa fa-angle-double-right"></i> Masters in Public Health or related field</li>
+                      <li><i class="fa fa-angle-double-right"></i> 3 months experience in job related field</li>
+                  </ul>
+                  <h4>Days/Hours:</h4>
+                  <ul>
+                      <li><i class="fa fa-angle-double-right"></i> Full-time: 40 hours per week</li>
+                  </ul>
+                  <h4>Salary Range: Negotiable</h4>
+                  <h4>Other Benefits</h4>
+                  <ul>
+                      <li><i class="fa fa-angle-double-right"></i> Awesome culture - driven to execution</li>
+                      <li><i class="fa fa-angle-double-right"></i> Opportunity to work closely with US-based technology team</li>
+                      <li><i class="fa fa-angle-double-right"></i> Competitive salary</li>
+                      <li><i class="fa fa-angle-double-right"></i> Two annual festival bonuses</li>
+                      <li><i class="fa fa-angle-double-right"></i> Free lunch and snacks</li>
+                      <li><i class="fa fa-angle-double-right"></i> Opportunity to learn and contribute in different product areas</li>
+                  </ul>
+                  <a href="" class="btn btn-default btn-job"> Apply Now</a>
+              </div>-->
+            </div>
+          </div>
+        </div>
+
+        <!--<div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-3 job-head">
+                                    <h5>Managing Director</h5>
+                                    <p>Universal Medical Records</p>
+                                </div>
+                                <div class="col-md-3 job-head">
+                                    <p><b>Published:</b> Jun 20, 2016</p>
+                                    <p><b>Deadline:</b> Jun 30, 2016</p>
+                                </div>
+                                <div class="col-md-3 job-head">
+                                    <p><b>No. of Vacancies:</b> 01</p>
+                                    <p><b>Gender:</b> Male <span><b>Age:</b> 35 to 45 yr(s)</span> </p>
+                                </div>
+                                <div class="col-md-3 job-head">
+                                    <p><b>Experience:</b> 5 to 8 yr(s)</p>
+                                    <p><b>Job Location:</b> New York</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </h4>
+            </div>
+
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. </div>
+            </div>
+        </div>-->
+
+      </div>
+
+    </div>
+
+    <section class="jobadd-form">
+      <div class="container">
+        <div class="row">
+          <form action="job-list.html">
+
+            <!-- Modal -->
+            <div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">UMR Job Admin Login</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <input type="text" class="form-control contact-input" name="login_id" [(ngModel)]="loginId" placeholder="Login ID">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" class="form-control contact-input" name="passwrd" [(ngModel)]="password" placeholder="Password">
+                    </div>
+                    <div class="form-group text-right">
+                      <button type="submit" class="btn btn-primary btn-job" (click)="goToJobBoard()">Log In</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </section>

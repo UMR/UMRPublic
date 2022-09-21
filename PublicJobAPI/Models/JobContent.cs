@@ -21,5 +21,6 @@ namespace PublicJobAPI.Models
         public string EmailCV { get; set; }
         public string SpecialInstruction { get; set; }
         public string ApplicationDeadline { get; set; }
+        public string CreatedDate { get; set; }
     }
 }

@@ -28,6 +28,8 @@ namespace PublicJobAPI.Controllers
                     {
                         JobContent jobContent = new JobContent();
                         jobContent.JobDescription = row["JobDescription"].ToString();
+                        jobContent.JobTitle = row["JobTitle"].ToString();
+                        jobContent.CreatedDate = Convert.ToDateTime(row["CreatedDate"].ToString()).ToString(("MMMM dd, yyyy"));
                         jobContents.Add(jobContent);
                     }
                 }

@@ -31,7 +31,10 @@ export class JobOpeningComponent implements AfterViewInit {
     getAllJobs() {
         this.jobContentService.getAllJobs()
             .subscribe(
-            jobcontents => this.jobContents = jobcontents,
+              jobcontents => {
+                this.jobContents = jobcontents;
+                //console.log(this.jobContents);
+              },
             error => {
 
             });
