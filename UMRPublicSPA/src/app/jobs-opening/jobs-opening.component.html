@@ -4,7 +4,7 @@
 
       <div class="home-content about-content job-open contact-content">
         <div class="col-sm-10 col-md-10">
-          <h3>JOB OPENINGS </h3>
+          <h3>JOBS</h3>
         </div>
         <!--<div class="col-sm-2 col-md-2 text-right">
             <button type="button" class="btn btn-default btn-job" data-toggle="modal" data-target=".bs-example-modal-sm">
@@ -48,8 +48,10 @@
 
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body" *ngFor="let jobContent of jobContents; let i = index">
-              <h2>{{jobContent.JobTitle}}</h2>
-              <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span>
+              <div class="col-md-12" style="margin-bottom:16px">
+                <h2><strong> {{jobContent.JobTitle}}</strong></h2>
+                <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span><br />
+              </div>
               <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
               </div>
               <!--<div class="col-md-6 job-body" [innerHTML]="jobContent.SecondHalf">
