@@ -3,14 +3,15 @@
     <div class="row">
 
       <div class="home-content about-content job-open contact-content">
+        <loading-image [is-loading]="isLoading"></loading-image>
         <div class="col-sm-10 col-md-10">
           <h3>JOBS</h3>
         </div>
         <!--<div class="col-sm-2 col-md-2 text-right">
-            <button type="button" class="btn btn-default btn-job" data-toggle="modal" data-target=".bs-example-modal-sm">
-                <i class="fa fa-briefcase"></i> Add Jobs
-            </button>
-        </div>-->
+      <button type="button" class="btn btn-default btn-job" data-toggle="modal" data-target=".bs-example-modal-sm">
+          <i class="fa fa-briefcase"></i> Add Jobs
+      </button>
+  </div>-->
       </div>
 
     </div>
@@ -52,7 +53,14 @@
                 <h2><strong> {{jobContent.JobTitle}}</strong></h2>
                 <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span><br />
               </div>
+              <div class="col-md-12" style="margin-bottom:16px">
+                <h2>
+                  <strong>Location : </strong>
+                  <span>{{jobContent.County}} {{jobContent.StateCode}}</span>
+                </h2>
+              </div>
               <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
+
               </div>
               <!--<div class="col-md-6 job-body" [innerHTML]="jobContent.SecondHalf">
 
