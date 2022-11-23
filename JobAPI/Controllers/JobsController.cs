@@ -1,4 +1,5 @@
-﻿using PublicJobAPI.Models;
+﻿using JobAPI.Models;
+using PublicJobAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -13,6 +14,7 @@ namespace JobAPI.Controllers
     [RoutePrefix("api/jobs")]
     public class JobsController : ApiController
     {
+        [Route("job")]
         [HttpGet]
         public IHttpActionResult GetAllJobs()
         {
@@ -43,6 +45,82 @@ namespace JobAPI.Controllers
                 }
 
                 return Ok(jobContents);
+            }
+            catch (Exception ex)
+            {
+                //Log.Write(ex);
+                //if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                //{
+                //    return InternalServerError();
+                //}
+                return InternalServerError(ex);
+            }
+        }
+
+        [Route("county")]
+        [HttpGet]
+        public IHttpActionResult GetAllGroupByCounty()
+        {
+            try
+            {
+                //var jobs = GetActiveJobs();
+
+                List<CountyState> countyStates = new List<CountyState>();
+                DataTable dataTable = JobPostManager.GetAllGroupByCounty();
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        CountyState countyState = new CountyState();
+                        countyState.StateId = Convert.ToInt32(row["StateId"].ToString());
+                        countyState.Count = Convert.ToInt32(row["Count"].ToString());
+                        countyState.County = row["County"].ToString();
+                        countyState.StateName = row["StateName"].ToString();
+                        countyStates.Add(countyState);
+                    }
+                }
+
+                if (countyStates.Count == 0)
+                {
+                    return NotFound();
+                }
+
+                return Ok(countyStates);
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
+        }
+
+        [Route("position")]
+        [HttpGet]
+        public IHttpActionResult GetAllGroupByPosition()
+        {
+            try
+            {
+                //var jobs = GetActiveJobs();
+
+                List<Position> positions = new List<Position>();
+                DataTable dataTable = JobPostManager.GetAllGroupByPosition();
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        Position position = new Position();
+                        position.Count = Convert.ToInt32(row["Count"].ToString());
+                        position.PositionID = Convert.ToInt32(row["PositionID"].ToString());
+                        position.JobTitle = row["JobTitle"].ToString();
+                        positions.Add(position);
+                    }
+                }
+
+                if (positions.Count == 0)
+                {
+                    return NotFound();
+                }
+
+                return Ok(positions);
             }
             catch (Exception ex)
             {
