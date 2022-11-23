@@ -6,6 +6,7 @@ import { JobContent } from './model/job-content';
 
 @Component({
   templateUrl: 'jobs-opening.component.html',
+  styleUrls: ['./jobs-opening.component.css'],
   providers: [LoginService, JobContentService]
 })
 
