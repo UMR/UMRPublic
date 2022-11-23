@@ -118,9 +118,53 @@ export class JobContentService {
   getAllJobs(): Observable<any> {
 
     //let jobContentGetURL = `${resourceServerUrl}` + "/api/jobboards/getalljobs";
-    let jobContentGetURL = `${resourceServerUrl}` + "/api/jobs";
+    let jobContentGetURL = `${resourceServerUrl}` + "/api/jobs/job";
     //let jobContentGetURL = "http://www.umrtest.com/publicjobAPI/api/jobs";
     //let jobContentGetURL = "http://localhost:3576/api/jobs";
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    let bearer = 'Bearer {0}'.replace('{0}', this.accessTokenService.accessToken);
+    headers.append('Authorization', bearer);
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.get(jobContentGetURL, options)
+      .map((res: Response) => {
+        if (res.status == 200) {
+          return res.json();
+        }
+        else {
+          return null;
+        }
+      })
+      .catch(err => Observable.throw(err));
+  }
+
+  getAllPosition(): Observable<any> {
+
+    let jobContentGetURL = `${resourceServerUrl}` + "/api/jobs/position";
+
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    let bearer = 'Bearer {0}'.replace('{0}', this.accessTokenService.accessToken);
+    headers.append('Authorization', bearer);
+    let options = new RequestOptions({ headers: headers });
+
+    return this.http.get(jobContentGetURL, options)
+      .map((res: Response) => {
+        if (res.status == 200) {
+          return res.json();
+        }
+        else {
+          return null;
+        }
+      })
+      .catch(err => Observable.throw(err));
+  }
+
+  getAllCountyState(): Observable<any> {
+
+    let jobContentGetURL = `${resourceServerUrl}` + "/api/jobs/county";
 
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');

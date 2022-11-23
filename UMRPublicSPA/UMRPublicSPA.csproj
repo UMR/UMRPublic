@@ -94,6 +94,7 @@
     <Content Include="src\app\jobs-opening\change-password\change-password.component.html" />
     <Content Include="src\app\jobs-opening\job-dashboard\job-dashboard.component.css" />
     <Content Include="src\app\jobs-opening\job-dashboard\job-dashboard.component.html" />
+    <Content Include="src\app\jobs-opening\jobs-opening.component.css" />
     <Content Include="src\app\jobs-opening\jobs-opening.component.html" />
     <Content Include="src\app\portal\portal.component.html" />
     <Content Include="src\app\products-and-services\products-services.component.css" />

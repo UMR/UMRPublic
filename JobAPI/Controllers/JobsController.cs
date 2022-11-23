@@ -14,6 +14,7 @@ namespace JobAPI.Controllers
     [RoutePrefix("api/jobs")]
     public class JobsController : ApiController
     {
+
         [Route("job")]
         [HttpGet]
         public IHttpActionResult GetAllJobs()
@@ -29,11 +30,15 @@ namespace JobAPI.Controllers
                     foreach (DataRow row in dataTable.Rows)
                     {
                         JobContent jobContent = new JobContent();
+                        //jobContent.JobContentId = Convert.ToInt32(row["JobContentId"].ToString());
                         jobContent.JobDescription = row["JobDescription"].ToString();
                         jobContent.JobTitle = row["JobTitle"].ToString();
                         jobContent.County = row["County"].ToString();
                         jobContent.StateCode = row["SateCode"].ToString();
                         jobContent.StateName = row["StateName"].ToString();
+                        //jobContent.PositionID = row["PositionID"].ToString();
+                        //jobContent.InstituteTypeID = row["InstituteTypeID"].ToString();
+                        //jobContent.InstituteType = row["InstituteType"].ToString();
                         jobContent.CreatedDate = Convert.ToDateTime(row["CreatedDate"].ToString()).ToString(("MMMM dd, yyyy"));
                         jobContents.Add(jobContent);
                     }

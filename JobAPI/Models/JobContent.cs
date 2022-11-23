@@ -25,5 +25,8 @@ namespace PublicJobAPI.Models
         public string County { get; set; }
         public string StateCode { get; set; }
         public string StateName { get; set; }
+        public string InstituteTypeID { get; set; }
+        public string PositionID { get; set; }
+        public string InstituteType { get; set; }
     }
 }

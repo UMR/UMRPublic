@@ -19,6 +19,9 @@ export class JobOpeningComponent implements AfterViewInit {
   password: string;
   jobContents = [];
   filterJobContents = [];
+  positions: any = [];
+  countyState: any = [];
+  selectedCities: string = "";
   goToJobBoard() {
     if (this.loginId == "" || this.password == "") {
       alert("The Login ID or Password can not be empty");
@@ -60,9 +63,41 @@ export class JobOpeningComponent implements AfterViewInit {
       }
 
     }, 1000);
-    //let jobs = this.jobContents;
-    //for (var item of jobs) {
+    this.getAllCountyState();
+    this.getAllPosition();
+  }
+  getAllPosition() {
+    this.isLoading = true;
+    this.jobContentService.getAllPosition()
+      .subscribe(positions => {
+        this.positions = positions;
+        this.isLoading = false;
+        //console.log(this.jobContents);
+      },
+        error => {
+          this.isLoading = false;
+        });
+  }
+  getAllCountyState() {
+    this.isLoading = true;
+    this.jobContentService.getAllCountyState()
+      .subscribe(county => {
+        this.countyState = county;
+        this.isLoading = false;
+        //console.log(this.jobContents);
+      },
+        error => {
+          this.isLoading = false;
+        });
+  }
+  getCountyState(evt) {
+    console.log(evt);
+  }
 
-    //}
+  onCheckPosition(position) {
+    console.log(position);
+  }
+  jobDetailClick(evt) {
+    console.log(evt);
   }
 }

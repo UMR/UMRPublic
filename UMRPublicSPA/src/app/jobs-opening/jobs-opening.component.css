@@ -1,10 +1,16 @@
-.jobs-full-content{
-    margin-top: 50px;
+.row {
+    margin:0;
+}
+label {
+  pointer-events: all;
+}
+.jobs-full-content {
+  background-color: #303030;
 }
 
 .menu-customized {
   padding: 0;
-  background-color: #252728;
+  background-color: #303030 !important;
   color: white;
   position: sticky;
   top: 0;
