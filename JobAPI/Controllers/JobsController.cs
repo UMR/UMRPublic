@@ -17,28 +17,45 @@ namespace JobAPI.Controllers
 
         [Route("job")]
         [HttpGet]
-        public IHttpActionResult GetAllJobs()
+        public IHttpActionResult GetAllJobs(string county, string position)
         {
             try
             {
                 //var jobs = GetActiveJobs();
 
                 List<JobContent> jobContents = new List<JobContent>();
-                DataTable dataTable = JobPostManager.GetAllActiveJobs();
+                DataTable dataTable = new DataTable();
+                if (string.IsNullOrEmpty(county) && string.IsNullOrEmpty(position))
+                {
+                    dataTable = JobPostManager.GetAllActiveJobs();
+                }
+                else if (!string.IsNullOrEmpty(county) && string.IsNullOrEmpty(position))
+                {
+                    dataTable = JobPostManager.GetAllActiveJobsByCounty(county.ToString());
+                }
+                else if (string.IsNullOrEmpty(county) && !string.IsNullOrEmpty(position))
+                {
+                    dataTable = JobPostManager.GetAllActiveJobsByPosition(position.ToString());
+                }
+                else if (!string.IsNullOrEmpty(county)&& !string.IsNullOrEmpty(position))
+                {
+                    dataTable = JobPostManager.GetAllJobsByCountyandPosition(county.ToString(), position.ToString());
+                }
+
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {
                     foreach (DataRow row in dataTable.Rows)
                     {
                         JobContent jobContent = new JobContent();
-                        //jobContent.JobContentId = Convert.ToInt32(row["JobContentId"].ToString());
+                        jobContent.JobId = Convert.ToInt32(row["JobId"].ToString());
                         jobContent.JobDescription = row["JobDescription"].ToString();
                         jobContent.JobTitle = row["JobTitle"].ToString();
                         jobContent.County = row["County"].ToString();
                         jobContent.StateCode = row["SateCode"].ToString();
                         jobContent.StateName = row["StateName"].ToString();
-                        //jobContent.PositionID = row["PositionID"].ToString();
-                        //jobContent.InstituteTypeID = row["InstituteTypeID"].ToString();
-                        //jobContent.InstituteType = row["InstituteType"].ToString();
+                        jobContent.PositionID = row["PositionID"].ToString();
+                        jobContent.InstituteTypeID = row["InstituteTypeID"].ToString();
+                        jobContent.InstituteType = row["InstituteType"].ToString();
                         jobContent.CreatedDate = Convert.ToDateTime(row["CreatedDate"].ToString()).ToString(("MMMM dd, yyyy"));
                         jobContents.Add(jobContent);
                     }

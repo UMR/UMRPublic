@@ -1,3 +1,4 @@
+<loading-image [is-loading]="isLoading"></loading-image>
 <!--<section class="content">
   <div class="container">
     <div class="row">
@@ -197,7 +198,7 @@
       <label class="list-group-item">
         Location
       </label>
-      <label class="list-group-item" *ngFor="let location of countyState" (click)="getCountyState(location)">
+      <label class="list-group-item" style="cursor:pointer" *ngFor="let location of countyState" (click)="getCountyState(location)">
         <input class="form-check-input me-1" type="checkbox" value="">
         {{location.County}}, {{location.StateName}}
         <span class="badge badge-primary badge-pill">{{location.Count}}</span>
@@ -210,7 +211,7 @@
         Category
       </label>
       <label class="list-group-item" *ngFor="let position of positions" (click)="onCheckPosition(position)">
-        <input class="form-check-input me-1" type="checkbox" value="">
+        <input class="form-check-input me-1" type="checkbox">
         {{position.JobTitle}}
         <span class="badge badge-primary badge-pill">{{position.Count}}</span>
       </label>
@@ -218,9 +219,6 @@
   </div>
 
   <div class="col-md-10 main-content">
-    <!--<div class="page-heading">
-      HVN Careers
-    </div>-->
     <div class="page-body">
       <div class="openjobs">
         Open Jobs
@@ -228,45 +226,26 @@
       <div class="card" *ngFor="let jobContent of jobContents" style="cursor:pointer" (click)="jobDetailClick(jobContent.JobContentId)">
         <div class="card-title-category">
           <div class="card-title">
-            <span class="card-title-main">Director of Nursing</span>
-            <span class="card-title-sub">Fairmont, Illinois</span>
-            <span class="card-title-sub">Direct Hire</span>
-            <span class="card-title-sub">Added - 9 hours ago</span>
-            <span class="card-title-sub-arrow">-></span>
+            <div class="row">
+              <div class="col-md-7" style="padding-left:0px">
+                <span class="card-title-main">{{jobContent.JobTitle}}</span>
+                <div class="card-category">{{jobContent.InstituteType}}</div>
+              </div>
+              <div class="col-md-2">
+                <span class="card-title-sub">{{jobContent.County}} , {{jobContent.StateName}}</span>
+              </div>
+              <div class="col-md-3">
+                <span class="card-title-sub">Added - {{jobContent.CreatedDate}}</span>
+                <span class="glyphicon glyphicon-arrow-right" style="float:right"></span>
+              </div>
+            </div>
           </div>
-          <div class="card-category">Director of Nursing LTC</div>
+
         </div>
         <div class="card-body">
-          Director of Nursing-Nursing Home
-
-          Located near Fairmont, IL
-
-          An elegant long term care, skilled nursing facility located near Fairmont, IL is looking for a compassionate and professional Director of Nursing.
-
-          Responsibilities of the Director of Nursing:
-
-
-          Supervises all nursing staff in the facility
-          Development and implementation of nursing policy and procedure
-          Overseeing the hiring and continued employment of nursing staff
-          Ensuring there is adequate nursing staff, and that the staff's skills remain current
-          Overseeing nursing employee conduct
-          Being knowledgeable of incidents at the facility
-          Assessing the health needs of each resident
-
-
-          Requirements of the Director of Nursing:
-
-
-          Must have IL RN license
-          Must have previous experience as a Director of Nursing
-          Must have Long Term Care Experience
-          Strong leadership skills
-          Strong written and verbal communication skills
-
-
-          Hudson View Network is a medical recruiting firm whose goal is to bridge exceptional talent to superior institutions. We work with various healthcare organizations to help fill needs within their facilities.
-
+          <div style="white-space:nowrap">
+            {{htmlTagRemove(jobContent.JobDescription)}}
+          </div>
         </div>
       </div>
     </div>

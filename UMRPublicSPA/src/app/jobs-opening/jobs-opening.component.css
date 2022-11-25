@@ -2,7 +2,7 @@
     margin:0;
 }
 label {
-  pointer-events: all;
+  pointer-events: auto;
 }
 .jobs-full-content {
   background-color: #303030;
@@ -123,7 +123,6 @@ label {
   font-weight: 500;
   font-size: 0.7em;
   font-size: 0.7em;
-  margin-left: 18em;
 }
 
 .card-title-sub-arrow {
@@ -159,5 +158,5 @@ label {
   color: #cecece;
   font-size: 0.9em;
   font-weight: 500;
-  margin: 0 0 1em;
+  margin: 0 0 3em;
 }

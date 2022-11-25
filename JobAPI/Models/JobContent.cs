@@ -7,7 +7,7 @@ namespace PublicJobAPI.Models
 {
     public class JobContent
     {
-        public int JobContentId { get; set; }
+        public int JobId { get; set; }
         public string JobTitle { get; set; }
         public string NoOfVacancies { get; set; }
         public string JobDescription { get; set; }
