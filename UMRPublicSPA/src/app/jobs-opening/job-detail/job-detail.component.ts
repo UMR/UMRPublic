@@ -11,6 +11,7 @@ import { JobContentService } from '../services/job-content.service';
 export class JobDetailComponent implements OnInit {
   public isLoading: boolean = true;
   public jobContents = [];
+  public isDetailView: boolean = false;
   constructor(private route: ActivatedRoute, private jobContentService: JobContentService) { }
 
   ngOnInit() {

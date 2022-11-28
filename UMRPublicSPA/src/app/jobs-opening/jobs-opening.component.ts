@@ -12,12 +12,14 @@ import { JobContent } from './model/job-content';
 
 export class JobOpeningComponent implements OnInit {
   public isLoading: boolean = true;
+  public isDetailView: boolean = false;
 
   constructor(private router: Router, private loginService: LoginService, private jobContentService: JobContentService) { }
 
   loginId: string;
   password: string;
   jobContents = [];
+  public jobDetail = [];
   filterJobContents = [];
   positions: any = [];
   countyState: any = [];
@@ -96,7 +98,7 @@ export class JobOpeningComponent implements OnInit {
         });
   }
   getCountyState(event) {
-
+    this.isDetailView = false;
     //this.clickOnCountyCount += 1;
     //if (this.clickOnCountyCount % 2 != 0) {
     if (this.selectedCounty == "") {
@@ -116,6 +118,7 @@ export class JobOpeningComponent implements OnInit {
         this.selectedCounty += "," + event.County;
       }
     }
+   
     this.isLoading = true;
     this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
       .subscribe(
@@ -131,7 +134,7 @@ export class JobOpeningComponent implements OnInit {
   }
 
   onCheckPosition(event) {
-
+    this.isDetailView = false;
     //this.clickOnPositionCount += 1;
     //if (this.clickOnPositionCount % 2 != 0) {
     if (this.selectedPosition == "") {
@@ -168,12 +171,27 @@ export class JobOpeningComponent implements OnInit {
   }
 
   jobDetailClick(evt) {
-    this.router.navigate(['/job-detail', { id: evt }]);
+    this.isDetailView = true;
+    this.isLoading = true;
+    this.jobContentService.getJobById(evt)
+      .subscribe(
+        data => {
+          this.jobDetail = data;
+          //console.log(this.jobDetail);
+          this.isLoading = false;
+        },
+        error => {
+          this.isLoading = false;
+        });
+    //this.router.navigate(['/job-detail', { id: evt }]);
     //console.log(evt);
   }
 
   htmlTagRemove(text) {
     var removeHtml = text.replace(/<\/?[^>]+(>|$)/g, "");
     return removeHtml.replaceAll("&nbsp;", " ");
+  }
+  back() {
+    this.isDetailView = false;
   }
 }

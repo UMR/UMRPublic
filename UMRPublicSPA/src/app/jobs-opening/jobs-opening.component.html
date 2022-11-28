@@ -220,7 +220,7 @@
     </div>
   </div>
 
-  <div class="col-md-10 main-content">
+  <div class="col-md-10 main-content" *ngIf="!isDetailView">
     <div class="page-body">
       <div class="openjobs">
         Open Jobs
@@ -251,6 +251,25 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="col-md-10 main-content" *ngIf="isDetailView" style="padding-top:50px">
+    <div class="page-body">
+      <span class="glyphicon glyphicon-arrow-left" style="font-size: 40px; cursor: pointer; color: #5198DE" (click)="back()"></span>
+      <div class="panel-body" *ngFor="let jobContent of jobDetail; let i = index">
+        <div class="col-md-12" style="margin-bottom:16px">
+          <h2 style="color: #5198DE"><strong> {{jobContent.JobTitle}}</strong></h2>
+          <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span><br />
+        </div>
+        <div class="col-md-12" style="margin-bottom:16px">
+          <h2>
+            <strong>Location : </strong>
+            <span>{{jobContent.County}} {{jobContent.StateCode}}</span>
+          </h2>
+        </div>
+        <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
 
+        </div>
+      </div>
+    </div>
   </div>
 </div>
