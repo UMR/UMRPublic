@@ -133,7 +133,7 @@ export class JobOpeningComponent implements OnInit {
     if (this.clickOnPositionCount % 2 != 0) {
       if (this.selectedPosition == "") {
         this.selectedPosition = event.PositionID.toString();
-        console.log(this.selectedPosition);
+        //console.log(this.selectedPosition);
       }
       else {
         if (this.selectedPosition.includes(event.PositionID + ",")) {
@@ -165,7 +165,7 @@ export class JobOpeningComponent implements OnInit {
 
   jobDetailClick(evt) {
     this.router.navigate(['/job-detail', { id: evt }]);
-    console.log(evt);
+    //console.log(evt);
   }
 
   htmlTagRemove(text) {
