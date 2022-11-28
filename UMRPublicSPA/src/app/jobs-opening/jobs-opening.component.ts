@@ -96,7 +96,7 @@ export class JobOpeningComponent implements OnInit {
         });
   }
   getCountyState(event) {
-    this.isLoading = true;
+    
     this.clickOnCountyCount += 1;
     if (this.clickOnCountyCount % 2 != 0) {
       if (this.selectedCounty == "") {
@@ -116,6 +116,7 @@ export class JobOpeningComponent implements OnInit {
           this.selectedCounty += "," + event.County;
         }
       }
+      this.isLoading = true;
       this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
         .subscribe(
           jobcontents => {
@@ -130,7 +131,7 @@ export class JobOpeningComponent implements OnInit {
   }
 
   onCheckPosition(event) {
-    this.isLoading = true;
+    
     this.clickOnPositionCount += 1;
     if (this.clickOnPositionCount % 2 != 0) {
       if (this.selectedPosition == "") {
@@ -151,6 +152,7 @@ export class JobOpeningComponent implements OnInit {
           this.selectedPosition += "," + event.PositionID;
         }
       }
+      this.isLoading = true;
       this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
         .subscribe(
           jobcontents => {
