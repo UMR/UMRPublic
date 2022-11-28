@@ -96,6 +96,7 @@ export class JobOpeningComponent implements OnInit {
         });
   }
   getCountyState(event) {
+    this.isLoading = true;
     this.clickOnCountyCount += 1;
     if (this.clickOnCountyCount % 2 != 0) {
       if (this.selectedCounty == "") {
@@ -129,6 +130,7 @@ export class JobOpeningComponent implements OnInit {
   }
 
   onCheckPosition(event) {
+    this.isLoading = true;
     this.clickOnPositionCount += 1;
     if (this.clickOnPositionCount % 2 != 0) {
       if (this.selectedPosition == "") {
