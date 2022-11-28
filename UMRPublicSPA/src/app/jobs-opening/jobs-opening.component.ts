@@ -164,6 +164,7 @@ export class JobOpeningComponent implements OnInit {
   }
 
   jobDetailClick(evt) {
+    this.router.navigate(['/job-detail', { id: evt }]);
     console.log(evt);
   }
 

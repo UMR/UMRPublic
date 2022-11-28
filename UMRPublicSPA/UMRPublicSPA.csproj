@@ -94,6 +94,8 @@
     <Content Include="src\app\jobs-opening\change-password\change-password.component.html" />
     <Content Include="src\app\jobs-opening\job-dashboard\job-dashboard.component.css" />
     <Content Include="src\app\jobs-opening\job-dashboard\job-dashboard.component.html" />
+    <Content Include="src\app\jobs-opening\job-detail\job-detail.component.css" />
+    <Content Include="src\app\jobs-opening\job-detail\job-detail.component.html" />
     <Content Include="src\app\jobs-opening\jobs-opening.component.css" />
     <Content Include="src\app\jobs-opening\jobs-opening.component.html" />
     <Content Include="src\app\portal\portal.component.html" />
@@ -540,6 +542,7 @@
     <TypeScriptCompile Include="src\app\jobs-opening\change-password\change-password.component.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\change-password\change-password.service.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\job-dashboard\job-dashboard.component.ts" />
+    <TypeScriptCompile Include="src\app\jobs-opening\job-detail\job-detail.component.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\jobs-opening.component.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\model\job-content.ts" />
     <TypeScriptCompile Include="src\app\jobs-opening\services\job-content.service.ts" />

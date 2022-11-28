@@ -140,6 +140,24 @@ export class JobContentService {
       .catch(err => Observable.throw(err));
   }
 
+  getJobById(jobId: string = ''): Observable<any> {
+
+    let jobContentGetURL = `${resourceServerUrl}` + "/api/jobs/job";
+
+
+    jobContentGetURL = jobContentGetURL + `?jobId=${jobId}`
+    return this.http.get(jobContentGetURL)
+      .map((res: Response) => {
+        if (res.status == 200) {
+          return res.json();
+        }
+        else {
+          return null;
+        }
+      })
+      .catch(err => Observable.throw(err));
+  }
+
   getAllPosition(): Observable<any> {
 
     let jobContentGetURL = `${resourceServerUrl}` + "/api/jobs/position";

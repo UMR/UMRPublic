@@ -15,6 +15,7 @@ import { JobDashboardComponent } from './jobs-opening/job-dashboard/job-dashboar
 import { AdminHomeComponent } from './jobs-opening/admin-home/admin-home.component';
 import { ChangePasswordComponent } from './jobs-opening/change-password/change-password.component';
 import { JobBoardComponent } from './job-board/job-board.component';
+import { JobDetailComponent } from './jobs-opening/job-detail/job-detail.component';
 
 export const routes: Routes = [
   {
@@ -31,6 +32,7 @@ export const routes: Routes = [
       { path: 'applicant-portal', component: ApplicantPortalComponent },
       { path: 'customer-portal', component: CustomerPortalComponent },
       { path: 'jobs-opening', component: JobOpeningComponent },
+      { path: 'job-detail', component: JobDetailComponent },
       { path: 'jobs-board', component: JobBoardComponent }
     ]
   },

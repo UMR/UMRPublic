@@ -37,10 +37,59 @@ namespace JobAPI.Controllers
                 {
                     dataTable = JobPostManager.GetAllActiveJobsByPosition(position.ToString());
                 }
-                else if (!string.IsNullOrEmpty(county)&& !string.IsNullOrEmpty(position))
+                else if (!string.IsNullOrEmpty(county) && !string.IsNullOrEmpty(position))
                 {
                     dataTable = JobPostManager.GetAllJobsByCountyandPosition(county.ToString(), position.ToString());
                 }
+
+                if (dataTable != null && dataTable.Rows.Count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        JobContent jobContent = new JobContent();
+                        jobContent.JobId = Convert.ToInt32(row["JobId"].ToString());
+                        jobContent.JobDescription = row["JobDescription"].ToString();
+                        jobContent.JobTitle = row["JobTitle"].ToString();
+                        jobContent.County = row["County"].ToString();
+                        jobContent.StateCode = row["SateCode"].ToString();
+                        jobContent.StateName = row["StateName"].ToString();
+                        jobContent.PositionID = row["PositionID"].ToString();
+                        jobContent.InstituteTypeID = row["InstituteTypeID"].ToString();
+                        jobContent.InstituteType = row["InstituteType"].ToString();
+                        jobContent.CreatedDate = Convert.ToDateTime(row["CreatedDate"].ToString()).ToString(("MMMM dd, yyyy"));
+                        jobContents.Add(jobContent);
+                    }
+                }
+
+                if (jobContents.Count == 0)
+                {
+                    return NotFound();
+                }
+
+                return Ok(jobContents);
+            }
+            catch (Exception ex)
+            {
+                //Log.Write(ex);
+                //if (UMRPublicAPI.AuthorizationServer.Constants.IsProductionBuild)
+                //{
+                //    return InternalServerError();
+                //}
+                return InternalServerError(ex);
+            }
+        }
+
+        [Route("job")]
+        [HttpGet]
+        public IHttpActionResult GetAllJobs(string jobId)
+        {
+            try
+            {
+                //var jobs = GetActiveJobs();
+
+                List<JobContent> jobContents = new List<JobContent>();
+                DataTable dataTable = new DataTable();
+                dataTable = JobPostManager.GetActiveJobById(Convert.ToInt32(jobId));
 
                 if (dataTable != null && dataTable.Rows.Count > 0)
                 {

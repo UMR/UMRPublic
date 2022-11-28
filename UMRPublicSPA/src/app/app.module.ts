@@ -42,6 +42,7 @@ import { ForbiddenValidatorDirective } from './common/directives/single-equal-va
 import { AsyncPasswordValidator } from './common/directives/password.async.validator';
 import { CommonModule } from '@angular/common';
 import { CheckboxModule } from 'primeng/primeng';
+import { JobDetailComponent } from './jobs-opening/job-detail/job-detail.component';
 
 
 @NgModule({
@@ -89,7 +90,8 @@ import { CheckboxModule } from 'primeng/primeng';
     ChangePasswordComponent,
     EqualValidator,
     ForbiddenValidatorDirective,
-    AsyncPasswordValidator
+    AsyncPasswordValidator,
+    JobDetailComponent
   ],
   providers: [{ provide: CookieService, useFactory: cookieServiceFactory },
     UmrPublicCookieService,

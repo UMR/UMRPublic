@@ -1,0 +1,20 @@
+
+<section class="content">
+  <div class="container">
+    <div class="panel-body" *ngFor="let jobContent of jobContents; let i = index">
+      <div class="col-md-12" style="margin-bottom:16px">
+        <h2><strong> {{jobContent.JobTitle}}</strong></h2>
+        <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span><br />
+      </div>
+      <div class="col-md-12" style="margin-bottom:16px">
+        <h2>
+          <strong>Location : </strong>
+          <span>{{jobContent.County}} {{jobContent.StateCode}}</span>
+        </h2>
+      </div>
+      <div class="col-md-12 job-body" [innerHTML]="jobContent.JobDescription">
+
+      </div>
+    </div>
+  </div>
+</section>
