@@ -96,75 +96,75 @@ export class JobOpeningComponent implements OnInit {
         });
   }
   getCountyState(event) {
-    
-    this.clickOnCountyCount += 1;
-    if (this.clickOnCountyCount % 2 != 0) {
-      if (this.selectedCounty == "") {
-        this.selectedCounty = event.County;
+
+    //this.clickOnCountyCount += 1;
+    //if (this.clickOnCountyCount % 2 != 0) {
+    if (this.selectedCounty == "") {
+      this.selectedCounty = event.County;
+    }
+    else {
+      if (this.selectedCounty.includes(event.County + ",")) {
+        this.selectedCounty = this.selectedCounty.replace(event.County + ",", "");
+      }
+      else if (this.selectedCounty.includes("," + event.County)) {
+        this.selectedCounty = this.selectedCounty.replace("," + event.County, "");
+      }
+      else if (this.selectedCounty.includes(event.County)) {
+        this.selectedCounty = this.selectedCounty.replace(event.County, "");
       }
       else {
-        if (this.selectedCounty.includes(event.County + ",")) {
-          this.selectedCounty = this.selectedCounty.replace(event.County + ",", "");
-        }
-        else if (this.selectedCounty.includes("," + event.County)) {
-          this.selectedCounty = this.selectedCounty.replace("," + event.County, "");
-        }
-        else if (this.selectedCounty.includes(event.County)) {
-          this.selectedCounty = this.selectedCounty.replace(event.County, "");
-        }
-        else {
-          this.selectedCounty += "," + event.County;
-        }
+        this.selectedCounty += "," + event.County;
       }
-      this.isLoading = true;
-      this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
-        .subscribe(
-          jobcontents => {
-            this.jobContents = jobcontents;
-            this.filterJobList = this.jobContents;
-            this.isLoading = false;
-          },
-          error => {
-            this.isLoading = false;
-          });
     }
+    this.isLoading = true;
+    this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
+      .subscribe(
+        jobcontents => {
+          this.jobContents = jobcontents;
+          this.isLoading = false;
+        },
+        error => {
+          this.jobContents = [];
+          this.isLoading = false;
+        });
+    //}
   }
 
   onCheckPosition(event) {
-    
-    this.clickOnPositionCount += 1;
-    if (this.clickOnPositionCount % 2 != 0) {
-      if (this.selectedPosition == "") {
-        this.selectedPosition = event.PositionID.toString();
-        //console.log(this.selectedPosition);
+
+    //this.clickOnPositionCount += 1;
+    //if (this.clickOnPositionCount % 2 != 0) {
+    if (this.selectedPosition == "") {
+      this.selectedPosition = event.PositionID.toString();
+      //console.log(this.selectedPosition);
+    }
+    else {
+      if (this.selectedPosition.includes(event.PositionID + ",")) {
+        this.selectedPosition = this.selectedPosition.replace(event.PositionID + ",", "");
+      }
+      else if (this.selectedPosition.includes("," + event.PositionID)) {
+        this.selectedPosition = this.selectedPosition.replace("," + event.PositionID, "");
+      }
+      else if (this.selectedPosition.includes(event.PositionID)) {
+        this.selectedPosition = this.selectedPosition.replace(event.PositionID, "");
       }
       else {
-        if (this.selectedPosition.includes(event.PositionID + ",")) {
-          this.selectedPosition = this.selectedPosition.replace(event.PositionID + ",", "");
-        }
-        else if (this.selectedPosition.includes("," + event.PositionID)) {
-          this.selectedPosition = this.selectedPosition.replace("," + event.PositionID, "");
-        }
-        else if (this.selectedPosition.includes(event.PositionID)) {
-          this.selectedPosition = this.selectedPosition.replace(event.PositionID, "");
-        }
-        else {
-          this.selectedPosition += "," + event.PositionID;
-        }
+        this.selectedPosition += "," + event.PositionID;
       }
-      this.isLoading = true;
-      this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
-        .subscribe(
-          jobcontents => {
-            this.jobContents = jobcontents;
-            this.filterJobList = this.jobContents;
-            this.isLoading = false;
-            this.clickOnPositionCount += 1;
-          },
-          error => {
-            this.isLoading = false;
-          });
     }
+    this.isLoading = true;
+    this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
+      .subscribe(
+        jobcontents => {
+          this.jobContents = jobcontents;
+          this.isLoading = false;
+          //this.clickOnPositionCount += 1;
+        },
+        error => {
+          this.jobContents = [];
+          this.isLoading = false;
+        });
+    //}
   }
 
   jobDetailClick(evt) {
