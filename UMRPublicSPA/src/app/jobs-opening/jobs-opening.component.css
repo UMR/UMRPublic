@@ -1,11 +1,18 @@
 .row {
     margin:0;
 }
+.trans {
+  background: transparent;
+  border: none
+}
+.active_class {
+  color: #a0a2a4;
+}
 label {
   pointer-events: auto;
 }
 .jobs-full-content {
-  background-color: #303030;
+  /*background-color: #303030;*/
 }
 
 .menu-customized {
@@ -121,8 +128,7 @@ label {
 .card-title-sub {
   color: #939597;
   font-weight: 500;
-  font-size: 0.7em;
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
 
 .card-title-sub-arrow {

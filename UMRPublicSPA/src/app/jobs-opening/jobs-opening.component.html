@@ -193,10 +193,21 @@
     </div>
     <div class="filter-customized">
       Filters
+      <div style="float:right;margin-right:32px">
+        <button class="active trans" (click)="listViewClick()">
+          <i class="glyphicon glyphicon-th-list" [ngClass]="{'active_class': !isListView}"></i>
+        </button>
+        <button class="trans" (click)="gridViewClick()">
+          <i class="glyphicon glyphicon-th" [ngClass]="{'active_class': isListView}"></i>
+        </button>
+      </div>
     </div>
     <div class="menu-content-customized list-group">
       <div class="list-group-item">
         Location
+        <div style="float:right" *ngIf="isCountyClearShow">
+          <button class="trans" (click)="countyOnClearClick()"><i class="glyphicon glyphicon-remove"></i> Clear</button>
+        </div>
       </div>
       <div class="list-group-item" style="cursor:pointer" *ngFor="let location of countyState" (mouseup)="countyCheckbox.checked = !countyCheckbox.checked"
            (click)="getCountyState(location)">
@@ -210,6 +221,10 @@
     <div class="menu-content-customized list-group">
       <div class="list-group-item">
         Category
+        <div style="float:right" *ngIf="isPositionClearShow">
+          <button class="trans" (click)="positionOnClearClick()">
+            <i class="glyphicon glyphicon-remove"></i> Clear</button>
+        </div>
       </div>
       <div class="list-group-item" style="cursor:pointer" *ngFor="let position of positions" (mouseup)="positionCheckbox.checked = !positionCheckbox.checked"
            (click)="onCheckPosition(position)">
@@ -221,7 +236,7 @@
   </div>
 
   <div class="col-md-10 main-content" *ngIf="!isDetailView">
-    <div class="page-body">
+    <div class="page-body" *ngIf="isListView">
       <div class="openjobs">
         Open Jobs
       </div>
@@ -247,6 +262,24 @@
         <div class="card-body">
           <div style="white-space:nowrap">
             {{htmlTagRemove(jobContent.JobDescription)}}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-body" *ngIf="!isListView">
+      <div class="openjobs">
+        Open Jobs
+      </div>
+      <div class="row">
+        <div class="col-md-4" *ngFor="let jobContent of jobContents" style="cursor:pointer" (click)="jobDetailClick(jobContent.JobId)">
+          <div class="thumbnail">
+            <div class="caption" style="height:350px">
+              <p>Added - {{jobContent.CreatedDate}}</p>
+              <h3 style="color: #5198DE">{{jobContent.JobTitle}}</h3>
+              <h5 class="card-category" style="padding:2px 0 16px 0">{{jobContent.InstituteType}}</h5>
+              <span class="card-title-sub">{{jobContent.County}} , {{jobContent.StateName}}</span>
+              <div style="height:210px;overflow:hidden;padding-top:16px"> {{htmlTagRemove(jobContent.JobDescription)}}</div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChildren, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../login/login.service';
 import { JobContentService } from './services/job-content.service';
@@ -12,7 +12,14 @@ import { JobContent } from './model/job-content';
 
 export class JobOpeningComponent implements OnInit {
   public isLoading: boolean = true;
+  public isCountyClearShow: boolean = false;
+  public isPositionClearShow: boolean = false;
   public isDetailView: boolean = false;
+  public isListView: boolean = true;
+  @ViewChildren('countyCheckbox') public countyCheckbox: ElementRef<HTMLInputElement>[];
+  @ViewChildren('positionCheckbox') public positionCheckbox: ElementRef<HTMLInputElement>[];
+  
+
 
   constructor(private router: Router, private loginService: LoginService, private jobContentService: JobContentService) { }
 
@@ -60,16 +67,6 @@ export class JobOpeningComponent implements OnInit {
   ngOnInit() {
 
     this.getAllJobs();
-    //let jobContents = this.jobContents;
-    //for (let content of jobContents) {
-    //  let len = content.JobDescription.length;
-    //  let halfContent = content.JobDescription.substring(0, len / 2);
-    //  let secondHalf = content.JobDescription.substring(len - len / 2, len);
-    //  let jobContent = new JobContent();
-    //  jobContent.HalfContent = halfContent;
-    //  jobContent.SecondHalf = secondHalf;
-    //  this.filterJobContents.push(jobContent);
-    //}
     this.getAllCountyState();
     this.getAllPosition();
   }
@@ -118,7 +115,13 @@ export class JobOpeningComponent implements OnInit {
         this.selectedCounty += "," + event.County;
       }
     }
-   
+    if (this.selectedCounty != "") {
+      this.isCountyClearShow = true;
+    }
+    else {
+      this.isCountyClearShow = false;
+    }
+
     this.isLoading = true;
     this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
       .subscribe(
@@ -155,6 +158,12 @@ export class JobOpeningComponent implements OnInit {
         this.selectedPosition += "," + event.PositionID;
       }
     }
+    if (this.selectedPosition != "") {
+      this.isPositionClearShow = true;
+    }
+    else {
+      this.isPositionClearShow = false;
+    }
     this.isLoading = true;
     this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
       .subscribe(
@@ -186,6 +195,12 @@ export class JobOpeningComponent implements OnInit {
     //this.router.navigate(['/job-detail', { id: evt }]);
     //console.log(evt);
   }
+  listViewClick() {
+    this.isListView = true;
+  }
+  gridViewClick() {
+    this.isListView = false;
+  }
 
   htmlTagRemove(text) {
     var removeHtml = text.replace(/<\/?[^>]+(>|$)/g, "");
@@ -194,4 +209,41 @@ export class JobOpeningComponent implements OnInit {
   back() {
     this.isDetailView = false;
   }
+  countyOnClearClick() {
+    this.countyCheckbox.forEach(check => {
+      check.nativeElement.checked = false;
+    })
+    this.selectedCounty = "";
+    this.isCountyClearShow = false;
+    this.isLoading = true;
+    this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
+      .subscribe(
+        jobcontents => {
+          this.jobContents = jobcontents;
+          this.isLoading = false;
+        },
+        error => {
+          this.jobContents = [];
+          this.isLoading = false;
+        });
+  }
+  positionOnClearClick() {
+    this.positionCheckbox.forEach(check => {
+      check.nativeElement.checked = false;
+    })
+    this.selectedPosition = "";
+    this.isPositionClearShow = false;
+    this.isLoading = true;
+    this.jobContentService.getAllJobs(this.selectedCounty, this.selectedPosition)
+      .subscribe(
+        jobcontents => {
+          this.jobContents = jobcontents;
+          this.isLoading = false;
+        },
+        error => {
+          this.jobContents = [];
+          this.isLoading = false;
+        });
+  }
 }
+
