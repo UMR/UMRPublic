@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { JobContentService } from '../services/job-content.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-job-detail',
@@ -12,7 +13,7 @@ export class JobDetailComponent implements OnInit {
   public isLoading: boolean = true;
   public jobContents = [];
   public isDetailView: boolean = false;
-  constructor(private route: ActivatedRoute, private jobContentService: JobContentService) { }
+  constructor(private route: ActivatedRoute, private jobContentService: JobContentService, private location: Location) { }
 
   ngOnInit() {
     const jobId = this.route.snapshot.paramMap.get('id');
@@ -31,5 +32,7 @@ export class JobDetailComponent implements OnInit {
           this.isLoading = false;
         });
   }
-
+  back() {
+    this.location.back();
+  }
 }

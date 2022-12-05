@@ -47,10 +47,10 @@ export const scopes = ['UMRPublic', 'offline_access', 'openid'];
 export const allPermissions = ['Add New Applicant', 'Allowed IP', 'Applicant Degree', 'Applicant Ownership', 'Applicant Skill', 'Applicant Transfer', 'Applicants', 'Assign Recruiter Role', 'Calendar', 'Cold Tracking', 'Configure Field Access Permission', 'Contact', 'Email', 'Follow-up', 'General Population', 'Hot Tracking', 'Information', 'Institution Information', 'Institution Type Information', 'Interview', 'Job Attributes', 'Job Skills', 'Manage Profile', 'Manage Recruiter', 'Manage Role', 'Others', 'Pending', 'Placement', 'Position Information', 'Profiles', 'Recruiter', 'Send Out', 'Settings', 'User Mail', 'User Mail Configuration', 'User Mail Template', 'User Settings', 'View By Applicant', 'View by Institution', 'Logout'];
 
 ///////// localhost ///////////
-export const resourceServerUrl = 'http://localhost:40123';
+//export const resourceServerUrl = 'http://localhost:40123';
 
 ///////// umrtest ////////////
-//export const resourceServerUrl = 'http://www.umrtest.com/publicjobAPI';
+export const resourceServerUrl = 'http://www.umrtest.com/publicjobAPI';
 
 //////////// production ///////////////
 //export const resourceServerUrl = 'https://www.universalmedicalrecord.com/publicjobAPI';

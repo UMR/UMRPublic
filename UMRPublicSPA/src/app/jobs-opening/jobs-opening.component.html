@@ -187,11 +187,8 @@
 
 
 <div class="row jobs-full-content">
-  <div class="col-md-2 menu-customized">
-    <div class="filter-customized">
-      Filters
-    </div>
-    <div class="filter-customized">
+  <div class="col-md-2 menu-customized" style="z-index:1000">
+    <div class="filter-customized" style="height:60px">
       Filters
       <div style="float:right;margin-right:32px">
         <button class="active trans" (click)="listViewClick()">
@@ -211,7 +208,7 @@
       </div>
       <div class="list-group-item" style="cursor:pointer" *ngFor="let location of countyState" (mouseup)="countyCheckbox.checked = !countyCheckbox.checked"
            (click)="getCountyState(location)">
-        <input class="form-check-input" type="checkbox" value="" #countyCheckbox (mouseup)="countyCheckbox.checked = !countyCheckbox.checked">
+        <input class="form-check-input" type="checkbox" value="{{location.County}}" #countyCheckbox (mouseup)="countyCheckbox.checked = !countyCheckbox.checked">
         {{location.County}}, {{location.StateName}}
         <span class="badge badge-primary badge-pill">{{location.Count}}</span>
       </div>
@@ -228,7 +225,7 @@
       </div>
       <div class="list-group-item" style="cursor:pointer" *ngFor="let position of positions" (mouseup)="positionCheckbox.checked = !positionCheckbox.checked"
            (click)="onCheckPosition(position)">
-        <input class="form-check-input me-1" type="checkbox" #positionCheckbox (mouseup)="positionCheckbox.checked = !positionCheckbox.checked">
+        <input class="form-check-input me-1" type="checkbox" value="{{position.PositionID}}" #positionCheckbox (mouseup)="positionCheckbox.checked = !positionCheckbox.checked">
         {{position.JobTitle}}
         <span class="badge badge-primary badge-pill">{{position.Count}}</span>
       </div>
@@ -288,7 +285,7 @@
   <div class="col-md-10 main-content" *ngIf="isDetailView" style="padding-top:50px">
     <div class="page-body">
       <span class="glyphicon glyphicon-arrow-left" style="font-size: 40px; cursor: pointer; color: #5198DE" (click)="back()"></span>
-      <div class="panel-body" *ngFor="let jobContent of jobDetail; let i = index">
+      <div class="panel-body" *ngFor="let jobContent of jobDetail">
         <div class="col-md-12" style="margin-bottom:16px">
           <h2 style="color: #5198DE"><strong> {{jobContent.JobTitle}}</strong></h2>
           <span>Published Date : <b> {{jobContent.CreatedDate}} </b></span><br />
