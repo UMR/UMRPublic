@@ -246,7 +246,6 @@ export class JobOpeningComponent implements OnInit, AfterViewInit {
     this.getAllJobs();
   }
   positionOnClearClick() {
-    //console.log(this.positionCheckbox);
     this.positionCheckbox.forEach(check => {
       check.nativeElement.checked = false;
     });
