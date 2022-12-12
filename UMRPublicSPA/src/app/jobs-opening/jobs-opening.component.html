@@ -188,57 +188,57 @@
 
 <div class="row jobs-full-content">
 
-  <div (click)="sideberCloseClick()">
-    <aside class="col-md-2 menu-customized" style="z-index: 1000" [ngClass]="{'aside-open': isOpen}">
-      <div class="filter-customized" style="height:60px">
 
-        Filters
-        <div style="float:right;margin-right:32px">
-          <button class="active trans" (click)="listViewClick()">
-            <i class="glyphicon glyphicon-th-list" [ngClass]="{'active_class': !isListView}"></i>
-          </button>
-          <button class="trans" (click)="gridViewClick()">
-            <i class="glyphicon glyphicon-th" [ngClass]="{'active_class': isListView}"></i>
-          </button>
-          <button class="trans" (click)="sideberCloseClick()">
-            <i class="close-button glyphicon glyphicon-remove"></i>
+  <aside class="col-md-2 menu-customized" style="z-index: 1000" [ngClass]="{'aside-open': isOpen}" (click)="sideberCloseClick()">
+    <div class="filter-customized" style="height:60px">
+
+      Filters
+      <div style="float:right;margin-right:32px">
+        <button class="active trans" (click)="listViewClick()">
+          <i class="glyphicon glyphicon-th-list" [ngClass]="{'active_class': !isListView}"></i>
+        </button>
+        <button class="trans" (click)="gridViewClick()">
+          <i class="glyphicon glyphicon-th" [ngClass]="{'active_class': isListView}"></i>
+        </button>
+        <button class="trans" (click)="sideberCloseClick()">
+          <i class="close-button glyphicon glyphicon-remove"></i>
+        </button>
+      </div>
+    </div>
+    <div class="menu-content-customized list-group" style="height:50%;overflow:auto">
+      <div class="list-group-item">
+        Location
+        <div style="float:right" *ngIf="isCountyClearShow">
+          <button class="trans" (click)="countyOnClearClick()"><i class="glyphicon glyphicon-remove"></i> Clear</button>
+        </div>
+      </div>
+      <div class="list-group-item" style="cursor:pointer" *ngFor="let location of countyState" (mouseup)="countyCheckbox.checked = !countyCheckbox.checked"
+           (click)="getCountyState(location)">
+        <input class="form-check-input" type="checkbox" value="{{location.County}}" #countyCheckbox (mouseup)="countyCheckbox.checked = !countyCheckbox.checked">
+        {{location.County}}, {{location.StateName}}
+        <span class="badge badge-primary badge-pill">{{location.Count}}</span>
+      </div>
+
+    </div>
+
+    <div class="menu-content-customized list-group" style="height:50%;overflow:auto">
+      <div class="list-group-item">
+        Category
+        <div style="float:right" *ngIf="isPositionClearShow">
+          <button class="trans" (click)="positionOnClearClick()">
+            <i class="glyphicon glyphicon-remove"></i> Clear
           </button>
         </div>
       </div>
-      <div class="menu-content-customized list-group" style="height:50%;overflow:auto">
-        <div class="list-group-item">
-          Location
-          <div style="float:right" *ngIf="isCountyClearShow">
-            <button class="trans" (click)="countyOnClearClick()"><i class="glyphicon glyphicon-remove"></i> Clear</button>
-          </div>
-        </div>
-        <div class="list-group-item" style="cursor:pointer" *ngFor="let location of countyState" (mouseup)="countyCheckbox.checked = !countyCheckbox.checked"
-             (click)="getCountyState(location)">
-          <input class="form-check-input" type="checkbox" value="{{location.County}}" #countyCheckbox (mouseup)="countyCheckbox.checked = !countyCheckbox.checked">
-          {{location.County}}, {{location.StateName}}
-          <span class="badge badge-primary badge-pill">{{location.Count}}</span>
-        </div>
-
+      <div class="list-group-item" style="cursor:pointer" *ngFor="let position of positions" (mouseup)="positionCheckbox.checked = !positionCheckbox.checked"
+           (click)="onCheckPosition(position)">
+        <input class="form-check-input me-1" type="checkbox" value="{{position.PositionID}}" #positionCheckbox (mouseup)="positionCheckbox.checked = !positionCheckbox.checked">
+        {{position.JobTitle}}
+        <span class="badge badge-primary badge-pill">{{position.Count}}</span>
       </div>
+    </div>
+  </aside>
 
-      <div class="menu-content-customized list-group" style="height:50%;overflow:auto">
-        <div class="list-group-item">
-          Category
-          <div style="float:right" *ngIf="isPositionClearShow">
-            <button class="trans" (click)="positionOnClearClick()">
-              <i class="glyphicon glyphicon-remove"></i> Clear
-            </button>
-          </div>
-        </div>
-        <div class="list-group-item" style="cursor:pointer" *ngFor="let position of positions" (mouseup)="positionCheckbox.checked = !positionCheckbox.checked"
-             (click)="onCheckPosition(position)">
-          <input class="form-check-input me-1" type="checkbox" value="{{position.PositionID}}" #positionCheckbox (mouseup)="positionCheckbox.checked = !positionCheckbox.checked">
-          {{position.JobTitle}}
-          <span class="badge badge-primary badge-pill">{{position.Count}}</span>
-        </div>
-      </div>
-    </aside>
-  </div>
   <span>
     <i *ngIf="isOpen" class="glyphicon glyphicon-list" (click)="sideberOpenClick()" style="z-index: 1002; font-size: 28px; top: 14px; left: 4px;position:fixed"></i>
   </span>
