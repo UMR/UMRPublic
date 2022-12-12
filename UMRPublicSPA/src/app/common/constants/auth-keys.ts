@@ -50,7 +50,7 @@ export const allPermissions = ['Add New Applicant', 'Allowed IP', 'Applicant Deg
 //export const resourceServerUrl = 'http://localhost:40123';
 
 ///////// umrtest ////////////
-//export const resourceServerUrl = 'http://www.umrtest.com/publicjobAPI';
+export const resourceServerUrl = 'http://www.umrtest.com/publicjobAPI';
 
 //////////// production ///////////////
-export const resourceServerUrl = 'https://www.universalmedicalrecord.com/publicjobAPI';
+//export const resourceServerUrl = 'https://www.universalmedicalrecord.com/publicjobAPI';

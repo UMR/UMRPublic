@@ -1,16 +1,79 @@
-.row {
-    margin:0;
+@media screen and (max-width: 480px) {
+  aside {
+    z-index: 125;
+    height: 100%;
+    width: 85%;
+    min-width: 85%;
+    position: absolute;
+    top: 0;
+    left: -80%;
+    background-color: #2E2F30;
+    color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .aside-open {
+    display: none;
+    /*z-index: 125;
+    height: 10%;
+    width: 0%;
+    min-width: 0%;
+    position: absolute;
+    top: 0;
+    left: -80%;
+    background-color: #2E2F30;
+    color: #FFFFFF;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;*/
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out
+  }
+  .close-button {
+      display:block !important;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .main-content {
+    width: 100%
+  }
+
+  .page-body {
+    width: 100% !important;
+  }
+}
+
+.close-button {
+  display: none;
+}
+
+.row {
+  margin: 0;
+}
+
 .trans {
   background: transparent;
   border: none
 }
+
 .active_class {
   color: #a0a2a4;
 }
+
 label {
   pointer-events: auto;
 }
+
 .jobs-full-content {
   /*background-color: #303030;*/
 }
@@ -64,10 +127,10 @@ label {
   color: lightgray !important;
   font-size: 0.9em !important;
   padding-top: 0 !important;
-  border:hidden;
+  border: hidden;
 }
 
-:host >>> .badge {
+:host > > > .badge {
   background-color: #303030 !important;
 }
 

@@ -38,6 +38,7 @@ export class JobOpeningComponent implements OnInit, AfterViewInit {
   selectedPosition: string = "";
   clickOnCountyCount: number = 0;
   clickOnPositionCount: number = 0;
+  isOpen: boolean = false;
 
 
 
@@ -253,6 +254,13 @@ export class JobOpeningComponent implements OnInit, AfterViewInit {
     this.isPositionClearShow = false;
     localStorage.setItem("selectedPosition", this.selectedPosition);
     this.getAllJobs();
+  }
+  sideberCloseClick() {
+    this.isOpen = true;
+    console.log("sideberCloseClick")
+  }
+  sideberOpenClick() {
+    this.isOpen = false;
   }
 }
 
