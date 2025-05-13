@@ -122,6 +122,7 @@
     <Content Include="src\assets\images\dna.png" />
     <Content Include="src\assets\images\favicon.png" />
     <Content Include="src\assets\images\hcontent-img.png" />
+    <Content Include="src\assets\images\Jared.JPEG" />
     <Content Include="src\assets\images\medical-history.png" />
     <Content Include="src\assets\images\medicine.png" />
     <Content Include="src\assets\images\member-1.jpg" />
@@ -473,6 +474,8 @@
     <Content Include="e2e\tsconfig.e2e.json" />
     <Content Include="tsconfig.json" />
     <Content Include="tslint.json" />
+    <Content Include="src\assets\pdf\Jared D. Cohn DO PGY3 CV.docx" />
+    <Content Include="src\assets\pdf\Jared D. Cohn.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
