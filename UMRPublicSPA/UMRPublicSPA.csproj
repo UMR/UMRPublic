@@ -130,6 +130,7 @@
     <Content Include="src\assets\images\member-3.jpg" />
     <Content Include="src\assets\images\member-4.jpg" />
     <Content Include="src\assets\images\member.jpg" />
+    <Content Include="src\assets\images\SarinaCohn.jpeg" />
     <Content Include="src\assets\images\umr-recreuitment-services.png" />
     <Content Include="src\assets\images\universal-medical-informatics.png" />
     <Content Include="src\assets\images\urmtest-logo.png" />
@@ -476,6 +477,7 @@
     <Content Include="tslint.json" />
     <Content Include="src\assets\pdf\Jared D. Cohn DO PGY3 CV.docx" />
     <Content Include="src\assets\pdf\Jared D. Cohn.pdf" />
+    <Content Include="src\assets\pdf\SarinaCohn.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
